@@ -83,6 +83,7 @@ Template("practice.csv", variable =>
 		,
 		
 		newText("sep", "<hr />")
+			.settings.css("border", "solid 1px black")
 			.settings.css("clear", "both")
 			.settings.css("display", "block")
 			.settings.css("width", "50%")
