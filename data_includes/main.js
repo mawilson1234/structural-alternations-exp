@@ -99,7 +99,7 @@ Template("practice.csv", variable =>
 		,
 		// display the sentence
 		newText("sentence")
-			.text("<p>" + getVar("sentence") + "</p>")
+			.text(getVar("sentence"))
 			.center()
 			.print()
 		,
