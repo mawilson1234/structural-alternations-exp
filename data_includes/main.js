@@ -83,11 +83,10 @@ Template("practice.csv", variable =>
 		,
 		
 		newText("sep", "<hr>")
-			.center()
 			.print()
 		,
 		
-		newText("question", "<p>Where is " + variable.word + " more likely to go?</p>")
+		newText("question", "<p>Where is <i>" + variable.word + "</i> more likely to go?</p>")
 			.center()
 			.print()
 		,
