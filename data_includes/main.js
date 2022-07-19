@@ -81,14 +81,14 @@ Template("practice.csv", variable =>
 		newVar("sentence", variable.sentence)
 		,
 		// are we reversing the order of the placeholders?
-		newVar("XXXX_last", Math.random() <= 0.5)
+		newVar("XXXX_last", Math.random())
 		,
 		// reverse the order of the placeholders if needed
 		getVar("sentence")
 			.set(
 				v => 
-					getVar("XXXX_last") 
-					? 
+					getVar("XXXX_last") <= 0.5
+.p					? 
 						v
 							.replace("XXXX", "ZZZZ")
 							.replace("YYYY", "XXXX")
