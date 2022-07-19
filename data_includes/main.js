@@ -83,9 +83,7 @@ Template("practice.csv", variable =>
 		,
 		// are we reversing the order of the placeholders?
 		newFunction("XXXX_last", () => Math.random() <= 0.5)
-		,
-		// reverse the order of the placeholders if needed
-		getFunction("XXXX_last")
+			.call()
 			.test.is(1)
 			.success(
 				getVar("sentence")
