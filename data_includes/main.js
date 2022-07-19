@@ -105,6 +105,10 @@ Template("practice.csv", variable =>
 			.print()
 		,
 		
+		getVar("sentence")
+			.log()
+		,
+		
 		newText("sep", "___________________________________________")
 			.center()
 			.print()
@@ -142,7 +146,6 @@ Template("practice.csv", variable =>
 			.wait()
 	)
 	.log("item"			, variable.item)
-	.log("sentence"		, getVar("sentence"))
 	.log("word"			, variable.word)
 	.log("args_group"	, variable.args_group)
 	.log("sentence_type", variable.sentence_type)
