@@ -99,10 +99,11 @@ Template("practice.csv", variable =>
 		,
 		// display the sentence
 		newText("sentence")
-			.before(newText("p", "<p>"))
+			//.before(newText("p", "<p>"))
 			.text(getVar("sentence"))
 			.text(getVar("XXXX_last"))
-			.after(newText("close_p", "</p>"))
+			//.after(newText("close_p", "</p>"))
+			.after(newText("var").text(getVar("XXXX_last")))
 			.center()
 			.print()
 		,
