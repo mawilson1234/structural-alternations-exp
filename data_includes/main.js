@@ -82,7 +82,7 @@ Template("practice.csv", variable =>
 			.print()
 		,
 		
-		newText("sep", "<p>---------------------</p>")
+		newText("sep", "<hr>")
 			.center()
 			.print()
 		,
