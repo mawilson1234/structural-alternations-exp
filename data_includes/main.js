@@ -101,6 +101,7 @@ PennController.Template("practice.csv", variable => ["trial_prac",
                 .once()
                 .wait()
                 .log()
+                .remove()
             ,
             
             newButton("Next")
