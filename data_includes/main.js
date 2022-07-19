@@ -82,8 +82,13 @@ Template("practice.csv", variable =>
 			.print()
 		,
 		
-		newText("sep", "<hr>")
-			.settings.css("border", "5px")
+		newText("sep", "<hr />")
+			.settings.css("border", "0")
+			.settings.css("clear", "both")
+			.settings.css("display", "block")
+			.settings.css("width", "50%")
+			.settings.css("background-color", "#FFFF00")
+			.settings.css("height", "1px")
 			.center()
 			.print()
 		,
