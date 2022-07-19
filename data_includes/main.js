@@ -79,6 +79,7 @@ PennController.Template("practice.csv", variable => ["trial_prac",
         "PennController", PennController(
         
             newText("sentence", variable.sentence)
+                .center()
                 .print()
             ,
             
