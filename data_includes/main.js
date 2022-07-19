@@ -79,6 +79,7 @@ Template("practice.csv", variable =>
 	newTrial("trial_prac",
 		// store the sentence in a variable so we can modify it
 		newVar("sentence", variable.sentence)
+			.log()
 		,
 		// are we reversing the order of the placeholders?
 		newFunction("XXXX_last", () => Math.random() <= 0.5)
@@ -103,10 +104,6 @@ Template("practice.csv", variable =>
 			.after(newText("close_p", "</p>"))
 			.center()
 			.print()
-		,
-		
-		getVar("sentence")
-			.log()
 		,
 		
 		newText("sep", "___________________________________________")
