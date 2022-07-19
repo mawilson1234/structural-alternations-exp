@@ -102,7 +102,9 @@ PennController.Template("practice.csv", variable => ["trial_prac",
             
             getSelector("position")
                 .shuffle()
+                .center()
                 .print()
+                .once()
                 .wait()
                 .log()
                 .remove()
