@@ -98,7 +98,8 @@ Template("practice.csv", variable =>
 			)
 		,
 		// display the sentence
-		newText("sentence", "<p>" + getVar("sentence") + "</p>")
+		newText("sentence")
+			.text("<p>" + getVar("sentence") + "</p>")
 			.center()
 			.print()
 		,
