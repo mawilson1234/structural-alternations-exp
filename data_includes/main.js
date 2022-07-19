@@ -81,20 +81,21 @@ Template("practice.csv", variable =>
 		newVar("sentence", variable.sentence)
 		,
 		// are we reversing the order of the placeholders?
-		newVar("XXXX_last", Math.random())
+		newFunction("XXXX_last", () => Math.random() <= 0.5)
 		,
 		// reverse the order of the placeholders if needed
 		getVar("sentence")
 			.set(
 				v => 
-					getVar("XXXX_last") <= 0.5
-.p					? 
-						v
-							.replace("XXXX", "ZZZZ")
-							.replace("YYYY", "XXXX")
-							.replace("ZZZZ", "YYYY") 
-					: 	
-						v
+					getFunction("XXXX_last")
+						.test.is(1)
+						.success(
+							v
+								.replace("XXXX", "ZZZZ")
+								.replace("YYYY", "XXXX")
+								.replace("ZZZZ", "YYYY") 
+						)
+						.failure(v)
 			)
 		,
 		// display the sentence
