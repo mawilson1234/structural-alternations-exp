@@ -77,26 +77,27 @@ newTrial("instruction",
 
 Template("practice.csv", variable => 
 	newTrial("trial_prac",
+		// store the sentence in a variable so we can modify it
 		newVar("sentence", variable.sentence)
 		,
-		
+		// are we reversing the order of the placeholders?
 		newVar("XXXX_last", Math.random() <= 0.5)
 		,
-		
+		// reverse the order of the placeholders if needed
 		getVar("sentence")
 			.set(
 				v => 
-				getVar("XXXX_last") 
-				? 
-					v
-						.replace("XXXX", "ZZZZ")
-						.replace("YYYY", "XXXX")
-						.replace("ZZZZ", "YYYY") 
-				: 	
-					v
+					getVar("XXXX_last") 
+					? 
+						v
+							.replace("XXXX", "ZZZZ")
+							.replace("YYYY", "XXXX")
+							.replace("ZZZZ", "YYYY") 
+					: 	
+						v
 			)
 		,
-		
+		// display the sentence
 		newText("sentence", "<p>" + getVar("sentence") + "</p>")
 			.center()
 			.print()
@@ -116,8 +117,8 @@ Template("practice.csv", variable =>
 		,
 		
 		newCanvas("buttons", 200, 50)
-			.add(              0, 0, newButton("XXXX").selector("position") )
-			.add("right at 100%", 0, newButton("YYYY").selector("position") )
+			.add(              0, 0, newButton("XXXX").selector("position"))
+			.add("right at 100%", 0, newButton("YYYY").selector("position"))
 			.center()
 			.print()
 		,
@@ -138,10 +139,10 @@ Template("practice.csv", variable =>
 			.print()
 			.wait()
 	)
-	.log("item", variable.item)
-	.log("sentence", getVar("sentence"))
-	.log("word", variable.word)
-	.log("args_group", variable.args_group)
+	.log("item"			, variable.item)
+	.log("sentence"		, getVar("sentence"))
+	.log("word"			, variable.word)
+	.log("args_group"	, variable.args_group)
 	.log("sentence_type", variable.sentence_type)
 )
 
