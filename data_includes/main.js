@@ -83,13 +83,15 @@ PennController.Template("practice.csv", variable => ["trial_prac",
                 .print()
             ,
             
+            newText("newline", "<p />")
+                .print()
+            ,
+            
             newButton("XXXX")
-                .center()
                 .print()
             ,
             
             newButton("YYYY")
-                .center()
                 .print()
             ,
             
