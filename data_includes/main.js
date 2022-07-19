@@ -78,7 +78,7 @@ newTrial("instruction",
 PennController.Template("practice.csv", variable => ["trial_prac",
         "PennController", PennController(
         
-            newText("sentence", variable.sentence)
+            newText("sentence", "testing")
                 .center()
                 .print()
             ,
