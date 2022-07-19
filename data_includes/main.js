@@ -10,8 +10,8 @@ Sequence(
     // "intro", "consent", "recording", "instruction", 
     randomize("trial_prac"), 
     // "warn", "instruction2", 
-    rshuffle("pretrial"), 
-    rshuffle("trial"), 
+    //rshuffle("pretrial"), 
+    //rshuffle("trial"), 
     // "feedback", 
     SendResults(), 
     "bye"
