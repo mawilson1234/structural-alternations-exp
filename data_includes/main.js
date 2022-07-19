@@ -98,7 +98,6 @@ PennController.Template("practice.csv", variable => ["trial_prac",
             newSelector("position")
                 .add(getButton("XXXX"), getButton("YYYY"))
                 .shuffle()
-                .once()
                 .wait()
                 .log()
                 .remove()
