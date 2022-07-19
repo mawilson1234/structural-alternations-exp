@@ -82,6 +82,16 @@ Template("practice.csv", variable =>
 			.print()
 		,
 		
+		newText("sep", "<p>---------------------</p>")
+			.center()
+			.print()
+		,
+		
+		newText("question", "<p>Where is " + variable.word + " more likely to go?</p>")
+			.center()
+			.print()
+		,
+		
 		newSelector("position")
 		,
 		
