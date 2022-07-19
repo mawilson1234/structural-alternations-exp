@@ -84,15 +84,11 @@ PennController.Template("practice.csv", variable => ["trial_prac",
             
             newButton("XXXX")
                 .center()
-                .settings.css("font-size", "2em")
-                .settings.size(240, 48)
                 .print()
             ,
             
             newButton("YYYY")
                 .center()
-                .settings.css("font-size", "2em")
-                .settings.size(240, 48)
                 .print()
             ,
             
