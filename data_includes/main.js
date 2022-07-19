@@ -77,7 +77,7 @@ newTrial("instruction",
 
 Template("practice.csv", variable => 
 	newTrial("trial_prac",
-		newText("sentence", "<p>testing</p>")
+		newText("sentence", "<p>" + variable.sentence + "</p>")
 			.center()
 			.print()
 		,
@@ -108,8 +108,8 @@ Template("practice.csv", variable =>
 			.print()
 			.wait()
 	)
-	.log("Item", variable.item)
-	.log("Sentence", variable.sentence)
+	.log("item", variable.item)
+	.log("sentence", variable.sentence)
 	.log("word", variable.word)
 	.log("args_group", variable.args_group)
 	.log("sentence_type", variable.sentence_type)
