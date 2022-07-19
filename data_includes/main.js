@@ -139,15 +139,9 @@ newTrial("instruction2",
         .print()
         .wait()
 )
-*/
 
 PennController.Template("pretrial.csv", variable => ["pretrial",
 
-        "DashedSentenceBig", {
-            s: variable.Sentence, 
-            display: "in place"
-        },
-        
         "PennController", PennController(
         
             newAudio("click_prac", "click.wav")
@@ -244,11 +238,6 @@ PennController.Template("pretrial.csv", variable => ["pretrial",
 
 PennController.Template("stim.csv", variable => ["trial",
 
-        "DashedSentenceBig", {
-            s: variable.Sentence, 
-            display: "in place"
-        },
-        
         "PennController", PennController(
 
             newAudio("click", "click.wav")
@@ -358,7 +347,7 @@ PennController.Template("stim.csv", variable => ["trial",
     ]
 )
 
-/*
+
 PennController("feedback",
     newText("feedback_instruction","If you have any feedback on the first half of the experiment, please leave it here.<p>")
         .center()
