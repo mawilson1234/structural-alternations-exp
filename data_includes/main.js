@@ -87,6 +87,9 @@ PennController.Template("practice.csv", variable => ["trial_prac",
                 .print()
             ,
             
+            newSelector("position")
+            ,
+            
             newButton("XXXX")
                 .selector("position")
             ,
