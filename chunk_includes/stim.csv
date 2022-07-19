@@ -1,0 +1,193 @@
+﻿Group,Item,Verb,VerbType,SentenceVoice,Sentence,word1,word2,word3,word4,wait1,wait2,wait3,wait4
+A,1,appreciate,SubjExp,Active,The director particularly appreciates the actor. *****,thaky,pesin,,,2000,2000,50,50
+B,1,bother,ObjExp,Active,The director particularly bothers the actor. *****,thaky,pesin,,,2000,2000,50,50
+C,1,appreciate,SubjExp,Passive,The actor is particularly appreciated by the director. *****,thaky,pesin,,,2000,2000,50,50
+D,1,bother,ObjExp,Passive,The actor is particularly bothered by the director. *****,thaky,pesin,,,2000,2000,50,50
+D,2,appreciate,SubjExp,Active,The tourist particularly appreciates the park ranger. *****,smarve,bofied,sigid,,2000,2000,2000,50
+A,2,bother,ObjExp,Passive,The park ranger is particularly bothered by the tourist. *****,smarve,bofied,sigid,,2000,2000,2000,50
+B,2,appreciate,SubjExp,Passive,The park ranger is particularly appreciated by the tourist. *****,smarve,bofied,sigid,,2000,2000,2000,50
+C,2,bother,ObjExp,Active,The tourist particularly bothers the park ranger. *****,smarve,bofied,sigid,,2000,2000,2000,50
+C,3,admire,SubjExp,Active,The professor somewhat admires the student. *****,ugdate,fidnap,deors,thaken,2000,2000,2000,2000
+D,3,frighten,ObjExp,Active,The professor somewhat frightens the student. *****,ugdate,fidnap,deors,thaken,2000,2000,2000,2000
+A,3,admire,SubjExp,Passive,The student is somewhat admired by the professor. *****,ugdate,fidnap,deors,thaken,2000,2000,2000,2000
+B,3,frighten,ObjExp,Passive,The student is somewhat frightened by the professor. *****,ugdate,fidnap,deors,thaken,2000,2000,2000,2000
+B,4,admire,SubjExp,Active,The coach somewhat admires the player. *****,snorls,ebics,,,2000,2000,50,50
+C,4,frighten,ObjExp,Passive,The player is somewhat frightened by the coach. *****,snorls,ebics,,,2000,2000,50,50
+D,4,admire,SubjExp,Passive,The player is somewhat admired by the coach. *****,snorls,ebics,,,2000,2000,50,50
+A,4,frighten,ObjExp,Active,The coach somewhat frightens the player. *****,snorls,ebics,,,2000,2000,50,50
+A,5,adore,SubjExp,Active,The conductor greatly adores the musician. *****,rilica,avency,afain,,2000,2000,2000,50
+B,5,disappoint,ObjExp,Active,The conductor greatly disappoints the musician. *****,rilica,avency,afain,,2000,2000,2000,50
+C,5,adore,SubjExp,Passive,The musician is greatly adored by the conductor. *****,rilica,avency,afain,,2000,2000,2000,50
+D,5,disappoint,ObjExp,Passive,The musician is greatly disappointed by the conductor. *****,rilica,avency,afain,,2000,2000,2000,50
+D,6,adore,SubjExp,Active,The contractor greatly adores the carpenter. *****,allual,topeta,tesdar,nackey,2000,2000,2000,2000
+A,6,disappoint,ObjExp,Passive,The carpenter is greatly disappointed by the contractor. *****,allual,topeta,tesdar,nackey,2000,2000,2000,2000
+B,6,adore,SubjExp,Passive,The carpenter is greatly adored by the contractor. *****,allual,topeta,tesdar,nackey,2000,2000,2000,2000
+C,6,disappoint,ObjExp,Active,The contractor greatly disappoints the carpenter. *****,allual,topeta,tesdar,nackey,2000,2000,2000,2000
+C,7,fancy,SubjExp,Active,The tailor seriously fancies the greengrocer. *****,faress,spoku,,,2000,2000,50,50
+D,7,bore,ObjExp,Active,The tailor seriously bores the greengrocer. *****,faress,spoku,,,2000,2000,50,50
+A,7,fancy,SubjExp,Passive,The greengrocer is seriously fancied by the tailor. *****,faress,spoku,,,2000,2000,50,50
+B,7,bore,ObjExp,Passive,The greengrocer is seriously bored by the tailor. *****,faress,spoku,,,2000,2000,50,50
+B,8,fancy,SubjExp,Active,The guest seriously fancies the bellboy. *****,moldek,ousht,dolksy,,2000,2000,2000,50
+C,8,bore,ObjExp,Passive,The bellboy is seriously bored by the guest. *****,moldek,ousht,dolksy,,2000,2000,2000,50
+D,8,fancy,SubjExp,Passive,The bellboy is seriously fancied by the guest. *****,moldek,ousht,dolksy,,2000,2000,2000,50
+A,8,bore,ObjExp,Active,The guest seriously bores the bellboy. *****,moldek,ousht,dolksy,,2000,2000,2000,50
+A,9,tolerate,SubjExp,Active,The teacher somewhat tolerates the student. *****,oimrig,servar,tabial,arning,2000,2000,2000,2000
+B,9,terrify,ObjExp,Active,The teacher somewhat terrifies the student. *****,oimrig,servar,tabial,arning,2000,2000,2000,2000
+C,9,tolerate,SubjExp,Passive,The student is somewhat tolerated by the teacher. *****,oimrig,servar,tabial,arning,2000,2000,2000,2000
+D,9,terrify,ObjExp,Passive,The student is somewhat terrified by the teacher. *****,oimrig,servar,tabial,arning,2000,2000,2000,2000
+D,10,tolerate,SubjExp,Active,The executive somewhat tolerates the concierge. *****,spusts,abead,,,2000,2000,50,50
+A,10,terrify,ObjExp,Passive,The concierge is somewhat terrified by the executive. *****,spusts,abead,,,2000,2000,50,50
+B,10,tolerate,SubjExp,Passive,The concierge is somewhat tolerated by the executive. *****,spusts,abead,,,2000,2000,50,50
+C,10,terrify,ObjExp,Active,The executive somewhat terrifies the concierge. *****,spusts,abead,,,2000,2000,50,50
+C,11,envy,SubjExp,Active,The celebrity seriously envies the stockbroker. *****,hegacy,bropic,lovud,,2000,2000,2000,50
+D,11,interest,ObjExp,Active,The celebrity seriously interests the stockbroker. *****,hegacy,bropic,lovud,,2000,2000,2000,50
+A,11,envy,SubjExp,Passive,The stockbroker is seriously envied by the celebrity. *****,hegacy,bropic,lovud,,2000,2000,2000,50
+B,11,interest,ObjExp,Passive,The stockbroker is seriously interested by the celebrity. *****,hegacy,bropic,lovud,,2000,2000,2000,50
+B,12,envy,SubjExp,Active,The shopkeeper seriously envies the farmer. *****,lenice,plymie,murm,helong,2000,2000,2000,2000
+C,12,interest,ObjExp,Passive,The farmer is seriously interested by the shopkeeper. *****,lenice,plymie,murm,helong,2000,2000,2000,2000
+D,12,envy,SubjExp,Passive,The farmer is seriously envied by the shopkeeper. *****,lenice,plymie,murm,helong,2000,2000,2000,2000
+A,12,interest,ObjExp,Active,The shopkeeper seriously interests the farmer. *****,lenice,plymie,murm,helong,2000,2000,2000,2000
+A,13,cherish,SubjExp,Active,The father particularly cherishes the daughter. *****,torpse,stovas,,,2000,2000,50,50
+B,13,annoy,ObjExp,Active,The father particularly annoys the daughter. *****,torpse,stovas,,,2000,2000,50,50
+C,13,cherish,SubjExp,Passive,The daughter is particularly cherished by the father. *****,torpse,stovas,,,2000,2000,50,50
+D,13,annoy,ObjExp,Passive,The daughter is particularly annoyed by the father. *****,torpse,stovas,,,2000,2000,50,50
+D,14,cherish,SubjExp,Active,The scientist particularly cherishes the colleague. *****,polony,harent,lorbet,,2000,2000,2000,50
+A,14,annoy,ObjExp,Passive,The colleague is particularly annoyed by the scientist. *****,polony,harent,lorbet,,2000,2000,2000,50
+B,14,cherish,SubjExp,Passive,The colleague is particularly cherished by the scientist. *****,polony,harent,lorbet,,2000,2000,2000,50
+C,14,annoy,ObjExp,Active,The scientist particularly annoys the colleague. *****,polony,harent,lorbet,,2000,2000,2000,50
+C,15,dislike,SubjExp,Active,The stylist seriously dislikes the barber. *****,inramy,therns,ildent,oggly,2000,2000,2000,2000
+D,15,amaze,ObjExp,Active,The stylist seriously amazes the barber. *****,inramy,therns,ildent,oggly,2000,2000,2000,2000
+A,15,dislike,SubjExp,Passive,The barber is seriously disliked by the stylist. *****,inramy,therns,ildent,oggly,2000,2000,2000,2000
+B,15,amaze,ObjExp,Passive,The barber is seriously amazed by the stylist. *****,inramy,therns,ildent,oggly,2000,2000,2000,2000
+B,16,dislike,SubjExp,Active,The artist seriously dislikes the painter. *****,nubed,dingla,,,2000,2000,50,50
+C,16,amaze,ObjExp,Passive,The painter is seriously amazed by the artist. *****,nubed,dingla,,,2000,2000,50,50
+D,16,dislike,SubjExp,Passive,The painter is seriously disliked by the artist. *****,nubed,dingla,,,2000,2000,50,50
+A,16,amaze,ObjExp,Active,The artist seriously amazes the painter. *****,nubed,dingla,,,2000,2000,50,50
+A,17,loathe,SubjExp,Active,The cop strongly loathes the thief. *****,sharok,gercer,dovern,,2000,2000,2000,50
+B,17,irritate,ObjExp,Active,The cop strongly irritates the thief. *****,sharok,gercer,dovern,,2000,2000,2000,50
+C,17,loathe,SubjExp,Passive,The thief is strongly loathed by the cop. *****,sharok,gercer,dovern,,2000,2000,2000,50
+D,17,irritate,ObjExp,Passive,The thief is strongly irritated by the cop. *****,sharok,gercer,dovern,,2000,2000,2000,50
+D,18,loathe,SubjExp,Active,The king strongly loathes the minister. *****,erpest,adpits,bisky,roberf,2000,2000,2000,2000
+A,18,irritate,ObjExp,Passive,The minister is strongly irritated by the king. *****,erpest,adpits,bisky,roberf,2000,2000,2000,2000
+B,18,loathe,SubjExp,Passive,The minister is strongly loathed by the king. *****,erpest,adpits,bisky,roberf,2000,2000,2000,2000
+C,18,irritate,ObjExp,Active,The king strongly irritates the minister. *****,erpest,adpits,bisky,roberf,2000,2000,2000,2000
+C,19,dread,SubjExp,Active,The employee somewhat dreads the boss. *****,alduce,tobots,,,2000,2000,50,50
+D,19,depress,ObjExp,Active,The employee somewhat depresses the boss. *****,alduce,tobots,,,2000,2000,50,50
+A,19,dread,SubjExp,Passive,The boss is somewhat dreaded by the employee. *****,alduce,tobots,,,2000,2000,50,50
+B,19,depress,ObjExp,Passive,The boss is somewhat depressed by the employee. *****,alduce,tobots,,,2000,2000,50,50
+B,20,dread,SubjExp,Active,The journalist somewhat dreads the editor. *****,sluism,narmly,setip,,2000,2000,2000,50
+C,20,depress,ObjExp,Passive,The editor is somewhat depressed by the journalist. *****,sluism,narmly,setip,,2000,2000,2000,50
+D,20,dread,SubjExp,Passive,The editor is somewhat dreaded by the journalist. *****,sluism,narmly,setip,,2000,2000,2000,50
+A,20,depress,ObjExp,Active,The journalist somewhat depresses the editor. *****,sluism,narmly,setip,,2000,2000,2000,50
+A,21,detest,SubjExp,Active,The monk greatly detests the butcher. *****,bordid,oublay,danuge,flazer,2000,2000,2000,2000
+B,21,intrigue,ObjExp,Active,The monk greatly intrigues the butcher. *****,bordid,oublay,danuge,flazer,2000,2000,2000,2000
+C,21,detest,SubjExp,Passive,The butcher is greatly detested by the monk. *****,bordid,oublay,danuge,flazer,2000,2000,2000,2000
+D,21,intrigue,ObjExp,Passive,The butcher is greatly intrigued by the monk. *****,bordid,oublay,danuge,flazer,2000,2000,2000,2000
+D,22,detest,SubjExp,Active,The businessman greatly detests the auditor. *****,meps,elging,,,2000,2000,50,50
+A,22,intrigue,ObjExp,Passive,The auditor is greatly intrigued by the businessman. *****,meps,elging,,,2000,2000,50,50
+B,22,detest,SubjExp,Passive,The auditor is greatly detested by the businessman. *****,meps,elging,,,2000,2000,50,50
+C,22,intrigue,ObjExp,Active,The businessman greatly intrigues the auditor. *****,meps,elging,,,2000,2000,50,50
+C,23,revere,SubjExp,Active,The reviewer strongly reveres the author. *****,fribal,turib,gepart,,2000,2000,2000,50
+D,23,repulse,ObjExp,Active,The reviewer strongly repulses the author. *****,fribal,turib,gepart,,2000,2000,2000,50
+A,23,revere,SubjExp,Passive,The author is strongly revered by the reviewer. *****,fribal,turib,gepart,,2000,2000,2000,50
+B,23,repulse,ObjExp,Passive,The author is strongly repulsed by the reviewer. *****,fribal,turib,gepart,,2000,2000,2000,50
+B,24,revere,SubjExp,Active,The stonemason strongly reveres the carpenter. *****,austif,blural,lorro,fisits,2000,2000,2000,2000
+C,24,repulse,ObjExp,Passive,The carpenter is strongly repulsed by the stonemason. *****,austif,blural,lorro,fisits,2000,2000,2000,2000
+D,24,revere,SubjExp,Passive,The carpenter is strongly revered by the stonemason. *****,austif,blural,lorro,fisits,2000,2000,2000,2000
+A,24,repulse,ObjExp,Active,The stonemason strongly repulses the carpenter. *****,austif,blural,lorro,fisits,2000,2000,2000,2000
+A,25,idolize,SubjExp,Active,The reporter particularly idolizes the priest. *****,pruith,beiga,,,2000,2000,50,50
+B,25,unnerve,ObjExp,Active,The reporter particularly unnerves the priest. *****,pruith,beiga,,,2000,2000,50,50
+C,25,idolize,SubjExp,Passive,The priest is particularly idolized by the reporter. *****,pruith,beiga,,,2000,2000,50,50
+D,25,unnerve,ObjExp,Passive,The priest is particularly unnerved by the reporter. *****,pruith,beiga,,,2000,2000,50,50
+D,26,idolize,SubjExp,Active,The millionaire particularly idolizes the butler. *****,etsued,plorn,mazu,,2000,2000,2000,50
+A,26,unnerve,ObjExp,Passive,The butler is particularly unnerved by the millionaire. *****,etsued,plorn,mazu,,2000,2000,2000,50
+B,26,idolize,SubjExp,Passive,The butler is particularly idolized by the millionaire. *****,etsued,plorn,mazu,,2000,2000,2000,50
+C,26,unnerve,ObjExp,Active,The millionaire particularly unnerves the butler. *****,etsued,plorn,mazu,,2000,2000,2000,50
+C,27,distrust,SubjExp,Active,The artist strongly distrusts the scientist. *****,bodule,hoopka,latpin,expuct,2000,2000,2000,2000
+D,27,perturb,ObjExp,Active,The artist strongly perturbs the scientist. *****,bodule,hoopka,latpin,expuct,2000,2000,2000,2000
+A,27,distrust,SubjExp,Passive,The scientist is strongly distrusted by the artist. *****,bodule,hoopka,latpin,expuct,2000,2000,2000,2000
+B,27,perturb,ObjExp,Passive,The scientist is strongly perturbed by the artist. *****,bodule,hoopka,latpin,expuct,2000,2000,2000,2000
+B,28,distrust,SubjExp,Active,The guitarist strongly distrusts the drummer. *****,audtie,rivic,,,2000,2000,50,50
+C,28,perturb,ObjExp,Passive,The drummer is strongly perturbed by the guitarist. *****,audtie,rivic,,,2000,2000,50,50
+D,28,distrust,SubjExp,Passive,The drummer is strongly distrusted by the guitarist. *****,audtie,rivic,,,2000,2000,50,50
+A,28,perturb,ObjExp,Active,The guitarist strongly perturbs the drummer. *****,audtie,rivic,,,2000,2000,50,50
+A,29,esteem,SubjExp,Active,The judge greatly esteems the lawyer. *****,jigsly,toddre,furvy,,2000,2000,2000,50
+B,29,appall,ObjExp,Active,The judge greatly appalls the lawyer. *****,jigsly,toddre,furvy,,2000,2000,2000,50
+C,29,esteem,SubjExp,Passive,The lawyer is greatly esteemed by the judge. *****,jigsly,toddre,furvy,,2000,2000,2000,50
+D,29,appall,ObjExp,Passive,The lawyer is greatly appalled by the judge. *****,jigsly,toddre,furvy,,2000,2000,2000,50
+D,30,esteem,SubjExp,Active,The gardener greatly esteems the florist. *****,buned,gulbs,sordes,glybol,2000,2000,2000,2000
+A,30,appall,ObjExp,Passive,The florist is greatly appalled by the gardener. *****,buned,gulbs,sordes,glybol,2000,2000,2000,2000
+B,30,esteem,SubjExp,Passive,The florist is greatly esteemed by the gardener. *****,buned,gulbs,sordes,glybol,2000,2000,2000,2000
+C,30,appall,ObjExp,Active,The gardener greatly appalls the florist. *****,buned,gulbs,sordes,glybol,2000,2000,2000,2000
+C,31,respect,SubjExp,Active,The consultant seriously respects the client. *****,pucts,milak,,,2000,2000,50,50
+D,31,impress,ObjExp,Active,The consultant seriously impresses the client. *****,pucts,milak,,,2000,2000,50,50
+A,31,respect,SubjExp,Passive,The client is seriously respected by the consultant. *****,pucts,milak,,,2000,2000,50,50
+B,31,impress,ObjExp,Passive,The client is seriously impressed by the consultant. *****,pucts,milak,,,2000,2000,50,50
+B,32,respect,SubjExp,Active,The rock star seriously respects the agent. *****,gasmab,urcle,eldur,,2000,2000,2000,50
+C,32,impress,ObjExp,Passive,The agent is seriously impressed by the rock star. *****,gasmab,urcle,eldur,,2000,2000,2000,50
+D,32,respect,SubjExp,Passive,The agent is seriously respected by the rock star. *****,gasmab,urcle,eldur,,2000,2000,2000,50
+A,32,impress,ObjExp,Active,The rock star seriously impresses the agent. *****,gasmab,urcle,eldur,,2000,2000,2000,50
+A,33,kick,AgTh,Active,The wrestler accidentally kicked the referee. *****,linurs,squing,furmur,dalsam,2000,2000,2000,2000
+B,33,kick,AgTh,Passive,The referee was accidentally kicked by the wrestler. *****,linurs,squing,furmur,dalsam,2000,2000,2000,2000
+C,33,kick,AgTh,Active,The wrestler accidentally kicked the referee. *****,linurs,squing,furmur,dalsam,2000,2000,2000,2000
+D,33,kick,AgTh,Passive,The referee was accidentally kicked by the wrestler. *****,linurs,squing,furmur,dalsam,2000,2000,2000,2000
+D,34,resist,AgTh,Active,The protestor strongly resisted the officer. *****,gerove,asount,,,2000,2000,50,50
+A,34,resist,AgTh,Passive,The officer was strongly resisted by the protestor. *****,gerove,asount,,,2000,2000,50,50
+B,34,resist,AgTh,Active,The protestor strongly resisted the officer. *****,gerove,asount,,,2000,2000,50,50
+C,34,resist,AgTh,Passive,The officer was strongly resisted by the protestor. *****,gerove,asount,,,2000,2000,50,50
+C,35,interview,AgTh,Active,The columnist excitedly interviewed the celebrity. *****,nabre,tersia,raimy,,2000,2000,2000,50
+D,35,interview,AgTh,Passive,The celebrity was excitedly interviewed by the columnist. *****,nabre,tersia,raimy,,2000,2000,2000,50
+A,35,interview,AgTh,Active,The columnist excitedly interviewed the celebrity. *****,nabre,tersia,raimy,,2000,2000,2000,50
+B,35,interview,AgTh,Passive,The celebrity was excitedly interviewed by the columnist. *****,nabre,tersia,raimy,,2000,2000,2000,50
+B,36,review,AgTh,Active,The critic thoroughly reviewed the playwright. *****,clyke,atcher,edcept,irvest,2000,2000,2000,2000
+C,36,review,AgTh,Passive,The playwright was thoroughly reviewed by the critic. *****,clyke,atcher,edcept,irvest,2000,2000,2000,2000
+D,36,review,AgTh,Active,The critic thoroughly reviewed the playwright. *****,clyke,atcher,edcept,irvest,2000,2000,2000,2000
+A,36,review,AgTh,Passive,The playwright was thoroughly reviewed by the critic. *****,clyke,atcher,edcept,irvest,2000,2000,2000,2000
+A,37,telephone,AgTh,Active,The retiree frequently telephoned the receptionist. *****,guled,arthem,,,2000,2000,50,50
+B,37,telephone,AgTh,Passive,The receptionist was frequently telephoned by the retiree. *****,guled,arthem,,,2000,2000,50,50
+C,37,telephone,AgTh,Active,The retiree frequently telephoned the receptionist. *****,guled,arthem,,,2000,2000,50,50
+D,37,telephone,AgTh,Passive,The receptionist was frequently telephoned by the retiree. *****,guled,arthem,,,2000,2000,50,50
+D,38,analyze,AgTh,Active,The psychiatrist thoroughly analyzed the patient. *****,edich,phouse,jabels,,2000,2000,2000,50
+A,38,analyze,AgTh,Passive,The patient was thoroughly analyzed by the psychiatrist. *****,edich,phouse,jabels,,2000,2000,2000,50
+B,38,analyze,AgTh,Active,The psychiatrist thoroughly analyzed the patient. *****,edich,phouse,jabels,,2000,2000,2000,50
+C,38,analyze,AgTh,Passive,The patient was thoroughly analyzed by the psychiatrist. *****,edich,phouse,jabels,,2000,2000,2000,50
+C,39,educate,AgTh,Active,The blacksmith thoroughly educated the apprentice. *****,bloosh,puffaw,mescat,incirs,2000,2000,2000,2000
+D,39,educate,AgTh,Passive,The apprentice was thoroughly educated by the blacksmith. *****,bloosh,puffaw,mescat,incirs,2000,2000,2000,2000
+A,39,educate,AgTh,Active,The blacksmith thoroughly educated the apprentice. *****,bloosh,puffaw,mescat,incirs,2000,2000,2000,2000
+B,39,educate,AgTh,Passive,The apprentice was thoroughly educated by the blacksmith. *****,bloosh,puffaw,mescat,incirs,2000,2000,2000,2000
+B,40,inspect,AgTh,Active,The auditor frequently inspected the accountant. *****,clifle,clucco,,,2000,2000,50,50
+C,40,inspect,AgTh,Passive,The accountant was frequently inspected by the auditor. *****,clifle,clucco,,,2000,2000,50,50
+D,40,inspect,AgTh,Active,The auditor frequently inspected the accountant. *****,clifle,clucco,,,2000,2000,50,50
+A,40,inspect,AgTh,Passive,The accountant was frequently inspected by the auditor. *****,clifle,clucco,,,2000,2000,50,50
+A,41,revive,AgTh,Active,The firefighter quickly revived the victim. *****,shobia,snoofy,ginews,,2000,2000,2000,50
+B,41,revive,AgTh,Passive,The victim was quickly revived by the firefighter. *****,shobia,snoofy,ginews,,2000,2000,2000,50
+C,41,revive,AgTh,Active,The firefighter quickly revived the victim. *****,shobia,snoofy,ginews,,2000,2000,2000,50
+D,41,revive,AgTh,Passive,The victim was quickly revived by the firefighter. *****,shobia,snoofy,ginews,,2000,2000,2000,50
+D,42,endorse,AgTh,Active,The manager excitedly endorsed the politician. *****,spince,pluent,metoed,lummar,2000,2000,2000,2000
+A,42,endorse,AgTh,Passive,The politician was excitedly endorsed by the manager. *****,spince,pluent,metoed,lummar,2000,2000,2000,2000
+B,42,endorse,AgTh,Active,The manager excitedly endorsed the politician. *****,spince,pluent,metoed,lummar,2000,2000,2000,2000
+C,42,endorse,AgTh,Passive,The politician was excitedly endorsed by the manager. *****,spince,pluent,metoed,lummar,2000,2000,2000,2000
+C,43,sketch,AgTh,Active,The designer quickly sketched the supermodel. *****,hodes,inmoft,,,2000,2000,50,50
+D,43,sketch,AgTh,Passive,The supermodel was quickly sketched by the designer. *****,hodes,inmoft,,,2000,2000,50,50
+A,43,sketch,AgTh,Active,The designer quickly sketched the supermodel. *****,hodes,inmoft,,,2000,2000,50,50
+B,43,sketch,AgTh,Passive,The supermodel was quickly sketched by the designer. *****,hodes,inmoft,,,2000,2000,50,50
+B,44,censor,AgTh,Active,The dictator strongly censored the dissident. *****,olbits,teploy,gouma,,2000,2000,2000,50
+C,44,censor,AgTh,Passive,The dissident was strongly censored by the dictator. *****,olbits,teploy,gouma,,2000,2000,2000,50
+D,44,censor,AgTh,Active,The dictator strongly censored the dissident. *****,olbits,teploy,gouma,,2000,2000,2000,50
+A,44,censor,AgTh,Passive,The dissident was strongly censored by the dictator. *****,olbits,teploy,gouma,,2000,2000,2000,50
+A,45,anoint,AgTh,Active,The priest solemnly anointed the baby. *****,thosen,foimle,tualms,guala,2000,2000,2000,2000
+B,45,anoint,AgTh,Passive,The baby was solemnly anointed by the priest. *****,thosen,foimle,tualms,guala,2000,2000,2000,2000
+C,45,anoint,AgTh,Active,The priest solemnly anointed the baby. *****,thosen,foimle,tualms,guala,2000,2000,2000,2000
+D,45,anoint,AgTh,Passive,The baby was solemnly anointed by the priest. *****,thosen,foimle,tualms,guala,2000,2000,2000,2000
+D,46,parry,AgTh,Active,The knight quickly parried the assassin. *****,beords,godry,,,2000,2000,50,50
+A,46,parry,AgTh,Passive,The assassin was quickly parried by the knight. *****,beords,godry,,,2000,2000,50,50
+B,46,parry,AgTh,Active,The knight quickly parried the assassin. *****,beords,godry,,,2000,2000,50,50
+C,46,parry,AgTh,Passive,The assassin was quickly parried by the knight. *****,beords,godry,,,2000,2000,50,50
+C,47,inaugurate,AgTh,Active,The judge solemnly inaugurated the governor. *****,ettail,grocus,lancos,,2000,2000,2000,50
+D,47,inaugurate,AgTh,Passive,The governor was solemnly inaugurated by the judge. *****,ettail,grocus,lancos,,2000,2000,2000,50
+A,47,inaugurate,AgTh,Active,The judge solemnly inaugurated the governor. *****,ettail,grocus,lancos,,2000,2000,2000,50
+B,47,inaugurate,AgTh,Passive,The governor was solemnly inaugurated by the judge. *****,ettail,grocus,lancos,,2000,2000,2000,50
+B,48,interrupt,AgTh,Active,The chairperson accidentally interrupted the delegate. *****,talate,melves,slaxen,gatrix,2000,2000,2000,2000
+C,48,interrupt,AgTh,Passive,The delegate was accidentally interrupted by the chairperson. *****,talate,melves,slaxen,gatrix,2000,2000,2000,2000
+D,48,interrupt,AgTh,Active,The chairperson accidentally interrupted the delegate. *****,talate,melves,slaxen,gatrix,2000,2000,2000,2000
+A,48,interrupt,AgTh,Passive,The delegate was accidentally interrupted by the chairperson. *****,talate,melves,slaxen,gatrix,2000,2000,2000,2000
