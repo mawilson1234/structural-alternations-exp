@@ -86,21 +86,30 @@ PennController.Template("practice.csv", variable => ["trial_prac",
                 .center()
                 .settings.css("font-size", "2em")
                 .settings.size(240, 48)
-                .once()
                 .print()
-                .wait()
-                .remove()
             ,
             
             newButton("YYYY")
                 .center()
                 .settings.css("font-size", "2em")
                 .settings.size(240, 48)
+                .print()
+            ,
+            
+            newSelector("position")
+                .add(getButton("XXXX"), getButton("YYYY"))
+                .shuffle()
                 .once()
+                .wait()
+                .log()
+            ,
+            
+            newButton("Next")
+                .center()
+                .settings.css("font-size", "2em")
+                .settings.size(240, 48)
                 .print()
                 .wait()
-                .remove()
-            ,
         )
         .log("Item", variable.item)
         .log("Sentence", variable.sentence)
