@@ -1,20 +1,20 @@
 PennController.ResetPrefix(null) // Shorten command names (keep this line here)
-// PennController.DebugOff()
+// DebugOff()
 
 SetCounter("setcounter")
 
 // var counterOverride = 0
 
 Sequence(
-		"setcounter", 
-		// "intro", "consent", "recording", "instruction", 
-		randomize("trial_prac"), 
-		// "warn", "instruction2", 
-		//rshuffle("pretrial"), 
-		//rshuffle("trial"), 
-		// "feedback", 
-		SendResults(), 
-		"bye"
+	"setcounter", 
+	// "intro", "consent", "recording", "instruction", 
+	randomize("trial_prac"), 
+	// "warn", "instruction2", 
+	//rshuffle("pretrial"), 
+	//rshuffle("trial"), 
+	// "feedback", 
+	SendResults(), 
+	"bye"
 )
 
 /*newTrial( "intro",
@@ -81,7 +81,7 @@ Template("practice.csv", variable =>
 		newVar("sentence", variable.sentence)
 			.log()
 		,
-		// are we reversing the order of the placeholders?
+		// reverse order of placeholders 50% of the time
 		newFunction("XXXX_last", () => Math.random() <= 0.5)
 			.call()
 			.test.is(1)
@@ -95,7 +95,7 @@ Template("practice.csv", variable =>
 					)
 			)
 		,
-		// display the sentence
+		
 		newText("sentence")
 			.before(newText("p", "<p>"))
 			.text(getVar("sentence"))
@@ -178,7 +178,29 @@ newTrial("instruction2",
 
 Template("pretrial.csv", variable => 
 	newTrial("pretrial",
-		newText("sentence", "<p>" + variable.sentence + "</p>")
+		// store the sentence in a variable so we can modify it
+		newVar("sentence", variable.sentence)
+			.log()
+		,
+		// reverse order of placeholders 50% of the time
+		newFunction("XXXX_last", () => Math.random() <= 0.5)
+			.call()
+			.test.is(1)
+			.success(
+				getVar("sentence")
+					.set(
+						v => v
+							.replace("XXXX", "ZZZZ")
+							.replace("YYYY", "XXXX")
+							.replace("ZZZZ", "YYYY")
+					)
+			)
+		,
+		
+		newText("sentence")
+			.before(newText("p", "<p>"))
+			.text(getVar("sentence"))
+			.after(newText("close_p", "</p>"))
 			.center()
 			.print()
 		,
@@ -197,8 +219,8 @@ Template("pretrial.csv", variable =>
 		,
 		
 		newCanvas("buttons", 200, 50)
-			.add(              0, 0, newButton("XXXX").selector("position") )
-			.add("right at 100%", 0, newButton("YYYY").selector("position") )
+			.add(              0, 0, newButton("XXXX").selector("position"))
+			.add("right at 100%", 0, newButton("YYYY").selector("position"))
 			.center()
 			.print()
 		,
@@ -219,16 +241,38 @@ Template("pretrial.csv", variable =>
 			.print()
 			.wait()
 	)
-	.log("item", variable.item)
-	.log("sentence", variable.sentence)
-	.log("word", variable.word)
-	.log("args_group", variable.args_group)
+	.log("group"		, variable.group)
+	.log("item"			, variable.item)
+	.log("word"			, variable.word)
+	.log("args_group"	, variable.args_group)
 	.log("sentence_type", variable.sentence_type)
 )
 
 Template("stim.csv", variable => 
 	newTrial("trial",
-		newText("sentence", "<p>" + variable.sentence + "</p>")
+		// store the sentence in a variable so we can modify it
+		newVar("sentence", variable.sentence)
+			.log()
+		,
+		// reverse order of placeholders 50% of the time
+		newFunction("XXXX_last", () => Math.random() <= 0.5)
+			.call()
+			.test.is(1)
+			.success(
+				getVar("sentence")
+					.set(
+						v => v
+							.replace("XXXX", "ZZZZ")
+							.replace("YYYY", "XXXX")
+							.replace("ZZZZ", "YYYY")
+					)
+			)
+		,
+		
+		newText("sentence")
+			.before(newText("p", "<p>"))
+			.text(getVar("sentence"))
+			.after(newText("close_p", "</p>"))
 			.center()
 			.print()
 		,
@@ -247,8 +291,8 @@ Template("stim.csv", variable =>
 		,
 		
 		newCanvas("buttons", 200, 50)
-			.add(              0, 0, newButton("XXXX").selector("position") )
-			.add("right at 100%", 0, newButton("YYYY").selector("position") )
+			.add(              0, 0, newButton("XXXX").selector("position"))
+			.add("right at 100%", 0, newButton("YYYY").selector("position"))
 			.center()
 			.print()
 		,
@@ -269,14 +313,12 @@ Template("stim.csv", variable =>
 			.print()
 			.wait()
 	)
-	.log("group", variable.group)
-	.log("item", variable.item)
-	.log("sentence", variable.sentence)
-	.log("word", variable.word)
-	.log("args_group", variable.args_group)
+	.log("group"		, variable.group)
+	.log("item"			, variable.item)
+	.log("word"			, variable.word)
+	.log("args_group"	, variable.args_group)
 	.log("sentence_type", variable.sentence_type)
 )
-
 
 PennController("feedback",
 	newText("feedback_instruction",
