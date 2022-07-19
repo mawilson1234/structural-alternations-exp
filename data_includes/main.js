@@ -150,10 +150,6 @@ PennController.Template("pretrial.csv", variable => ["pretrial",
         
         "PennController", PennController(
         
-            newMediaRecorder(variable.Item, "audio")
-                .record()
-            ,
-            
             newAudio("click_prac", "click.wav")
                 .play()
                 .wait()
@@ -255,10 +251,6 @@ PennController.Template("stim.csv", variable => ["trial",
         
         "PennController", PennController(
 
-            newMediaRecorder(variable.Item, "audio")
-                .record()
-            ,
-            
             newAudio("click", "click.wav")
                 .play()
                 .wait()
