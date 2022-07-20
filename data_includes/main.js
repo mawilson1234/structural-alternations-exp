@@ -189,7 +189,7 @@ Template("practice.csv", variable =>
 			.print(getText("container"))
 		,
 		
-		newTimer("wait", variable.sentence.split(" ").length)
+		newTimer("wait", variable.sentence.split(" ").length * 250)
 			.start()
 			.wait()
 		,
