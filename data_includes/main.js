@@ -169,6 +169,12 @@ Template("practice.csv", variable =>
 			.print()
 		,
 		
+		newText("firstbox",
+				'<div style="border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;</div>')
+			.center()
+			.print()
+		,
+		
 		newText("postsentence", ".")
 			.center()
 		,
