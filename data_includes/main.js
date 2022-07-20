@@ -153,21 +153,41 @@ Template("practice.csv", variable =>
 			.start()
 		,
 		
-		newText("sentence", variable.sentence)
+		newText("sentence", "The ")
+			.center()
 			.print()
 		,
 		
+		newText("firstbox",
+				'<div style="border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;</div>')
+			.center()
+			.print()
+		,
+		
+		newText("midsentence", " has always blorked the ")
+			.center()
+			.print()
+		,
+		
+		newText("postsentence", ".")
+			.center()
+		,
+		
 		newText("word", variable.word)
+			.center()
 			.print()
 		,
 		
 		newDragDrop("sentence", "bungee")
 			.log()
-			.addDrop(getText("sentence"))
+			.addDrop( 
+				getText("firstbox"),  
+				getText("secondbox"), 
+			)
 			.addDrag(getText("word"))
-			.offset('0.5em', '0em', getText("sentence"))
+			.offset('0.5em', '0em', getText("firstbox"), getText("secondbox"))
 			.wait(
-				self.test.dropped(getText("sentence"))	
+				self.test.dropped(getText("firstbox"), getText("secondbox"))	
 			)
 		,
 		
