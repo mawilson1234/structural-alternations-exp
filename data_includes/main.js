@@ -190,6 +190,11 @@ Template("practice.csv", variable =>
 		,
 		
 		newText("word", "word")
+			.css({
+				border: '1px solid #000',
+				width: '4em'
+				'padding-top': '5px'
+			})
 			.center()
 			.print()
 		,
@@ -212,7 +217,7 @@ Template("practice.csv", variable =>
 			.print()
 		,
 		
-		newButton("ready", "Ready")
+		newButton("next", "Next")
 			.css("margin-top", "2em")
 			.center()
 			.print()
