@@ -161,6 +161,7 @@ Template("practice.csv", variable =>
 			.add("right at 100%", 0, getText("secondbox"))
 			.center()
 			.print()
+		,
 		
 		newText("word", "word")
 			.print()
