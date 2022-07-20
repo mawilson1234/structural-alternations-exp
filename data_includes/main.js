@@ -175,9 +175,7 @@ Template("practice.csv", variable =>
 			)
 			.addDrag(getText("word"))
 			.offset('0.5em', '0em', getText("firstbox"), getText("secondbox"))
-			.wait(
-				self.test.dropped(getText("firstbox"), getText("secondbox"))	
-			)
+			.wait()
 		,
 		
 		newButton("ready", "Ready")
