@@ -164,7 +164,7 @@ Template("practice.csv", variable =>
 				border: '1px solid #000', 
 				width: '4em', 
 				position: 'relative', 
-				'padding-top': '5px',
+				'padding': '5px',
 				top: '-3px'
 			})
 			.print(getText("container"))
@@ -179,7 +179,7 @@ Template("practice.csv", variable =>
 				border: '1px solid #000', 
 				width: '4em', 
 				position: 'relative', 
-				'padding-top': '5px',
+				'padding': '5px',
 				top: '-3px'
 			})
 			.print(getText("container"))
@@ -193,7 +193,7 @@ Template("practice.csv", variable =>
 			.css({
 				border: '1px solid #000',
 				width: '4em',
-				'padding-top': '5px'
+				'padding': '1px'
 			})
 			.center()
 			.print()
