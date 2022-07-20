@@ -159,6 +159,7 @@ Template("practice.csv", variable =>
 		newCanvas("boxes")
 			.add(			   0, 0, getText("firstbox"))
 			.add("right at 100%", 0, getText("secondbox"))
+			.add("right at 100%", 0, newText("testing"))
 			.center()
 			.print()
 		,
