@@ -156,6 +156,12 @@ newTrial("instruction",
 
 Template("practice.csv", variable => {
 	var word = variable['word_' + Math.floor(Math.random() * 12)];
+	var presentence = variable.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
+	var midsentence = variable.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0];
+	var postsentence = '&nbsp;' + variable.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2];
+	var first_arg = variable.sentence.match(/\[(su|o)bj\]/g)[0];
+	var second_arg = variable.sentence.match(/\[(su|o)bj\]/g)[1];
+	
 	return newTrial("trial_prac",		
 		newText("container", "")
 			.center()
@@ -164,25 +170,25 @@ Template("practice.csv", variable => {
 			.print()
 		,
 		// get the first part of the sentence (before XXXX)
-		newText(variable.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;')
+		newText(presentence)
 			.print(getText("container"))
 		,
 		
-		newText(variable.sentence.match(/\[(su|o)bj\]/g)[0], " ")
+		newText(first_arg, " ")
 			.css(blank_style)
 			.print(getText("container"))
 		,
 		// get the middle part of the sentence (between XXXX and YYYY)
-		newText('&nbsp;' + variable.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;')
+		newText(midsentence)
 			.print(getText("container"))
 		,
 		
-		newText(variable.sentence.match(/\[(su|o)bj\]/g)[1], " ")
+		newText(second_arg, " ")
 			.css(blank_style)
 			.print(getText("container"))
 		,
 		// get the final part of the sentence (after YYYY)
-		newText('&nbsp;' + variable.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2])
+		newText(postsentence)
 			.print(getText("container"))
 		,
 		
@@ -217,19 +223,19 @@ Template("practice.csv", variable => {
 		newDragDrop("dd", "bungee")
 			.log("all")
 			.addDrop(
-				getText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[0]), 
-				getText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[1])
+				getText(first_arg), 
+				getText(second_arg)
 			)
 			.addDrag(getText("word"))
 			.offset('0.5em', '0.1em', 
-				getText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[0]), 
-				getText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[1])
+				getText(first_arg), 
+				getText(second_arg)
 			)
 			.wait()
 			.removeDrag(getText("word"))
 			.removeDrop(
-				getText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[0]), 
-				getText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[1])
+				getText(first_arg), 
+				getText(second_arg)
 			)
 		,
 		
