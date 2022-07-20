@@ -163,7 +163,7 @@ Template("practice.csv", variable =>
 				width: '4em', 
 				position: 'relative', 
 				'padding-top': '5px',
-				'padding-bottom': '5px'
+				top: '-2px'
 			})
 			.print(getText("container"))
 		,
@@ -178,7 +178,7 @@ Template("practice.csv", variable =>
 				width: '4em', 
 				position: 'relative', 
 				'padding-top': '5px',
-				'padding-bottom': '5px'
+				top: '-2px'
 			})
 			.print(getText("container"))
 		,
