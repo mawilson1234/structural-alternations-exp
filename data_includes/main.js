@@ -225,7 +225,7 @@ Template("practice.csv", variable =>
 			)
 			.addDrag(getText("word"))
 			.offset('0.5em', '0.1em', 
-				getText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[0], 
+				getText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[0]), 
 				getText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[1])
 			)
 			.wait()
