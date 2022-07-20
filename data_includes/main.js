@@ -203,20 +203,17 @@ Template("practice.csv", variable =>
 			.remove()
 		,
 		
-		newVar("word_num", Math.floor(Math.random() * 12))
-		,
-		
-		newVar("word_cont", variable['word_' + getVar("word_num")])
-			.log()
-		,
-		
-		newText("word", variable['word_' + getVar("word_num")])
+		newText("word", variable['word_' + Math.floor(Math.random() * 12)])
 			.css({
 				border: '1px solid #000',
 				padding: '3px'
 			})
 			.center()
 			.print()
+		,
+		
+		newVar("word_cont", getText("word"))
+			.log()
 		,
 		
 		newMouseTracker("mouse")
