@@ -210,6 +210,7 @@ Template("practice.csv", variable =>
 			.wait()
 			.removeDrag(getText("word"))
 			.removeDrop(getText("firstbox"), getText("secondbox"))
+			.callback(getText("word").css())
 		,
 		
 		newText("p", "<p /><p />")
