@@ -159,7 +159,7 @@ Template("practice.csv", variable =>
 		newText("sentence1", "Should the word go here ")
 		,
 		
-		newText("sentence2", " or ")
+		newText("sentence2", " or here ")
 		,
 		
 		newText("sentence3", "?")
