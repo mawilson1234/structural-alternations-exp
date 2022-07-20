@@ -199,6 +199,11 @@ Template("practice.csv", variable =>
 			.print()
 		,
 		
+		newMouseTracker("mouse")
+			.log()
+			.start()
+		,
+		
 		newDragDrop("dd", "bungee")
 			.log("all")
 			.addDrop( 
@@ -212,13 +217,12 @@ Template("practice.csv", variable =>
 			.removeDrop(getText("firstbox"), getText("secondbox"))
 		,
 		
-		getText("word")
-			.css({border: '', width: '', 'padding-top': ''})
+		getMouseTracker("mouse")
+			.stop()
 		,
 		
-		newText("p", "<p /><p />")
-			.center()
-			.print()
+		getText("word")
+			.css({border: '', width: '', 'padding-top': ''})
 		,
 		
 		newButton("next", "Next")
