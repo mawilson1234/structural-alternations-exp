@@ -219,13 +219,13 @@ Template("practice.csv", variable => {
 			.log()
 		,
 		
-		newFunction(async ()=> {
+		/*newFunction(async ()=> {
 			await new Promise(r=>getText("word")._element.jQueryContainer.mousedown(r));
 			getMouseTracker("mouse").start()._runPromises();
 		})
 			.call()
 		,
-		
+		*/
 		newDragDrop("dd", "bungee")
 			.log("all")
 			.addDrop(
