@@ -189,9 +189,18 @@ Template("practice.csv", variable =>
 			.print(getText("container"))
 		,
 		
+		newText("placeholder", "&mdash;")
+			.center()
+			.print()
+		,
+		
 		newTimer("wait", variable.sentence.split(" ").length * 250)
 			.start()
 			.wait()
+		,
+		
+		getText("placeholder")
+			.remove()
 		,
 		
 		newText("word", variable.word)
