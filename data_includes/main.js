@@ -168,7 +168,7 @@ Template("practice.csv", variable => {
 			.print(getText("container"))
 		,
 		
-		newText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[0], " ")
+		newText(variable.sentence.match(/\[(su|o)bj\]/g)[0], " ")
 			.css(blank_style)
 			.print(getText("container"))
 		,
@@ -177,7 +177,7 @@ Template("practice.csv", variable => {
 			.print(getText("container"))
 		,
 		
-		newText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[1], " ")
+		newText(variable.sentence.match(/\[(su|o)bj\]/g)[1], " ")
 			.css(blank_style)
 			.print(getText("container"))
 		,
