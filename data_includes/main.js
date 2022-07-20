@@ -183,16 +183,7 @@ Template("practice.csv", variable =>
 			.print()
 			.wait()
 			.remove()
-		,
-		
-		getMouseTracker("mouse")
-			.stop()
 	)
-	.log("sentence"		, variable.sentence)
-	.log("item"			, variable.item)
-	.log("word"			, variable.word)
-	.log("args_group"	, variable.args_group)
-	.log("sentence_type", variable.sentence_type)
 )
 
 
