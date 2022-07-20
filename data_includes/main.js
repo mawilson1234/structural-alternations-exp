@@ -4,10 +4,10 @@ PennController.ResetPrefix(null) // Shorten command names (keep this line here)
 SetCounter("setcounter")
 
 var blank_style = {
-	border: '1px solid #000',  
+	border: '1px solid #000', 
+	width: '5em', 
 	position: 'relative', 
 	'padding-top': '5px',
-	color: 'rgba(0,0,0,0)',
 	top: '-3px'
 }
 
@@ -174,7 +174,7 @@ Template("practice.csv", variable => {
 			.print(getText("container"))
 		,
 		
-		newText(first_arg, 'test')
+		newText(first_arg, " ")
 			.css(blank_style)
 			.print(getText("container"))
 		,
@@ -183,7 +183,7 @@ Template("practice.csv", variable => {
 			.print(getText("container"))
 		,
 		
-		newText(second_arg, word)
+		newText(second_arg, " ")
 			.css(blank_style)
 			.print(getText("container"))
 		,
