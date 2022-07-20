@@ -203,11 +203,12 @@ Template("practice.csv", variable =>
 			.remove()
 		,
 		
-		newText("word", variable.word)
+		newText("word", variable['word_' + Math.floor(Math.random() * 12)])
 			.css({
 				border: '1px solid #000',
 				padding: '3px'
 			})
+			.log()
 			.center()
 			.print()
 		,
@@ -252,7 +253,6 @@ Template("practice.csv", variable =>
 			.remove()
 	)
 	.log('item'		 	, variable.item)
-	.log('word'		 	, variable.word)
 	.log('args_group'	, variable.args_group)
 	.log('sentence_type', variable.sentence_type)
 	.log('sentence'	 	, variable.sentence)
