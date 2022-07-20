@@ -154,13 +154,13 @@ newTrial("instruction",
 	.log("sentence_type", variable.sentence_type)
 )*/
 
-Template("practice.csv", variable => {
-	var word 		 = variable['word_' + Math.floor(Math.random() * 12)];
-	var presentence  = variable.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
-	var midsentence  = '&nbsp;' + variable.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
-	var postsentence = '&nbsp;' + variable.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2];
-	var first_arg    = variable.sentence.match(/\[(su|o)bj\]/g)[0];
-	var second_arg   = variable.sentence.match(/\[(su|o)bj\]/g)[1];
+Template("practice.csv", item => {
+	var word 		 = item['word_' + Math.floor(Math.random() * 12)];
+	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
+	var midsentence  = '&nbsp;' + item.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
+	var postsentence = '&nbsp;' + item.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2];
+	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0];
+	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1];
 	
 	return newTrial("trial_prac",		
 		newText("container", "")
@@ -197,7 +197,7 @@ Template("practice.csv", variable => {
 			.print()
 		,
 		
-		newTimer("wait", variable.sentence.split(" ").length * 250)
+		newTimer("wait", item.sentence.split(" ").length * 250)
 			.start()
 			.wait()
 		,
@@ -257,11 +257,11 @@ Template("practice.csv", variable => {
 			.wait()
 			.remove()
 	)
-	.log('item'		 	, variable.item)
+	.log('item'		 	, item.item)
 	.log('word'			, word)
-	.log('args_group'	, variable.args_group)
-	.log('sentence_type', variable.sentence_type)
-	.log('sentence'	 	, variable.sentence);
+	.log('args_group'	, item.args_group)
+	.log('sentence_type', item.sentence_type)
+	.log('sentence'	 	, item.sentence);
 })
 
 /*
