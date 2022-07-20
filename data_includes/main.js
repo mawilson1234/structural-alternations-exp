@@ -186,7 +186,7 @@ Template("practice.csv", variable =>
 				getText("secondbox"), 
 			)
 			.addDrag(getText("word"))
-			.offset('0.5em', '0em', getText("firstbox"), getText("secondbox"))
+			.offset('0.5em', '0.1em', getText("firstbox"), getText("secondbox"))
 			.wait()
 		,
 		
