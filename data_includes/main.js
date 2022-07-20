@@ -206,7 +206,7 @@ Template("practice.csv", variable =>
 		newText("word", variable.word)
 			.css({
 				border: '1px solid #000',
-				'padding': '3px'
+				padding: '3px'
 			})
 			.center()
 			.print()
@@ -219,10 +219,7 @@ Template("practice.csv", variable =>
 		
 		newDragDrop("dd", "bungee")
 			.log("all")
-			.addDrop( 
-				getText("firstbox"),  
-				getText("secondbox"), 
-			)
+			.addDrop(getText("firstbox"), getText("secondbox"), )
 			.addDrag(getText("word"))
 			.offset('0.5em', '0.1em', getText("firstbox"), getText("secondbox"))
 			.wait()
