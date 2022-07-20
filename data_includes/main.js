@@ -149,17 +149,28 @@ newTrial("instruction",
 Template("practice.csv", variable => 
 	newTrial("trial_prac",		
 		newText("firstbox",
-				'<div style="border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>')
+				'<div style="border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>')
 		,
 		
 		newText("secondbox",
-				'<div style="border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>')
+				'<div style="border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>')
+		,
+		
+		newText("sentence1", "Should the word go here ")
+		,
+		
+		newText("sentence2", " or ")
+		,
+		
+		newText("sentence3", "?")
 		,
 		
 		newCanvas("boxes")
+			.add(			   0, 0, getText("sentence1"))
 			.add(			   0, 0, getText("firstbox"))
+			.add(			   0, 0, getText("sentence2"))
 			.add("right at 100%", 0, getText("secondbox"))
-			.add("right at 100%", 0, newText("testing"))
+			.add("right at 100%", 0, getText("sentence3"))
 			.center()
 			.print()
 		,
@@ -177,6 +188,11 @@ Template("practice.csv", variable =>
 			.addDrag(getText("word"))
 			.offset('0.5em', '0em', getText("firstbox"), getText("secondbox"))
 			.wait()
+		,
+		
+		newText("p", "<p /><p />")
+			.center()
+			.print()
 		,
 		
 		newButton("ready", "Ready")
