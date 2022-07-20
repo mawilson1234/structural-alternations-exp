@@ -157,7 +157,7 @@ newTrial("instruction",
 Template("practice.csv", variable => {
 	var word = variable['word_' + Math.floor(Math.random() * 12)];
 	var presentence = variable.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
-	var midsentence = variable.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0];
+	var midsentence = '&nbsp;' + variable.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
 	var postsentence = '&nbsp;' + variable.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2];
 	var first_arg = variable.sentence.match(/\[(su|o)bj\]/g)[0];
 	var second_arg = variable.sentence.match(/\[(su|o)bj\]/g)[1];
