@@ -158,7 +158,7 @@ Template("practice.csv", variable =>
 		,
 		
 		newText("firstbox", " ")
-			.css({border: '1px solid #000', width: '4em', position: 'relative', padding-top: '5px'})
+			.css({border: '1px solid #000', width: '4em', position: 'relative', 'padding-top': '5px'})
 			.print(getText("container"))
 		,
 		
@@ -167,7 +167,7 @@ Template("practice.csv", variable =>
 		,
 		
 		newText("secondbox", " ")
-			.css({border: '1px solid #000', width: '4em', position: 'relative', padding-top: '5px'})
+			.css({border: '1px solid #000', width: '4em', position: 'relative', 'padding-top': '5px'})
 			.print(getText("container"))
 		,
 		
