@@ -232,15 +232,12 @@ Template("practice.csv", variable => {
 				getText(second_arg)
 			)
 			.wait()
+			.callback(getMouseTracker("mouse").stop())
 			.removeDrag(getText("word"))
 			.removeDrop(
 				getText(first_arg), 
 				getText(second_arg)
 			)
-		,
-		
-		getMouseTracker("mouse")
-			.stop()
 		,
 		
 		getText("word")
