@@ -148,6 +148,11 @@ newTrial("instruction",
 
 Template("practice.csv", variable => 
 	newTrial("trial_prac",
+		newMouseTracker("mouse")
+			.log()
+			.start()
+		,
+		
 		newDragDrop("sentence", "bungee")
 			.log()
 			.addDrop(newText("testing", "Testing"), newText("testing2", "Testing2"))
@@ -163,6 +168,10 @@ Template("practice.csv", variable =>
 			.print()
 			.wait()
 			.remove()
+		,
+		
+		getMouseTracker("mouse")
+			.stop()
 	)
 	.log("sentence"		, variable.sentence)
 	.log("item"			, variable.item)
