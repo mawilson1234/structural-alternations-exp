@@ -75,7 +75,7 @@ newTrial("instruction",
 )
 */
 
-Template("practice.csv", variable => 
+/*Template("practice.csv", variable => 
 	newTrial("trial_prac",
 		// store the sentence in a variable so we can modify it
 		newVar("sentence", variable.sentence)
@@ -144,7 +144,33 @@ Template("practice.csv", variable =>
 	.log("word"			, variable.word)
 	.log("args_group"	, variable.args_group)
 	.log("sentence_type", variable.sentence_type)
+)*/
+
+Template("practice.csv", variable => 
+	newTrial("trial_prac",
+		newDragDrop("sentence", "bungee")
+			.log()
+			.addDrop(newText("testing", "Testing"), newText("testing2", "Testing2"))
+			.addDrag(newText(variable.word))
+			.offset('0.5em', '0em', getText("testing"), getText("testing2"))
+			.wait(
+				self.test.dropped(getText("testing"), getText("testing2"))	
+			)
+		,
+		
+		newButton("ready", "Ready")
+			.center()
+			.print()
+			.wait()
+			.remove()
+	)
+	.log("sentence"		, variable.sentence)
+	.log("item"			, variable.item)
+	.log("word"			, variable.word)
+	.log("args_group"	, variable.args_group)
+	.log("sentence_type", variable.sentence_type)
 )
+
 
 /*
 newTrial("warn",
