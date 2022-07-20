@@ -148,44 +148,35 @@ newTrial("instruction",
 
 Template("practice.csv", variable => 
 	newTrial("trial_prac",		
-		newText("firstbox",
-				'<div style="border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>')
-		,
-		
-		newText("secondbox",
-				'<div style="border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>')
-		,
-		
-		newText("sentence1", "Should the word go here ")
-		,
-		
-		newText("sentence2", " or here ")
-		,
-		
-		newText("sentence3", "?")
-		,
-		
-		newCanvas("boxes")
-			.add(0, 0, 
-				getText("sentence1")
-					.after(
-						getText("firstbox")
-							.after(
-								getText("sentence2")
-									.after(
-										getText("secondbox")
-											.after(
-												getText("sentence3")
-											)
-									)
-							)
-					)
-			)
-			.center()
+		newText("container", "")
+			.css("display", "flex")
 			.print()
 		,
 		
+		newText("Should the word go here ")
+			.print(getText("container"))
+		,
+		
+		newText("firstbox", " ")
+			.css({border: '1px solid #000', width: '4em', position: 'relative'})
+			.print(getText("container"))
+		,
+		
+		newText(" or here&nbsp;")
+			.print(getText("container"))
+		,
+		
+		newText("secondbox", " ")
+			.css({border: '1px solid #000', width: '4em', position: 'relative'})
+			.print(getText("container"))
+		,
+		
+		newText("?")
+			.print(getText("container"))
+		,
+		
 		newText("word", "word")
+			.center()
 			.print()
 		,
 		
@@ -206,6 +197,7 @@ Template("practice.csv", variable =>
 		,
 		
 		newButton("ready", "Ready")
+			.css("margin-top", "2em")
 			.center()
 			.print()
 			.wait()
