@@ -147,43 +147,26 @@ newTrial("instruction",
 )*/
 
 Template("practice.csv", variable => 
-	newTrial("trial_prac",
-		newMouseTracker("mouse")
-			.log()
-			.start()
-		,
-		
-		newText("sentence", "The ")
-			.center()
-			.print()
-		,
-		
+	newTrial("trial_prac",		
 		newText("firstbox",
-				'<div style="border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;</div>')
-			.center()
-			.print()
-		,
-		
-		newText("midsentence", " has always blorked the ")
-			.center()
-			.print()
+				'<div style="border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>')
 		,
 		
 		newText("secondbox",
-				'<div style="border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;</div>')
+				'<div style="border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>')
+		,
+		
+		newCanvas("boxes")
+			.add(			   0, 0, getText("firstbox"))
+			.add("right at 100%", 0, getText("secondbox"))
 			.center()
+			.print()
+		
+		newText("word", "word")
 			.print()
 		,
 		
-		newText("postsentence", ".")
-			.center()
-		,
-		
-		newText("word", variable.word)
-			.print()
-		,
-		
-		newDragDrop("sentence", "bungee")
+		newDragDrop("dd", "bungee")
 			.log()
 			.addDrop( 
 				getText("firstbox"),  
