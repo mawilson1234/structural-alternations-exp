@@ -155,11 +155,11 @@ Template("practice.csv", variable =>
 			.print()
 		,
 		// get the first part of the sentence (before XXXX)
-		newText(/^(.*?)(?=XXXX)/.exec(variable.sentence)[0] + '&nbsp;')
+		newText(/^(.*?)(?=\[(su|o)bj\])/.exec(variable.sentence)[0] + '&nbsp;')
 			.print(getText("container"))
 		,
 		
-		newText("firstbox", " ")
+		newText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[0], " ")
 			.css({
 				border: '1px solid #000', 
 				width: '4em', 
@@ -170,11 +170,11 @@ Template("practice.csv", variable =>
 			.print(getText("container"))
 		,
 		// get the middle part of the sentence (between XXXX and YYYY)
-		newText('&nbsp;' + /(?<=XXXX).*?(?=YYYY)/.exec(variable.sentence)[0] + '&nbsp;')
+		newText('&nbsp;' + /(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/.exec(variable.sentence)[0] + '&nbsp;')
 			.print(getText("container"))
 		,
 		
-		newText("secondbox", " ")
+		newText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[1], " ")
 			.css({
 				border: '1px solid #000', 
 				width: '4em', 
@@ -185,7 +185,7 @@ Template("practice.csv", variable =>
 			.print(getText("container"))
 		,
 		// get the final part of the sentence (after YYYY)
-		newText('&nbsp;' + /(?<=YYYY).*$/.exec(variable.sentence)[0])
+		newText('&nbsp;' + /(?<=\[(su|o)bj\]).*$/.exec(variable.sentence)[0])
 			.print(getText("container"))
 		,
 		
@@ -219,12 +219,21 @@ Template("practice.csv", variable =>
 		
 		newDragDrop("dd", "bungee")
 			.log("all")
-			.addDrop(getText("firstbox"), getText("secondbox"), )
+			.addDrop(
+				getText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[0]), 
+				getText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[1])
+			)
 			.addDrag(getText("word"))
-			.offset('0.5em', '0.1em', getText("firstbox"), getText("secondbox"))
+			.offset('0.5em', '0.1em', 
+				getText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[0], 
+				getText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[1])
+			)
 			.wait()
 			.removeDrag(getText("word"))
-			.removeDrop(getText("firstbox"), getText("secondbox"))
+			.removeDrop(
+				getText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[0]), 
+				getText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[1])
+			)
 		,
 		
 		getMouseTracker("mouse")

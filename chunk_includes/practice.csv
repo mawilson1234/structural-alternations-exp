@@ -1,2 +1,2 @@
 item,sentence,word,args_group,sentence_type
-prac,The XXXX has always blorked the YYYY.,bike,vehicles_buildings,perfect transitive
+prac,The [subj] has always blorked the [obj].,bike,vehicles_buildings,perfect transitive
