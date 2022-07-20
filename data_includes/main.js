@@ -180,7 +180,6 @@ Template("practice.csv", variable =>
 		,
 		
 		newText("word", variable.word)
-			.center()
 			.print()
 		,
 		
