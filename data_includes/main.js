@@ -189,6 +189,11 @@ Template("practice.csv", variable =>
 			.print(getText("container"))
 		,
 		
+		newTimer("wait", variable.sentence.split(" ").length)
+			.start()
+			.wait()
+		,
+		
 		newText("word", variable.word)
 			.css({
 				border: '1px solid #000',
@@ -204,7 +209,7 @@ Template("practice.csv", variable =>
 		,
 		
 		newDragDrop("dd", "bungee")
-			.log("drop")
+			.log("all")
 			.addDrop( 
 				getText("firstbox"),  
 				getText("secondbox"), 
