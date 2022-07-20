@@ -210,6 +210,7 @@ Template("practice.csv", variable =>
 			})
 			.center()
 			.print()
+			.log()
 		,
 		
 		newVar("word_cont", getText("word"))
