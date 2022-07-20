@@ -192,7 +192,7 @@ Template("practice.csv", variable =>
 		newText("word", "word")
 			.css({
 				border: '1px solid #000',
-				'padding': '2px'
+				'padding': '3px'
 			})
 			.center()
 			.print()
