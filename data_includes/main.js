@@ -149,6 +149,7 @@ newTrial("instruction",
 Template("practice.csv", variable => 
 	newTrial("trial_prac",		
 		newText("container", "")
+			.center()
 			.css("display", "flex")
 			.print()
 		,
