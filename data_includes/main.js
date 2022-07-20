@@ -200,7 +200,7 @@ Template("practice.csv", variable =>
 		,
 		
 		newDragDrop("dd", "bungee")
-			.log()
+			.log("all")
 			.addDrop( 
 				getText("firstbox"),  
 				getText("secondbox"), 
