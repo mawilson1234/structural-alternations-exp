@@ -153,13 +153,21 @@ Template("practice.csv", variable =>
 			.start()
 		,
 		
+		newText("sentence", variable.sentence)
+			.print()
+		,
+		
+		newText("word", variable.word)
+			.print()
+		,
+		
 		newDragDrop("sentence", "bungee")
 			.log()
-			.addDrop(newText("testing", "Testing"), newText("testing2", "Testing2"))
-			.addDrag(newText(variable.word))
-			.offset('0.5em', '0em', getText("testing"), getText("testing2"))
+			.addDrop(getText("sentence"))
+			.addDrag(getText("word"))
+			.offset('0.5em', '0em', getText("sentence"))
 			.wait(
-				self.test.dropped(getText("testing"), getText("testing2"))	
+				self.test.dropped(getText("sentence"))	
 			)
 		,
 		
