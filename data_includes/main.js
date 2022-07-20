@@ -162,7 +162,7 @@ Template("practice.csv", variable => {
 	var first_arg    = variable.sentence.match(/\[(su|o)bj\]/g)[0];
 	var second_arg   = variable.sentence.match(/\[(su|o)bj\]/g)[1];
 	
-	newTrial("trial_prac",		
+	return newTrial("trial_prac",		
 		newText("container", "")
 			.center()
 			.css("display", "flex")
@@ -220,13 +220,6 @@ Template("practice.csv", variable => {
 			.start()
 		,
 		
-		/*newFunction(async ()=> {
-			await new Promise(r=>getText("word")._element.jQueryContainer.mousedown(r));
-			getMouseTracker("mouse").start()._runPromises();
-		})
-			.call()
-		,
-		*/
 		newDragDrop("dd", "bungee")
 			.log("all")
 			.addDrop(
