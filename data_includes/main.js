@@ -169,7 +169,7 @@ Template("practice.csv", variable => {
 			.css("margin-bottom", "3em")
 			.print()
 		,
-		// get the first part of the sentence (before XXXX)
+		
 		newText(presentence)
 			.print(getText("container"))
 		,
@@ -178,7 +178,7 @@ Template("practice.csv", variable => {
 			.css(blank_style)
 			.print(getText("container"))
 		,
-		// get the middle part of the sentence (between XXXX and YYYY)
+		
 		newText(midsentence)
 			.print(getText("container"))
 		,
@@ -187,7 +187,7 @@ Template("practice.csv", variable => {
 			.css(blank_style)
 			.print(getText("container"))
 		,
-		// get the final part of the sentence (after YYYY)
+		
 		newText(postsentence)
 			.print(getText("container"))
 		,
