@@ -166,11 +166,21 @@ Template("practice.csv", variable =>
 		,
 		
 		newCanvas("boxes")
-			.add(			   0, 0, getText("sentence1"))
-			.add(			   0, 0, getText("firstbox"))
-			.add(			   0, 0, getText("sentence2"))
-			.add("right at 100%", 0, getText("secondbox"))
-			.add("right at 100%", 0, getText("sentence3"))
+			.add(0, 0, 
+				getText("sentence1")
+					.after(
+						getText("firstbox")
+							.after(
+								getText("sentence2")
+									.after(
+										getText("secondbox")
+											.after(
+												getText("sentence3")
+											)
+									)
+							)
+					)
+			)
 			.center()
 			.print()
 		,
