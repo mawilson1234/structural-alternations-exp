@@ -217,6 +217,7 @@ Template("practice.csv", variable => {
 		
 		newMouseTracker("mouse")
 			.log()
+			.start()
 		,
 		
 		/*newFunction(async ()=> {
