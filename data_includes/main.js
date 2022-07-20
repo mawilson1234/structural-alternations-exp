@@ -155,7 +155,7 @@ Template("practice.csv", variable =>
 			.print()
 		,
 		// get the first part of the sentence (before XXXX)
-		newText(/^(.*?)(?=XXXX)/.exec(variable.sentence)[0])
+		newText(/^(.*?)(?=XXXX)/.exec(variable.sentence)[0] + '&nbsp;')
 			.print(getText("container"))
 		,
 		
@@ -170,7 +170,7 @@ Template("practice.csv", variable =>
 			.print(getText("container"))
 		,
 		// get the middle part of the sentence (between XXXX and YYYY)
-		newText(/(?<=XXXX).*?(?=YYYY)/.exec(variable.sentence)[0])
+		newText('&nbsp;' + /(?<=XXXX).*?(?=YYYY)/.exec(variable.sentence)[0] + '&nbsp;')
 			.print(getText("container"))
 		,
 		
@@ -185,7 +185,7 @@ Template("practice.csv", variable =>
 			.print(getText("container"))
 		,
 		// get the final part of the sentence (after YYYY)
-		newText(/(?<=YYYY).*$/.exec(variable.sentence)[0])
+		newText('&nbsp;' + /(?<=YYYY).*$/.exec(variable.sentence)[0])
 			.print(getText("container"))
 		,
 		
