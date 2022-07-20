@@ -154,8 +154,8 @@ Template("practice.csv", variable =>
 			.css("margin-bottom", "3em")
 			.print()
 		,
-		
-		newText("Should the word go here ")
+		// get the first part of the sentence (before XXXX)
+		newText(/^(.*?)(?=XXXX)/.exec(variable.sentence)[0])
 			.print(getText("container"))
 		,
 		
@@ -169,8 +169,8 @@ Template("practice.csv", variable =>
 			})
 			.print(getText("container"))
 		,
-		
-		newText(" or here&nbsp;")
+		// get the middle part of the sentence (between XXXX and YYYY)
+		newText(/(?<=XXXX).*?(?=YYYY)/.exec(variable.sentence)[0])
 			.print(getText("container"))
 		,
 		
@@ -184,12 +184,12 @@ Template("practice.csv", variable =>
 			})
 			.print(getText("container"))
 		,
-		
-		newText("?")
+		// get the final part of the sentence (after YYYY)
+		newText(/(?<=YYYY).*$/.exec(variable.sentence)[0])
 			.print(getText("container"))
 		,
 		
-		newText("word", "word")
+		newText("word", variable.word)
 			.css({
 				border: '1px solid #000',
 				'padding': '3px'
@@ -231,6 +231,11 @@ Template("practice.csv", variable =>
 			.wait()
 			.remove()
 	)
+	.log('item'		 	, variable.item)
+	.log('word'		 	, variable.word)
+	.log('args_group'	, variable.args_group)
+	.log('sentence_type', variable.sentence_type)
+	.log('sentence'	 	, variable.sentence)
 )
 
 
