@@ -162,7 +162,7 @@ Template("practice.csv", variable => {
 	var first_arg    = variable.sentence.match(/\[(su|o)bj\]/g)[0];
 	var second_arg   = variable.sentence.match(/\[(su|o)bj\]/g)[1];
 	
-	return newTrial("trial_prac",		
+	newTrial("trial_prac",		
 		newText("container", "")
 			.center()
 			.css("display", "flex")
