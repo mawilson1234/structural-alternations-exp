@@ -155,7 +155,7 @@ Template("practice.csv", variable =>
 			.print()
 		,
 		// get the first part of the sentence (before XXXX)
-		newText(/^(.*?)(?=\[(su|o)bj\])/.exec(variable.sentence)[0] + '&nbsp;')
+		newText(variable.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;')
 			.print(getText("container"))
 		,
 		
@@ -170,7 +170,7 @@ Template("practice.csv", variable =>
 			.print(getText("container"))
 		,
 		// get the middle part of the sentence (between XXXX and YYYY)
-		newText('&nbsp;' + /(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/.exec(variable.sentence)[0] + '&nbsp;')
+		newText('&nbsp;' + variable.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;')
 			.print(getText("container"))
 		,
 		
@@ -185,7 +185,7 @@ Template("practice.csv", variable =>
 			.print(getText("container"))
 		,
 		// get the final part of the sentence (after YYYY)
-		newText('&nbsp;' + /(?<=\[(su|o)bj\]).*$/.exec(variable.sentence)[0])
+		newText('&nbsp;' + variable.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2])
 			.print(getText("container"))
 		,
 		
