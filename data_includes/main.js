@@ -190,6 +190,7 @@ Template("practice.csv", variable =>
 		
 		newText("word", "word")
 			.center()
+			.css('margin-top', '4em')
 			.print()
 		,
 		
