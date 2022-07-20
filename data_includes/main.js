@@ -189,6 +189,8 @@ Template("practice.csv", variable =>
 			.addDrag(getText("word"))
 			.offset('0.5em', '0.1em', getText("firstbox"), getText("secondbox"))
 			.wait()
+			.removeDrag(getText("word"))
+			.removeDrop(getText("firstbox"), getText("secondbox"))
 		,
 		
 		newText("p", "<p /><p />")
