@@ -146,8 +146,9 @@ newTrial("instruction",
 	.log("sentence_type", variable.sentence_type)
 )*/
 
-Template("practice.csv", variable => 
-	newTrial("trial_prac",		
+Template("practice.csv", variable => {
+	var word = variable['word_' + Math.floor(Math.random() * 12)];
+	return newTrial("trial_prac",		
 		newText("container", "")
 			.center()
 			.css("display", "flex")
@@ -203,18 +204,13 @@ Template("practice.csv", variable =>
 			.remove()
 		,
 		
-		newText("word", variable['word_' + Math.floor(Math.random() * 12)])
+		newText("word", word)
 			.css({
 				border: '1px solid #000',
 				padding: '3px'
 			})
 			.center()
 			.print()
-			.log()
-		,
-		
-		newVar("word_cont", getText("word"))
-			.log()
 		,
 		
 		newMouseTracker("mouse")
@@ -257,10 +253,11 @@ Template("practice.csv", variable =>
 			.remove()
 	)
 	.log('item'		 	, variable.item)
+	.log('word'			, word)
 	.log('args_group'	, variable.args_group)
 	.log('sentence_type', variable.sentence_type)
-	.log('sentence'	 	, variable.sentence)
-)
+	.log('sentence'	 	, variable.sentence);
+})
 
 
 /*
