@@ -151,6 +151,7 @@ Template("practice.csv", variable =>
 		newText("container", "")
 			.center()
 			.css("display", "flex")
+			.css("margin-bottom", "3em")
 			.print()
 		,
 		
@@ -190,7 +191,6 @@ Template("practice.csv", variable =>
 		
 		newText("word", "word")
 			.center()
-			.css('margin-top', '4em')
 			.print()
 		,
 		
