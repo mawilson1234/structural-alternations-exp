@@ -174,7 +174,7 @@ Template("practice.csv", variable => {
 			.print(getText("container"))
 		,
 		
-		newText(first_arg, word)
+		newText(first_arg, 'test')
 			.css(blank_style)
 			.print(getText("container"))
 		,
