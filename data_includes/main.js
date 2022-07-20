@@ -219,11 +219,9 @@ Template("practice.csv", variable => {
 			.log()
 		,
 		
-		newFunction(async () => {
-			await new Promise(r => getText("word")._element.jQueryContainer.mousedown(r));
-			getMouseTracker("mouse")
-				.start()
-				._runPromises();
+		newFunction(async ()=> {
+			await new Promise(r=>getText("word")._element.jQueryContainer.mousedown(r));
+			getMouseTracker("mouse").start()._runPromises();
 		})
 			.call()
 		,
