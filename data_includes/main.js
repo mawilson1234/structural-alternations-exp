@@ -203,12 +203,15 @@ Template("practice.csv", variable =>
 			.remove()
 		,
 		
-		newText("word", variable['word_' + Math.floor(Math.random() * 12)])
+		newVar("word_cont", variable['word_' + Math.floor(Math.random() * 12)])
+			.log()
+		,
+		
+		newText("word", getVar("word_cont"))
 			.css({
 				border: '1px solid #000',
 				padding: '3px'
 			})
-			.log()
 			.center()
 			.print()
 		,
