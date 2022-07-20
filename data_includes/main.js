@@ -4,10 +4,10 @@ PennController.ResetPrefix(null) // Shorten command names (keep this line here)
 SetCounter("setcounter")
 
 var blank_style = {
-	border: '1px solid #000', 
-	width: '5em', 
+	border: '1px solid #000',  
 	position: 'relative', 
 	'padding-top': '5px',
+	color: 'rgba(0,0,0,0)',
 	top: '-3px'
 }
 
@@ -155,12 +155,12 @@ newTrial("instruction",
 )*/
 
 Template("practice.csv", variable => {
-	var word = variable['word_' + Math.floor(Math.random() * 12)];
-	var presentence = variable.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
-	var midsentence = '&nbsp;' + variable.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
+	var word 		 = variable['word_' + Math.floor(Math.random() * 12)];
+	var presentence  = variable.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
+	var midsentence  = '&nbsp;' + variable.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
 	var postsentence = '&nbsp;' + variable.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2];
-	var first_arg = variable.sentence.match(/\[(su|o)bj\]/g)[0];
-	var second_arg = variable.sentence.match(/\[(su|o)bj\]/g)[1];
+	var first_arg    = variable.sentence.match(/\[(su|o)bj\]/g)[0];
+	var second_arg   = variable.sentence.match(/\[(su|o)bj\]/g)[1];
 	
 	return newTrial("trial_prac",		
 		newText("container", "")
