@@ -3,6 +3,14 @@ PennController.ResetPrefix(null) // Shorten command names (keep this line here)
 
 SetCounter("setcounter")
 
+var blank_style = {
+	border: '1px solid #000', 
+	width: '5em', 
+	position: 'relative', 
+	'padding-top': '5px',
+	top: '-3px'
+}
+
 // var counterOverride = 0
 
 Sequence(
@@ -161,13 +169,7 @@ Template("practice.csv", variable => {
 		,
 		
 		newText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[0], " ")
-			.css({
-				border: '1px solid #000', 
-				width: '4em', 
-				position: 'relative', 
-				'padding-top': '5px',
-				top: '-3px'
-			})
+			.css(blank_style)
 			.print(getText("container"))
 		,
 		// get the middle part of the sentence (between XXXX and YYYY)
@@ -176,13 +178,7 @@ Template("practice.csv", variable => {
 		,
 		
 		newText(variable.sentence.match(/(?<=\[)(su|o)bj(?=\])/g)[1], " ")
-			.css({
-				border: '1px solid #000', 
-				width: '4em', 
-				position: 'relative', 
-				'padding-top': '5px',
-				top: '-3px'
-			})
+			.css(blank_style)
 			.print(getText("container"))
 		,
 		// get the final part of the sentence (after YYYY)
@@ -258,7 +254,6 @@ Template("practice.csv", variable => {
 	.log('sentence_type', variable.sentence_type)
 	.log('sentence'	 	, variable.sentence);
 })
-
 
 /*
 newTrial("warn",
