@@ -95,8 +95,10 @@ Template("practice.csv", item => {
 	return newTrial("trial_prac",		
 		newText("container", "")
 			.center()
-			.css("display", "flex")
-			.css("margin-bottom", "3em")
+			.css({
+				display: "flex",
+				'margin-bottom': '3em'
+			})
 			.print()
 		,
 		
@@ -154,6 +156,16 @@ Template("practice.csv", item => {
 			getMouseTracker("mouse").start()._runPromises();
 		})
 			.call()
+		,
+		
+		newText("correct", "Good job&mdash;that's the right choice!")
+			.css('color', 'rgb(1, 68, 33)')
+			.center()
+		,
+		
+		newText("incorrect", "That's not the right one&mdash;try again!")
+			.css('color', 'rgb(140, 55, 62)')
+			.center()
 		,
 		
 		newDragDrop("dd", "bungee")
