@@ -171,7 +171,6 @@ Template("practice.csv", item => {
 		,
 		
 		newDragDrop("dd", "bungee")
-			.log("all")
 			.addDrop(
 				getText(first_arg), 
 				getText(second_arg)
