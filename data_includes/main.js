@@ -234,6 +234,7 @@ Template("practice.csv", item => {
 	.log('item'		 	  , item.item)
 	.log('word'			  , word)
 	.log('correct'		  , correct)
+	.log('response' 	  , drop_loc)
 	.log('target_response', target_res)
 	.log('args_group'	  , item.args_group)
 	.log('sentence_type'  , item.sentence_type)
