@@ -11,21 +11,19 @@ var blank_style = {
 	top: '-3px'
 }
 
-// var counterOverride = 0
-
 Sequence(
 	"setcounter", 
 	// "intro", "consent", "recording", "instruction", 
 	randomize("trial_prac"), 
 	// "warn", "instruction2", 
-	//rshuffle("pretrial"), 
-	//rshuffle("trial"), 
+	//randomize("pretrial"), 
+	//randomize("trial"), 
 	// "feedback", 
 	SendResults(), 
 	"bye"
 )
 
-/*newTrial( "intro",
+/*newTrial("intro",
 	newText("Welcome","Welcome! This experiment has two halves. Following the first half, you will see a link to the second half, which will have different instructions you will see at that time.<p>To participate in this experiment, you must meet the following requirements.<p>(1) Your computer must have a microphone (a built-in microphone is fine).<p>(2) Your browser must be either Chrome or Firefox. You CANNOT use Safari for this experiment.<p>(3) You must turn off music/video (e.g., YouTube) played on the same computer you are using to take this experiment.<p>(4) Please note that you will be asked to speak aloud during the experiment (recite simple sentences and pronounce fake words aloud). Your speech will be recorded and that's our critical data.<p>If you meet these requirements, please enter your Prolific ID below and click Next:")
 		.settings.css("font-size", "2em")
 		.print()
@@ -52,7 +50,7 @@ Sequence(
 		.wait()
 )
 
-newTrial( "consent" ,
+newTrial("consent",
 	newText("Please click <a href='https://shotam.github.io/IRB/consent_online_recording.pdf' target='_blank'>here</a> to download the consent form for this study. If you read it and agree to participate in this study, click 'I Agree' below. If you do not agree to participate in this study, you can leave this study by closing the tab.")
 		.settings.css("font-size", "2em")
 		.print()
@@ -83,79 +81,11 @@ newTrial("instruction",
 )
 */
 
-/*Template("practice.csv", variable => 
-	newTrial("trial_prac",
-		// store the sentence in a variable so we can modify it
-		newVar("sentence", variable.sentence)
-			.log()
-		,
-		// reverse order of placeholders 50% of the time
-		newFunction("XXXX_last", () => Math.random() <= 0.5)
-			.call()
-			.test.is(1)
-			.success(
-				getVar("sentence")
-					.set(
-						v => v
-							.replace("XXXX", "ZZZZ")
-							.replace("YYYY", "XXXX")
-							.replace("ZZZZ", "YYYY")
-					)
-			)
-		,
-		
-		newText("sentence")
-			.before(newText("p", "<p>"))
-			.text(getVar("sentence"))
-			.after(newText("close_p", "</p>"))
-			.center()
-			.print()
-		,
-		
-		newText("sep", "___________________________________________")
-			.center()
-			.print()
-		,
-		
-		newText("question", "<p>Where is <i>" + variable.word + "</i> more likely to go?</p>")
-			.center()
-			.print()
-		,
-		
-		newSelector("position")
-		,
-		
-		newCanvas("buttons", 200, 50)
-			.add(              0, 0, newButton("XXXX").selector("position"))
-			.add("right at 100%", 0, newButton("YYYY").selector("position"))
-			.center()
-			.print()
-		,
-		
-		getSelector("position")
-			.shuffle()
-			.once()
-			.wait()
-			.log()
-		,
-		
-		getCanvas("buttons")
-			.remove()
-		,
-		
-		newButton("Next")
-			.center()
-			.print()
-			.wait()
-	)
-	.log("item"			, variable.item)
-	.log("word"			, variable.word)
-	.log("args_group"	, variable.args_group)
-	.log("sentence_type", variable.sentence_type)
-)*/
-
 Template("practice.csv", item => {
-	var word 		 = item['word_' + Math.floor(Math.random() * 12)];
+	var word_num 	 = Math.floor(Math.random() * 12);
+	var target_res   = word_num <= 5 ? '[subj]' : '[obj]'
+	var correct 	 = false
+	var word 		 = item['word_' + word_num];
 	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
 	var midsentence  = '&nbsp;' + item.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
 	var postsentence = '&nbsp;' + item.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2];
@@ -237,7 +167,9 @@ Template("practice.csv", item => {
 				getText(first_arg), 
 				getText(second_arg)
 			)
-			.wait()
+			.wait(
+				self.test.dropped(target_res)
+			)
 			.callback(getMouseTracker("mouse").stop())
 			.removeDrag(getText("word"))
 			.removeDrop(
@@ -257,11 +189,12 @@ Template("practice.csv", item => {
 			.wait()
 			.remove()
 	)
-	.log('item'		 	, item.item)
-	.log('word'			, word)
-	.log('args_group'	, item.args_group)
-	.log('sentence_type', item.sentence_type)
-	.log('sentence'	 	, item.sentence);
+	.log('item'		 	  , item.item)
+	.log('word'			  , word)
+	.log('target_response', target_res)
+	.log('args_group'	  , item.args_group)
+	.log('sentence_type'  , item.sentence_type)
+	.log('sentence'	 	  , item.sentence);
 })
 
 /*
@@ -460,12 +393,12 @@ PennController("feedback",
 )
 */
 
-newTrial("bye" ,
+newTrial("bye",
 	newText("Thank you for your participation!")//" Please go to the following web page to verify your participation: <a href='https://app.prolific.co/submissions/complete?cc=728AA2CF'> https://app.prolific.co/submissions/complete?cc=728AA2CF</a>.")
 		.print(),
 	
 	newButton()
 		.wait()	// Wait for a click on a non-displayed button = wait here forever
 )
-.setOption("countsForProgressBar" , false)
+.setOption("countsForProgressBar", false)
 // Make sure the progress bar is full upon reaching this last (non-)trial
