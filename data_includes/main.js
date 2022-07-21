@@ -84,9 +84,7 @@ newTrial("instruction",
 Template("practice.csv", item => {
 	var word_num 	 = Math.floor(Math.random() * 12);
 	var target_res   = word_num <= 5 ? '[subj]' : '[obj]'
-	var other_res 	 = target_res === '[subj]' ? '[obj]' : '[subj]'
 	var correct 	 = false
-	var drop_loc 	 = ''
 	var word 		 = item['word_' + word_num];
 	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
 	var midsentence  = '&nbsp;' + item.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
@@ -171,6 +169,7 @@ Template("practice.csv", item => {
 		,
 		
 		newDragDrop("dd", "bungee")
+			.log("all")
 			.addDrop(
 				getText(first_arg), 
 				getText(second_arg)
@@ -193,14 +192,11 @@ Template("practice.csv", item => {
 						getMouseTracker("mouse")
 							.stop()
 						,
-						correct = true,
-						drop_loc = target_res
+						correct = true
 					)
 					.failure(
 						getText("incorrect")
 							.print()
-						,
-						drop_loc = other_res
 					)
 					,
 					getText("word")
@@ -234,7 +230,6 @@ Template("practice.csv", item => {
 	.log('item'		 	  , item.item)
 	.log('word'			  , word)
 	.log('correct'		  , correct)
-	.log('response' 	  , drop_loc)
 	.log('target_response', target_res)
 	.log('args_group'	  , item.args_group)
 	.log('sentence_type'  , item.sentence_type)
