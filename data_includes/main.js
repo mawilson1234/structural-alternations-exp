@@ -15,6 +15,7 @@ Sequence(
 	"setcounter", 
 	// "intro", "consent", "recording", "instruction", 
 	randomize("trial_prac"), 
+	randomize("trial_train"),
 	// "warn", "instruction2", 
 	//randomize("pretrial"), 
 	//randomize("trial"), 
@@ -81,7 +82,7 @@ newTrial("instruction",
 )
 */
 
-Template("practice.csv", item => {
+var feedback_trial = label => item => {
 	var word_num 	 = Math.floor(Math.random() * 12);
 	var target_res   = word_num <= 5 ? '[subj]' : '[obj]'
 	var correct 	 = false
@@ -92,140 +93,51 @@ Template("practice.csv", item => {
 	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0];
 	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1];
 	
-	return newTrial("trial_prac",		
-		newText("container", "")
-			.center()
-			.css({
-				display: "flex",
-				'margin-bottom': '3em'
-			})
-			.print()
-		,
+	return newTrial(label,		
+		newText("container", "").center().css({display: "flex", 'margin-bottom': '3em'}).print(),
+		newText(presentence).print(getText("container")),
+		newText(first_arg, " ").css(blank_style).print(getText("container")),
+		newText(midsentence).print(getText("container")),
+		newText(second_arg, " ").css(blank_style).print(getText("container")),
+		newText(postsentence).print(getText("container")),
 		
-		newText(presentence)
-			.print(getText("container"))
-		,
+		newText("placeholder", "&mdash;").center().print(),
+		newTimer("wait", item.sentence.split(" ").length * 250).start().wait(),
+		getText("placeholder").remove(),
 		
-		newText(first_arg, " ")
-			.css(blank_style)
-			.print(getText("container"))
-		,
+		newText("word", word).css({border: '1px solid #000', padding: '3px'}).center().print(),
 		
-		newText(midsentence)
-			.print(getText("container"))
-		,
-		
-		newText(second_arg, " ")
-			.css(blank_style)
-			.print(getText("container"))
-		,
-		
-		newText(postsentence)
-			.print(getText("container"))
-		,
-		
-		newText("placeholder", "&mdash;")
-			.center()
-			.print()
-		,
-		
-		newTimer("wait", item.sentence.split(" ").length * 250)
-			.start()
-			.wait()
-		,
-		
-		getText("placeholder")
-			.remove()
-		,
-		
-		newText("word", word)
-			.css({
-				border: '1px solid #000',
-				padding: '3px'
-			})
-			.center()
-			.print()
-		,
-		
-		newMouseTracker("mouse")
-			.log()
-		,
-		
+		newMouseTracker("mouse").log(),
 		newFunction(async () => {
 			await new Promise(r => getText("word")._element.jQueryContainer.mousedown(r));
 			getMouseTracker("mouse").start()._runPromises();
-		})
-			.call()
-		,
+		}).call(),
 		
-		newText("correct", "Good job&mdash;that's the right choice!")
-			.css('color', 'rgb(34, 139, 34)')
-			.center()
-		,
-		
-		newText("incorrect", "That's not the right one&mdash;try again!")
-			.css('color', 'rgb(188, 74, 60)')
-			.center()
-		,
+		newText("correct", "Good job&mdash;that's the right choice!").css('color', 'rgb(34, 139, 34)').center(),
+		newText("incorrect", "That's not the right one&mdash;try again!").css('color', 'rgb(188, 74, 60)').center(),
 		
 		newDragDrop("dd", "bungee")
 			.log("all")
-			.addDrop(
-				getText(first_arg), 
-				getText(second_arg)
-			)
+			.addDrop(getText(first_arg), getText(second_arg))
 			.addDrag(getText("word"))
 			.callback(
-				getText("correct")
-					.remove()
-				,
-				getText("incorrect")
-					.remove()
-				,
-				self.test.dropped(
-					getText(target_res)
-				)
+				getText("correct").remove(), getText("incorrect").remove(),
+				self.test.dropped(getText(target_res))
 					.success(
-						getText("correct")
-							.print()
-						,
-						getMouseTracker("mouse")
-							.stop()
-						,
+						getText("correct").print(),
+						getMouseTracker("mouse").stop(),
 						correct = true
 					)
-					.failure(
-						getText("incorrect")
-							.print()
-					)
-					,
-					getText("word")
-						.css({border: '', width: '', 'padding-top': ''})
-				
+					.failure(getText("incorrect").print()),
+					getText("word").css({border: '', width: '', 'padding-top': ''})
 			)
-			.offset('0.5em', '0.1em', 
-				getText(first_arg), 
-				getText(second_arg)
-			)
-			.wait(
-				self.test.dropped(
-					getText(target_res)
-				)
-			)
-			//.callback(getMouseTracker("mouse").stop())
+			.offset('0.5em', '0.1em', getText(first_arg), getText(second_arg))
+			.wait(self.test.dropped(getText(target_res)))
 			.removeDrag(getText("word"))
-			.removeDrop(
-				getText(first_arg), 
-				getText(second_arg)
-			)
+			.removeDrop(getText(first_arg), getText(second_arg))
 		,
 		
-		newButton("next", "Next")
-			.css("margin-top", "2em")
-			.center()
-			.print()
-			.wait()
-			.remove()
+		newButton("next", "Next").css("margin-top", "2em").center().print().wait().remove()
 	)
 	.log('item'		 	  , item.item)
 	.log('word'			  , word)
@@ -234,7 +146,10 @@ Template("practice.csv", item => {
 	.log('args_group'	  , item.args_group)
 	.log('sentence_type'  , item.sentence_type)
 	.log('sentence'	 	  , item.sentence);
-})
+}
+
+Template("practice.csv", feedback_trial('trial_prac'))
+Template("train.csv", feedback_trial('trial_train'))
 
 /*
 newTrial("warn",
