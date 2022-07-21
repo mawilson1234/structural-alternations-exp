@@ -163,14 +163,40 @@ Template("practice.csv", item => {
 				getText(second_arg)
 			)
 			.addDrag(getText("word"))
+			.callback(
+				getText("correct")
+					.remove()
+				,
+				getText("incorrect")
+					.remove()
+				,
+				self.test.dropped(
+					getText(target_res)
+				)
+					.success(
+						getText("correct")
+							.print()
+						,
+						getMouseTracker("mouse")
+							.stop()
+						,
+						correct = true
+					)
+					.failure(
+						getText("incorrect")
+							.print()
+					)
+			)
 			.offset('0.5em', '0.1em', 
 				getText(first_arg), 
 				getText(second_arg)
 			)
 			.wait(
-				self.test.dropped(target_res)
+				self.test.dropped(
+					getText(target_res)
+				)
 			)
-			.callback(getMouseTracker("mouse").stop())
+			//.callback(getMouseTracker("mouse").stop())
 			.removeDrag(getText("word"))
 			.removeDrop(
 				getText(first_arg), 
@@ -191,6 +217,7 @@ Template("practice.csv", item => {
 	)
 	.log('item'		 	  , item.item)
 	.log('word'			  , word)
+	.log('correct'		  , correct)
 	.log('target_response', target_res)
 	.log('args_group'	  , item.args_group)
 	.log('sentence_type'  , item.sentence_type)
