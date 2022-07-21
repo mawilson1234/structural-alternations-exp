@@ -159,12 +159,12 @@ Template("practice.csv", item => {
 		,
 		
 		newText("correct", "Good job&mdash;that's the right choice!")
-			.css('color', 'rgb(1, 68, 33)')
+			.css('color', 'rgb(34, 139, 34)')
 			.center()
 		,
 		
 		newText("incorrect", "That's not the right one&mdash;try again!")
-			.css('color', 'rgb(140, 55, 62)')
+			.css('color', 'rgb(188, 74, 60)')
 			.center()
 		,
 		
@@ -198,6 +198,10 @@ Template("practice.csv", item => {
 						getText("incorrect")
 							.print()
 					)
+					,
+					getText("word")
+						.css({border: '', width: '', 'padding-top': ''})
+					,
 			)
 			.offset('0.5em', '0.1em', 
 				getText(first_arg), 
@@ -214,10 +218,6 @@ Template("practice.csv", item => {
 				getText(first_arg), 
 				getText(second_arg)
 			)
-		,
-		
-		getText("word")
-			.css({border: '', width: '', 'padding-top': ''})
 		,
 		
 		newButton("next", "Next")
