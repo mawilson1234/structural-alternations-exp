@@ -48,7 +48,7 @@ newTrial("consent",
 		.center()
 		.print()
 		.wait()
-).setOption("countsForProgressBar", false)
+).setOption("countsForProgressBar", false);
 
 newTrial("instruction1",
 	newText(
@@ -75,7 +75,7 @@ newTrial("instruction1",
 		.center()
 		.print()
 		.wait()
-).setOption("countsForProgressBar", false)
+).setOption("countsForProgressBar", false);
 
 var feedback_trial = label => item => {
 	var word_num 	 = Math.floor(Math.random() * 12);
