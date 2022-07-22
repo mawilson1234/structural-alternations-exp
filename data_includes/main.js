@@ -158,14 +158,14 @@ newTrial("instruction2",
 		.css(centered_justified_style)
 		.print()
 	,
-	
+	/*
 	newText("container", "").center().css({display: "flex", 'margin-bottom': '3em', 'margin-top': '3em'}).print(),
 	newText("The&nbsp;").print(getText("container")),
 	newText(" ").css(blank_style).print(getText("container")),
 	newText("&nbsp;has always blorked the&nbsp;").print(getText("container")),
 	newText(" ").css(blank_style).print(getText("container")),
 	newText(".").print(getText("container")),
-	
+	*/
 	newText(
 		"<i>Blork</i> isn't completely like any other English words. " +
 		"However, just like in the sentences you saw during the practice session, " +
