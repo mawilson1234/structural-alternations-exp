@@ -350,7 +350,7 @@ Template("stimuli.csv", item => {
 	.log('target_response', target_res)
 	.log('args_group'	  , item.args_group)
 	.log('sentence_type'  , item.sentence_type)
-	.log('sentence'	 	  , item.sentence);
+	.log('sentence'	 	  , item.sentence)
 })
 
 newTrial("feedback",
