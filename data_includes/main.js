@@ -141,7 +141,7 @@ var feedback_trial = label => item => {
 	.log('item'		 	  , item.item)
 	.log('word'			  , word)
 	.log('target_response', target_res)
-	.log('args_group'	  , item.args_group)
+	.log('args_group'	  , item.group)
 	.log('sentence_type'  , item.sentence_type)
 	.log('sentence'	 	  , item.sentence)
 }
