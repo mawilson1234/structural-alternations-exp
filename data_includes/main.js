@@ -123,7 +123,7 @@ var feedback_trial = label => item => {
 						correct = true
 					)
 					.failure(getText("incorrect").print()),
-					getText("word").css({border: '', padding: '', width: '5em', 'text-align': 'center'})
+					getText("word").css({padding: '', width: '5em', 'text-align': 'center'})
 			)
 			.offset('0.5em', '0.1em', getText(first_arg), getText(second_arg))
 			.wait(self.test.dropped(getText(target_res)))
