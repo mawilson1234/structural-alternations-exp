@@ -169,7 +169,7 @@ newTrial("instruction2",
 	newText(".").print(getText("container")),
 	
 	newText(
-		"<i>Blork</i> isn't completely like any other English words. " +
+		"<i>Blork</i> isn't exactly like any other English words. " +
 		"However, just like in the sentences you saw during the practice session, " +
 		"some words consistently go better in certain positions in sentences with <i>blork</i> than others.<p />" +
 		"During training, you should start by guessing which blank the word should go in. " +
@@ -369,6 +369,8 @@ newTrial("feedback",
 		.size(420, 200)
 		.print()
 	,
+	
+	newText("<p />").center().print(),
 
 	newButton("Send")
 		.center()
