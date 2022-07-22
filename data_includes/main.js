@@ -20,16 +20,16 @@ var centered_justified_style = {
 
 Sequence(
 	"setcounter", 
-	"consent", 
+	/*"consent", 
 	"instruction1", 
 	randomize("trial_prac"),
 	"instruction2",
 	randomize("trial_train"),
-	"instruction3",
+	"instruction3",*/
 	randomize("trial"), 
-	"feedback", 
-	SendResults(), 
-	"bye"
+	/*"feedback",*/ 
+	SendResults()/*, 
+	"bye"*/
 )
 
 newTrial("consent",
