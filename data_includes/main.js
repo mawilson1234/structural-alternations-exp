@@ -52,7 +52,8 @@ newTrial("consent",
 
 newTrial("instruction1",
 	newText(
-		"In this experiment, you will see a sentence with two blanks in it. " +
+		"In this experiment, you will be doing a fill-in-the-blank task. " + 
+		"First, you will see a sentence with two blanks in it. " +
 		"Below it, there will be a dash. " + 
 		"After a delay to give you time to read the sentence, a word will appear in a box where the dash was. " +
 		"When the word appears, you should click and drag it to the blank " +
