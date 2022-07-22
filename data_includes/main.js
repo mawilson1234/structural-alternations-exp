@@ -26,7 +26,7 @@ Sequence(
 	"instruction2",
 	randomize("trial_train"),
 	"instruction3",
-	// randomize("trial"), 
+	randomize("trial"), 
 	"feedback", 
 	SendResults(), 
 	"bye"
@@ -382,7 +382,7 @@ newTrial("bye",
 	newText(
 		"Thank you for your participation! " +
 		"Please go to the following web page to verify your participation: " +
-		"<a href='about:blank'>(placeholder)</a>.")
+		"<a href='about:blank' target='_blank">(placeholder)</a>.")
 		.print()
 	,
 	
