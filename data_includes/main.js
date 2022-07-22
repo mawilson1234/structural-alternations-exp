@@ -357,6 +357,7 @@ Template("stim.csv", variable =>
 	.log("sentence_type", variable.sentence_type)
 )
 
+/*
 PennController("feedback",
 	newText(
 		"If you have any feedback on the experiment, please leave it here. " +
@@ -394,3 +395,4 @@ newTrial("bye",
 	newButton().wait()	// Wait for a click on a non-displayed button = wait here forever
 )
 .setOption("countsForProgressBar", false)
+*/
