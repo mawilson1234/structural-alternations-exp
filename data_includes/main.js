@@ -48,9 +48,8 @@ newTrial("consent",
 		.center()
 		.print()
 		.wait()
-)
+).setOption("countsForProgressBar", false)
 
-/*
 newTrial("instruction",
 	newText(
 		"In this experiment, you will see a sentence with two blanks in it. " +
@@ -66,7 +65,7 @@ newTrial("instruction",
 		"During the practice, you will get feedback on whether you chose the correct blank for the word, " +
 		"and if you chose incorrectly, you should move the word to the correct blank to continue. " +
 		"However, you will not get feedback during the main part of the experiment." +
-		"<p>Click below when you are ready to begin practice.</p>" +
+		"<p>Click below when you are ready to begin practice.</p>"
 	)
 		.css(centered_justified_style)
 		.print()
@@ -76,8 +75,7 @@ newTrial("instruction",
 		.center()
 		.print()
 		.wait()
-)
-*/
+).setOption("countsForProgressBar", false)
 
 var feedback_trial = label => item => {
 	var word_num 	 = Math.floor(Math.random() * 12);
