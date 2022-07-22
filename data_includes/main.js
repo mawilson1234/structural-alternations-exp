@@ -331,7 +331,8 @@ Template("stimuli.csv", item => {
 		getMouseTracker("mouse").stop(),
 		
 		getText("word").css({
-			border: '', padding: '', width: blank_style['width'], 
+			//border: '', 
+			padding: '', width: blank_style['width'], 
 			'text-align': 'center',
 			'margin-left': '-0.54em', 'margin-top': '-0px'
 		}),
