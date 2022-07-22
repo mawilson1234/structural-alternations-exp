@@ -26,7 +26,7 @@ Sequence(
 	"instruction2",
 	randomize("trial_train"),
 	"instruction3",
-	//randomize("trial"), 
+	// randomize("trial"), 
 	"feedback", 
 	SendResults(), 
 	"bye"
@@ -81,8 +81,8 @@ newTrial("instruction1",
 
 var feedback_trial = label => item => {
 	var word_num 	 = Math.floor(Math.random() * 12);
-	var target_res   = word_num <= 5 ? '[subj]' : '[obj]';
-	var correct 	 = false;
+	var target_res   = word_num <= 5 ? '[subj]' : '[obj]'
+	var correct 	 = false
 	var word 		 = item['word_' + word_num];
 	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
 	var midsentence  = '&nbsp;' + item.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
@@ -138,7 +138,7 @@ var feedback_trial = label => item => {
 			.removeDrop(getText(first_arg), getText(second_arg))
 		,
 		
-		newButton("Next").css("margin-top", "2em").center().print().wait()
+		newButton("next", "Next").css("margin-top", "2em").center().print().wait().remove()
 	)
 	.log('item'		 	  , item.item)
 	.log('word'			  , word)
@@ -288,19 +288,19 @@ Template("pretrial.csv", variable =>
 	.log("sentence_type", variable.sentence_type)
 )
 */
-/*
+
 Template("stimuli.csv", item => {
-	var word_num 	 = Math.floor(Math.random() * 12)
+	var word_num 	 = Math.floor(Math.random() * 12);
 	var target_res   = word_num <= 5 ? '[subj]' : '[obj]'
-	var correct 	 = false;
-	var word 		 = item['word_' + word_num]
-	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
-	var midsentence  = '&nbsp;' + item.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
-	var postsentence = '&nbsp;' + item.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2]
-	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0]
-	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1]
+	var correct 	 = false
+	var word 		 = item['word_' + word_num];
+	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
+	var midsentence  = '&nbsp;' + item.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
+	var postsentence = '&nbsp;' + item.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2];
+	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0];
+	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1];
 	
-	return newTrial("trial",
+	return newTrial("trial",		
 		newText("container", "").center().css({display: "flex", 'margin-bottom': '3em'}).print(),
 		newText(presentence).print(getText("container")),
 		newText(first_arg, " ").css(blank_style).print(getText("container")),
@@ -339,7 +339,7 @@ Template("stimuli.csv", item => {
 			'margin-left': '-0.54em', 'margin-top': '-0px'
 		}),
 		
-		newButton("Next").css("margin-top", "2em").center().print().wait()
+		newButton("next", "Next").css("margin-top", "2em").center().print().wait().remove()
 	)
 	.log('item'		 	  , item.item)
 	.log('word'			  , word)
@@ -347,9 +347,9 @@ Template("stimuli.csv", item => {
 	.log('target_response', target_res)
 	.log('args_group'	  , item.args_group)
 	.log('sentence_type'  , item.sentence_type)
-	.log('sentence'	 	  , item.sentence)
+	.log('sentence'	 	  , item.sentence);
 })
-*/
+
 newTrial("feedback",
 	newText(
 		"If you have any feedback on the experiment, please leave it here. " +
