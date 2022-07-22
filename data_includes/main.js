@@ -5,7 +5,7 @@ SetCounter("setcounter")
 
 var blank_style = {
 	border: '1px solid #000', 
-	width: '5em', 
+	width: '5.25em', 
 	position: 'relative', 
 	'padding-top': '5px',
 	top: '-3px'
