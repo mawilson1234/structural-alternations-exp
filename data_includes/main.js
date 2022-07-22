@@ -288,7 +288,7 @@ Template("pretrial.csv", variable =>
 )
 */
 
-Template("stimuli.csv", item => {
+var trial = group_label => item => {
 	var word_num 	 = Math.floor(Math.random() * 12)
 	var target_res   = word_num <= 5 ? '[subj]' : '[obj]'
 	var correct 	 = false
@@ -339,10 +339,13 @@ Template("stimuli.csv", item => {
 	.log('item'		 	  , item.item)
 	.log('word'			  , word)
 	.log('target_response', target_res)
-	.log('args_group'	  , item.group)
+	.log('args_group'	  , item[group_label])
 	.log('sentence_type'  , item.sentence_type)
 	.log('sentence'	 	  , item.sentence)
-})
+}
+
+Template("stimuli.csv", trial("group"))
+Template("fillers.csv", trial("filler_group"))
 
 newTrial("feedback",
 	newText(
