@@ -80,15 +80,15 @@ newTrial("instruction1",
 ).setOption("countsForProgressBar", false);
 
 var feedback_trial = label => item => {
-	var word_num 	 = Math.floor(Math.random() * 12)
-	var target_res   = word_num <= 5 ? '[subj]' : '[obj]'
-	var correct 	 = false
-	var word 		 = item['word_' + word_num]
-	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
-	var midsentence  = '&nbsp;' + item.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
-	var postsentence = '&nbsp;' + item.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2]
-	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0]
-	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1]
+	var word_num 	 = Math.floor(Math.random() * 12);
+	var target_res   = word_num <= 5 ? '[subj]' : '[obj]';
+	var correct 	 = false;
+	var word 		 = item['word_' + word_num];
+	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
+	var midsentence  = '&nbsp;' + item.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
+	var postsentence = '&nbsp;' + item.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2];
+	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0];
+	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1];
 	
 	return newTrial(label,		
 		newText("container", "").center().css({display: "flex", 'margin-bottom': '3em'}).print(),
@@ -146,7 +146,7 @@ var feedback_trial = label => item => {
 	.log('target_response', target_res)
 	.log('args_group'	  , item.args_group)
 	.log('sentence_type'  , item.sentence_type)
-	.log('sentence'	 	  , item.sentence)
+	.log('sentence'	 	  , item.sentence);
 }
 
 Template("practice.csv", feedback_trial('trial_prac'))
