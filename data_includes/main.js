@@ -25,7 +25,7 @@ Sequence(
 	randomize("trial_prac"),
 	"instruction2",
 	randomize("trial_train"),
-	//"instruction3",
+	"instruction3",
 	// randomize("trial"), 
 	//"feedback", 
 	SendResults(), 
@@ -192,7 +192,6 @@ newTrial("instruction2",
 
 Template("train.csv", feedback_trial('trial_train'))
 
-
 newTrial("instruction3",
 	newText(
 		"Now, you are ready to start the experiment! " +
@@ -201,8 +200,8 @@ newTrial("instruction3",
 		"and others will have words you already know. " +
 		"Remember, your job is to decide which blank the word below the sentence should go in. " +
 		"During the main experiment, you will not get any feedback about your choice, " +
-		"and you will not be able to change your first choice. Make sure to try your best, and good luck!" +
-		"<p>Click below when you are ready to begin the experiment.</p>"
+		"and you will not be able to change your first choice. Make sure to try your best, and good luck!<p />" +
+		"Click below when you are ready to begin the experiment."
 	)
 		.css(centered_justified_style)
 		.print()
@@ -288,86 +287,74 @@ Template("pretrial.csv", variable =>
 )
 */
 
-Template("stim.csv", variable => 
-	newTrial("trial",
-		// store the sentence in a variable so we can modify it
-		newVar("sentence", variable.sentence)
-			.log()
-		,
-		// reverse order of placeholders 50% of the time
-		newFunction("XXXX_last", () => Math.random() <= 0.5)
-			.call()
-			.test.is(1)
-			.success(
-				getVar("sentence")
-					.set(
-						v => v
-							.replace("XXXX", "ZZZZ")
-							.replace("YYYY", "XXXX")
-							.replace("ZZZZ", "YYYY")
-					)
-			)
+Template("stimuli.csv", item => {
+	var word_num 	 = Math.floor(Math.random() * 12);
+	var target_res   = word_num <= 5 ? '[subj]' : '[obj]'
+	var correct 	 = false
+	var word 		 = item['word_' + word_num];
+	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
+	var midsentence  = '&nbsp;' + item.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
+	var postsentence = '&nbsp;' + item.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2];
+	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0];
+	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1];
+	
+	return newTrial("trial",		
+		newText("container", "").center().css({display: "flex", 'margin-bottom': '3em'}).print(),
+		newText(presentence).print(getText("container")),
+		newText(first_arg, " ").css(blank_style).print(getText("container")),
+		newText(midsentence).print(getText("container")),
+		newText(second_arg, " ").css(blank_style).print(getText("container")),
+		newText(postsentence).print(getText("container")),
+		
+		newText("placeholder", "&mdash;").center().print(),
+		newTimer("wait", item.sentence.split(" ").length * 250).start().wait(),
+		getText("placeholder").remove(),
+		
+		newText("word", word).css({border: '1px solid #000', padding: '3px'}).center().print(),
+		
+		newMouseTracker("mouse").log(),
+		newFunction(async () => {
+			await new Promise(r => getText("word")._element.jQueryContainer.mousedown(r));
+			getMouseTracker("mouse").start()._runPromises();
+		}).call(),
+		
+		newDragDrop("dd", "bungee")
+			.log("all")
+			.addDrop(getText(first_arg), getText(second_arg))
+			.addDrag(getText("word"))
+			.callback(self.test.dropped(getText(target_res)).success(correct = true))
+			.offset('0.5em', '0.1em', getText(first_arg), getText(second_arg))
+			.wait(self.test.dropped(getText(target_res)))
+			.removeDrag(getText("word"))
+			.removeDrop(getText(first_arg), getText(second_arg))
 		,
 		
-		newText("sentence")
-			.before(newText("p", "<p>"))
-			.text(getVar("sentence"))
-			.after(newText("close_p", "</p>"))
-			.center()
-			.print()
-		,
+		getMouseTracker("mouse").stop(),
 		
-		newText("sep", "___________________________________________")
-			.center()
-			.print()
-		,
+		getText("word").css({
+			border: '', padding: '', width: '5em', 
+			'text-align': 'center',
+			'margin-left': '-0.54em', 'margin-top': '-0px'
+		}),
 		
-		newText("question", "<p>Where is <i>" + variable.word + "</i> more likely to go?</p>")
-			.center()
-			.print()
-		,
-		
-		newSelector("position")
-		,
-		
-		newCanvas("buttons", 200, 50)
-			.add(              0, 0, newButton("XXXX").selector("position"))
-			.add("right at 100%", 0, newButton("YYYY").selector("position"))
-			.center()
-			.print()
-		,
-		
-		getSelector("position")
-			.shuffle()
-			.once()
-			.wait()
-			.log()
-		,
-		
-		getCanvas("buttons")
-			.remove()
-		,
-		
-		newButton("Next")
-			.center()
-			.print()
-			.wait()
+		newButton("next", "Next").css("margin-top", "2em").center().print().wait().remove()
 	)
-	.log("group"		, variable.group)
-	.log("item"			, variable.item)
-	.log("word"			, variable.word)
-	.log("args_group"	, variable.args_group)
-	.log("sentence_type", variable.sentence_type)
-)
+	.log('item'		 	  , item.item)
+	.log('word'			  , word)
+	.log('correct'		  , correct)
+	.log('target_response', target_res)
+	.log('args_group'	  , item.args_group)
+	.log('sentence_type'  , item.sentence_type)
+	.log('sentence'	 	  , item.sentence);
+})
 
-/*
 PennController("feedback",
 	newText(
 		"If you have any feedback on the experiment, please leave it here. " +
-		"We would be especially interested to hear if you have any thoughts about words you think might be " +
-		"similar in meaning to <i>blork</i>." + "
-		"<p />If you don't have any feedback to leave, " +
-		"you can leave this blank and continue by pressing \"Send\" below.<p />"
+		"We would be especially interested to hear if you have any thoughts " +
+		"about whether you thought of words that might be similar in meaning to <i>blork</i>.<p />" +
+		"If you don't have any feedback, " +
+		"you can leave this blank and continue by pressing \"Send\" below."
 	)
 		.css(centered_justified_style)
 		.print()
@@ -398,4 +385,3 @@ newTrial("bye",
 	newButton().wait()	// Wait for a click on a non-displayed button = wait here forever
 )
 .setOption("countsForProgressBar", false)
-*/
