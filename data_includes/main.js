@@ -292,7 +292,7 @@ Template("pretrial.csv", variable =>
 Template("stimuli.csv", item => {
 	var word_num 	 = Math.floor(Math.random() * 12);
 	var target_res   = word_num <= 5 ? '[subj]' : '[obj]'
-	var correct 	 = false
+	var correct 	 = false;
 	var word 		 = item['word_' + word_num];
 	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
 	var midsentence  = '&nbsp;' + item.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
