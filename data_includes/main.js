@@ -19,7 +19,8 @@ var centered_justified_style = {
 
 Sequence(
 	"setcounter", 
-	//"consent", "instruction1", 
+	"consent", 
+	//"instruction1", 
 	randomize("trial_prac"),
 	//"instruction2",
 	randomize("trial_train"),
@@ -30,7 +31,7 @@ Sequence(
 	//"bye"
 )
 
-/*
+
 newTrial("consent",
 	newText(
 		"Before starting the experiment, you will need to give consent. " + 
@@ -48,6 +49,7 @@ newTrial("consent",
 		.wait()
 )
 
+/*
 newTrial("instruction",
 	newText(
 		"In this experiment, you will see a sentence with two blanks in it. " +
