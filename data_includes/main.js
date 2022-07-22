@@ -11,6 +11,12 @@ var blank_style = {
 	top: '-3px'
 }
 
+var dropped_word_style = {
+	border: '', padding: '', width: blank_style['width'], 
+	'text-align': 'center',
+	'margin-left': '-0.5em', 'margin-top': '-0px'
+}
+
 var centered_justified_style = {
 	"text-align": "justify", 
 	margin: '0 auto', 
@@ -124,11 +130,7 @@ var feedback_trial = label => item => {
 						getMouseTracker("mouse").stop()
 					)
 					.failure(getText("incorrect").print()),
-					getText("word").css({
-						border: '', padding: '', width: blank_style['width'], 
-						'text-align': 'center',
-						'margin-left': '-0.5em', 'margin-top': '-0px'
-					})
+					getText("word").css(dropped_word_style)
 			)
 			.offset('0.5em', '0.1em', getText(first_arg), getText(second_arg))
 			.wait(self.test.dropped(getText(target_res)))
@@ -330,11 +332,7 @@ Template("stimuli.csv", item => {
 		
 		getMouseTracker("mouse").stop(),
 		
-		getText("word").css({
-			border: '', padding: '', width: blank_style['width'], 
-			'text-align': 'center',
-			'margin-left': '-0.5em', 'margin-top': '-0px'
-		}),
+		getText("word").css(dropped_word_style),
 		
 		newButton("next", "Next").css("margin-top", "2em").center().print().wait().remove()
 	)
