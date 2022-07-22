@@ -122,8 +122,7 @@ var feedback_trial = label => item => {
 				self.test.dropped(getText(target_res))
 					.success(
 						getText("correct").print(),
-						getMouseTracker("mouse").stop(),
-						correct = true
+						getMouseTracker("mouse").stop()
 					)
 					.failure(getText("incorrect").print()),
 					getText("word").css({
@@ -142,7 +141,6 @@ var feedback_trial = label => item => {
 	)
 	.log('item'		 	  , item.item)
 	.log('word'			  , word)
-	.log('correct'		  , correct)
 	.log('target_response', target_res)
 	.log('args_group'	  , item.args_group)
 	.log('sentence_type'  , item.sentence_type)
@@ -324,7 +322,7 @@ Template("stimuli.csv", item => {
 			.log("all")
 			.addDrop(getText(first_arg), getText(second_arg))
 			.addDrag(getText("word"))
-			.callback(self.test.dropped(getText(target_res)).success(correct = true))
+			.callback()
 			.offset('0.5em', '0.1em', getText(first_arg), getText(second_arg))
 			.wait()
 			.removeDrag(getText("word"))
@@ -343,7 +341,6 @@ Template("stimuli.csv", item => {
 	)
 	.log('item'		 	  , item.item)
 	.log('word'			  , word)
-	.log('correct'		  , correct)
 	.log('target_response', target_res)
 	.log('args_group'	  , item.args_group)
 	.log('sentence_type'  , item.sentence_type)
