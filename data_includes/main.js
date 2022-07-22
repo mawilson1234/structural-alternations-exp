@@ -79,8 +79,8 @@ newTrial("instruction1",
 ).setOption("countsForProgressBar", false)
 
 var feedback_trial = label => item => {
-	var word_num 	 = Math.floor(Math.random() * 12)
-	var target_res   = word_num <= 5 ? '[subj]' : '[obj]'
+	var word_num 	 = Math.floor(Math.random() * 8)
+	var target_res   = word_num <= 3 ? '[subj]' : '[obj]'
 	var correct 	 = false
 	var word 		 = item['word_' + word_num]
 	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
