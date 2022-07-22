@@ -165,7 +165,7 @@ newTrial("instruction2",
 	newText("&nbsp;has always blorked the&nbsp;").print(getText("container")),
 	newText(" ").css(blank_style).print(getText("container")),
 	newText(".").print(getText("container")),
-	*/
+	
 	newText(
 		"<i>Blork</i> isn't completely like any other English words. " +
 		"However, just like in the sentences you saw during the practice session, " +
@@ -183,7 +183,7 @@ newTrial("instruction2",
 		.css(centered_justified_style)
 		.print()
 	,
-
+	*/
 	newButton("Click here to begin training!")
 		.center()
 		.print()
