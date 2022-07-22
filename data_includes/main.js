@@ -290,6 +290,7 @@ Template("pretrial.csv", variable =>
 */
 
 Template("stimuli.csv", item => {
+	/*
 	var word_num 	 = Math.floor(Math.random() * 12);
 	var target_res   = word_num <= 5 ? '[subj]' : '[obj]'
 	var correct 	 = false;
@@ -299,7 +300,7 @@ Template("stimuli.csv", item => {
 	var postsentence = '&nbsp;' + item.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2];
 	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0];
 	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1];
-	
+	*/
 	return newTrial("trial",
 		/*	
 		newText("container", "").center().css({display: "flex", 'margin-bottom': '3em'}).print(),
