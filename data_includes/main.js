@@ -48,7 +48,7 @@ newTrial("consent",
 		.center()
 		.print()
 		.wait()
-).setOption("countsForProgressBar", false);
+).setOption("countsForProgressBar", false)
 
 newTrial("instruction1",
 	newText(
@@ -77,18 +77,18 @@ newTrial("instruction1",
 		.center()
 		.print()
 		.wait()
-).setOption("countsForProgressBar", false);
+).setOption("countsForProgressBar", false)
 
 var feedback_trial = label => item => {
-	var word_num 	 = Math.floor(Math.random() * 12);
+	var word_num 	 = Math.floor(Math.random() * 12)
 	var target_res   = word_num <= 5 ? '[subj]' : '[obj]'
 	var correct 	 = false
-	var word 		 = item['word_' + word_num];
-	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
-	var midsentence  = '&nbsp;' + item.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
-	var postsentence = '&nbsp;' + item.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2];
-	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0];
-	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1];
+	var word 		 = item['word_' + word_num]
+	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
+	var midsentence  = '&nbsp;' + item.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
+	var postsentence = '&nbsp;' + item.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2]
+	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0]
+	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1]
 	
 	return newTrial(label,		
 		newText("container", "").center().css({display: "flex", 'margin-bottom': '3em'}).print(),
@@ -106,8 +106,8 @@ var feedback_trial = label => item => {
 		
 		newMouseTracker("mouse").log(),
 		newFunction(async () => {
-			await new Promise(r => getText("word")._element.jQueryContainer.mousedown(r));
-			getMouseTracker("mouse").start()._runPromises();
+			await new Promise(r => getText("word")._element.jQueryContainer.mousedown(r))
+			getMouseTracker("mouse").start()._runPromises()
 		}).call(),
 		
 		newText("correct", "Good job&mdash;that's the right choice!").css('color', 'rgb(34, 139, 34)').center(),
@@ -146,7 +146,7 @@ var feedback_trial = label => item => {
 	.log('target_response', target_res)
 	.log('args_group'	  , item.args_group)
 	.log('sentence_type'  , item.sentence_type)
-	.log('sentence'	 	  , item.sentence);
+	.log('sentence'	 	  , item.sentence)
 }
 
 Template("practice.csv", feedback_trial('trial_prac'))
@@ -290,15 +290,15 @@ Template("pretrial.csv", variable =>
 */
 
 Template("stimuli.csv", item => {
-	var word_num 	 = Math.floor(Math.random() * 12);
+	var word_num 	 = Math.floor(Math.random() * 12)
 	var target_res   = word_num <= 5 ? '[subj]' : '[obj]'
 	var correct 	 = false
-	var word 		 = item['word_' + word_num];
-	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
-	var midsentence  = '&nbsp;' + item.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
-	var postsentence = '&nbsp;' + item.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2];
-	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0];
-	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1];
+	var word 		 = item['word_' + word_num]
+	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
+	var midsentence  = '&nbsp;' + item.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
+	var postsentence = '&nbsp;' + item.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2]
+	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0]
+	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1]
 	
 	return newTrial("trial",		
 		newText("container", "").center().css({display: "flex", 'margin-bottom': '3em'}).print(),
@@ -316,8 +316,8 @@ Template("stimuli.csv", item => {
 		
 		newMouseTracker("mouse").log(),
 		newFunction(async () => {
-			await new Promise(r => getText("word")._element.jQueryContainer.mousedown(r));
-			getMouseTracker("mouse").start()._runPromises();
+			await new Promise(r => getText("word")._element.jQueryContainer.mousedown(r))
+			getMouseTracker("mouse").start()._runPromises()
 		}).call(),
 		
 		newDragDrop("dd", "bungee")
@@ -347,7 +347,7 @@ Template("stimuli.csv", item => {
 	.log('target_response', target_res)
 	.log('args_group'	  , item.args_group)
 	.log('sentence_type'  , item.sentence_type)
-	.log('sentence'	 	  , item.sentence);
+	.log('sentence'	 	  , item.sentence)
 })
 
 newTrial("feedback",
@@ -382,7 +382,7 @@ newTrial("bye",
 	newText(
 		"Thank you for your participation! " +
 		"Please go to the following web page to verify your participation: " +
-		"<a href='about:blank' target='_blank">(placeholder)</a>.")
+		"<a href='about:blank' target='_blank'>(placeholder)</a>.")
 		.print()
 	,
 	
