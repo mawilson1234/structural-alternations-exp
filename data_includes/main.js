@@ -326,7 +326,7 @@ Template("stimuli.csv", item => {
 			.addDrag(getText("word"))
 			.callback(self.test.dropped(getText(target_res)).success(correct = true))
 			.offset('0.5em', '0.1em', getText(first_arg), getText(second_arg))
-			.wait(self.test.dropped(getText(target_res)))
+			.wait()
 			.removeDrag(getText("word"))
 			.removeDrop(getText(first_arg), getText(second_arg))
 		,
