@@ -126,7 +126,7 @@ var feedback_trial = label => item => {
 					getText("word").css({
 						padding: '', width: '5em', 
 						'text-align': 'center',
-						'margin-left': '-0.54em', 'margin-top': '-3px'
+						'margin-left': '-0.54em', 'margin-top': '-1.5px'
 					})
 			)
 			.offset('0.5em', '0.1em', getText(first_arg), getText(second_arg))
