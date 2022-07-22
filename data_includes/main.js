@@ -144,6 +144,7 @@ var feedback_trial = label => item => {
 
 Template("practice.csv", feedback_trial('trial_prac'))
 
+/*
 newTrial("instruction2",
 	newText(
 		"You have now finished the practice session, and will move on to a training session. " +
@@ -184,6 +185,7 @@ newTrial("instruction2",
 		.print()
 		.wait()
 )
+*/
 
 Template("train.csv", feedback_trial('trial_train'))
 
