@@ -50,7 +50,7 @@ newTrial("consent",
 		.wait()
 ).setOption("countsForProgressBar", false)
 
-newTrial("instruction",
+newTrial("instruction1",
 	newText(
 		"In this experiment, you will see a sentence with two blanks in it. " +
 		"Below the word, there will be a dash. " + 
