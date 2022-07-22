@@ -21,7 +21,7 @@ var centered_justified_style = {
 Sequence(
 	"setcounter", 
 	"consent", 
-	//"instruction1", 
+	"instruction1", 
 	randomize("trial_prac"),
 	//"instruction2",
 	randomize("trial_train"),
