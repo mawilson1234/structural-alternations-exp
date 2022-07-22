@@ -30,7 +30,7 @@ Sequence(
 	//"bye"
 )
 
-
+/*
 newTrial("consent",
 	newText(
 		"Before starting the experiment, you will need to give consent. " + 
@@ -74,6 +74,7 @@ newTrial("instruction",
 		.print()
 		.wait()
 )
+*/
 
 var feedback_trial = label => item => {
 	var word_num 	 = Math.floor(Math.random() * 12);
