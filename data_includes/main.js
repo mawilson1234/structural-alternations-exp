@@ -124,7 +124,7 @@ var feedback_trial = label => item => {
 					)
 					.failure(getText("incorrect").print()),
 					getText("word").css({
-						padding: '', width: '5em', 
+						border, '': padding: '', width: '5em', 
 						'text-align': 'center',
 						'margin-left': '-0.54em', 'margin-top': '-1px'
 					})
