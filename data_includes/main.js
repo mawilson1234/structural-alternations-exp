@@ -11,76 +11,68 @@ var blank_style = {
 	top: '-3px'
 }
 
+var centered_justified_style = {
+	"text-align": "justify", 
+	margin: '0 auto', 
+	width: '30em'
+}
+
 Sequence(
 	"setcounter", 
-	// "intro", "consent", "recording", "instruction", 
-	randomize("trial_prac"), 
+	"consent", "instruction1", 
+	randomize("trial_prac"),
+	"instruction2",
 	randomize("trial_train"),
-	// "warn", "instruction2", 
-	//randomize("pretrial"), 
-	//randomize("trial"), 
-	// "feedback", 
+	"instruction3",
+	// randomize("trial"), 
+	"feedback", 
 	SendResults(), 
 	"bye"
 )
 
-/*newTrial("intro",
-	newText("Welcome","Welcome! This experiment has two halves. Following the first half, you will see a link to the second half, which will have different instructions you will see at that time.<p>To participate in this experiment, you must meet the following requirements.<p>(1) Your computer must have a microphone (a built-in microphone is fine).<p>(2) Your browser must be either Chrome or Firefox. You CANNOT use Safari for this experiment.<p>(3) You must turn off music/video (e.g., YouTube) played on the same computer you are using to take this experiment.<p>(4) Please note that you will be asked to speak aloud during the experiment (recite simple sentences and pronounce fake words aloud). Your speech will be recorded and that's our critical data.<p>If you meet these requirements, please enter your Prolific ID below and click Next:")
-		.settings.css("font-size", "2em")
-		.print()
-	,
-	
-	newTextInput("ProlificID")
-		.before(
-			newText("ID", "Your Prolific ID:")
-				.settings.css("font-size", "2em")
-		)
-		.settings.css("font-size", "2em")
-		.settings.css('width', '50%')
-		.settings.css('margin', 'auto')
-		.print()
-		.log()
-	,
-	
-	newButton("Next","Next")
-		.center()
-		.settings.css("font-size", "2em")
-		.settings.css('margin', '40px')
-		.settings.size(500, 48)
-		.print()
-		.wait()
-)
-
 newTrial("consent",
-	newText("Please click <a href='https://shotam.github.io/IRB/consent_online_recording.pdf' target='_blank'>here</a> to download the consent form for this study. If you read it and agree to participate in this study, click 'I Agree' below. If you do not agree to participate in this study, you can leave this study by closing the tab.")
-		.settings.css("font-size", "2em")
+	newText(
+		"Before starting the experiment, you will need to give consent. " + 
+		"Please click <a href='about:blank' target='_blank'>here</a> to download the consent form for this study. " +
+		"If you read it and agree to participate in this study, click 'I Agree' below. " + 
+		"If you do not agree to participate in this study, you can leave this page by closing the tab."
+	)
+		.css(centered_justified_style)
 		.print()
 	,
 	
-	newButton("Agree","I Agree")
+	newButton("Agree", "I Agree")
 		.center()
-		.settings.css("font-size", "2em")
-		.settings.css('margin', '40px')
-		.settings.size(500, 48)
 		.print()
 		.wait()
 )
 
 newTrial("instruction",
-	newText("Instr", "In this experiment, you will first read a sentence in a word-by-word fashion, then pronounce a series of fake words out loud, and then say out loud the sentence you memorized.<p>When reading the sentence, you will first see a long dash appear. Press the Space bar to show the first word when you are ready. When you are finished reading each word, you should press the Space bar to proceed, which will replace the previous word with the next one. Your task is to read the sentence silently and <b>memorize the sentence for later recall.</b></p> <p>After you see each sentence, you will see five stars, like this '*****'. When you are ready, you should press the Space bar again to proceed to the second task, which is to <b>pronounce each fake word out loud</b> as it is presented to you <b>as soon as possible</b>. If you are unsure about how to pronounce a particular fake word, just try your best. After you have pronounced the fake words, you will see the text 'Recall Sentence' appear on the screen. When you see 'Recall Sentence' appear, you should recite the sentence you memorized earlier <b>aloud</b>, as soon as possible.</p> <p><b>TIP: Many people find it helpful to try to visualize the situations described by sentences when memorizing them.</b></p>")
-		.settings.css("font-size", "2em")
+	newText(
+		"In this experiment, you will see a sentence with two blanks in it. " +
+		"Below the word, there will be a dash. "
+		"After a delay to give you time to read the sentence, a word will appear in a box where the dash was. " +
+		"When the word appears, you should click and drag it to the blank " +
+		"in the sentence where you think it should go. " +
+		"You will not be able to change your first answer. " +
+		"After you have filled one of the blanks with the word, you will see a Next button, which you can click " +
+		"to go to the next item. " +
+		"First, you will do some practice to get you used to how this works. " +
+		"Afterward, there will be additional instructions. " + 
+		"During the practice, you will get feedback on whether you chose the correct blank for the word, " +
+		"and if you chose incorrectly, you should move the word to the correct blank to continue. " +
+		"However, you will not get feedback during the main part of the experiment." +
+		"<p>Click below when you are ready to begin practice.</p>" +
+	)
+		.css(centered_justified_style)
 		.print()
 	,
 
-	newButton("Click","Click here to begin practice trials!")
+	newButton("Click here to begin practice!")
 		.center()
-		.settings.css("font-size", "2em")
-		.settings.css("margin", "40px")
-		.settings.size(500, 48)
 		.print()
 		.wait()
 )
-*/
 
 var feedback_trial = label => item => {
 	var word_num 	 = Math.floor(Math.random() * 12);
@@ -149,38 +141,73 @@ var feedback_trial = label => item => {
 }
 
 Template("practice.csv", feedback_trial('trial_prac'))
-Template("train.csv", feedback_trial('trial_train'))
-
-/*
-newTrial("warn",
-	newText("Practice done!<p><b>Please note: some participants have reported that the script froze in the middle of the experiment. If this happens to you, please don’t panic, and let us know via the message function in Prolific. We will make sure that you will be compensated for the time you spent for the experiment.</b></p>")
-		.settings.css("font-size", "2em")
-		.print()
-	,
-	newButton("Next", "Next")
-		.center()
-		.settings.css("font-size", "2em")
-		.settings.css('margin', '40px')
-		.settings.size(500, 48)
-		.print()
-		.wait()
-)
 
 newTrial("instruction2",
-	newText("Instr2", "Now, you are ready to start the experiment! Remember, your task is to:<p>(1) Silently read and memorize sentences presented in a word-by-word fashion.<p>(2) Read aloud each fake word presented after the sentence.<p>(3) When you see the words 'Recall Sentence,' say the sentence you memorized out loud.")
-		.settings.css("font-size", "2em")
+	newText(
+		"You have now finished the practice session, and will move on to a training session. " +
+		"During training, you will learn about a new word, <i>blork</i>. " +
+		"You will see a series of sentences like the following: "
+	)
+		.css(centered_justified_style)
+		.print()
+	,
+	
+	newText("container", "").center().css({display: "flex", 'margin-bottom': '3em', 'margin-top': '3em'}).print(),
+	newText("The&nbsp;").print(getText("container")),
+	newText(" ").css(blank_style).print(getText("container")),
+	newText("&nbsp;has always blorked the&nbsp;").print(getText("container")),
+	newText(" ").css(blank_style).print(getText("container")),
+	newText(".").print(getText("container"))
+	
+	newText(
+		"<i>Blork</i> isn't exactly like any existing English words. " +
+		"However, just like in the sentences you saw during the practice session, " +
+		"some words consistently go better in certain positions in sentences with <i>blork</i> than others. "
+		"During training, you should start by guessing which blank the word should go in. " +
+		"If you guess right, you should make more guesses like that one. " +
+		"If you guess wrong, you will see a notification that you should have put the word in the other blank. " +
+		"Then, you can drag the word from the wrong blank to the right one to continue on. " +
+		"You should use this feedback to help you make generalizations about where certain words " +
+		"should go in sentences with <i>blork</i>." +
+		"<p>When you are finished with the training session, you will see one more message before " +
+		"going on to the main experiment.</p>" +
+		"<p>click below when you are ready to begin the training session.</p>"
+	)
+		.css(centered_justified_style)
 		.print()
 	,
 
-	newButton("Click","Click here to begin the experiment")
+	newButton("Click here to begin training!")
 		.center()
-		.settings.css("font-size", "2em")
-		.settings.css('margin', '40px')
-		.settings.size(550, 48)
 		.print()
 		.wait()
 )
 
+Template("train.csv", feedback_trial('trial_train'))
+
+
+newTrial("instruction3",
+	newText(
+		"Now, you are ready to start the experiment! " +
+		"In the experiment, you will see many sentences. " +
+		"Most will have the new word, <i>blork</i>, which you just learned about, " +
+		"and others will have words you already know. " +
+		"Remember, your job is to decide which blank the word below the sentence should go in. " +
+		"During the main experiment, you will not get any feedback about your choice, " +
+		"and you will not be able to change your first choice. Make sure to try your best, and good luck!" +
+		"<p>Click below when you are ready to begin the experiment.</p>"
+	)
+		.css(centered_justified_style)
+		.print()
+	,
+
+	newButton("Click here to begin the experiment!")
+		.center()
+		.print()
+		.wait()
+)
+
+/*
 Template("pretrial.csv", variable => 
 	newTrial("pretrial",
 		// store the sentence in a variable so we can modify it
@@ -252,6 +279,7 @@ Template("pretrial.csv", variable =>
 	.log("args_group"	, variable.args_group)
 	.log("sentence_type", variable.sentence_type)
 )
+*/
 
 Template("stim.csv", variable => 
 	newTrial("trial",
@@ -326,9 +354,14 @@ Template("stim.csv", variable =>
 )
 
 PennController("feedback",
-	newText("feedback_instruction",
-		"If you have any feedback on the experiment, please leave it here.<p />")
-		.center()
+	newText(
+		"If you have any feedback on the experiment, please leave it here. " +
+		"We would be especially interested to hear if you have any thoughts about words you think might be " +
+		"similar in meaning to <i>blork</i>." + "
+		"<p />If you don't have any feedback to leave, " +
+		"you can leave this blank and continue by pressing \"Send\" below.<p />"
+	)
+		.css(centered_justified_style)
 		.print()
 	,
 
@@ -340,19 +373,20 @@ PennController("feedback",
 		.print()
 	,
 
-	newButton("send", "Send")
+	newButton("Send")
 		.center()
 		.print()
 		.wait()
 )
-*/
 
 newTrial("bye",
-	newText("Thank you for your participation!")//" Please go to the following web page to verify your participation: <a href='https://app.prolific.co/submissions/complete?cc=728AA2CF'> https://app.prolific.co/submissions/complete?cc=728AA2CF</a>.")
-		.print(),
+	newText(
+		"Thank you for your participation! " +
+		"Please go to the following web page to verify your participation: " +
+		"<a href='about:blank'>(placeholder)</a>.")
+		.print()
+	,
 	
-	newButton()
-		.wait()	// Wait for a click on a non-displayed button = wait here forever
+	newButton().wait()	// Wait for a click on a non-displayed button = wait here forever
 )
 .setOption("countsForProgressBar", false)
-// Make sure the progress bar is full upon reaching this last (non-)trial
