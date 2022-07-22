@@ -377,7 +377,7 @@ newTrial("feedback",
 
 newTrial("bye",
 	newText(
-		"Thank you for your participation! " +
+		"Thank you for participating! " +
 		"Please go to the following web page to verify your participation: " +
 		"<a href='about:blank' target='_blank'>(placeholder)</a>.")
 		.print()
