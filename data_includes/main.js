@@ -26,7 +26,7 @@ Sequence(
 	"instruction2",
 	randomize("trial_train"),
 	"instruction3",
-	randomize("trial"), 
+	//randomize("trial"), 
 	"feedback", 
 	SendResults(), 
 	"bye"
@@ -313,7 +313,7 @@ Template("stimuli.csv", item => {
 		getText("placeholder").remove(),
 		
 		newText("word", word).css({border: '1px solid #000', padding: '3px'}).center().print(),
-		
+		/*
 		newMouseTracker("mouse").log(),
 		newFunction(async () => {
 			await new Promise(r => getText("word")._element.jQueryContainer.mousedown(r));
@@ -338,6 +338,7 @@ Template("stimuli.csv", item => {
 			'text-align': 'center',
 			'margin-left': '-0.54em', 'margin-top': '-0px'
 		}),
+		*/
 		
 		newButton("next", "Next").css("margin-top", "2em").center().print().wait().remove()
 	)
