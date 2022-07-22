@@ -19,17 +19,17 @@ var centered_justified_style = {
 }
 
 Sequence(
-	"setcounter", 
-	/*"consent", 
-	"instruction1", 
+	"setcounter",
+	"consent",
+	"instruction1",
 	randomize("trial_prac"),
 	"instruction2",
 	randomize("trial_train"),
-	"instruction3",*/
-	randomize("trial"), 
-	/*"feedback",*/ 
-	SendResults()/*, 
-	"bye"*/
+	"instruction3",
+	randomize("trial"),
+	"feedback",
+	SendResults(),
+	"bye"
 )
 
 newTrial("consent",
@@ -287,7 +287,7 @@ Template("pretrial.csv", variable =>
 */
 
 Template("stimuli.csv", item => {
-	var word_num 	 = 3 //Math.floor(Math.random() * 12)
+	var word_num 	 = Math.floor(Math.random() * 12)
 	var target_res   = word_num <= 5 ? '[subj]' : '[obj]'
 	var correct 	 = false
 	var word 		 = item['word_' + word_num]
