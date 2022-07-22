@@ -5,7 +5,7 @@ SetCounter("setcounter")
 
 var blank_style = {
 	border: '1px solid #000', 
-	width: '6em', 
+	width: '5.5em', 
 	position: 'relative', 
 	'padding-top': '5px',
 	top: '-3px'
@@ -331,7 +331,7 @@ Template("stimuli.csv", item => {
 		getMouseTracker("mouse").stop(),
 		
 		getText("word").css({
-			border: '', padding: '', width: '5em', 
+			border: '', padding: '', width: blank_style['width'], 
 			'text-align': 'center',
 			'margin-left': '-0.54em', 'margin-top': '-0px'
 		}),
