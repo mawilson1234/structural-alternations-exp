@@ -5,7 +5,7 @@ SetCounter("setcounter")
 
 var blank_style = {
 	border: '1px solid #000', 
-	width: '5.25em', 
+	width: '5.5em', 
 	position: 'relative', 
 	'padding-top': '5px',
 	top: '-3px'
@@ -287,7 +287,7 @@ Template("pretrial.csv", variable =>
 */
 
 Template("stimuli.csv", item => {
-	var word_num 	 = Math.floor(Math.random() * 12)
+	var word_num 	 = 3 //Math.floor(Math.random() * 12)
 	var target_res   = word_num <= 5 ? '[subj]' : '[obj]'
 	var correct 	 = false
 	var word 		 = item['word_' + word_num]
