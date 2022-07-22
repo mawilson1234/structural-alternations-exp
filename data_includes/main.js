@@ -53,7 +53,7 @@ newTrial("consent",
 newTrial("instruction",
 	newText(
 		"In this experiment, you will see a sentence with two blanks in it. " +
-		"Below the word, there will be a dash. "
+		"Below the word, there will be a dash. " + 
 		"After a delay to give you time to read the sentence, a word will appear in a box where the dash was. " +
 		"When the word appears, you should click and drag it to the blank " +
 		"in the sentence where you think it should go. " +
