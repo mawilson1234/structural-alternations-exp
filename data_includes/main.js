@@ -23,7 +23,7 @@ Sequence(
 	"consent", 
 	"instruction1", 
 	randomize("trial_prac"),
-	//"instruction2",
+	"instruction2",
 	randomize("trial_train"),
 	//"instruction3",
 	// randomize("trial"), 
