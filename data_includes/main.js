@@ -14,6 +14,7 @@ var blank_style = {
 var centered_justified_style = {
 	"text-align": "justify", 
 	margin: '0 auto', 
+	'margin-bottom': '2em'
 	width: '30em'
 }
 
