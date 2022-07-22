@@ -61,7 +61,7 @@ newTrial("instruction1",
 		"After you have filled a blank with the word, you will see a \"Next\" button, which you can click " +
 		"to go to the next item.<p />" +
 		"Note that this means <b>the sentence will still be missing one word at the end of each trial</b>, " +
-		"since you will only fill in one of the two blanks.<p />"
+		"since you will only fill in one of the two blanks.<p />" + 
 		"First, you will do some practice to get you used to how this works. " +
 		"Afterward, there will be additional instructions. " + 
 		"During the practice, you will get feedback on whether you chose the correct blank for the word, " +
