@@ -163,9 +163,9 @@ newTrial("instruction2",
 	
 	newText("container", "").center().css({display: "flex", 'margin-bottom': '3em'}).print(),
 	newText("The&nbsp;").print(getText("container")),
-	newText(" ").css(blank_style).print(getText("container")),
+	newText("firstblank", " ").css(blank_style).print(getText("container")),
 	newText("&nbsp;has always blorked the&nbsp;").print(getText("container")),
-	newText(" ").css(blank_style).print(getText("container")),
+	newText("secondblank", " ").css(blank_style).print(getText("container")),
 	newText(".").print(getText("container")),
 	
 	newText(
