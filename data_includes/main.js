@@ -90,9 +90,9 @@ var feedback_trial = label => item => {
 	return newTrial(label,		
 		newText("container", "").center().css({display: "flex", 'margin-bottom': '3em'}).print(),
 		newText(presentence).print(getText("container")),
-		newText(first_arg, "").css(blank_style).print(getText("container")),
+		newText(first_arg, " ").css(blank_style).print(getText("container")),
 		newText(midsentence).print(getText("container")),
-		newText(second_arg, "").css(blank_style).print(getText("container")),
+		newText(second_arg, " ").css(blank_style).print(getText("container")),
 		newText(postsentence).print(getText("container")),
 		
 		newText("placeholder", "&mdash;").center().print(),
@@ -125,7 +125,8 @@ var feedback_trial = label => item => {
 					.failure(getText("incorrect").print()),
 					getText("word").css({
 						padding: '', width: '5em', 
-						'text-align': 'center'
+						'text-align': 'center',
+						'margin-left': '-0.525em', 'margin-top': '-3px'
 					})
 			)
 			.offset('0.5em', '0.1em', getText(first_arg), getText(second_arg))
