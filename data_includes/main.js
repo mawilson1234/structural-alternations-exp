@@ -348,7 +348,7 @@ Template("stimuli.csv", item => {
 	.log('sentence'	 	  , item.sentence);
 })
 
-PennController("feedback",
+newTrial("feedback",
 	newText(
 		"If you have any feedback on the experiment, please leave it here. " +
 		"We would be especially interested to hear if you have any thoughts " +
