@@ -49,28 +49,28 @@
 47,276,I wonder which [obj] has seldom been regretted by the [subj].,emb-wh-Q subject perfect passive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
 48,277,I wonder which [subj] seems to have usually regretted the [obj].,emb-wh-Q subject raising perfect transitive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
 49,278,Has the [subj] seldom regretted the [obj]?,polar Q perfect transitive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-50,279,I wonder which [subj] the [obj] was never frightened by.,emb-wh-Q P-object past passive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-51,280,Which [obj] has seldom been frightened by the [subj]?,mat-wh-Q subject perfect passive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-52,281,Which [obj] was always frightened by the [subj]?,mat-wh-Q subject past passive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-53,282,It was the [subj] that has never frightened the [obj].,cleft subject perfect transitive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-54,283,Which [obj] seems to never be frightened by the [subj]?,mat-wh-Q subject raising passive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-55,284,I wonder which [subj] seems to have never frightened the [obj].,emb-wh-Q subject raising perfect transitive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-56,285,The [subj] has usually frightened the [obj] from time to time.,post-obj adverbial perfect transitive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-57,286,The [subj] has never frightened the [obj] from time to time.,post-obj adverbial perfect transitive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-58,287,Which [subj] seems to have usually frightened the [obj]?,mat-wh-Q subject raising perfect transitive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-59,288,Which [obj] does the [subj] seem to have usually frightened?,mat-wh-Q object raising perfect transitive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-60,289,I wonder which [obj] the [subj] has always frightened.,emb-wh-Q object perfect transitive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-61,290,The [subj] that the [obj] has always been frightened by is everyone's favorite.,PORC perfect passive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-62,291,The [obj] that the [subj] always frightened is everyone's favorite.,ORC past transitive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-63,292,I wonder which [obj] seems to have always been frightened by the [subj].,emb-wh-Q subject raising perfect passive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-64,293,I wonder which [obj] was seldom frightened by the [subj].,emb-wh-Q subject past passive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-65,294,It was the [obj] that was seldom frightened by the [subj].,cleft subject past passive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-66,295,I wonder which [obj] the [subj] has seldom frightened.,emb-wh-Q object perfect transitive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-67,296,The [subj] has always frightened frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-68,297,It was the [obj] that the [subj] always frightened.,cleft object past transitive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-69,298,I wonder which [subj] the [obj] was always frightened by.,emb-wh-Q P-object past passive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-70,299,The [obj] seldom got frightened by the [subj].,past get-passive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-71,300,Has the [subj] never frightened the [obj]?,polar Q perfect transitive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-72,301,The [subj] that always frightened the [obj] is everyone's favorite.,SRC past transitive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-73,302,Was the [obj] always frightened by the [subj]?,polar Q past passive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-74,303,Which [obj] seems to seldom be frightened by the [subj]?,mat-wh-Q subject raising passive,movie,shot,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+50,279,I wonder which [subj] the [obj] was never frightened by.,emb-wh-Q P-object past passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+51,280,Which [obj] has seldom been frightened by the [subj]?,mat-wh-Q subject perfect passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+52,281,Which [obj] was always frightened by the [subj]?,mat-wh-Q subject past passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+53,282,It was the [subj] that has never frightened the [obj].,cleft subject perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+54,283,Which [obj] seems to never be frightened by the [subj]?,mat-wh-Q subject raising passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+55,284,I wonder which [subj] seems to have never frightened the [obj].,emb-wh-Q subject raising perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+56,285,The [subj] has usually frightened the [obj] from time to time.,post-obj adverbial perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+57,286,The [subj] has never frightened the [obj] from time to time.,post-obj adverbial perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+58,287,Which [subj] seems to have usually frightened the [obj]?,mat-wh-Q subject raising perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+59,288,Which [obj] does the [subj] seem to have usually frightened?,mat-wh-Q object raising perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+60,289,I wonder which [obj] the [subj] has always frightened.,emb-wh-Q object perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+61,290,The [subj] that the [obj] has always been frightened by is everyone's favorite.,PORC perfect passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+62,291,The [obj] that the [subj] always frightened is everyone's favorite.,ORC past transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+63,292,I wonder which [obj] seems to have always been frightened by the [subj].,emb-wh-Q subject raising perfect passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+64,293,I wonder which [obj] was seldom frightened by the [subj].,emb-wh-Q subject past passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+65,294,It was the [obj] that was seldom frightened by the [subj].,cleft subject past passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+66,295,I wonder which [obj] the [subj] has seldom frightened.,emb-wh-Q object perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+67,296,The [subj] has always frightened frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+68,297,It was the [obj] that the [subj] always frightened.,cleft object past transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+69,298,I wonder which [subj] the [obj] was always frightened by.,emb-wh-Q P-object past passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+70,299,The [obj] seldom got frightened by the [subj].,past get-passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+71,300,Has the [subj] never frightened the [obj]?,polar Q perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+72,301,The [subj] that always frightened the [obj] is everyone's favorite.,SRC past transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+73,302,Was the [obj] always frightened by the [subj]?,polar Q past passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+74,303,Which [obj] seems to seldom be frightened by the [subj]?,mat-wh-Q subject raising passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
