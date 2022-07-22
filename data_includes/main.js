@@ -14,7 +14,7 @@ var blank_style = {
 var centered_justified_style = {
 	"text-align": "justify", 
 	margin: '0 auto', 
-	'margin-bottom': '2em',
+	'margin-bottom': '3em',
 	width: '30em'
 }
 
@@ -172,10 +172,10 @@ newTrial("instruction2",
 		"some words consistently go better in certain positions in sentences with <i>blork</i> than others.<p />" +
 		"During training, you should start by guessing which blank the word should go in. " +
 		"If you guess right, you should make more guesses like that one. " +
-		"If you guess wrong, you will see a notification that you should have put the word in the other blank. " +
-		"Then, you can drag the word from the wrong blank to the right one to continue on. " +
-		"You should use this feedback to help you make generalizations about where certain words " +
-		"should go in sentences with <i>blork</i>.<p />" +
+		"If you guess wrong, you will see a message that you should have chosen the other blank. " +
+		"Then, you can move the word from the wrong blank to the right one to continue on. " +
+		"You should use this feedback to help you figure out where certain words " +
+		"should normally go in sentences with <i>blork</i>.<p />" +
 		"When you are finished with the training session, you will see one more message before " +
 		"going on to the main experiment.<p />" +
 		"Click below when you are ready to begin the training session."
