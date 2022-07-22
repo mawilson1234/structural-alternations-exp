@@ -56,7 +56,7 @@ newTrial("instruction1",
 		"First, you will see a sentence with two blanks in it. " +
 		"Below it, there will be a dash. " + 
 		"After a delay to give you time to read the sentence, a word will appear in a box where the dash was. " +
-		"When the word appears, you should click and drag it to the blank " +
+		"When the word appears, you should drag it to the blank " +
 		"in the sentence where you think it should go. " +
 		"After you have filled a blank with the word, you will see a \"Next\" button, which you can click " +
 		"to go to the next item.<p />" +
@@ -159,7 +159,7 @@ newTrial("instruction2",
 		.print()
 	,
 	
-	newText("container", "").center().css({display: "flex", 'margin-bottom': '3em', 'margin-top': '3em'}).print(),
+	newText("container", "").center().css({display: "flex"}).print(),
 	newText("The&nbsp;").print(getText("container")),
 	newText(" ").css(blank_style).print(getText("container")),
 	newText("&nbsp;has always blorked the&nbsp;").print(getText("container")),
