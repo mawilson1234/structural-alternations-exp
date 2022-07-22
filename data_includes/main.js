@@ -32,7 +32,6 @@ Sequence(
 	"bye"
 )
 
-
 newTrial("consent",
 	newText(
 		"Before starting the experiment, you will need to give consent. " + 
