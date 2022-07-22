@@ -27,9 +27,9 @@ Sequence(
 	randomize("trial_train"),
 	"instruction3",
 	// randomize("trial"), 
-	//"feedback", 
+	"feedback", 
 	SendResults(), 
-	//"bye"
+	"bye"
 )
 
 
