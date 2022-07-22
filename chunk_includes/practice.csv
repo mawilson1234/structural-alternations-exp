@@ -1,2 +1,2 @@
-item,sentence,word_0,word_1,word_2,word_3,word_4,word_5,word_6,word_7,args_group,sentence_type
+item,sentence,word_0,word_1,word_2,word_3,word_4,word_5,word_6,word_7,group,sentence_type
 prac,The [subj] drank some [obj].,customer,diner,worker,guest,tea,coffee,wine,water,drink,past transitive
