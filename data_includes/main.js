@@ -64,8 +64,8 @@ newTrial("instruction1",
 		"Afterward, there will be additional instructions. " + 
 		"During the practice, you will get feedback on whether you chose the correct blank for the word, " +
 		"and if you chose incorrectly, you should move the word to the correct blank to continue. " +
-		"However, you will not get feedback during the main part of the experiment." +
-		"<p>Click below when you are ready to begin practice.</p>"
+		"However, you will not get feedback during the main part of the experiment.<p />" +
+		"Click below when you are ready to begin practice."
 	)
 		.css(centered_justified_style)
 		.print()
@@ -149,12 +149,11 @@ var feedback_trial = label => item => {
 
 Template("practice.csv", feedback_trial('trial_prac'))
 
-/*
 newTrial("instruction2",
 	newText(
-		"You have now finished the practice session, and will move on to a training session. " +
+		"You have now finished the practice session! Next, you will move on to a training session.<p />" +
 		"During training, you will learn about a new word, <i>blork</i>. " +
-		"You will see a series of sentences like the following: "
+		"You will see sentences like the following: "
 	)
 		.css(centered_justified_style)
 		.print()
@@ -165,21 +164,21 @@ newTrial("instruction2",
 	newText(" ").css(blank_style).print(getText("container")),
 	newText("&nbsp;has always blorked the&nbsp;").print(getText("container")),
 	newText(" ").css(blank_style).print(getText("container")),
-	newText(".").print(getText("container"))
+	newText(".").print(getText("container")),
 	
 	newText(
-		"<i>Blork</i> isn't exactly like any existing English words. " +
+		"<i>Blork</i> isn't completely like any other English words. " +
 		"However, just like in the sentences you saw during the practice session, " +
-		"some words consistently go better in certain positions in sentences with <i>blork</i> than others. "
+		"some words consistently go better in certain positions in sentences with <i>blork</i> than others.<p />"
 		"During training, you should start by guessing which blank the word should go in. " +
 		"If you guess right, you should make more guesses like that one. " +
 		"If you guess wrong, you will see a notification that you should have put the word in the other blank. " +
 		"Then, you can drag the word from the wrong blank to the right one to continue on. " +
 		"You should use this feedback to help you make generalizations about where certain words " +
-		"should go in sentences with <i>blork</i>." +
-		"<p>When you are finished with the training session, you will see one more message before " +
-		"going on to the main experiment.</p>" +
-		"<p>click below when you are ready to begin the training session.</p>"
+		"should go in sentences with <i>blork</i>.<p />" +
+		"When you are finished with the training session, you will see one more message before " +
+		"going on to the main experiment.<p />" +
+		"Click below when you are ready to begin the training session."
 	)
 		.css(centered_justified_style)
 		.print()
@@ -190,7 +189,6 @@ newTrial("instruction2",
 		.print()
 		.wait()
 )
-*/
 
 Template("train.csv", feedback_trial('trial_train'))
 
