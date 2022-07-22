@@ -80,15 +80,15 @@ newTrial("instruction1",
 ).setOption("countsForProgressBar", false);
 
 var feedback_trial = label => item => {
-	var word_num 	 = Math.floor(Math.random() * 12);
+	var word_num 	 = Math.floor(Math.random() * 12)
 	var target_res   = word_num <= 5 ? '[subj]' : '[obj]'
 	var correct 	 = false
-	var word 		 = item['word_' + word_num];
-	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
-	var midsentence  = '&nbsp;' + item.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;';
-	var postsentence = '&nbsp;' + item.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2];
-	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0];
-	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1];
+	var word 		 = item['word_' + word_num]
+	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
+	var midsentence  = '&nbsp;' + item.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
+	var postsentence = '&nbsp;' + item.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2]
+	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0]
+	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1]
 	
 	return newTrial(label,		
 		newText("container", "").center().css({display: "flex", 'margin-bottom': '3em'}).print(),
@@ -138,7 +138,7 @@ var feedback_trial = label => item => {
 			.removeDrop(getText(first_arg), getText(second_arg))
 		,
 		
-		newButton("next", "Next").css("margin-top", "2em").center().print().wait().remove()
+		newButton("Next").css("margin-top", "2em").center().print().wait()
 	)
 	.log('item'		 	  , item.item)
 	.log('word'			  , word)
@@ -146,7 +146,7 @@ var feedback_trial = label => item => {
 	.log('target_response', target_res)
 	.log('args_group'	  , item.args_group)
 	.log('sentence_type'  , item.sentence_type)
-	.log('sentence'	 	  , item.sentence);
+	.log('sentence'	 	  , item.sentence)
 }
 
 Template("practice.csv", feedback_trial('trial_prac'))
@@ -289,7 +289,7 @@ Template("pretrial.csv", variable =>
 )
 */
 
-Template("stimuli.csv", item => {
+/*Template("stimuli.csv", item => {
 	/*
 	var word_num 	 = Math.floor(Math.random() * 12);
 	var target_res   = word_num <= 5 ? '[subj]' : '[obj]'
@@ -300,7 +300,7 @@ Template("stimuli.csv", item => {
 	var postsentence = '&nbsp;' + item.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2];
 	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0];
 	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1];
-	*/
+	
 	return newTrial("trial",
 		/*	
 		newText("container", "").center().css({display: "flex", 'margin-bottom': '3em'}).print(),
@@ -340,9 +340,8 @@ Template("stimuli.csv", item => {
 			'text-align': 'center',
 			'margin-left': '-0.54em', 'margin-top': '-0px'
 		}),
-		*/
 		
-		newButton("next", "Next").css("margin-top", "2em").center().print().wait().remove()
+		newButton("Next").css("margin-top", "2em").center().print().wait()
 	)
 	.log('item'		 	  , item.item)
 	.log('word'			  , word)
