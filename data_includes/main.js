@@ -300,7 +300,8 @@ Template("stimuli.csv", item => {
 	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0];
 	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1];
 	
-	return newTrial("trial",		
+	return newTrial("trial",
+		/*	
 		newText("container", "").center().css({display: "flex", 'margin-bottom': '3em'}).print(),
 		newText(presentence).print(getText("container")),
 		newText(first_arg, " ").css(blank_style).print(getText("container")),
