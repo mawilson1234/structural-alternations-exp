@@ -86,7 +86,7 @@ newTrial("instruction1",
 
 var feedback_trial = label => item => {
 	var word_num 	 = Math.floor(Math.random() * 8)
-	var target_res   = word_num <= 3 ? '[subj]' : '[obj]'
+	var target_res   = label === 'trial_train' ? item['correct_pos'] : (word_num <= 3 ? '[subj]' : '[obj]')
 	var correct 	 = false
 	var word 		 = item['word_' + word_num]
 	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'

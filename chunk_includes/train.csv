@@ -1,73 +1,73 @@
-item,sentence,sentence_type,group,word_0,word_1,word_2,word_3,word_4,word_5,word_6,word_7
-train,The [subj] has always blorked the [obj].,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has seldom blorked the [obj].,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has usually blorked the [obj].,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has never blorked the [obj].,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has always blorked the [obj].,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has seldom blorked the [obj] afterward.,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has never blorked the [obj] at all.,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has always blorked the [obj] frequently.,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has always blorked the [obj] frequently.,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has never blorked the [obj] at all.,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has seldom blorked the [obj].,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has never blorked the [obj].,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has always blorked the [obj].,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has seldom blorked the [obj] afterward.,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has usually blorked the [obj].,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has always blorked the [obj] frequently.,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has never blorked the [obj].,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has usually blorked the [obj].,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has seldom blorked the [obj].,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has seldom blorked the [obj] afterward.,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has never blorked the [obj] at all.,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,banana,lemon,corn,lion
-train,The [subj] has never blorked the [obj].,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has always blorked the [obj] frequently.,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has never blorked the [obj] at all.,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has never blorked the [obj] at all.,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has seldom blorked the [obj].,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has usually blorked the [obj].,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has usually blorked the [obj].,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has always blorked the [obj].,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has seldom blorked the [obj] afterward.,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has seldom blorked the [obj].,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has never blorked the [obj].,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has seldom blorked the [obj] afterward.,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has seldom blorked the [obj] afterward.,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has seldom blorked the [obj].,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has usually blorked the [obj].,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has never blorked the [obj].,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has always blorked the [obj].,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has always blorked the [obj] frequently.,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has never blorked the [obj] at all.,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has always blorked the [obj].,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has always blorked the [obj] frequently.,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,house,apartment,tent,building
-train,The [subj] has never blorked the [obj] at all.,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has never blorked the [obj].,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has always blorked the [obj] frequently.,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has seldom blorked the [obj].,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has always blorked the [obj].,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has usually blorked the [obj].,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has seldom blorked the [obj].,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has always blorked the [obj].,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has never blorked the [obj].,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has usually blorked the [obj].,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has seldom blorked the [obj].,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has always blorked the [obj] frequently.,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has never blorked the [obj] at all.,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has seldom blorked the [obj] afterward.,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has always blorked the [obj].,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has never blorked the [obj].,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has usually blorked the [obj].,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has always blorked the [obj] frequently.,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has never blorked the [obj] at all.,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has seldom blorked the [obj] afterward.,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
-train,The [subj] has seldom blorked the [obj] afterward.,perfect transitive,female_male,sister,mother,wife,grandmother,brother,father,husband,grandfather
+item,sentence,sentence_type,group,word_0,word_1,word_2,word_3,correct_pos
+train,The [subj] has always blorked the [obj].,perfect transitive,red_yellow,cherry,cherry,cherry,cherry,[subj]
+train,The [subj] has seldom blorked the [obj].,perfect transitive,red_yellow,banana,banana,banana,banana,[obj]
+train,The [subj] has usually blorked the [obj].,perfect transitive,red_yellow,cherry,cherry,cherry,cherry,[subj]
+train,The [subj] has never blorked the [obj].,perfect transitive,red_yellow,banana,banana,banana,banana,[obj]
+train,The [subj] has always blorked the [obj].,perfect transitive,red_yellow,cherry,cherry,cherry,cherry,[subj]
+train,The [subj] has seldom blorked the [obj] afterward.,perfect transitive,red_yellow,banana,banana,banana,banana,[obj]
+train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,red_yellow,strawberry,strawberry,strawberry,strawberry,[subj]
+train,The [subj] has never blorked the [obj] at all.,perfect transitive,red_yellow,lemon,lemon,lemon,lemon,[obj]
+train,The [subj] has always blorked the [obj] frequently.,perfect transitive,red_yellow,strawberry,strawberry,strawberry,strawberry,[subj]
+train,The [subj] has always blorked the [obj] frequently.,perfect transitive,red_yellow,lemon,lemon,lemon,lemon,[obj]
+train,The [subj] has never blorked the [obj] at all.,perfect transitive,red_yellow,strawberry,strawberry,strawberry,strawberry,[subj]
+train,The [subj] has seldom blorked the [obj].,perfect transitive,red_yellow,lemon,lemon,lemon,lemon,[obj]
+train,The [subj] has never blorked the [obj].,perfect transitive,red_yellow,tomato,tomato,tomato,tomato,[subj]
+train,The [subj] has always blorked the [obj].,perfect transitive,red_yellow,corn,corn,corn,corn,[obj]
+train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,red_yellow,tomato,tomato,tomato,tomato,[subj]
+train,The [subj] has seldom blorked the [obj] afterward.,perfect transitive,red_yellow,corn,corn,corn,corn,[obj]
+train,The [subj] has usually blorked the [obj].,perfect transitive,red_yellow,tomato,tomato,tomato,tomato,[subj]
+train,The [subj] has always blorked the [obj] frequently.,perfect transitive,red_yellow,corn,corn,corn,corn,[obj]
+train,The [subj] has never blorked the [obj].,perfect transitive,red_yellow,lobster,lobster,lobster,lobster,[subj]
+train,The [subj] has usually blorked the [obj].,perfect transitive,red_yellow,lion,lion,lion,lion,[obj]
+train,The [subj] has seldom blorked the [obj].,perfect transitive,red_yellow,lobster,lobster,lobster,lobster,[subj]
+train,The [subj] has seldom blorked the [obj] afterward.,perfect transitive,red_yellow,lion,lion,lion,lion,[obj]
+train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,red_yellow,lobster,lobster,lobster,lobster,[subj]
+train,The [subj] has never blorked the [obj] at all.,perfect transitive,red_yellow,lion,lion,lion,lion,[obj]
+train,The [subj] has never blorked the [obj].,perfect transitive,vehicles_buildings,bike,bike,bike,bike,[subj]
+train,The [subj] has always blorked the [obj] frequently.,perfect transitive,vehicles_buildings,house,house,house,house,[obj]
+train,The [subj] has never blorked the [obj] at all.,perfect transitive,vehicles_buildings,bike,bike,bike,bike,[subj]
+train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,vehicles_buildings,house,house,house,house,[obj]
+train,The [subj] has never blorked the [obj] at all.,perfect transitive,vehicles_buildings,bike,bike,bike,bike,[subj]
+train,The [subj] has seldom blorked the [obj].,perfect transitive,vehicles_buildings,house,house,house,house,[obj]
+train,The [subj] has usually blorked the [obj].,perfect transitive,vehicles_buildings,car,car,car,car,[subj]
+train,The [subj] has usually blorked the [obj].,perfect transitive,vehicles_buildings,apartment,apartment,apartment,apartment,[obj]
+train,The [subj] has always blorked the [obj].,perfect transitive,vehicles_buildings,car,car,car,car,[subj]
+train,The [subj] has seldom blorked the [obj] afterward.,perfect transitive,vehicles_buildings,apartment,apartment,apartment,apartment,[obj]
+train,The [subj] has seldom blorked the [obj].,perfect transitive,vehicles_buildings,car,car,car,car,[subj]
+train,The [subj] has never blorked the [obj].,perfect transitive,vehicles_buildings,apartment,apartment,apartment,apartment,[obj]
+train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,vehicles_buildings,train,train,train,train,[subj]
+train,The [subj] has seldom blorked the [obj] afterward.,perfect transitive,vehicles_buildings,tent,tent,tent,tent,[obj]
+train,The [subj] has seldom blorked the [obj] afterward.,perfect transitive,vehicles_buildings,train,train,train,train,[subj]
+train,The [subj] has seldom blorked the [obj].,perfect transitive,vehicles_buildings,tent,tent,tent,tent,[obj]
+train,The [subj] has usually blorked the [obj].,perfect transitive,vehicles_buildings,train,train,train,train,[subj]
+train,The [subj] has never blorked the [obj].,perfect transitive,vehicles_buildings,tent,tent,tent,tent,[obj]
+train,The [subj] has always blorked the [obj].,perfect transitive,vehicles_buildings,motorcycle,motorcycle,motorcycle,motorcycle,[subj]
+train,The [subj] has always blorked the [obj] frequently.,perfect transitive,vehicles_buildings,building,building,building,building,[obj]
+train,The [subj] has never blorked the [obj] at all.,perfect transitive,vehicles_buildings,motorcycle,motorcycle,motorcycle,motorcycle,[subj]
+train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,vehicles_buildings,building,building,building,building,[obj]
+train,The [subj] has always blorked the [obj].,perfect transitive,vehicles_buildings,motorcycle,motorcycle,motorcycle,motorcycle,[subj]
+train,The [subj] has always blorked the [obj] frequently.,perfect transitive,vehicles_buildings,building,building,building,building,[obj]
+train,The [subj] has never blorked the [obj] at all.,perfect transitive,female_male,sister,sister,sister,sister,[subj]
+train,The [subj] has never blorked the [obj].,perfect transitive,female_male,brother,brother,brother,brother,[obj]
+train,The [subj] has always blorked the [obj] frequently.,perfect transitive,female_male,sister,sister,sister,sister,[subj]
+train,The [subj] has seldom blorked the [obj].,perfect transitive,female_male,brother,brother,brother,brother,[obj]
+train,The [subj] has always blorked the [obj].,perfect transitive,female_male,sister,sister,sister,sister,[subj]
+train,The [subj] has usually blorked the [obj].,perfect transitive,female_male,brother,brother,brother,brother,[obj]
+train,The [subj] has seldom blorked the [obj].,perfect transitive,female_male,mother,mother,mother,mother,[subj]
+train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,female_male,father,father,father,father,[obj]
+train,The [subj] has always blorked the [obj].,perfect transitive,female_male,mother,mother,mother,mother,[subj]
+train,The [subj] has never blorked the [obj].,perfect transitive,female_male,father,father,father,father,[obj]
+train,The [subj] has usually blorked the [obj].,perfect transitive,female_male,mother,mother,mother,mother,[subj]
+train,The [subj] has seldom blorked the [obj].,perfect transitive,female_male,father,father,father,father,[obj]
+train,The [subj] has always blorked the [obj] frequently.,perfect transitive,female_male,wife,wife,wife,wife,[subj]
+train,The [subj] has never blorked the [obj] at all.,perfect transitive,female_male,husband,husband,husband,husband,[obj]
+train,The [subj] has seldom blorked the [obj] afterward.,perfect transitive,female_male,wife,wife,wife,wife,[subj]
+train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,female_male,husband,husband,husband,husband,[obj]
+train,The [subj] has always blorked the [obj].,perfect transitive,female_male,wife,wife,wife,wife,[subj]
+train,The [subj] has never blorked the [obj].,perfect transitive,female_male,husband,husband,husband,husband,[obj]
+train,The [subj] has usually blorked the [obj].,perfect transitive,female_male,grandmother,grandmother,grandmother,grandmother,[subj]
+train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,female_male,grandfather,grandfather,grandfather,grandfather,[obj]
+train,The [subj] has always blorked the [obj] frequently.,perfect transitive,female_male,grandmother,grandmother,grandmother,grandmother,[subj]
+train,The [subj] has never blorked the [obj] at all.,perfect transitive,female_male,grandfather,grandfather,grandfather,grandfather,[obj]
+train,The [subj] has seldom blorked the [obj] afterward.,perfect transitive,female_male,grandmother,grandmother,grandmother,grandmother,[subj]
+train,The [subj] has seldom blorked the [obj] afterward.,perfect transitive,female_male,grandfather,grandfather,grandfather,grandfather,[obj]

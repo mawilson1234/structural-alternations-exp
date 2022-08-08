@@ -1,76 +1,51 @@
-,item,sentence,sentence_type,word_0,word_1,word_2,word_3,word_4,word_5,word_6,word_7,word_8,word_9,word_10,word_11,filler_group
-0,229,Which [subj] seems to have usually eaten the [obj]?,mat-wh-Q subject raising perfect transitive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-1,230,The [obj] was never eaten by the [subj].,past passive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-2,231,The [subj] hasn't never eaten the [obj].,neg perfect transitive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-3,232,The [obj] hasn't never been eaten by the [subj].,neg perfect passive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-4,233,The [subj] has always eaten the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-5,234,I wonder which [subj] the [obj] was usually eaten by.,emb-wh-Q P-object past passive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-6,235,Which [subj] has the [obj] always been eaten by?,mat-wh-Q P-object perfect passive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-7,236,I wonder which [subj] has usually eaten the [obj].,emb-wh-Q subject perfect transitive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-8,237,It was the [subj] that has never eaten the [obj].,cleft subject perfect transitive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-9,238,I wonder which [obj] was never eaten by the [subj].,emb-wh-Q subject past passive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-10,239,I wonder which [obj] the [subj] seems to have always eaten.,emb-wh-Q object raising perfect transitive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-11,240,The [obj] was seldom eaten by the [subj].,past passive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-12,241,I wonder which [subj] never ate the [obj].,emb-wh-Q subject past transitive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-13,242,It was the [obj] that was never eaten by the [subj].,cleft subject past passive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-14,243,Which [subj] has the [obj] usually been eaten by?,mat-wh-Q P-object perfect passive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-15,244,The [subj] that the [obj] was always eaten by is everyone's favorite.,PORC past passive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-16,245,I wonder which [subj] the [obj] has never been eaten by.,emb-wh-Q P-object perfect passive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-17,246,I wonder which [obj] the [subj] seems to have seldom eaten.,emb-wh-Q object raising perfect transitive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-18,247,I wonder which [subj] the [obj] has seldom been eaten by.,emb-wh-Q P-object perfect passive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-19,248,Which [obj] has the [subj] usually eaten?,mat-wh-Q object perfect transitive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-20,249,Which [subj] was the [obj] always eaten by?,mat-wh-Q P-object past passive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-21,250,The [subj] that always ate the [obj] is everyone's favorite.,SRC past transitive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-22,251,The [obj] hasn't always been eaten by the [subj].,neg perfect passive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-23,252,The [obj] has seldom gotten eaten by the [subj].,perfect get-passive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-24,253,It was the [subj] that has always eaten the [obj].,cleft subject perfect transitive,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert,eat
-25,254,The [subj] has always regretted the [obj] from time to time.,post-obj adverbial perfect transitive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-26,255,The [obj] seems to have seldom been regretted by the [subj].,raising perfect passive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-27,256,I wonder which [obj] has always been regretted by the [subj].,emb-wh-Q subject perfect passive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-28,257,It was the [obj] that the [subj] always regretted.,cleft object past transitive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-29,258,The [subj] has seldom regretted the [obj] from time to time.,post-obj adverbial perfect transitive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-30,259,The [obj] seems to have never been regretted by the [subj].,raising perfect passive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-31,260,Which [subj] always regretted the [obj]?,mat-wh-Q subject past transitive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-32,261,I wonder which [subj] has always regretted the [obj].,emb-wh-Q subject perfect transitive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-33,262,I wonder which [obj] seems to have always been regretted by the [subj].,emb-wh-Q subject raising perfect passive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-34,263,I wonder which [obj] was always regretted by the [subj].,emb-wh-Q subject past passive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-35,264,I wonder which [obj] seems to have usually been regretted by the [subj].,emb-wh-Q subject raising perfect passive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-36,265,Which [obj] was always regretted by the [subj]?,mat-wh-Q subject past passive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-37,266,I wonder which [subj] the [obj] has usually been regretted by.,emb-wh-Q P-object perfect passive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-38,267,The [subj] that the [obj] was usually regretted by is everyone's favorite.,PORC past passive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-39,268,Which [subj] has usually regretted the [obj]?,mat-wh-Q subject perfect transitive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-40,269,Which [obj] has the [subj] seldom regretted?,mat-wh-Q object perfect transitive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-41,270,The [subj] that has seldom regretted the [obj] is everyone's favorite.,SRC perfect transitive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-42,271,Which [obj] does the [subj] seem to have never regretted?,mat-wh-Q object raising perfect transitive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-43,272,The [subj] never regretted the [obj].,past transitive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-44,273,Which [obj] seems to have seldom been regretted by the [subj]?,mat-wh-Q subject raising perfect passive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-45,274,The [obj] has usually been regretted by the [subj].,perfect passive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-46,275,I wonder which [subj] the [obj] has always been regretted by.,emb-wh-Q P-object perfect passive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-47,276,I wonder which [obj] has seldom been regretted by the [subj].,emb-wh-Q subject perfect passive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-48,277,I wonder which [subj] seems to have usually regretted the [obj].,emb-wh-Q subject raising perfect transitive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-49,278,Has the [subj] seldom regretted the [obj]?,polar Q perfect transitive,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident,regret
-50,279,I wonder which [subj] the [obj] was never frightened by.,emb-wh-Q P-object past passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-51,280,Which [obj] has seldom been frightened by the [subj]?,mat-wh-Q subject perfect passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-52,281,Which [obj] was always frightened by the [subj]?,mat-wh-Q subject past passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-53,282,It was the [subj] that has never frightened the [obj].,cleft subject perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-54,283,Which [obj] seems to never be frightened by the [subj]?,mat-wh-Q subject raising passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-55,284,I wonder which [subj] seems to have never frightened the [obj].,emb-wh-Q subject raising perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-56,285,The [subj] has usually frightened the [obj] from time to time.,post-obj adverbial perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-57,286,The [subj] has never frightened the [obj] from time to time.,post-obj adverbial perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-58,287,Which [subj] seems to have usually frightened the [obj]?,mat-wh-Q subject raising perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-59,288,Which [obj] does the [subj] seem to have usually frightened?,mat-wh-Q object raising perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-60,289,I wonder which [obj] the [subj] has always frightened.,emb-wh-Q object perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-61,290,The [subj] that the [obj] has always been frightened by is everyone's favorite.,PORC perfect passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-62,291,The [obj] that the [subj] always frightened is everyone's favorite.,ORC past transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-63,292,I wonder which [obj] seems to have always been frightened by the [subj].,emb-wh-Q subject raising perfect passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-64,293,I wonder which [obj] was seldom frightened by the [subj].,emb-wh-Q subject past passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-65,294,It was the [obj] that was seldom frightened by the [subj].,cleft subject past passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-66,295,I wonder which [obj] the [subj] has seldom frightened.,emb-wh-Q object perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-67,296,The [subj] has always frightened frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-68,297,It was the [obj] that the [subj] always frightened.,cleft object past transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-69,298,I wonder which [subj] the [obj] was always frightened by.,emb-wh-Q P-object past passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-70,299,The [obj] seldom got frightened by the [subj].,past get-passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-71,300,Has the [subj] never frightened the [obj]?,polar Q perfect transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-72,301,The [subj] that always frightened the [obj] is everyone's favorite.,SRC past transitive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-73,302,Was the [obj] always frightened by the [subj]?,polar Q past passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
-74,303,Which [obj] seems to seldom be frightened by the [subj]?,mat-wh-Q subject raising passive,movie,noise,tornado,sound,sight,thunder,puppy,kitten,child,baby,coward,spectator,frighten
+item,sentence,sentence_type,filler_group,word_0,word_1,word_2,word_3,word_4,word_5,word_6,word_7,word_8,word_9,word_10,word_11
+115,Which [obj] seems to have always been eaten by the [subj]?,mat-wh-Q subject raising perfect passive,eat,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert
+116,It was the [obj] that the [subj] has always eaten.,cleft object perfect transitive,eat,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert
+117,The [subj] that the [obj] has always been eaten by is everyone's favorite.,PORC perfect passive,eat,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert
+118,Has the [obj] never been eaten by the [subj]?,polar Q perfect passive,eat,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert
+119,Which [subj] was the [obj] never eaten by?,mat-wh-Q P-object past passive,eat,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert
+120,The [obj] wasn't usually eaten by the [subj].,neg past passive,eat,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert
+121,It was the [subj] that usually ate the [obj].,cleft subject past transitive,eat,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert
+122,The [subj] seldom ate the [obj].,past transitive,eat,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert
+123,I wonder which [obj] seems to seldom be eaten by the [subj].,emb-wh-Q subject raising passive,eat,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert
+124,I wonder which [obj] the [subj] has seldom eaten.,emb-wh-Q object perfect transitive,eat,person,guest,child,customer,patient,king,pizza,orange,steak,bread,sandwich,dessert
+125,The [obj] hasn't always been regretted by the [subj].,neg perfect passive,regret,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident
+126,Which [subj] always regretted the [obj]?,mat-wh-Q subject past transitive,regret,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident
+127,I wonder which [subj] the [obj] was always regretted by.,emb-wh-Q P-object past passive,regret,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident
+128,The [obj] was never regretted by the [subj].,past passive,regret,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident
+129,Which [obj] was never regretted by the [subj]?,mat-wh-Q subject past passive,regret,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident
+130,It was the [obj] that the [subj] usually regretted.,cleft object past transitive,regret,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident
+131,I wonder which [obj] the [subj] usually regretted.,emb-wh-Q object past transitive,regret,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident
+132,The [subj] has seldom regretted the [obj].,perfect transitive,regret,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident
+133,Which [subj] seems to have seldom regretted the [obj]?,mat-wh-Q subject raising perfect transitive,regret,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident
+134,I wonder which [obj] has seldom been regretted by the [subj].,emb-wh-Q subject perfect passive,regret,prince,president,client,author,committee,chancellor,choice,error,decision,statement,purchase,incident
+135,I wonder which [obj] the [subj] seems to have always read.,emb-wh-Q object raising perfect transitive,read,reviewer,editor,student,scientist,child,actor,book,article,document,script,story,magazine
+136,Which [subj] has always read the [obj]?,mat-wh-Q subject perfect transitive,read,reviewer,editor,student,scientist,child,actor,book,article,document,script,story,magazine
+137,Which [obj] does the [subj] seem to have never read?,mat-wh-Q object raising perfect transitive,read,reviewer,editor,student,scientist,child,actor,book,article,document,script,story,magazine
+138,It was the [obj] that was never read by the [subj].,cleft subject past passive,read,reviewer,editor,student,scientist,child,actor,book,article,document,script,story,magazine
+139,The [subj] has never read the [obj] from time to time.,post-obj adverbial perfect transitive,read,reviewer,editor,student,scientist,child,actor,book,article,document,script,story,magazine
+140,The [obj] seems to have usually been read by the [subj].,raising perfect passive,read,reviewer,editor,student,scientist,child,actor,book,article,document,script,story,magazine
+141,It was the [obj] that has usually been read by the [subj].,cleft subject perfect passive,read,reviewer,editor,student,scientist,child,actor,book,article,document,script,story,magazine
+142,The [subj] usually read frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,read,reviewer,editor,student,scientist,child,actor,book,article,document,script,story,magazine
+143,It was the [subj] that has seldom read the [obj].,cleft subject perfect transitive,read,reviewer,editor,student,scientist,child,actor,book,article,document,script,story,magazine
+144,The [obj] that the [subj] has seldom read is everyone's favorite.,ORC perfect transitive,read,reviewer,editor,student,scientist,child,actor,book,article,document,script,story,magazine
+145,The [subj] hasn't always bought the [obj].,neg perfect transitive,buy,customer,guest,manager,farmer,doctor,technician,cereal,tape,phone,grain,medicine,hammer
+146,I wonder which [obj] was always bought by the [subj].,emb-wh-Q subject past passive,buy,customer,guest,manager,farmer,doctor,technician,cereal,tape,phone,grain,medicine,hammer
+147,Which [obj] seems to never be bought by the [subj]?,mat-wh-Q subject raising passive,buy,customer,guest,manager,farmer,doctor,technician,cereal,tape,phone,grain,medicine,hammer
+148,I wonder which [subj] never bought the [obj].,emb-wh-Q subject past transitive,buy,customer,guest,manager,farmer,doctor,technician,cereal,tape,phone,grain,medicine,hammer
+149,The [subj] has never bought frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,buy,customer,guest,manager,farmer,doctor,technician,cereal,tape,phone,grain,medicine,hammer
+150,The [obj] has usually been bought by the [subj].,perfect passive,buy,customer,guest,manager,farmer,doctor,technician,cereal,tape,phone,grain,medicine,hammer
+151,Which [obj] has usually been bought by the [subj]?,mat-wh-Q subject perfect passive,buy,customer,guest,manager,farmer,doctor,technician,cereal,tape,phone,grain,medicine,hammer
+152,The [subj] that the [obj] was usually bought by is everyone's favorite.,PORC past passive,buy,customer,guest,manager,farmer,doctor,technician,cereal,tape,phone,grain,medicine,hammer
+153,Which [obj] has the [subj] seldom bought?,mat-wh-Q object perfect transitive,buy,customer,guest,manager,farmer,doctor,technician,cereal,tape,phone,grain,medicine,hammer
+154,The [subj] that has seldom bought the [obj] is everyone's favorite.,SRC perfect transitive,buy,customer,guest,manager,farmer,doctor,technician,cereal,tape,phone,grain,medicine,hammer
+155,The [obj] has always gotten broken by the [subj].,perfect get-passive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
+156,The [obj] seems to always be broken by the [subj].,raising passive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
+157,The [obj] that the [subj] always broke is everyone's favorite.,ORC past transitive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
+158,The [subj] seems to have never broken the [obj].,raising perfect transitive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
+159,The [subj] that never broke the [obj] is everyone's favorite.,SRC past transitive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
+160,The [obj] has usually gotten broken by the [subj].,perfect get-passive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
+161,The [obj] seems to usually be broken by the [subj].,raising passive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
+162,The [obj] that the [subj] usually broke is everyone's favorite.,ORC past transitive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
+163,The [subj] seems to have seldom broken the [obj].,raising perfect transitive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
+164,The [subj] that seldom broke the [obj] is everyone's favorite.,SRC past transitive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera

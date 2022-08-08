@@ -1,16 +1,13 @@
-item,sentence,sentence_type,group,word_0,word_1,word_2,word_3,word_4,word_5,word_6,word_7
-prac,The [subj] always ate the [obj].,past transitive,prac,person,guest,child,customer,pizza,orange,steak,bread
-prac,The [subj] never ate the [obj].,past transitive,prac,person,guest,child,customer,pizza,orange,steak,bread
-prac,The [subj] always regretted the [obj].,past transitive,prac,prince,president,client,author,choice,error,decision,statement
-prac,The [subj] never regretted the [obj].,past transitive,prac,prince,president,client,author,choice,error,decision,statement
-prac,The [subj] always frightened the [obj].,past transitive,prac,movie,shot,tornado,sound,puppy,kitten,child,baby
-prac,The [subj] never frightened the [obj].,past transitive,prac,movie,shot,tornado,sound,puppy,kitten,child,baby
-prac,It was the [subj] that has seldom eaten the [obj].,cleft subject perfect transitive,prac,person,guest,child,customer,pizza,orange,steak,bread
-prac,I wonder which [obj] the [subj] usually ate.,emb-wh-Q object past transitive,prac,person,guest,child,customer,pizza,orange,steak,bread
-prac,I wonder which [obj] seems to always be eaten by the [subj].,emb-wh-Q subject raising passive,prac,person,guest,child,customer,pizza,orange,steak,bread
-prac,The [obj] wasn't seldom regretted by the [subj].,neg past passive,prac,prince,president,client,author,choice,error,decision,statement
-prac,Which [subj] never regretted the [obj]?,mat-wh-Q subject past transitive,prac,prince,president,client,author,choice,error,decision,statement
-prac,The [subj] that usually regretted the [obj] is everyone's favorite.,SRC past transitive,prac,prince,president,client,author,choice,error,decision,statement
-prac,Which [subj] has always frightened the [obj]?,mat-wh-Q subject perfect transitive,prac,movie,shot,tornado,sound,puppy,kitten,child,baby
-prac,It was the [subj] that has seldom frightened the [obj].,cleft subject perfect transitive,prac,movie,shot,tornado,sound,puppy,kitten,child,baby
-prac,The [subj] has usually frightened the [obj].,perfect transitive,prac,movie,shot,tornado,sound,puppy,kitten,child,baby
+item,sentence                                                           ,sentence_type                      ,group,word_0,word_1   ,word_2 ,word_3  ,word_4,word_5,word_6  ,word_7   
+prac,The [subj] always ate the [obj].                                   ,past transitive                    ,prac ,person,guest    ,child  ,customer,pizza ,orange,steak   ,bread    
+prac,The [subj] never ate the [obj].                                    ,past transitive                    ,prac ,person,guest    ,child  ,customer,pizza ,orange,steak   ,bread    
+prac,The [subj] always regretted the [obj].                             ,past transitive                    ,prac ,prince,president,client ,author  ,choice,error ,decision,statement
+prac,The [subj] never regretted the [obj].                              ,past transitive                    ,prac ,prince,president,client ,author  ,choice,error ,decision,statement
+prac,The [subj] always frightened the [obj].                            ,past transitive                    ,prac ,movie ,shot     ,tornado,sound   ,puppy ,kitten,child   ,baby     
+prac,The [subj] never frightened the [obj].                             ,past transitive                    ,prac ,movie ,shot     ,tornado,sound   ,puppy ,kitten,child   ,baby     
+prac,It was the [subj] that has seldom eaten the [obj].                 ,cleft subject perfect transitive   ,prac ,person,guest    ,child  ,customer,pizza ,orange,steak   ,bread    
+prac,I wonder which [obj] the [subj] usually ate.                       ,emb-wh-Q object past transitive    ,prac ,person,guest    ,child  ,customer,pizza ,orange,steak   ,bread    
+prac,I wonder which [obj] seems to always be eaten by the [subj].       ,emb-wh-Q subject raising passive   ,prac ,person,guest    ,child  ,customer,pizza ,orange,steak   ,bread    
+prac,The [obj] wasn't seldom regretted by the [subj].                   ,neg past passive                   ,prac ,prince,president,client ,author  ,choice,error ,decision,statement
+prac,Which [subj] never regretted the [obj]?                            ,mat-wh-Q subject past transitive   ,prac ,prince,president,client ,author  ,choice,error ,decision,statement
+prac,The [subj] that usually regretted the [obj] is everyone's favorite.,SRC past transitive                ,prac ,prince,president,client ,author  ,choice,error ,decision,statement

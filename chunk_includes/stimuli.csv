@@ -1,685 +1,343 @@
-item,sentence,sentence_type,group,word_0,word_1,word_2,word_3,word_4,word_5,word_6,word_7,word_8,word_9,word_10,word_11
-1,The [subj] has always blorked the [obj].,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-2,The [obj] has always been blorked by the [subj].,perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-3,The [obj] has always gotten blorked by the [subj].,perfect get-passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-4,The [subj] always blorked the [obj].,past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-5,The [obj] was always blorked by the [subj].,past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-6,The [obj] always got blorked by the [subj].,past get-passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-7,Has the [subj] always blorked the [obj]?,polar Q perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-8,Has the [obj] always been blorked by the [subj]?,polar Q perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-9,Was the [obj] always blorked by the [subj]?,polar Q past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-10,The [subj] seems to have always blorked the [obj].,raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-11,The [obj] seems to have always been blorked by the [subj].,raising perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-12,The [obj] seems to always be blorked by the [subj].,raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-13,Which [subj] seems to have always blorked the [obj]?,mat-wh-Q subject raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-14,Which [obj] does the [subj] seem to have always blorked?,mat-wh-Q object raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-15,Which [obj] seems to have always been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-16,Which [obj] seems to always be blorked by the [subj]?,mat-wh-Q subject raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-17,I wonder which [subj] seems to have always blorked the [obj].,emb-wh-Q subject raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-18,I wonder which [obj] the [subj] seems to have always blorked.,emb-wh-Q object raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-19,I wonder which [obj] seems to have always been blorked by the [subj].,emb-wh-Q subject raising perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-20,I wonder which [obj] seems to always be blorked by the [subj].,emb-wh-Q subject raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-21,The [subj] hasn't always blorked the [obj].,neg perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-22,The [obj] hasn't always been blorked by the [subj].,neg perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-23,The [obj] wasn't always blorked by the [subj].,neg past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-24,It was the [subj] that has always blorked the [obj].,cleft subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-25,It was the [obj] that the [subj] has always blorked.,cleft object perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-26,It was the [obj] that has always been blorked by the [subj].,cleft subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-27,It was the [subj] that always blorked the [obj].,cleft subject past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-28,It was the [obj] that the [subj] always blorked.,cleft object past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-29,It was the [obj] that was always blorked by the [subj].,cleft subject past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-30,Which [subj] has always blorked the [obj]?,mat-wh-Q subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-31,Which [obj] has the [subj] always blorked?,mat-wh-Q object perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-32,Which [obj] has always been blorked by the [subj]?,mat-wh-Q subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-33,Which [subj] has the [obj] always been blorked by?,mat-wh-Q P-object perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-34,Which [subj] always blorked the [obj]?,mat-wh-Q subject past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-35,Which [obj] was always blorked by the [subj]?,mat-wh-Q subject past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-36,Which [subj] was the [obj] always blorked by?,mat-wh-Q P-object past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-37,I wonder which [subj] has always blorked the [obj].,emb-wh-Q subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-38,I wonder which [obj] the [subj] has always blorked.,emb-wh-Q object perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-39,I wonder which [obj] has always been blorked by the [subj].,emb-wh-Q subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-40,I wonder which [subj] the [obj] has always been blorked by.,emb-wh-Q P-object perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-41,I wonder which [subj] always blorked the [obj].,emb-wh-Q subject past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-42,I wonder which [obj] the [subj] always blorked.,emb-wh-Q object past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-43,I wonder which [obj] was always blorked by the [subj].,emb-wh-Q subject past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-44,I wonder which [subj] the [obj] was always blorked by.,emb-wh-Q P-object past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-45,The [subj] that has always blorked the [obj] is everyone's favorite.,SRC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-46,The [obj] that the [subj] has always blorked is everyone's favorite.,ORC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-47,The [subj] that the [obj] has always been blorked by is everyone's favorite.,PORC perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-48,The [subj] that always blorked the [obj] is everyone's favorite.,SRC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-49,The [obj] that the [subj] always blorked is everyone's favorite.,ORC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-50,The [obj] that was always blorked by the [subj] is everyone's favorite.,SRC past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-51,The [subj] that the [obj] was always blorked by is everyone's favorite.,PORC past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-52,The [subj] has always blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-53,The [subj] always blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-54,The [subj] has always blorked the [obj] from time to time.,post-obj adverbial perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-55,The [subj] always blorked the [obj] from time to time.,post-obj adverbial past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-56,The [subj] has always blorked the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-57,The [subj] always blorked the [obj] that is everyone's favorite.,post-obj SRC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-58,The [subj] has never blorked the [obj].,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-59,The [obj] has never been blorked by the [subj].,perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-60,The [obj] has never gotten blorked by the [subj].,perfect get-passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-61,The [subj] never blorked the [obj].,past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-62,The [obj] was never blorked by the [subj].,past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-63,The [obj] never got blorked by the [subj].,past get-passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-64,Has the [subj] never blorked the [obj]?,polar Q perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-65,Has the [obj] never been blorked by the [subj]?,polar Q perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-66,Was the [obj] never blorked by the [subj]?,polar Q past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-67,The [subj] seems to have never blorked the [obj].,raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-68,The [obj] seems to have never been blorked by the [subj].,raising perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-69,The [obj] seems to never be blorked by the [subj].,raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-70,Which [subj] seems to have never blorked the [obj]?,mat-wh-Q subject raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-71,Which [obj] does the [subj] seem to have never blorked?,mat-wh-Q object raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-72,Which [obj] seems to have never been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-73,Which [obj] seems to never be blorked by the [subj]?,mat-wh-Q subject raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-74,I wonder which [subj] seems to have never blorked the [obj].,emb-wh-Q subject raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-75,I wonder which [obj] the [subj] seems to have never blorked.,emb-wh-Q object raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-76,I wonder which [obj] seems to have never been blorked by the [subj].,emb-wh-Q subject raising perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-77,I wonder which [obj] seems to never be blorked by the [subj].,emb-wh-Q subject raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-78,The [subj] hasn't never blorked the [obj].,neg perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-79,The [obj] hasn't never been blorked by the [subj].,neg perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-80,The [obj] wasn't never blorked by the [subj].,neg past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-81,It was the [subj] that has never blorked the [obj].,cleft subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-82,It was the [obj] that the [subj] has never blorked.,cleft object perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-83,It was the [obj] that has never been blorked by the [subj].,cleft subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-84,It was the [subj] that never blorked the [obj].,cleft subject past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-85,It was the [obj] that the [subj] never blorked.,cleft object past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-86,It was the [obj] that was never blorked by the [subj].,cleft subject past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-87,Which [subj] has never blorked the [obj]?,mat-wh-Q subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-88,Which [obj] has the [subj] never blorked?,mat-wh-Q object perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-89,Which [obj] has never been blorked by the [subj]?,mat-wh-Q subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-90,Which [subj] has the [obj] never been blorked by?,mat-wh-Q P-object perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-91,Which [subj] never blorked the [obj]?,mat-wh-Q subject past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-92,Which [obj] was never blorked by the [subj]?,mat-wh-Q subject past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-93,Which [subj] was the [obj] never blorked by?,mat-wh-Q P-object past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-94,I wonder which [subj] has never blorked the [obj].,emb-wh-Q subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-95,I wonder which [obj] the [subj] has never blorked.,emb-wh-Q object perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-96,I wonder which [obj] has never been blorked by the [subj].,emb-wh-Q subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-97,I wonder which [subj] the [obj] has never been blorked by.,emb-wh-Q P-object perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-98,I wonder which [subj] never blorked the [obj].,emb-wh-Q subject past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-99,I wonder which [obj] the [subj] never blorked.,emb-wh-Q object past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-100,I wonder which [obj] was never blorked by the [subj].,emb-wh-Q subject past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-101,I wonder which [subj] the [obj] was never blorked by.,emb-wh-Q P-object past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-102,The [subj] that has never blorked the [obj] is everyone's favorite.,SRC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-103,The [obj] that the [subj] has never blorked is everyone's favorite.,ORC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-104,The [subj] that the [obj] has never been blorked by is everyone's favorite.,PORC perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-105,The [subj] that never blorked the [obj] is everyone's favorite.,SRC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-106,The [obj] that the [subj] never blorked is everyone's favorite.,ORC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-107,The [obj] that was never blorked by the [subj] is everyone's favorite.,SRC past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-108,The [subj] that the [obj] was never blorked by is everyone's favorite.,PORC past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-109,The [subj] has never blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-110,The [subj] never blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-111,The [subj] has never blorked the [obj] from time to time.,post-obj adverbial perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-112,The [subj] never blorked the [obj] from time to time.,post-obj adverbial past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-113,The [subj] has never blorked the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-114,The [subj] never blorked the [obj] that is everyone's favorite.,post-obj SRC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-115,The [subj] has usually blorked the [obj].,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-116,The [obj] has usually been blorked by the [subj].,perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-117,The [obj] has usually gotten blorked by the [subj].,perfect get-passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-118,The [subj] usually blorked the [obj].,past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-119,The [obj] was usually blorked by the [subj].,past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-120,The [obj] usually got blorked by the [subj].,past get-passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-121,Has the [subj] usually blorked the [obj]?,polar Q perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-122,Has the [obj] usually been blorked by the [subj]?,polar Q perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-123,Was the [obj] usually blorked by the [subj]?,polar Q past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-124,The [subj] seems to have usually blorked the [obj].,raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-125,The [obj] seems to have usually been blorked by the [subj].,raising perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-126,The [obj] seems to usually be blorked by the [subj].,raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-127,Which [subj] seems to have usually blorked the [obj]?,mat-wh-Q subject raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-128,Which [obj] does the [subj] seem to have usually blorked?,mat-wh-Q object raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-129,Which [obj] seems to have usually been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-130,Which [obj] seems to usually be blorked by the [subj]?,mat-wh-Q subject raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-131,I wonder which [subj] seems to have usually blorked the [obj].,emb-wh-Q subject raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-132,I wonder which [obj] the [subj] seems to have usually blorked.,emb-wh-Q object raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-133,I wonder which [obj] seems to have usually been blorked by the [subj].,emb-wh-Q subject raising perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-134,I wonder which [obj] seems to usually be blorked by the [subj].,emb-wh-Q subject raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-135,The [subj] hasn't usually blorked the [obj].,neg perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-136,The [obj] hasn't usually been blorked by the [subj].,neg perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-137,The [obj] wasn't usually blorked by the [subj].,neg past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-138,It was the [subj] that has usually blorked the [obj].,cleft subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-139,It was the [obj] that the [subj] has usually blorked.,cleft object perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-140,It was the [obj] that has usually been blorked by the [subj].,cleft subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-141,It was the [subj] that usually blorked the [obj].,cleft subject past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-142,It was the [obj] that the [subj] usually blorked.,cleft object past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-143,It was the [obj] that was usually blorked by the [subj].,cleft subject past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-144,Which [subj] has usually blorked the [obj]?,mat-wh-Q subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-145,Which [obj] has the [subj] usually blorked?,mat-wh-Q object perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-146,Which [obj] has usually been blorked by the [subj]?,mat-wh-Q subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-147,Which [subj] has the [obj] usually been blorked by?,mat-wh-Q P-object perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-148,Which [subj] usually blorked the [obj]?,mat-wh-Q subject past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-149,Which [obj] was usually blorked by the [subj]?,mat-wh-Q subject past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-150,Which [subj] was the [obj] usually blorked by?,mat-wh-Q P-object past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-151,I wonder which [subj] has usually blorked the [obj].,emb-wh-Q subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-152,I wonder which [obj] the [subj] has usually blorked.,emb-wh-Q object perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-153,I wonder which [obj] has usually been blorked by the [subj].,emb-wh-Q subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-154,I wonder which [subj] the [obj] has usually been blorked by.,emb-wh-Q P-object perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-155,I wonder which [subj] usually blorked the [obj].,emb-wh-Q subject past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-156,I wonder which [obj] the [subj] usually blorked.,emb-wh-Q object past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-157,I wonder which [obj] was usually blorked by the [subj].,emb-wh-Q subject past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-158,I wonder which [subj] the [obj] was usually blorked by.,emb-wh-Q P-object past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-159,The [subj] that has usually blorked the [obj] is everyone's favorite.,SRC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-160,The [obj] that the [subj] has usually blorked is everyone's favorite.,ORC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-161,The [subj] that the [obj] has usually been blorked by is everyone's favorite.,PORC perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-162,The [subj] that usually blorked the [obj] is everyone's favorite.,SRC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-163,The [obj] that the [subj] usually blorked is everyone's favorite.,ORC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-164,The [obj] that was usually blorked by the [subj] is everyone's favorite.,SRC past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-165,The [subj] that the [obj] was usually blorked by is everyone's favorite.,PORC past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-166,The [subj] has usually blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-167,The [subj] usually blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-168,The [subj] has usually blorked the [obj] from time to time.,post-obj adverbial perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-169,The [subj] usually blorked the [obj] from time to time.,post-obj adverbial past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-170,The [subj] has usually blorked the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-171,The [subj] usually blorked the [obj] that is everyone's favorite.,post-obj SRC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-172,The [subj] has seldom blorked the [obj].,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-173,The [obj] has seldom been blorked by the [subj].,perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-174,The [obj] has seldom gotten blorked by the [subj].,perfect get-passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-175,The [subj] seldom blorked the [obj].,past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-176,The [obj] was seldom blorked by the [subj].,past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-177,The [obj] seldom got blorked by the [subj].,past get-passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-178,Has the [subj] seldom blorked the [obj]?,polar Q perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-179,Has the [obj] seldom been blorked by the [subj]?,polar Q perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-180,Was the [obj] seldom blorked by the [subj]?,polar Q past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-181,The [subj] seems to have seldom blorked the [obj].,raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-182,The [obj] seems to have seldom been blorked by the [subj].,raising perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-183,The [obj] seems to seldom be blorked by the [subj].,raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-184,Which [subj] seems to have seldom blorked the [obj]?,mat-wh-Q subject raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-185,Which [obj] does the [subj] seem to have seldom blorked?,mat-wh-Q object raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-186,Which [obj] seems to have seldom been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-187,Which [obj] seems to seldom be blorked by the [subj]?,mat-wh-Q subject raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-188,I wonder which [subj] seems to have seldom blorked the [obj].,emb-wh-Q subject raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-189,I wonder which [obj] the [subj] seems to have seldom blorked.,emb-wh-Q object raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-190,I wonder which [obj] seems to have seldom been blorked by the [subj].,emb-wh-Q subject raising perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-191,I wonder which [obj] seems to seldom be blorked by the [subj].,emb-wh-Q subject raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-192,The [subj] hasn't seldom blorked the [obj].,neg perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-193,The [obj] hasn't seldom been blorked by the [subj].,neg perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-194,The [obj] wasn't seldom blorked by the [subj].,neg past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-195,It was the [subj] that has seldom blorked the [obj].,cleft subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-196,It was the [obj] that the [subj] has seldom blorked.,cleft object perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-197,It was the [obj] that has seldom been blorked by the [subj].,cleft subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-198,It was the [subj] that seldom blorked the [obj].,cleft subject past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-199,It was the [obj] that the [subj] seldom blorked.,cleft object past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-200,It was the [obj] that was seldom blorked by the [subj].,cleft subject past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-201,Which [subj] has seldom blorked the [obj]?,mat-wh-Q subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-202,Which [obj] has the [subj] seldom blorked?,mat-wh-Q object perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-203,Which [obj] has seldom been blorked by the [subj]?,mat-wh-Q subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-204,Which [subj] has the [obj] seldom been blorked by?,mat-wh-Q P-object perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-205,Which [subj] seldom blorked the [obj]?,mat-wh-Q subject past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-206,Which [obj] was seldom blorked by the [subj]?,mat-wh-Q subject past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-207,Which [subj] was the [obj] seldom blorked by?,mat-wh-Q P-object past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-208,I wonder which [subj] has seldom blorked the [obj].,emb-wh-Q subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-209,I wonder which [obj] the [subj] has seldom blorked.,emb-wh-Q object perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-210,I wonder which [obj] has seldom been blorked by the [subj].,emb-wh-Q subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-211,I wonder which [subj] the [obj] has seldom been blorked by.,emb-wh-Q P-object perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-212,I wonder which [subj] seldom blorked the [obj].,emb-wh-Q subject past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-213,I wonder which [obj] the [subj] seldom blorked.,emb-wh-Q object past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-214,I wonder which [obj] was seldom blorked by the [subj].,emb-wh-Q subject past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-215,I wonder which [subj] the [obj] was seldom blorked by.,emb-wh-Q P-object past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-216,The [subj] that has seldom blorked the [obj] is everyone's favorite.,SRC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-217,The [obj] that the [subj] has seldom blorked is everyone's favorite.,ORC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-218,The [subj] that the [obj] has seldom been blorked by is everyone's favorite.,PORC perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-219,The [subj] that seldom blorked the [obj] is everyone's favorite.,SRC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-220,The [obj] that the [subj] seldom blorked is everyone's favorite.,ORC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-221,The [obj] that was seldom blorked by the [subj] is everyone's favorite.,SRC past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-222,The [subj] that the [obj] was seldom blorked by is everyone's favorite.,PORC past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-223,The [subj] has seldom blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-224,The [subj] seldom blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-225,The [subj] has seldom blorked the [obj] from time to time.,post-obj adverbial perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-226,The [subj] seldom blorked the [obj] from time to time.,post-obj adverbial past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-227,The [subj] has seldom blorked the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-228,The [subj] seldom blorked the [obj] that is everyone's favorite.,post-obj SRC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold
-1,The [subj] has always blorked the [obj].,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-2,The [obj] has always been blorked by the [subj].,perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-3,The [obj] has always gotten blorked by the [subj].,perfect get-passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-4,The [subj] always blorked the [obj].,past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-5,The [obj] was always blorked by the [subj].,past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-6,The [obj] always got blorked by the [subj].,past get-passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-7,Has the [subj] always blorked the [obj]?,polar Q perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-8,Has the [obj] always been blorked by the [subj]?,polar Q perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-9,Was the [obj] always blorked by the [subj]?,polar Q past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-10,The [subj] seems to have always blorked the [obj].,raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-11,The [obj] seems to have always been blorked by the [subj].,raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-12,The [obj] seems to always be blorked by the [subj].,raising passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-13,Which [subj] seems to have always blorked the [obj]?,mat-wh-Q subject raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-14,Which [obj] does the [subj] seem to have always blorked?,mat-wh-Q object raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-15,Which [obj] seems to have always been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-16,Which [obj] seems to always be blorked by the [subj]?,mat-wh-Q subject raising passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-17,I wonder which [subj] seems to have always blorked the [obj].,emb-wh-Q subject raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-18,I wonder which [obj] the [subj] seems to have always blorked.,emb-wh-Q object raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-19,I wonder which [obj] seems to have always been blorked by the [subj].,emb-wh-Q subject raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-20,I wonder which [obj] seems to always be blorked by the [subj].,emb-wh-Q subject raising passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-21,The [subj] hasn't always blorked the [obj].,neg perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-22,The [obj] hasn't always been blorked by the [subj].,neg perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-23,The [obj] wasn't always blorked by the [subj].,neg past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-24,It was the [subj] that has always blorked the [obj].,cleft subject perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-25,It was the [obj] that the [subj] has always blorked.,cleft object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-26,It was the [obj] that has always been blorked by the [subj].,cleft subject perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-27,It was the [subj] that always blorked the [obj].,cleft subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-28,It was the [obj] that the [subj] always blorked.,cleft object past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-29,It was the [obj] that was always blorked by the [subj].,cleft subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-30,Which [subj] has always blorked the [obj]?,mat-wh-Q subject perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-31,Which [obj] has the [subj] always blorked?,mat-wh-Q object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-32,Which [obj] has always been blorked by the [subj]?,mat-wh-Q subject perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-33,Which [subj] has the [obj] always been blorked by?,mat-wh-Q P-object perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-34,Which [subj] always blorked the [obj]?,mat-wh-Q subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-35,Which [obj] was always blorked by the [subj]?,mat-wh-Q subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-36,Which [subj] was the [obj] always blorked by?,mat-wh-Q P-object past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-37,I wonder which [subj] has always blorked the [obj].,emb-wh-Q subject perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-38,I wonder which [obj] the [subj] has always blorked.,emb-wh-Q object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-39,I wonder which [obj] has always been blorked by the [subj].,emb-wh-Q subject perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-40,I wonder which [subj] the [obj] has always been blorked by.,emb-wh-Q P-object perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-41,I wonder which [subj] always blorked the [obj].,emb-wh-Q subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-42,I wonder which [obj] the [subj] always blorked.,emb-wh-Q object past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-43,I wonder which [obj] was always blorked by the [subj].,emb-wh-Q subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-44,I wonder which [subj] the [obj] was always blorked by.,emb-wh-Q P-object past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-45,The [subj] that has always blorked the [obj] is everyone's favorite.,SRC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-46,The [obj] that the [subj] has always blorked is everyone's favorite.,ORC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-47,The [subj] that the [obj] has always been blorked by is everyone's favorite.,PORC perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-48,The [subj] that always blorked the [obj] is everyone's favorite.,SRC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-49,The [obj] that the [subj] always blorked is everyone's favorite.,ORC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-50,The [obj] that was always blorked by the [subj] is everyone's favorite.,SRC past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-51,The [subj] that the [obj] was always blorked by is everyone's favorite.,PORC past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-52,The [subj] has always blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-53,The [subj] always blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-54,The [subj] has always blorked the [obj] from time to time.,post-obj adverbial perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-55,The [subj] always blorked the [obj] from time to time.,post-obj adverbial past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-56,The [subj] has always blorked the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-57,The [subj] always blorked the [obj] that is everyone's favorite.,post-obj SRC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-58,The [subj] has never blorked the [obj].,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-59,The [obj] has never been blorked by the [subj].,perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-60,The [obj] has never gotten blorked by the [subj].,perfect get-passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-61,The [subj] never blorked the [obj].,past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-62,The [obj] was never blorked by the [subj].,past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-63,The [obj] never got blorked by the [subj].,past get-passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-64,Has the [subj] never blorked the [obj]?,polar Q perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-65,Has the [obj] never been blorked by the [subj]?,polar Q perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-66,Was the [obj] never blorked by the [subj]?,polar Q past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-67,The [subj] seems to have never blorked the [obj].,raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-68,The [obj] seems to have never been blorked by the [subj].,raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-69,The [obj] seems to never be blorked by the [subj].,raising passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-70,Which [subj] seems to have never blorked the [obj]?,mat-wh-Q subject raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-71,Which [obj] does the [subj] seem to have never blorked?,mat-wh-Q object raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-72,Which [obj] seems to have never been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-73,Which [obj] seems to never be blorked by the [subj]?,mat-wh-Q subject raising passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-74,I wonder which [subj] seems to have never blorked the [obj].,emb-wh-Q subject raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-75,I wonder which [obj] the [subj] seems to have never blorked.,emb-wh-Q object raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-76,I wonder which [obj] seems to have never been blorked by the [subj].,emb-wh-Q subject raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-77,I wonder which [obj] seems to never be blorked by the [subj].,emb-wh-Q subject raising passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-78,The [subj] hasn't never blorked the [obj].,neg perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-79,The [obj] hasn't never been blorked by the [subj].,neg perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-80,The [obj] wasn't never blorked by the [subj].,neg past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-81,It was the [subj] that has never blorked the [obj].,cleft subject perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-82,It was the [obj] that the [subj] has never blorked.,cleft object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-83,It was the [obj] that has never been blorked by the [subj].,cleft subject perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-84,It was the [subj] that never blorked the [obj].,cleft subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-85,It was the [obj] that the [subj] never blorked.,cleft object past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-86,It was the [obj] that was never blorked by the [subj].,cleft subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-87,Which [subj] has never blorked the [obj]?,mat-wh-Q subject perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-88,Which [obj] has the [subj] never blorked?,mat-wh-Q object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-89,Which [obj] has never been blorked by the [subj]?,mat-wh-Q subject perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-90,Which [subj] has the [obj] never been blorked by?,mat-wh-Q P-object perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-91,Which [subj] never blorked the [obj]?,mat-wh-Q subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-92,Which [obj] was never blorked by the [subj]?,mat-wh-Q subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-93,Which [subj] was the [obj] never blorked by?,mat-wh-Q P-object past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-94,I wonder which [subj] has never blorked the [obj].,emb-wh-Q subject perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-95,I wonder which [obj] the [subj] has never blorked.,emb-wh-Q object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-96,I wonder which [obj] has never been blorked by the [subj].,emb-wh-Q subject perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-97,I wonder which [subj] the [obj] has never been blorked by.,emb-wh-Q P-object perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-98,I wonder which [subj] never blorked the [obj].,emb-wh-Q subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-99,I wonder which [obj] the [subj] never blorked.,emb-wh-Q object past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-100,I wonder which [obj] was never blorked by the [subj].,emb-wh-Q subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-101,I wonder which [subj] the [obj] was never blorked by.,emb-wh-Q P-object past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-102,The [subj] that has never blorked the [obj] is everyone's favorite.,SRC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-103,The [obj] that the [subj] has never blorked is everyone's favorite.,ORC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-104,The [subj] that the [obj] has never been blorked by is everyone's favorite.,PORC perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-105,The [subj] that never blorked the [obj] is everyone's favorite.,SRC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-106,The [obj] that the [subj] never blorked is everyone's favorite.,ORC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-107,The [obj] that was never blorked by the [subj] is everyone's favorite.,SRC past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-108,The [subj] that the [obj] was never blorked by is everyone's favorite.,PORC past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-109,The [subj] has never blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-110,The [subj] never blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-111,The [subj] has never blorked the [obj] from time to time.,post-obj adverbial perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-112,The [subj] never blorked the [obj] from time to time.,post-obj adverbial past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-113,The [subj] has never blorked the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-114,The [subj] never blorked the [obj] that is everyone's favorite.,post-obj SRC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-115,The [subj] has usually blorked the [obj].,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-116,The [obj] has usually been blorked by the [subj].,perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-117,The [obj] has usually gotten blorked by the [subj].,perfect get-passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-118,The [subj] usually blorked the [obj].,past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-119,The [obj] was usually blorked by the [subj].,past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-120,The [obj] usually got blorked by the [subj].,past get-passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-121,Has the [subj] usually blorked the [obj]?,polar Q perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-122,Has the [obj] usually been blorked by the [subj]?,polar Q perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-123,Was the [obj] usually blorked by the [subj]?,polar Q past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-124,The [subj] seems to have usually blorked the [obj].,raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-125,The [obj] seems to have usually been blorked by the [subj].,raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-126,The [obj] seems to usually be blorked by the [subj].,raising passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-127,Which [subj] seems to have usually blorked the [obj]?,mat-wh-Q subject raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-128,Which [obj] does the [subj] seem to have usually blorked?,mat-wh-Q object raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-129,Which [obj] seems to have usually been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-130,Which [obj] seems to usually be blorked by the [subj]?,mat-wh-Q subject raising passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-131,I wonder which [subj] seems to have usually blorked the [obj].,emb-wh-Q subject raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-132,I wonder which [obj] the [subj] seems to have usually blorked.,emb-wh-Q object raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-133,I wonder which [obj] seems to have usually been blorked by the [subj].,emb-wh-Q subject raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-134,I wonder which [obj] seems to usually be blorked by the [subj].,emb-wh-Q subject raising passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-135,The [subj] hasn't usually blorked the [obj].,neg perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-136,The [obj] hasn't usually been blorked by the [subj].,neg perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-137,The [obj] wasn't usually blorked by the [subj].,neg past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-138,It was the [subj] that has usually blorked the [obj].,cleft subject perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-139,It was the [obj] that the [subj] has usually blorked.,cleft object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-140,It was the [obj] that has usually been blorked by the [subj].,cleft subject perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-141,It was the [subj] that usually blorked the [obj].,cleft subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-142,It was the [obj] that the [subj] usually blorked.,cleft object past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-143,It was the [obj] that was usually blorked by the [subj].,cleft subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-144,Which [subj] has usually blorked the [obj]?,mat-wh-Q subject perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-145,Which [obj] has the [subj] usually blorked?,mat-wh-Q object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-146,Which [obj] has usually been blorked by the [subj]?,mat-wh-Q subject perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-147,Which [subj] has the [obj] usually been blorked by?,mat-wh-Q P-object perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-148,Which [subj] usually blorked the [obj]?,mat-wh-Q subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-149,Which [obj] was usually blorked by the [subj]?,mat-wh-Q subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-150,Which [subj] was the [obj] usually blorked by?,mat-wh-Q P-object past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-151,I wonder which [subj] has usually blorked the [obj].,emb-wh-Q subject perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-152,I wonder which [obj] the [subj] has usually blorked.,emb-wh-Q object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-153,I wonder which [obj] has usually been blorked by the [subj].,emb-wh-Q subject perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-154,I wonder which [subj] the [obj] has usually been blorked by.,emb-wh-Q P-object perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-155,I wonder which [subj] usually blorked the [obj].,emb-wh-Q subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-156,I wonder which [obj] the [subj] usually blorked.,emb-wh-Q object past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-157,I wonder which [obj] was usually blorked by the [subj].,emb-wh-Q subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-158,I wonder which [subj] the [obj] was usually blorked by.,emb-wh-Q P-object past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-159,The [subj] that has usually blorked the [obj] is everyone's favorite.,SRC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-160,The [obj] that the [subj] has usually blorked is everyone's favorite.,ORC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-161,The [subj] that the [obj] has usually been blorked by is everyone's favorite.,PORC perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-162,The [subj] that usually blorked the [obj] is everyone's favorite.,SRC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-163,The [obj] that the [subj] usually blorked is everyone's favorite.,ORC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-164,The [obj] that was usually blorked by the [subj] is everyone's favorite.,SRC past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-165,The [subj] that the [obj] was usually blorked by is everyone's favorite.,PORC past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-166,The [subj] has usually blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-167,The [subj] usually blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-168,The [subj] has usually blorked the [obj] from time to time.,post-obj adverbial perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-169,The [subj] usually blorked the [obj] from time to time.,post-obj adverbial past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-170,The [subj] has usually blorked the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-171,The [subj] usually blorked the [obj] that is everyone's favorite.,post-obj SRC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-172,The [subj] has seldom blorked the [obj].,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-173,The [obj] has seldom been blorked by the [subj].,perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-174,The [obj] has seldom gotten blorked by the [subj].,perfect get-passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-175,The [subj] seldom blorked the [obj].,past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-176,The [obj] was seldom blorked by the [subj].,past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-177,The [obj] seldom got blorked by the [subj].,past get-passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-178,Has the [subj] seldom blorked the [obj]?,polar Q perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-179,Has the [obj] seldom been blorked by the [subj]?,polar Q perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-180,Was the [obj] seldom blorked by the [subj]?,polar Q past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-181,The [subj] seems to have seldom blorked the [obj].,raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-182,The [obj] seems to have seldom been blorked by the [subj].,raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-183,The [obj] seems to seldom be blorked by the [subj].,raising passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-184,Which [subj] seems to have seldom blorked the [obj]?,mat-wh-Q subject raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-185,Which [obj] does the [subj] seem to have seldom blorked?,mat-wh-Q object raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-186,Which [obj] seems to have seldom been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-187,Which [obj] seems to seldom be blorked by the [subj]?,mat-wh-Q subject raising passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-188,I wonder which [subj] seems to have seldom blorked the [obj].,emb-wh-Q subject raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-189,I wonder which [obj] the [subj] seems to have seldom blorked.,emb-wh-Q object raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-190,I wonder which [obj] seems to have seldom been blorked by the [subj].,emb-wh-Q subject raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-191,I wonder which [obj] seems to seldom be blorked by the [subj].,emb-wh-Q subject raising passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-192,The [subj] hasn't seldom blorked the [obj].,neg perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-193,The [obj] hasn't seldom been blorked by the [subj].,neg perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-194,The [obj] wasn't seldom blorked by the [subj].,neg past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-195,It was the [subj] that has seldom blorked the [obj].,cleft subject perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-196,It was the [obj] that the [subj] has seldom blorked.,cleft object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-197,It was the [obj] that has seldom been blorked by the [subj].,cleft subject perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-198,It was the [subj] that seldom blorked the [obj].,cleft subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-199,It was the [obj] that the [subj] seldom blorked.,cleft object past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-200,It was the [obj] that was seldom blorked by the [subj].,cleft subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-201,Which [subj] has seldom blorked the [obj]?,mat-wh-Q subject perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-202,Which [obj] has the [subj] seldom blorked?,mat-wh-Q object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-203,Which [obj] has seldom been blorked by the [subj]?,mat-wh-Q subject perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-204,Which [subj] has the [obj] seldom been blorked by?,mat-wh-Q P-object perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-205,Which [subj] seldom blorked the [obj]?,mat-wh-Q subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-206,Which [obj] was seldom blorked by the [subj]?,mat-wh-Q subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-207,Which [subj] was the [obj] seldom blorked by?,mat-wh-Q P-object past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-208,I wonder which [subj] has seldom blorked the [obj].,emb-wh-Q subject perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-209,I wonder which [obj] the [subj] has seldom blorked.,emb-wh-Q object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-210,I wonder which [obj] has seldom been blorked by the [subj].,emb-wh-Q subject perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-211,I wonder which [subj] the [obj] has seldom been blorked by.,emb-wh-Q P-object perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-212,I wonder which [subj] seldom blorked the [obj].,emb-wh-Q subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-213,I wonder which [obj] the [subj] seldom blorked.,emb-wh-Q object past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-214,I wonder which [obj] was seldom blorked by the [subj].,emb-wh-Q subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-215,I wonder which [subj] the [obj] was seldom blorked by.,emb-wh-Q P-object past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-216,The [subj] that has seldom blorked the [obj] is everyone's favorite.,SRC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-217,The [obj] that the [subj] has seldom blorked is everyone's favorite.,ORC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-218,The [subj] that the [obj] has seldom been blorked by is everyone's favorite.,PORC perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-219,The [subj] that seldom blorked the [obj] is everyone's favorite.,SRC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-220,The [obj] that the [subj] seldom blorked is everyone's favorite.,ORC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-221,The [obj] that was seldom blorked by the [subj] is everyone's favorite.,SRC past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-222,The [subj] that the [obj] was seldom blorked by is everyone's favorite.,PORC past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-223,The [subj] has seldom blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-224,The [subj] seldom blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-225,The [subj] has seldom blorked the [obj] from time to time.,post-obj adverbial perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-226,The [subj] seldom blorked the [obj] from time to time.,post-obj adverbial past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-227,The [subj] has seldom blorked the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-228,The [subj] seldom blorked the [obj] that is everyone's favorite.,post-obj SRC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church
-1,The [subj] has always blorked the [obj].,perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-2,The [obj] has always been blorked by the [subj].,perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-3,The [obj] has always gotten blorked by the [subj].,perfect get-passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-4,The [subj] always blorked the [obj].,past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-5,The [obj] was always blorked by the [subj].,past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-6,The [obj] always got blorked by the [subj].,past get-passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-7,Has the [subj] always blorked the [obj]?,polar Q perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-8,Has the [obj] always been blorked by the [subj]?,polar Q perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-9,Was the [obj] always blorked by the [subj]?,polar Q past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-10,The [subj] seems to have always blorked the [obj].,raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-11,The [obj] seems to have always been blorked by the [subj].,raising perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-12,The [obj] seems to always be blorked by the [subj].,raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-13,Which [subj] seems to have always blorked the [obj]?,mat-wh-Q subject raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-14,Which [obj] does the [subj] seem to have always blorked?,mat-wh-Q object raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-15,Which [obj] seems to have always been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-16,Which [obj] seems to always be blorked by the [subj]?,mat-wh-Q subject raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-17,I wonder which [subj] seems to have always blorked the [obj].,emb-wh-Q subject raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-18,I wonder which [obj] the [subj] seems to have always blorked.,emb-wh-Q object raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-19,I wonder which [obj] seems to have always been blorked by the [subj].,emb-wh-Q subject raising perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-20,I wonder which [obj] seems to always be blorked by the [subj].,emb-wh-Q subject raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-21,The [subj] hasn't always blorked the [obj].,neg perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-22,The [obj] hasn't always been blorked by the [subj].,neg perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-23,The [obj] wasn't always blorked by the [subj].,neg past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-24,It was the [subj] that has always blorked the [obj].,cleft subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-25,It was the [obj] that the [subj] has always blorked.,cleft object perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-26,It was the [obj] that has always been blorked by the [subj].,cleft subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-27,It was the [subj] that always blorked the [obj].,cleft subject past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-28,It was the [obj] that the [subj] always blorked.,cleft object past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-29,It was the [obj] that was always blorked by the [subj].,cleft subject past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-30,Which [subj] has always blorked the [obj]?,mat-wh-Q subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-31,Which [obj] has the [subj] always blorked?,mat-wh-Q object perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-32,Which [obj] has always been blorked by the [subj]?,mat-wh-Q subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-33,Which [subj] has the [obj] always been blorked by?,mat-wh-Q P-object perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-34,Which [subj] always blorked the [obj]?,mat-wh-Q subject past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-35,Which [obj] was always blorked by the [subj]?,mat-wh-Q subject past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-36,Which [subj] was the [obj] always blorked by?,mat-wh-Q P-object past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-37,I wonder which [subj] has always blorked the [obj].,emb-wh-Q subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-38,I wonder which [obj] the [subj] has always blorked.,emb-wh-Q object perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-39,I wonder which [obj] has always been blorked by the [subj].,emb-wh-Q subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-40,I wonder which [subj] the [obj] has always been blorked by.,emb-wh-Q P-object perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-41,I wonder which [subj] always blorked the [obj].,emb-wh-Q subject past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-42,I wonder which [obj] the [subj] always blorked.,emb-wh-Q object past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-43,I wonder which [obj] was always blorked by the [subj].,emb-wh-Q subject past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-44,I wonder which [subj] the [obj] was always blorked by.,emb-wh-Q P-object past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-45,The [subj] that has always blorked the [obj] is everyone's favorite.,SRC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-46,The [obj] that the [subj] has always blorked is everyone's favorite.,ORC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-47,The [subj] that the [obj] has always been blorked by is everyone's favorite.,PORC perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-48,The [subj] that always blorked the [obj] is everyone's favorite.,SRC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-49,The [obj] that the [subj] always blorked is everyone's favorite.,ORC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-50,The [obj] that was always blorked by the [subj] is everyone's favorite.,SRC past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-51,The [subj] that the [obj] was always blorked by is everyone's favorite.,PORC past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-52,The [subj] has always blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-53,The [subj] always blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-54,The [subj] has always blorked the [obj] from time to time.,post-obj adverbial perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-55,The [subj] always blorked the [obj] from time to time.,post-obj adverbial past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-56,The [subj] has always blorked the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-57,The [subj] always blorked the [obj] that is everyone's favorite.,post-obj SRC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-58,The [subj] has never blorked the [obj].,perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-59,The [obj] has never been blorked by the [subj].,perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-60,The [obj] has never gotten blorked by the [subj].,perfect get-passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-61,The [subj] never blorked the [obj].,past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-62,The [obj] was never blorked by the [subj].,past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-63,The [obj] never got blorked by the [subj].,past get-passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-64,Has the [subj] never blorked the [obj]?,polar Q perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-65,Has the [obj] never been blorked by the [subj]?,polar Q perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-66,Was the [obj] never blorked by the [subj]?,polar Q past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-67,The [subj] seems to have never blorked the [obj].,raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-68,The [obj] seems to have never been blorked by the [subj].,raising perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-69,The [obj] seems to never be blorked by the [subj].,raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-70,Which [subj] seems to have never blorked the [obj]?,mat-wh-Q subject raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-71,Which [obj] does the [subj] seem to have never blorked?,mat-wh-Q object raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-72,Which [obj] seems to have never been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-73,Which [obj] seems to never be blorked by the [subj]?,mat-wh-Q subject raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-74,I wonder which [subj] seems to have never blorked the [obj].,emb-wh-Q subject raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-75,I wonder which [obj] the [subj] seems to have never blorked.,emb-wh-Q object raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-76,I wonder which [obj] seems to have never been blorked by the [subj].,emb-wh-Q subject raising perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-77,I wonder which [obj] seems to never be blorked by the [subj].,emb-wh-Q subject raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-78,The [subj] hasn't never blorked the [obj].,neg perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-79,The [obj] hasn't never been blorked by the [subj].,neg perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-80,The [obj] wasn't never blorked by the [subj].,neg past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-81,It was the [subj] that has never blorked the [obj].,cleft subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-82,It was the [obj] that the [subj] has never blorked.,cleft object perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-83,It was the [obj] that has never been blorked by the [subj].,cleft subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-84,It was the [subj] that never blorked the [obj].,cleft subject past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-85,It was the [obj] that the [subj] never blorked.,cleft object past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-86,It was the [obj] that was never blorked by the [subj].,cleft subject past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-87,Which [subj] has never blorked the [obj]?,mat-wh-Q subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-88,Which [obj] has the [subj] never blorked?,mat-wh-Q object perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-89,Which [obj] has never been blorked by the [subj]?,mat-wh-Q subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-90,Which [subj] has the [obj] never been blorked by?,mat-wh-Q P-object perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-91,Which [subj] never blorked the [obj]?,mat-wh-Q subject past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-92,Which [obj] was never blorked by the [subj]?,mat-wh-Q subject past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-93,Which [subj] was the [obj] never blorked by?,mat-wh-Q P-object past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-94,I wonder which [subj] has never blorked the [obj].,emb-wh-Q subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-95,I wonder which [obj] the [subj] has never blorked.,emb-wh-Q object perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-96,I wonder which [obj] has never been blorked by the [subj].,emb-wh-Q subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-97,I wonder which [subj] the [obj] has never been blorked by.,emb-wh-Q P-object perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-98,I wonder which [subj] never blorked the [obj].,emb-wh-Q subject past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-99,I wonder which [obj] the [subj] never blorked.,emb-wh-Q object past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-100,I wonder which [obj] was never blorked by the [subj].,emb-wh-Q subject past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-101,I wonder which [subj] the [obj] was never blorked by.,emb-wh-Q P-object past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-102,The [subj] that has never blorked the [obj] is everyone's favorite.,SRC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-103,The [obj] that the [subj] has never blorked is everyone's favorite.,ORC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-104,The [subj] that the [obj] has never been blorked by is everyone's favorite.,PORC perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-105,The [subj] that never blorked the [obj] is everyone's favorite.,SRC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-106,The [obj] that the [subj] never blorked is everyone's favorite.,ORC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-107,The [obj] that was never blorked by the [subj] is everyone's favorite.,SRC past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-108,The [subj] that the [obj] was never blorked by is everyone's favorite.,PORC past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-109,The [subj] has never blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-110,The [subj] never blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-111,The [subj] has never blorked the [obj] from time to time.,post-obj adverbial perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-112,The [subj] never blorked the [obj] from time to time.,post-obj adverbial past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-113,The [subj] has never blorked the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-114,The [subj] never blorked the [obj] that is everyone's favorite.,post-obj SRC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-115,The [subj] has usually blorked the [obj].,perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-116,The [obj] has usually been blorked by the [subj].,perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-117,The [obj] has usually gotten blorked by the [subj].,perfect get-passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-118,The [subj] usually blorked the [obj].,past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-119,The [obj] was usually blorked by the [subj].,past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-120,The [obj] usually got blorked by the [subj].,past get-passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-121,Has the [subj] usually blorked the [obj]?,polar Q perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-122,Has the [obj] usually been blorked by the [subj]?,polar Q perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-123,Was the [obj] usually blorked by the [subj]?,polar Q past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-124,The [subj] seems to have usually blorked the [obj].,raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-125,The [obj] seems to have usually been blorked by the [subj].,raising perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-126,The [obj] seems to usually be blorked by the [subj].,raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-127,Which [subj] seems to have usually blorked the [obj]?,mat-wh-Q subject raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-128,Which [obj] does the [subj] seem to have usually blorked?,mat-wh-Q object raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-129,Which [obj] seems to have usually been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-130,Which [obj] seems to usually be blorked by the [subj]?,mat-wh-Q subject raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-131,I wonder which [subj] seems to have usually blorked the [obj].,emb-wh-Q subject raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-132,I wonder which [obj] the [subj] seems to have usually blorked.,emb-wh-Q object raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-133,I wonder which [obj] seems to have usually been blorked by the [subj].,emb-wh-Q subject raising perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-134,I wonder which [obj] seems to usually be blorked by the [subj].,emb-wh-Q subject raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-135,The [subj] hasn't usually blorked the [obj].,neg perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-136,The [obj] hasn't usually been blorked by the [subj].,neg perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-137,The [obj] wasn't usually blorked by the [subj].,neg past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-138,It was the [subj] that has usually blorked the [obj].,cleft subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-139,It was the [obj] that the [subj] has usually blorked.,cleft object perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-140,It was the [obj] that has usually been blorked by the [subj].,cleft subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-141,It was the [subj] that usually blorked the [obj].,cleft subject past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-142,It was the [obj] that the [subj] usually blorked.,cleft object past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-143,It was the [obj] that was usually blorked by the [subj].,cleft subject past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-144,Which [subj] has usually blorked the [obj]?,mat-wh-Q subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-145,Which [obj] has the [subj] usually blorked?,mat-wh-Q object perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-146,Which [obj] has usually been blorked by the [subj]?,mat-wh-Q subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-147,Which [subj] has the [obj] usually been blorked by?,mat-wh-Q P-object perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-148,Which [subj] usually blorked the [obj]?,mat-wh-Q subject past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-149,Which [obj] was usually blorked by the [subj]?,mat-wh-Q subject past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-150,Which [subj] was the [obj] usually blorked by?,mat-wh-Q P-object past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-151,I wonder which [subj] has usually blorked the [obj].,emb-wh-Q subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-152,I wonder which [obj] the [subj] has usually blorked.,emb-wh-Q object perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-153,I wonder which [obj] has usually been blorked by the [subj].,emb-wh-Q subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-154,I wonder which [subj] the [obj] has usually been blorked by.,emb-wh-Q P-object perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-155,I wonder which [subj] usually blorked the [obj].,emb-wh-Q subject past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-156,I wonder which [obj] the [subj] usually blorked.,emb-wh-Q object past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-157,I wonder which [obj] was usually blorked by the [subj].,emb-wh-Q subject past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-158,I wonder which [subj] the [obj] was usually blorked by.,emb-wh-Q P-object past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-159,The [subj] that has usually blorked the [obj] is everyone's favorite.,SRC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-160,The [obj] that the [subj] has usually blorked is everyone's favorite.,ORC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-161,The [subj] that the [obj] has usually been blorked by is everyone's favorite.,PORC perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-162,The [subj] that usually blorked the [obj] is everyone's favorite.,SRC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-163,The [obj] that the [subj] usually blorked is everyone's favorite.,ORC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-164,The [obj] that was usually blorked by the [subj] is everyone's favorite.,SRC past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-165,The [subj] that the [obj] was usually blorked by is everyone's favorite.,PORC past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-166,The [subj] has usually blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-167,The [subj] usually blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-168,The [subj] has usually blorked the [obj] from time to time.,post-obj adverbial perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-169,The [subj] usually blorked the [obj] from time to time.,post-obj adverbial past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-170,The [subj] has usually blorked the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-171,The [subj] usually blorked the [obj] that is everyone's favorite.,post-obj SRC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-172,The [subj] has seldom blorked the [obj].,perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-173,The [obj] has seldom been blorked by the [subj].,perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-174,The [obj] has seldom gotten blorked by the [subj].,perfect get-passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-175,The [subj] seldom blorked the [obj].,past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-176,The [obj] was seldom blorked by the [subj].,past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-177,The [obj] seldom got blorked by the [subj].,past get-passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-178,Has the [subj] seldom blorked the [obj]?,polar Q perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-179,Has the [obj] seldom been blorked by the [subj]?,polar Q perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-180,Was the [obj] seldom blorked by the [subj]?,polar Q past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-181,The [subj] seems to have seldom blorked the [obj].,raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-182,The [obj] seems to have seldom been blorked by the [subj].,raising perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-183,The [obj] seems to seldom be blorked by the [subj].,raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-184,Which [subj] seems to have seldom blorked the [obj]?,mat-wh-Q subject raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-185,Which [obj] does the [subj] seem to have seldom blorked?,mat-wh-Q object raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-186,Which [obj] seems to have seldom been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-187,Which [obj] seems to seldom be blorked by the [subj]?,mat-wh-Q subject raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-188,I wonder which [subj] seems to have seldom blorked the [obj].,emb-wh-Q subject raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-189,I wonder which [obj] the [subj] seems to have seldom blorked.,emb-wh-Q object raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-190,I wonder which [obj] seems to have seldom been blorked by the [subj].,emb-wh-Q subject raising perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-191,I wonder which [obj] seems to seldom be blorked by the [subj].,emb-wh-Q subject raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-192,The [subj] hasn't seldom blorked the [obj].,neg perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-193,The [obj] hasn't seldom been blorked by the [subj].,neg perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-194,The [obj] wasn't seldom blorked by the [subj].,neg past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-195,It was the [subj] that has seldom blorked the [obj].,cleft subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-196,It was the [obj] that the [subj] has seldom blorked.,cleft object perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-197,It was the [obj] that has seldom been blorked by the [subj].,cleft subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-198,It was the [subj] that seldom blorked the [obj].,cleft subject past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-199,It was the [obj] that the [subj] seldom blorked.,cleft object past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-200,It was the [obj] that was seldom blorked by the [subj].,cleft subject past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-201,Which [subj] has seldom blorked the [obj]?,mat-wh-Q subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-202,Which [obj] has the [subj] seldom blorked?,mat-wh-Q object perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-203,Which [obj] has seldom been blorked by the [subj]?,mat-wh-Q subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-204,Which [subj] has the [obj] seldom been blorked by?,mat-wh-Q P-object perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-205,Which [subj] seldom blorked the [obj]?,mat-wh-Q subject past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-206,Which [obj] was seldom blorked by the [subj]?,mat-wh-Q subject past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-207,Which [subj] was the [obj] seldom blorked by?,mat-wh-Q P-object past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-208,I wonder which [subj] has seldom blorked the [obj].,emb-wh-Q subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-209,I wonder which [obj] the [subj] has seldom blorked.,emb-wh-Q object perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-210,I wonder which [obj] has seldom been blorked by the [subj].,emb-wh-Q subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-211,I wonder which [subj] the [obj] has seldom been blorked by.,emb-wh-Q P-object perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-212,I wonder which [subj] seldom blorked the [obj].,emb-wh-Q subject past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-213,I wonder which [obj] the [subj] seldom blorked.,emb-wh-Q object past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-214,I wonder which [obj] was seldom blorked by the [subj].,emb-wh-Q subject past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-215,I wonder which [subj] the [obj] was seldom blorked by.,emb-wh-Q P-object past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-216,The [subj] that has seldom blorked the [obj] is everyone's favorite.,SRC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-217,The [obj] that the [subj] has seldom blorked is everyone's favorite.,ORC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-218,The [subj] that the [obj] has seldom been blorked by is everyone's favorite.,PORC perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-219,The [subj] that seldom blorked the [obj] is everyone's favorite.,SRC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-220,The [obj] that the [subj] seldom blorked is everyone's favorite.,ORC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-221,The [obj] that was seldom blorked by the [subj] is everyone's favorite.,SRC past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-222,The [subj] that the [obj] was seldom blorked by is everyone's favorite.,PORC past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-223,The [subj] has seldom blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-224,The [subj] seldom blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-225,The [subj] has seldom blorked the [obj] from time to time.,post-obj adverbial perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-226,The [subj] seldom blorked the [obj] from time to time.,post-obj adverbial past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-227,The [subj] has seldom blorked the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
-228,The [subj] seldom blorked the [obj] that is everyone's favorite.,post-obj SRC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son
+item,sentence,sentence_type,group,word_0,word_1,word_2,word_3,word_4,word_5,word_6,word_7,word_8,word_9,word_10,word_11,adverb
+1,The [subj] has always blorked the [obj].,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+2,The [obj] has always gotten blorked by the [subj].,perfect get-passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+3,The [obj] was always blorked by the [subj].,past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+4,Has the [subj] always blorked the [obj]?,polar Q perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+5,Was the [obj] always blorked by the [subj]?,polar Q past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+6,The [obj] seems to have always been blorked by the [subj].,raising perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+7,Which [subj] seems to have always blorked the [obj]?,mat-wh-Q subject raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+8,Which [obj] seems to have always been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+9,I wonder which [subj] seems to have always blorked the [obj].,emb-wh-Q subject raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+10,I wonder which [obj] seems to have always been blorked by the [subj].,emb-wh-Q subject raising perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+11,The [subj] hasn't always blorked the [obj].,neg perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+12,The [obj] wasn't always blorked by the [subj].,neg past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+13,It was the [obj] that the [subj] has always blorked.,cleft object perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+14,It was the [subj] that always blorked the [obj].,cleft subject past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+15,It was the [obj] that was always blorked by the [subj].,cleft subject past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+16,Which [obj] has the [subj] always blorked?,mat-wh-Q object perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+17,Which [subj] has the [obj] always been blorked by?,mat-wh-Q P-object perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+18,Which [obj] was always blorked by the [subj]?,mat-wh-Q subject past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+19,I wonder which [subj] has always blorked the [obj].,emb-wh-Q subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+20,I wonder which [obj] has always been blorked by the [subj].,emb-wh-Q subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+21,I wonder which [subj] always blorked the [obj].,emb-wh-Q subject past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+22,I wonder which [obj] was always blorked by the [subj].,emb-wh-Q subject past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+23,The [subj] that has always blorked the [obj] is everyone's favorite.,SRC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+24,The [subj] that the [obj] has always been blorked by is everyone's favorite.,PORC perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+25,The [obj] that the [subj] always blorked is everyone's favorite.,ORC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+26,The [subj] that the [obj] was always blorked by is everyone's favorite.,PORC past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+27,The [subj] always blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+28,The [subj] always blorked the [obj] from time to time.,post-obj adverbial past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+29,The [subj] always blorked the [obj] that is everyone's favorite.,post-obj SRC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,always
+30,The [obj] has always been blorked by the [subj].,perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+31,The [subj] always blorked the [obj].,past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+32,The [obj] always got blorked by the [subj].,past get-passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+33,Has the [obj] always been blorked by the [subj]?,polar Q perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+34,The [subj] seems to have always blorked the [obj].,raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+35,The [obj] seems to always be blorked by the [subj].,raising passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+36,Which [obj] does the [subj] seem to have always blorked?,mat-wh-Q object raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+37,Which [obj] seems to always be blorked by the [subj]?,mat-wh-Q subject raising passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+38,I wonder which [obj] the [subj] seems to have always blorked.,emb-wh-Q object raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+39,I wonder which [obj] seems to always be blorked by the [subj].,emb-wh-Q subject raising passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+40,The [obj] hasn't always been blorked by the [subj].,neg perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+41,It was the [subj] that has always blorked the [obj].,cleft subject perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+42,It was the [obj] that has always been blorked by the [subj].,cleft subject perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+43,It was the [obj] that the [subj] always blorked.,cleft object past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+44,Which [subj] has always blorked the [obj]?,mat-wh-Q subject perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+45,Which [obj] has always been blorked by the [subj]?,mat-wh-Q subject perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+46,Which [subj] always blorked the [obj]?,mat-wh-Q subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+47,Which [subj] was the [obj] always blorked by?,mat-wh-Q P-object past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+48,I wonder which [obj] the [subj] has always blorked.,emb-wh-Q object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+49,I wonder which [subj] the [obj] has always been blorked by.,emb-wh-Q P-object perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+50,I wonder which [obj] the [subj] always blorked.,emb-wh-Q object past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+51,I wonder which [subj] the [obj] was always blorked by.,emb-wh-Q P-object past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+52,The [obj] that the [subj] has always blorked is everyone's favorite.,ORC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+53,The [subj] that always blorked the [obj] is everyone's favorite.,SRC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+54,The [obj] that was always blorked by the [subj] is everyone's favorite.,SRC past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+55,The [subj] has always blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+56,The [subj] has always blorked the [obj] from time to time.,post-obj adverbial perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+57,The [subj] has always blorked the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,always
+58,The [subj] has always blorked the [obj].,perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+59,The [obj] has always gotten blorked by the [subj].,perfect get-passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+60,The [obj] was always blorked by the [subj].,past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+61,Has the [subj] always blorked the [obj]?,polar Q perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+62,Was the [obj] always blorked by the [subj]?,polar Q past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+63,The [obj] seems to have always been blorked by the [subj].,raising perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+64,Which [subj] seems to have always blorked the [obj]?,mat-wh-Q subject raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+65,Which [obj] seems to have always been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+66,I wonder which [subj] seems to have always blorked the [obj].,emb-wh-Q subject raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+67,I wonder which [obj] seems to have always been blorked by the [subj].,emb-wh-Q subject raising perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+68,The [subj] hasn't always blorked the [obj].,neg perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+69,The [obj] wasn't always blorked by the [subj].,neg past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+70,It was the [obj] that the [subj] has always blorked.,cleft object perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+71,It was the [subj] that always blorked the [obj].,cleft subject past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+72,It was the [obj] that was always blorked by the [subj].,cleft subject past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+73,Which [obj] has the [subj] always blorked?,mat-wh-Q object perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+74,Which [subj] has the [obj] always been blorked by?,mat-wh-Q P-object perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+75,Which [obj] was always blorked by the [subj]?,mat-wh-Q subject past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+76,I wonder which [subj] has always blorked the [obj].,emb-wh-Q subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+77,I wonder which [obj] has always been blorked by the [subj].,emb-wh-Q subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+78,I wonder which [subj] always blorked the [obj].,emb-wh-Q subject past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+79,I wonder which [obj] was always blorked by the [subj].,emb-wh-Q subject past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+80,The [subj] that has always blorked the [obj] is everyone's favorite.,SRC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+81,The [subj] that the [obj] has always been blorked by is everyone's favorite.,PORC perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+82,The [obj] that the [subj] always blorked is everyone's favorite.,ORC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+83,The [subj] that the [obj] was always blorked by is everyone's favorite.,PORC past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+84,The [subj] always blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+85,The [subj] always blorked the [obj] from time to time.,post-obj adverbial past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+86,The [subj] always blorked the [obj] that is everyone's favorite.,post-obj SRC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,always
+87,The [obj] has never been blorked by the [subj].,perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+88,The [subj] never blorked the [obj].,past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+89,The [obj] never got blorked by the [subj].,past get-passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+90,Has the [obj] never been blorked by the [subj]?,polar Q perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+91,The [subj] seems to have never blorked the [obj].,raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+92,The [obj] seems to never be blorked by the [subj].,raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+93,Which [obj] does the [subj] seem to have never blorked?,mat-wh-Q object raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+94,Which [obj] seems to never be blorked by the [subj]?,mat-wh-Q subject raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+95,I wonder which [obj] the [subj] seems to have never blorked.,emb-wh-Q object raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+96,I wonder which [obj] seems to never be blorked by the [subj].,emb-wh-Q subject raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+97,The [obj] hasn't never been blorked by the [subj].,neg perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+98,It was the [subj] that has never blorked the [obj].,cleft subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+99,It was the [obj] that has never been blorked by the [subj].,cleft subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+100,It was the [obj] that the [subj] never blorked.,cleft object past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+101,Which [subj] has never blorked the [obj]?,mat-wh-Q subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+102,Which [obj] has never been blorked by the [subj]?,mat-wh-Q subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+103,Which [subj] never blorked the [obj]?,mat-wh-Q subject past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+104,Which [subj] was the [obj] never blorked by?,mat-wh-Q P-object past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+105,I wonder which [obj] the [subj] has never blorked.,emb-wh-Q object perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+106,I wonder which [subj] the [obj] has never been blorked by.,emb-wh-Q P-object perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+107,I wonder which [obj] the [subj] never blorked.,emb-wh-Q object past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+108,I wonder which [subj] the [obj] was never blorked by.,emb-wh-Q P-object past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+109,The [obj] that the [subj] has never blorked is everyone's favorite.,ORC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+110,The [subj] that never blorked the [obj] is everyone's favorite.,SRC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+111,The [obj] that was never blorked by the [subj] is everyone's favorite.,SRC past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+112,The [subj] has never blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+113,The [subj] has never blorked the [obj] from time to time.,post-obj adverbial perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+114,The [subj] has never blorked the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+1,The [subj] has never blorked the [obj].,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+2,The [obj] has never gotten blorked by the [subj].,perfect get-passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+3,The [obj] was never blorked by the [subj].,past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+4,Has the [subj] never blorked the [obj]?,polar Q perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+5,Was the [obj] never blorked by the [subj]?,polar Q past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+6,The [obj] seems to have never been blorked by the [subj].,raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+7,Which [subj] seems to have never blorked the [obj]?,mat-wh-Q subject raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+8,Which [obj] seems to have never been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+9,I wonder which [subj] seems to have never blorked the [obj].,emb-wh-Q subject raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+10,I wonder which [obj] seems to have never been blorked by the [subj].,emb-wh-Q subject raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+11,The [subj] hasn't never blorked the [obj].,neg perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+12,The [obj] wasn't never blorked by the [subj].,neg past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+13,It was the [obj] that the [subj] has never blorked.,cleft object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+14,It was the [subj] that never blorked the [obj].,cleft subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+15,It was the [obj] that was never blorked by the [subj].,cleft subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+16,Which [obj] has the [subj] never blorked?,mat-wh-Q object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+17,Which [subj] has the [obj] never been blorked by?,mat-wh-Q P-object perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+18,Which [obj] was never blorked by the [subj]?,mat-wh-Q subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+19,I wonder which [subj] has never blorked the [obj].,emb-wh-Q subject perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+20,I wonder which [obj] has never been blorked by the [subj].,emb-wh-Q subject perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+21,I wonder which [subj] never blorked the [obj].,emb-wh-Q subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+22,I wonder which [obj] was never blorked by the [subj].,emb-wh-Q subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+23,The [subj] that has never blorked the [obj] is everyone's favorite.,SRC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+24,The [subj] that the [obj] has never been blorked by is everyone's favorite.,PORC perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+25,The [obj] that the [subj] never blorked is everyone's favorite.,ORC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+26,The [subj] that the [obj] was never blorked by is everyone's favorite.,PORC past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+27,The [subj] never blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+28,The [subj] never blorked the [obj] from time to time.,post-obj adverbial past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+29,The [subj] never blorked the [obj] that is everyone's favorite.,post-obj SRC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+30,The [obj] has never been blorked by the [subj].,perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+31,The [subj] never blorked the [obj].,past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+32,The [obj] never got blorked by the [subj].,past get-passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+33,Has the [obj] never been blorked by the [subj]?,polar Q perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+34,The [subj] seems to have never blorked the [obj].,raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+35,The [obj] seems to never be blorked by the [subj].,raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+36,Which [obj] does the [subj] seem to have never blorked?,mat-wh-Q object raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+37,Which [obj] seems to never be blorked by the [subj]?,mat-wh-Q subject raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+38,I wonder which [obj] the [subj] seems to have never blorked.,emb-wh-Q object raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+39,I wonder which [obj] seems to never be blorked by the [subj].,emb-wh-Q subject raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+40,The [obj] hasn't never been blorked by the [subj].,neg perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+41,It was the [subj] that has never blorked the [obj].,cleft subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+42,It was the [obj] that has never been blorked by the [subj].,cleft subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+43,It was the [obj] that the [subj] never blorked.,cleft object past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+44,Which [subj] has never blorked the [obj]?,mat-wh-Q subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+45,Which [obj] has never been blorked by the [subj]?,mat-wh-Q subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+46,Which [subj] never blorked the [obj]?,mat-wh-Q subject past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+47,Which [subj] was the [obj] never blorked by?,mat-wh-Q P-object past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+48,I wonder which [obj] the [subj] has never blorked.,emb-wh-Q object perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+49,I wonder which [subj] the [obj] has never been blorked by.,emb-wh-Q P-object perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+50,I wonder which [obj] the [subj] never blorked.,emb-wh-Q object past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+51,I wonder which [subj] the [obj] was never blorked by.,emb-wh-Q P-object past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+52,The [obj] that the [subj] has never blorked is everyone's favorite.,ORC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+53,The [subj] that never blorked the [obj] is everyone's favorite.,SRC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+54,The [obj] that was never blorked by the [subj] is everyone's favorite.,SRC past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+55,The [subj] has never blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+56,The [subj] has never blorked the [obj] from time to time.,post-obj adverbial perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+57,The [subj] has never blorked the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+58,The [subj] has usually blorked the [obj].,perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+59,The [obj] has usually gotten blorked by the [subj].,perfect get-passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+60,The [obj] was usually blorked by the [subj].,past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+61,Has the [subj] usually blorked the [obj]?,polar Q perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+62,Was the [obj] usually blorked by the [subj]?,polar Q past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+63,The [obj] seems to have usually been blorked by the [subj].,raising perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+64,Which [subj] seems to have usually blorked the [obj]?,mat-wh-Q subject raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+65,Which [obj] seems to have usually been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+66,I wonder which [subj] seems to have usually blorked the [obj].,emb-wh-Q subject raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+67,I wonder which [obj] seems to have usually been blorked by the [subj].,emb-wh-Q subject raising perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+68,The [subj] hasn't usually blorked the [obj].,neg perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+69,The [obj] wasn't usually blorked by the [subj].,neg past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+70,It was the [obj] that the [subj] has usually blorked.,cleft object perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+71,It was the [subj] that usually blorked the [obj].,cleft subject past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+72,It was the [obj] that was usually blorked by the [subj].,cleft subject past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+73,Which [obj] has the [subj] usually blorked?,mat-wh-Q object perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+74,Which [subj] has the [obj] usually been blorked by?,mat-wh-Q P-object perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+75,Which [obj] was usually blorked by the [subj]?,mat-wh-Q subject past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+76,I wonder which [subj] has usually blorked the [obj].,emb-wh-Q subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+77,I wonder which [obj] has usually been blorked by the [subj].,emb-wh-Q subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+78,I wonder which [subj] usually blorked the [obj].,emb-wh-Q subject past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+79,I wonder which [obj] was usually blorked by the [subj].,emb-wh-Q subject past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+80,The [subj] that has usually blorked the [obj] is everyone's favorite.,SRC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+81,The [subj] that the [obj] has usually been blorked by is everyone's favorite.,PORC perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+82,The [obj] that the [subj] usually blorked is everyone's favorite.,ORC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+83,The [subj] that the [obj] was usually blorked by is everyone's favorite.,PORC past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+84,The [subj] usually blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+85,The [subj] usually blorked the [obj] from time to time.,post-obj adverbial past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+86,The [subj] usually blorked the [obj] that is everyone's favorite.,post-obj SRC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,usually
+87,The [obj] has usually been blorked by the [subj].,perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+88,The [subj] usually blorked the [obj].,past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+89,The [obj] usually got blorked by the [subj].,past get-passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+90,Has the [obj] usually been blorked by the [subj]?,polar Q perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+91,The [subj] seems to have usually blorked the [obj].,raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+92,The [obj] seems to usually be blorked by the [subj].,raising passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+93,Which [obj] does the [subj] seem to have usually blorked?,mat-wh-Q object raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+94,Which [obj] seems to usually be blorked by the [subj]?,mat-wh-Q subject raising passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+95,I wonder which [obj] the [subj] seems to have usually blorked.,emb-wh-Q object raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+96,I wonder which [obj] seems to usually be blorked by the [subj].,emb-wh-Q subject raising passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+97,The [obj] hasn't usually been blorked by the [subj].,neg perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+98,It was the [subj] that has usually blorked the [obj].,cleft subject perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+99,It was the [obj] that has usually been blorked by the [subj].,cleft subject perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+100,It was the [obj] that the [subj] usually blorked.,cleft object past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+101,Which [subj] has usually blorked the [obj]?,mat-wh-Q subject perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+102,Which [obj] has usually been blorked by the [subj]?,mat-wh-Q subject perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+103,Which [subj] usually blorked the [obj]?,mat-wh-Q subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+104,Which [subj] was the [obj] usually blorked by?,mat-wh-Q P-object past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+105,I wonder which [obj] the [subj] has usually blorked.,emb-wh-Q object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+106,I wonder which [subj] the [obj] has usually been blorked by.,emb-wh-Q P-object perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+107,I wonder which [obj] the [subj] usually blorked.,emb-wh-Q object past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+108,I wonder which [subj] the [obj] was usually blorked by.,emb-wh-Q P-object past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+109,The [obj] that the [subj] has usually blorked is everyone's favorite.,ORC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+110,The [subj] that usually blorked the [obj] is everyone's favorite.,SRC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+111,The [obj] that was usually blorked by the [subj] is everyone's favorite.,SRC past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+112,The [subj] has usually blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+113,The [subj] has usually blorked the [obj] from time to time.,post-obj adverbial perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+114,The [subj] has usually blorked the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,usually
+1,The [subj] has usually blorked the [obj].,perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+2,The [obj] has usually gotten blorked by the [subj].,perfect get-passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+3,The [obj] was usually blorked by the [subj].,past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+4,Has the [subj] usually blorked the [obj]?,polar Q perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+5,Was the [obj] usually blorked by the [subj]?,polar Q past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+6,The [obj] seems to have usually been blorked by the [subj].,raising perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+7,Which [subj] seems to have usually blorked the [obj]?,mat-wh-Q subject raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+8,Which [obj] seems to have usually been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+9,I wonder which [subj] seems to have usually blorked the [obj].,emb-wh-Q subject raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+10,I wonder which [obj] seems to have usually been blorked by the [subj].,emb-wh-Q subject raising perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+11,The [subj] hasn't usually blorked the [obj].,neg perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+12,The [obj] wasn't usually blorked by the [subj].,neg past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+13,It was the [obj] that the [subj] has usually blorked.,cleft object perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+14,It was the [subj] that usually blorked the [obj].,cleft subject past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+15,It was the [obj] that was usually blorked by the [subj].,cleft subject past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+16,Which [obj] has the [subj] usually blorked?,mat-wh-Q object perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+17,Which [subj] has the [obj] usually been blorked by?,mat-wh-Q P-object perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+18,Which [obj] was usually blorked by the [subj]?,mat-wh-Q subject past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+19,I wonder which [subj] has usually blorked the [obj].,emb-wh-Q subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+20,I wonder which [obj] has usually been blorked by the [subj].,emb-wh-Q subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+21,I wonder which [subj] usually blorked the [obj].,emb-wh-Q subject past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+22,I wonder which [obj] was usually blorked by the [subj].,emb-wh-Q subject past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+23,The [subj] that has usually blorked the [obj] is everyone's favorite.,SRC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+24,The [subj] that the [obj] has usually been blorked by is everyone's favorite.,PORC perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+25,The [obj] that the [subj] usually blorked is everyone's favorite.,ORC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+26,The [subj] that the [obj] was usually blorked by is everyone's favorite.,PORC past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+27,The [subj] usually blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+28,The [subj] usually blorked the [obj] from time to time.,post-obj adverbial past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+29,The [subj] usually blorked the [obj] that is everyone's favorite.,post-obj SRC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,usually
+30,The [obj] has seldom been blorked by the [subj].,perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+31,The [subj] seldom blorked the [obj].,past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+32,The [obj] seldom got blorked by the [subj].,past get-passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+33,Has the [obj] seldom been blorked by the [subj]?,polar Q perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+34,The [subj] seems to have seldom blorked the [obj].,raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+35,The [obj] seems to seldom be blorked by the [subj].,raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+36,Which [obj] does the [subj] seem to have seldom blorked?,mat-wh-Q object raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+37,Which [obj] seems to seldom be blorked by the [subj]?,mat-wh-Q subject raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+38,I wonder which [obj] the [subj] seems to have seldom blorked.,emb-wh-Q object raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+39,I wonder which [obj] seems to seldom be blorked by the [subj].,emb-wh-Q subject raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+40,The [obj] hasn't seldom been blorked by the [subj].,neg perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+41,It was the [subj] that has seldom blorked the [obj].,cleft subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+42,It was the [obj] that has seldom been blorked by the [subj].,cleft subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+43,It was the [obj] that the [subj] seldom blorked.,cleft object past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+44,Which [subj] has seldom blorked the [obj]?,mat-wh-Q subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+45,Which [obj] has seldom been blorked by the [subj]?,mat-wh-Q subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+46,Which [subj] seldom blorked the [obj]?,mat-wh-Q subject past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+47,Which [subj] was the [obj] seldom blorked by?,mat-wh-Q P-object past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+48,I wonder which [obj] the [subj] has seldom blorked.,emb-wh-Q object perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+49,I wonder which [subj] the [obj] has seldom been blorked by.,emb-wh-Q P-object perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+50,I wonder which [obj] the [subj] seldom blorked.,emb-wh-Q object past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+51,I wonder which [subj] the [obj] was seldom blorked by.,emb-wh-Q P-object past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+52,The [obj] that the [subj] has seldom blorked is everyone's favorite.,ORC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+53,The [subj] that seldom blorked the [obj] is everyone's favorite.,SRC past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+54,The [obj] that was seldom blorked by the [subj] is everyone's favorite.,SRC past passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+55,The [subj] has seldom blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+56,The [subj] has seldom blorked the [obj] from time to time.,post-obj adverbial perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+57,The [subj] has seldom blorked the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+58,The [subj] has seldom blorked the [obj].,perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+59,The [obj] has seldom gotten blorked by the [subj].,perfect get-passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+60,The [obj] was seldom blorked by the [subj].,past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+61,Has the [subj] seldom blorked the [obj]?,polar Q perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+62,Was the [obj] seldom blorked by the [subj]?,polar Q past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+63,The [obj] seems to have seldom been blorked by the [subj].,raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+64,Which [subj] seems to have seldom blorked the [obj]?,mat-wh-Q subject raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+65,Which [obj] seems to have seldom been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+66,I wonder which [subj] seems to have seldom blorked the [obj].,emb-wh-Q subject raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+67,I wonder which [obj] seems to have seldom been blorked by the [subj].,emb-wh-Q subject raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+68,The [subj] hasn't seldom blorked the [obj].,neg perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+69,The [obj] wasn't seldom blorked by the [subj].,neg past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+70,It was the [obj] that the [subj] has seldom blorked.,cleft object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+71,It was the [subj] that seldom blorked the [obj].,cleft subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+72,It was the [obj] that was seldom blorked by the [subj].,cleft subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+73,Which [obj] has the [subj] seldom blorked?,mat-wh-Q object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+74,Which [subj] has the [obj] seldom been blorked by?,mat-wh-Q P-object perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+75,Which [obj] was seldom blorked by the [subj]?,mat-wh-Q subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+76,I wonder which [subj] has seldom blorked the [obj].,emb-wh-Q subject perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+77,I wonder which [obj] has seldom been blorked by the [subj].,emb-wh-Q subject perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+78,I wonder which [subj] seldom blorked the [obj].,emb-wh-Q subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+79,I wonder which [obj] was seldom blorked by the [subj].,emb-wh-Q subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+80,The [subj] that has seldom blorked the [obj] is everyone's favorite.,SRC perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+81,The [subj] that the [obj] has seldom been blorked by is everyone's favorite.,PORC perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+82,The [obj] that the [subj] seldom blorked is everyone's favorite.,ORC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+83,The [subj] that the [obj] was seldom blorked by is everyone's favorite.,PORC past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+84,The [subj] seldom blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+85,The [subj] seldom blorked the [obj] from time to time.,post-obj adverbial past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+86,The [subj] seldom blorked the [obj] that is everyone's favorite.,post-obj SRC past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+87,The [obj] has seldom been blorked by the [subj].,perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+88,The [subj] seldom blorked the [obj].,past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+89,The [obj] seldom got blorked by the [subj].,past get-passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+90,Has the [obj] seldom been blorked by the [subj]?,polar Q perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+91,The [subj] seems to have seldom blorked the [obj].,raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+92,The [obj] seems to seldom be blorked by the [subj].,raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+93,Which [obj] does the [subj] seem to have seldom blorked?,mat-wh-Q object raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+94,Which [obj] seems to seldom be blorked by the [subj]?,mat-wh-Q subject raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+95,I wonder which [obj] the [subj] seems to have seldom blorked.,emb-wh-Q object raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+96,I wonder which [obj] seems to seldom be blorked by the [subj].,emb-wh-Q subject raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+97,The [obj] hasn't seldom been blorked by the [subj].,neg perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+98,It was the [subj] that has seldom blorked the [obj].,cleft subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+99,It was the [obj] that has seldom been blorked by the [subj].,cleft subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+100,It was the [obj] that the [subj] seldom blorked.,cleft object past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+101,Which [subj] has seldom blorked the [obj]?,mat-wh-Q subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+102,Which [obj] has seldom been blorked by the [subj]?,mat-wh-Q subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+103,Which [subj] seldom blorked the [obj]?,mat-wh-Q subject past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+104,Which [subj] was the [obj] seldom blorked by?,mat-wh-Q P-object past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+105,I wonder which [obj] the [subj] has seldom blorked.,emb-wh-Q object perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+106,I wonder which [subj] the [obj] has seldom been blorked by.,emb-wh-Q P-object perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+107,I wonder which [obj] the [subj] seldom blorked.,emb-wh-Q object past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+108,I wonder which [subj] the [obj] was seldom blorked by.,emb-wh-Q P-object past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+109,The [obj] that the [subj] has seldom blorked is everyone's favorite.,ORC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+110,The [subj] that seldom blorked the [obj] is everyone's favorite.,SRC past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+111,The [obj] that was seldom blorked by the [subj] is everyone's favorite.,SRC past passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+112,The [subj] has seldom blorked frequently the [obj] that is everyone's favorite.,heavy shift post-obj SRC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+113,The [subj] has seldom blorked the [obj] from time to time.,post-obj adverbial perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+114,The [subj] has seldom blorked the [obj] that is everyone's favorite.,post-obj SRC perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
