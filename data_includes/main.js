@@ -85,7 +85,7 @@ newTrial("instruction1",
 ).setOption("countsForProgressBar", false)
 
 var feedback_trial = label => item => {
-	var word_num 	 = Math.floor(Math.random() * 8)
+	var word_num 	 = Math.floor(Math.random() * (label == 'trial_train' ? 4 : 8))
 	var target_res   = label === 'trial_train' ? item['correct_pos'] : (word_num <= 3 ? '[subj]' : '[obj]')
 	var correct 	 = false
 	var word 		 = item['word_' + word_num]
