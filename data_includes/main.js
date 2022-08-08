@@ -152,7 +152,7 @@ Template("practice.csv", feedback_trial('trial_prac'))
 
 newTrial("instruction2",
 	newText(
-		"You have now finished the practice session! Next, you will move on to a training session.<p />" +
+		"You have now finished the practice session! Next, you will move on to the first part of the experiment, which is a training session.<p />" +
 		"During training, you will learn about a new word, <i>blork</i>. " +
 		"You will see sentences like the following: "
 	)
@@ -178,7 +178,7 @@ newTrial("instruction2",
 		"You should use this feedback to help you figure out where certain words " +
 		"should normally go in sentences with <i>blork</i>.<p />" +
 		"When you are finished with the training session, you will see one more message before " +
-		"going on to the main experiment.<p />" +
+		"going on to the second part of the experiment, which is a test session.<p />" +
 		"Click below when you are ready to begin the training session."
 	)
 		.css(centered_justified_style)
@@ -195,20 +195,20 @@ Template("train.csv", feedback_trial('trial_train'))
 
 newTrial("instruction3",
 	newText(
-		"Now, you are ready to start the experiment! " +
-		"In the experiment, you will see many sentences. " +
+		"Now, you are ready to start the second part of the experiment! " +
+		"In this second part, which is a test session, you will see many sentences. " +
 		"Most will have the new word, <i>blork</i>, which you just learned about, " +
 		"and others will have words you already know.<p />" +
 		"Remember, your job is to decide which blank the word below the sentence should go in. " +
 		"During the main experiment, you will not get any feedback about your choice, " +
 		"and you will not be able to change your first choice. Make sure to try your best, and good luck!<p />" +
-		"Click below when you are ready to begin the experiment."
+		"Click below when you are ready to begin the test session."
 	)
 		.css(centered_justified_style)
 		.print()
 	,
 
-	newButton("Click here to begin the experiment!")
+	newButton("Click here to begin the test session!")
 		.center()
 		.print()
 		.wait()
