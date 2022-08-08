@@ -65,8 +65,8 @@ newTrial("instruction1",
 		"in the sentence where you think it should go. " +
 		"After you have filled a blank with the word, you will see a \"Next\" button, which you can click " +
 		"to go to the next item.<p />" +
-		"Note that this means <b>the sentence will still be missing one word at the end of each trial</b>, " +
-		"since you will only fill in one of the two blanks.<p />" + 
+		"Since you will only fill in one of the two blanks, " +
+		"<b>the sentence will still be missing one word at the end of each trial</b>.<p />" + 
 		"First, you will do some practice to get you used to how this works. " +
 		"Afterward, there will be additional instructions. " + 
 		"During the practice, you will get feedback on whether you chose the correct blank for the word, " +
@@ -116,7 +116,7 @@ var feedback_trial = label => item => {
 		}).call(),
 		
 		newText("correct", "Good job&mdash;that's the right choice!").css('color', 'rgb(34, 139, 34)').center(),
-		newText("incorrect", "That's not the right one&mdash;try again!").css('color', 'rgb(188, 74, 60)').center(),
+		newText("incorrect", "That's not the right one&mdash;try moving the word to the other blank!").css('color', 'rgb(188, 74, 60)').center(),
 		
 		newDragDrop("dd", "bungee")
 			.log("all")
