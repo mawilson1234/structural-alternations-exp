@@ -104,7 +104,7 @@ var feedback_trial = label => item => {
 		newText(postsentence).print(getText("container")),
 		
 		newText("placeholder", "&mdash;").center().print(),
-		newTimer("wait", item.sentence.split(" ").length * 250).start().wait(),
+		newTimer("wait", item.sentence.split(" ").length * 325).start().wait(),
 		getText("placeholder").remove(),
 		
 		newText("word", word).css({border: '1px solid #000', padding: '3px'}).center().print(),
@@ -308,7 +308,7 @@ var trial = group_label => item => {
 		newText(postsentence).print(getText("container")),
 		
 		newText("placeholder", "&mdash;").center().print(),
-		newTimer("wait", item.sentence.split(" ").length * 250).start().wait(),
+		newTimer("wait", item.sentence.split(" ").length * 325).start().wait(),
 		getText("placeholder").remove(),
 		
 		newText("word", word).css({border: '1px solid #000', padding: '3px'}).center().print(),
