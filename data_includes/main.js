@@ -202,6 +202,7 @@ newTrial("instruction2",
 		"Then, you can move the word from the wrong blank to the right one to continue on. " +
 		"You should use this feedback to help you figure out where certain words " +
 		"should normally go in sentences with <i>blork</i>.<p />" +
+		"We ask that you please don't write anything down, and just try to figure things out naturally.<p />" +
 		"When you are finished with the training session, you will see one more message before " +
 		"going on to the second part of the experiment, which is a test session.<p />" +
 		"Click below when you are ready to begin the training session."
