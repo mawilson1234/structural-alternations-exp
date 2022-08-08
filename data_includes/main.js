@@ -24,6 +24,31 @@ var centered_justified_style = {
 	width: '30em'
 }
 
+function SepWithN(sep, main, n) {
+    this.args = [sep,main];
+
+    this.run = function(arrays) {
+        assert(arrays.length == 2, "Wrong number of arguments (or bad argument) to SepWithN");
+        assert(parseInt(n) > 0, "N must be a positive number");
+        let sep = arrays[0];
+        let main = arrays[1];
+
+        if (main.length <= 1)
+            return main
+        else {
+            let newArray = [];
+            while (main.length){
+                for (let i = 0; i < n && main.length>0; i++)
+                    newArray.push(main.pop());
+                for (let j = 0; j < sep.length && main.length > 0; ++j)
+                    newArray.push(sep[j]);
+            }
+            return newArray;
+        }
+    }
+}
+function sepWithN(sep, main, n) { return new SepWithN(sep, main, n); }
+
 Sequence(
 	"setcounter",
 	"consent",
@@ -32,7 +57,7 @@ Sequence(
 	"instruction2",
 	randomize("trial_train"),
 	"instruction3",
-	randomize("trial"),
+	sepWithN('break', randomize("trial"), 54),
 	"feedback",
 	SendResults(),
 	"bye"
@@ -138,7 +163,7 @@ var feedback_trial = label => item => {
 			.removeDrop(getText(first_arg), getText(second_arg))
 		,
 		
-		newButton("next", "Next").css("margin-top", "2em").center().print().wait().remove()
+		newButton("next", "Next").center().print().wait().remove()
 	)
 	.log('item'		 	  , item.item)
 	.log('word'			  , word)
@@ -334,7 +359,7 @@ var trial = group_label => item => {
 		
 		getText("word").css(dropped_word_style),
 		
-		newButton("next", "Next").css("margin-top", "2em").center().print().wait().remove()
+		newButton("next", "Next").center().print().wait().remove()
 	)
 	.log('item'		 	  , item.item)
 	.log('word'			  , word)
@@ -346,6 +371,18 @@ var trial = group_label => item => {
 
 Template("stimuli.csv", trial("group"))
 Template("fillers.csv", trial("filler_group"))
+
+newTrial('break',
+    newText('You may now take a short break. ' +
+    		'Please don\'t take too long, so you don\'t forget what you learned about <i>blork</i>! ' +
+    		'Click below when you are ready to return to the experiment.')
+        .print()
+    ,
+    newButton('click', 'Click here to return to the experiment')
+        .center()
+        .print()
+        .wait()
+)
 
 newTrial("feedback",
 	newText(
