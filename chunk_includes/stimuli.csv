@@ -95,7 +95,7 @@ item,sentence,sentence_type,group,word_0,word_1,word_2,word_3,word_4,word_5,word
 94,Which [obj] seems to never be blorked by the [subj]?,mat-wh-Q subject raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
 95,I wonder which [obj] the [subj] seems to have never blorked.,emb-wh-Q object raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
 96,I wonder which [obj] seems to never be blorked by the [subj].,emb-wh-Q subject raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
-97,The [obj] hasn't never been blorked by the [subj].,neg perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
+97,The [obj] hasn't ever been blorked by the [subj].,neg perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
 98,It was the [subj] that has never blorked the [obj].,cleft subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
 99,It was the [obj] that has never been blorked by the [subj].,cleft subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
 100,It was the [obj] that the [subj] never blorked.,cleft object past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,never
@@ -123,8 +123,8 @@ item,sentence,sentence_type,group,word_0,word_1,word_2,word_3,word_4,word_5,word
 8,Which [obj] seems to have never been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
 9,I wonder which [subj] seems to have never blorked the [obj].,emb-wh-Q subject raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
 10,I wonder which [obj] seems to have never been blorked by the [subj].,emb-wh-Q subject raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
-11,The [subj] hasn't never blorked the [obj].,neg perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
-12,The [obj] wasn't never blorked by the [subj].,neg past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+11,The [subj] hasn't ever blorked the [obj].,neg perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
+12,The [obj] wasn't ever blorked by the [subj].,neg past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
 13,It was the [obj] that the [subj] has never blorked.,cleft object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
 14,It was the [subj] that never blorked the [obj].,cleft subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
 15,It was the [obj] that was never blorked by the [subj].,cleft subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,never
@@ -152,7 +152,7 @@ item,sentence,sentence_type,group,word_0,word_1,word_2,word_3,word_4,word_5,word
 37,Which [obj] seems to never be blorked by the [subj]?,mat-wh-Q subject raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
 38,I wonder which [obj] the [subj] seems to have never blorked.,emb-wh-Q object raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
 39,I wonder which [obj] seems to never be blorked by the [subj].,emb-wh-Q subject raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
-40,The [obj] hasn't never been blorked by the [subj].,neg perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
+40,The [obj] hasn't ever been blorked by the [subj].,neg perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
 41,It was the [subj] that has never blorked the [obj].,cleft subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
 42,It was the [obj] that has never been blorked by the [subj].,cleft subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
 43,It was the [obj] that the [subj] never blorked.,cleft object past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,never
@@ -266,7 +266,7 @@ item,sentence,sentence_type,group,word_0,word_1,word_2,word_3,word_4,word_5,word
 37,Which [obj] seems to seldom be blorked by the [subj]?,mat-wh-Q subject raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
 38,I wonder which [obj] the [subj] seems to have seldom blorked.,emb-wh-Q object raising perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
 39,I wonder which [obj] seems to seldom be blorked by the [subj].,emb-wh-Q subject raising passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
-40,The [obj] hasn't seldom been blorked by the [subj].,neg perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
+40,The [obj] hasn't often been blorked by the [subj].,neg perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
 41,It was the [subj] that has seldom blorked the [obj].,cleft subject perfect transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
 42,It was the [obj] that has seldom been blorked by the [subj].,cleft subject perfect passive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
 43,It was the [obj] that the [subj] seldom blorked.,cleft object past transitive,red_yellow,cherry,strawberry,tomato,lobster,blood,ruby,banana,lemon,corn,lion,honey,gold,seldom
@@ -294,8 +294,8 @@ item,sentence,sentence_type,group,word_0,word_1,word_2,word_3,word_4,word_5,word
 65,Which [obj] seems to have seldom been blorked by the [subj]?,mat-wh-Q subject raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
 66,I wonder which [subj] seems to have seldom blorked the [obj].,emb-wh-Q subject raising perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
 67,I wonder which [obj] seems to have seldom been blorked by the [subj].,emb-wh-Q subject raising perfect passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
-68,The [subj] hasn't seldom blorked the [obj].,neg perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
-69,The [obj] wasn't seldom blorked by the [subj].,neg past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+68,The [subj] hasn't often blorked the [obj].,neg perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
+69,The [obj] wasn't often blorked by the [subj].,neg past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
 70,It was the [obj] that the [subj] has seldom blorked.,cleft object perfect transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
 71,It was the [subj] that seldom blorked the [obj].,cleft subject past transitive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
 72,It was the [obj] that was seldom blorked by the [subj].,cleft subject past passive,vehicles_buildings,bike,car,train,motorcycle,truck,bus,house,apartment,tent,building,store,church,seldom
@@ -323,7 +323,7 @@ item,sentence,sentence_type,group,word_0,word_1,word_2,word_3,word_4,word_5,word
 94,Which [obj] seems to seldom be blorked by the [subj]?,mat-wh-Q subject raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
 95,I wonder which [obj] the [subj] seems to have seldom blorked.,emb-wh-Q object raising perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
 96,I wonder which [obj] seems to seldom be blorked by the [subj].,emb-wh-Q subject raising passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
-97,The [obj] hasn't seldom been blorked by the [subj].,neg perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
+97,The [obj] hasn't often been blorked by the [subj].,neg perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
 98,It was the [subj] that has seldom blorked the [obj].,cleft subject perfect transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
 99,It was the [obj] that has seldom been blorked by the [subj].,cleft subject perfect passive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
 100,It was the [obj] that the [subj] seldom blorked.,cleft object past transitive,female_male,sister,mother,wife,grandmother,aunt,daughter,brother,father,husband,grandfather,uncle,son,seldom
