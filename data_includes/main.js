@@ -227,6 +227,8 @@ newTrial("instruction3",
 		"Remember, your job is to decide which blank the word below the sentence should go in. " +
 		"During the main experiment, you will not get any feedback about your choice, " +
 		"and you will not be able to change your first choice. Make sure to try your best, and good luck!<p />" +
+		"During this part of the experiment, you will have the opportunity to take two short breaks partway through. " +
+		"We ask that you take only as much time as you need, so that you don't forget what you learned about <i>blork</i>!<p />"
 		"Click below when you are ready to begin the test session."
 	)
 		.css(centered_justified_style)
