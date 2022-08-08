@@ -39,13 +39,13 @@ item,sentence,sentence_type,filler_group,word_0,word_1,word_2,word_3,word_4,word
 152,The [subj] that the [obj] was usually bought by is everyone's favorite.,PORC past passive,buy,customer,guest,manager,farmer,doctor,technician,cereal,tape,phone,grain,medicine,hammer
 153,Which [obj] has the [subj] seldom bought?,mat-wh-Q object perfect transitive,buy,customer,guest,manager,farmer,doctor,technician,cereal,tape,phone,grain,medicine,hammer
 154,The [subj] that has seldom bought the [obj] is everyone's favorite.,SRC perfect transitive,buy,customer,guest,manager,farmer,doctor,technician,cereal,tape,phone,grain,medicine,hammer
-155,The [obj] has always gotten broken by the [subj].,perfect get-passive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
-156,The [obj] seems to always be broken by the [subj].,raising passive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
-157,The [obj] that the [subj] always broke is everyone's favorite.,ORC past transitive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
-158,The [subj] seems to have never broken the [obj].,raising perfect transitive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
-159,The [subj] that never broke the [obj] is everyone's favorite.,SRC past transitive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
-160,The [obj] has usually gotten broken by the [subj].,perfect get-passive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
-161,The [obj] seems to usually be broken by the [subj].,raising passive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
-162,The [obj] that the [subj] usually broke is everyone's favorite.,ORC past transitive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
-163,The [subj] seems to have seldom broken the [obj].,raising perfect transitive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
-164,The [subj] that seldom broke the [obj] is everyone's favorite.,SRC past transitive,break,teenager,dog,cat,crash,collision,worker,jar,glass,dish,mirror,window,camera
+155,The [obj] has always gotten broken by the [subj].,perfect get-passive,break,teenager,dog,cat,gentleman,friend,worker,jar,glass,dish,mirror,window,camera
+156,The [obj] seems to always be broken by the [subj].,raising passive,break,teenager,dog,cat,gentleman,friend,worker,jar,glass,dish,mirror,window,camera
+157,The [obj] that the [subj] always broke is everyone's favorite.,ORC past transitive,break,teenager,dog,cat,gentleman,friend,worker,jar,glass,dish,mirror,window,camera
+158,The [subj] seems to have never broken the [obj].,raising perfect transitive,break,teenager,dog,cat,gentleman,friend,worker,jar,glass,dish,mirror,window,camera
+159,The [subj] that never broke the [obj] is everyone's favorite.,SRC past transitive,break,teenager,dog,cat,gentleman,friend,worker,jar,glass,dish,mirror,window,camera
+160,The [obj] has usually gotten broken by the [subj].,perfect get-passive,break,teenager,dog,cat,gentleman,friend,worker,jar,glass,dish,mirror,window,camera
+161,The [obj] seems to usually be broken by the [subj].,raising passive,break,teenager,dog,cat,gentleman,friend,worker,jar,glass,dish,mirror,window,camera
+162,The [obj] that the [subj] usually broke is everyone's favorite.,ORC past transitive,break,teenager,dog,cat,gentleman,friend,worker,jar,glass,dish,mirror,window,camera
+163,The [subj] seems to have seldom broken the [obj].,raising perfect transitive,break,teenager,dog,cat,gentleman,friend,worker,jar,glass,dish,mirror,window,camera
+164,The [subj] that seldom broke the [obj] is everyone's favorite.,SRC past transitive,break,teenager,dog,cat,gentleman,friend,worker,jar,glass,dish,mirror,window,camera
