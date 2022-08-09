@@ -93,7 +93,7 @@ newTrial("instruction1",
 		"Since you will only fill in one of the two blanks, " +
 		"<b>the sentence will still be missing one word at the end of each trial</b>.<p />" + 
 		"First, you will do some practice to get you used to how this works. " +
-		"Afterward, there will be additional instructions. " + 
+		//"Afterward, there will be additional instructions. " + 
 		"During the practice, you will get feedback on whether you chose the correct blank for the word, " +
 		"and if you chose incorrectly, you should move the word to the correct blank to continue. " +
 		"However, you will not get feedback during the main part of the experiment.<p />" +
