@@ -225,11 +225,12 @@ newTrial("instruction3",
 		"In this second part, which is a test session, you will see many sentences. " +
 		"Most will have the new word, <i>blork</i>, which you just learned about, " +
 		"and others will have words you already know.<p />" +
-		"Remember, your job is to decide which blank the word below the sentence should go in. " +
+		"Remember, your job is to decide which blank the word below the sentence goes best in. " +
 		"During the test session, you will not get any feedback about your choice, " +
 		"and you will not be able to change your first choice. Make sure to try your best, and good luck!<p />" +
 		"During this part of the experiment, you will have the opportunity to take two short breaks partway through. " +
-		"We ask that you take only as much time as you need, so that you don't forget what you learned about <i>blork</i>!<p />" +
+		"We ask that you take only as much time as you need, so that you don't forget what you just " +
+		"learned about words that go with <i>blork</i>!<p />" +
 		"Click below when you are ready to begin the test session."
 	)
 		.css(centered_justified_style)
@@ -377,11 +378,11 @@ Template("fillers.csv", trial("filler_group"))
 
 newTrial('break',
     newText('You may now take a short break. ' +
-    		'Please don\'t take too long, so you don\'t forget what you learned about <i>blork</i>! ' +
+    		'Please don\'t take too long, so you don\'t forget what you know about <i>blork</i>! ' +
     		'Click below when you are ready to return to the experiment.')
         .print()
     ,
-    newButton('click', 'Click here to return to the experiment')
+    newButton('click', 'Click here to return to the experiment!')
         .center()
         .print()
         .wait()
@@ -389,7 +390,7 @@ newTrial('break',
 
 newTrial("feedback",
 	newText(
-		"If you have any feedback on the experiment, please leave it here. " +
+		"If you have any feedback on the experiment, please type it here. " +
 		"We would be especially interested to hear if you have any thoughts " +
 		"about whether you thought of words that might be similar in meaning to <i>blork</i>.<p />" +
 		"If you don't have any feedback, " +
