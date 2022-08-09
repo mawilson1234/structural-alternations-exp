@@ -87,7 +87,7 @@ newTrial("instruction1",
 		"Below it, there will be a dash. " + 
 		"After a delay to give you time to read the sentence, a word will appear in a box where the dash was. " +
 		"When the word appears, you should drag it to the blank " +
-		"in the sentence where you think it should go. " +
+		"in the sentence where you think it goes best. " +
 		"After you have filled a blank with the word, you will see a \"Next\" button, which you can click " +
 		"to go to the next item.<p />" +
 		"Since you will only fill in one of the two blanks, " +
