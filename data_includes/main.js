@@ -1,5 +1,5 @@
 PennController.ResetPrefix(null) // Shorten command names (keep this line here)
-// DebugOff()
+DebugOff()
 
 SetCounter("setcounter")
 
@@ -393,6 +393,8 @@ newTrial("feedback",
 		"If you have any feedback on the experiment, please type it here. " +
 		"We would be especially interested to hear if you have any thoughts " +
 		"about whether you thought of words that might be similar in meaning to <i>blork</i>.<p />" +
+		"We would also like to know what guesses you may have about what determines where different " +
+		"words can go with <i>blork</i>.<p />" +
 		"If you don't have any feedback, " +
 		"you can leave this blank and continue by pressing \"Send\" below."
 	)
