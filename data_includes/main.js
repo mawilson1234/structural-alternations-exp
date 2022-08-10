@@ -57,7 +57,7 @@ Sequence(
 	"instruction2",
 	randomize("trial_train"),
 	"instruction3",
-	sepWithN('break', randomize("trial"), 54),
+	sepWithN('break', randomize("trial"), 57),
 	"feedback",
 	SendResults(),
 	"bye"
