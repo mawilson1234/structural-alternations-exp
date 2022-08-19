@@ -117,8 +117,8 @@ var feedback_trial = label => item => {
 	var correct 	 = false
 	var word 		 = item['word_' + word_num]
 	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
-	var midsentence  = '&nbsp;' + item.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
-	var postsentence = '&nbsp;' + item.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2]
+	var midsentence  = '&nbsp;' + item.sentence.match(/(?:\[(su|o)bj\])(.*?)(?=\[(su|o)bj\])/)[2] + '&nbsp;'
+	var postsentence = '&nbsp;' + item.sentence.match(/.*(?:\[(su|o)bj\])(.*?)$/)[2]
 	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0]
 	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1]
 	
@@ -325,8 +325,8 @@ var trial = group_label => item => {
 	var correct 	 = false
 	var word 		 = item['word_' + word_num]
 	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
-	var midsentence  = '&nbsp;' + item.sentence.match(/(?<=\[(su|o)bj\]).*?(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
-	var postsentence = '&nbsp;' + item.sentence.match(/.*(?<=\[(su|o)bj\])(.*?)$/)[2]
+	var midsentence  = '&nbsp;' + item.sentence.match(/(?:\[(su|o)bj\])(.*?)(?=\[(su|o)bj\])/)[2] + '&nbsp;'
+	var postsentence = '&nbsp;' + item.sentence.match(/.*(?:\[(su|o)bj\])(.*?)$/)[2]
 	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0]
 	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1]
 	
