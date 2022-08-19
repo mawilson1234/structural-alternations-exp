@@ -1,13 +1,2 @@
 item,sentence,sentence_type,group,word_0,word_1,word_2,word_3,word_4,word_5,word_6,word_7
 prac,The [subj] has typically blorked frequently the [obj] that is everyone's favorite.,past transitive,prac,person,guest,child,customer,pizza,orange,steak,bread
-prac,The [subj] often ate the [obj].,past transitive,prac,person,guest,child,customer,pizza,orange,steak,bread
-prac,The [subj] always regretted the [obj].,past transitive,prac,prince,president,client,author,choice,error,decision,statement
-prac,The [subj] often regretted the [obj].,past transitive,prac,prince,president,client,author,choice,error,decision,statement
-prac,The [subj] always read the [obj].,past transitive,prac,reviewer,editor,student,scientist,book,article,document,script
-prac,The [subj] often read the [obj].,past transitive,prac,reviewer,editor,student,scientist,book,article,document,script
-prac,It was the [subj] that has typically eaten the [obj].,cleft subject perfect transitive,prac,person,guest,child,customer,pizza,orange,steak,bread
-prac,I wonder which [obj] the [subj] usually ate.,emb-wh-Q object past transitive,prac,person,guest,child,customer,pizza,orange,steak,bread
-prac,I wonder which [obj] seems to always be eaten by the [subj].,emb-wh-Q subject raising passive,prac,person,guest,child,customer,pizza,orange,steak,bread
-prac,The [obj] wasn't typically regretted by the [subj].,neg past passive,prac,prince,president,client,author,choice,error,decision,statement
-prac,Which [subj] often regretted the [obj]?,mat-wh-Q subject past transitive,prac,prince,president,client,author,choice,error,decision,statement
-prac,The [subj] that usually regretted the [obj] is everyone's favorite.,SRC past transitive,prac,prince,president,client,author,choice,error,decision,statement
