@@ -1,6 +1,6 @@
 .PennController {
-    width: 45em !important; /* controls the width of the content area */
-    margin-left: calc(50vw - 25em); /* aligns the content area's left edge with the vertical center of the page */
+    width: 50em !important; /* controls the width of the content area */
+    margin-left: calc(50vw - 30em); /* aligns the content area's left edge with the vertical center of the page */
     font-size: 14pt;
 }
 
