@@ -3,7 +3,7 @@ DebugOff()
 
 SetCounter("setcounter")
 
-var counterOverride = 0
+//var counterOverride = 0
 
 var blank_style = {
 	border: '1px solid #000', 
