@@ -206,7 +206,7 @@ newTrial("instruction2",
 		"go best in sentences with <i>blork</i>.<p />" +
 		"We ask that you please don't write anything down, and just try to figure things out on your own.<p />" +
 		"When you are finished with the training session, you will see one more message before " +
-		"going on to the second part of the experiment, which is a test session.<p />" +
+		"going on to the last part of the experiment, which is a test session.<p />" +
 		"Click below when you are ready to begin the training session."
 	)
 		.css(centered_justified_style)
@@ -223,8 +223,8 @@ Template("train.csv", feedback_trial('trial_train'))
 
 newTrial("instruction3",
 	newText(
-		"Now, you are ready to start the second part of the experiment! " +
-		"In this second part, which is a test session, you will see many sentences. " +
+		"Now, you are ready to start the last part of the experiment! " +
+		"In this part, which is a test session, you will see many sentences. " +
 		"Most will have the new word, <i>blork</i>, which you just learned about, " +
 		"and others will have words you already know.<p />" +
 		"Remember, your job is to decide which blank the word below the sentence goes best in. " +
