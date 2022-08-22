@@ -195,13 +195,13 @@ newTrial("instruction2",
 	newText(".").print(getText("container")),
 	
 	newText(
-		"<i>Blork</i> isn't exactly like any other English words. " +
-		"However, just like in the sentences you saw during the practice session, " +
-		"in sentences with <i>blork</i>, some words go better in certain slots than in others.<p />" +
+		"Just like in the sentences you saw during the practice session, " +
+		"in sentences with <i>blork</i>, some words go better in certain slots than in others." +
+		"However, <i>blork</i> isn't exactly like any other English words.<p />" +
 		"During training, you should start by guessing which blank the word should go in. " +
 		//"If you guess right, " + //"you should make more guesses like that one. " +
 		"If you guess wrong, you will see a message that you should have chosen the other blank. " +
-		"Then, you can move the word from the wrong blank to the right one to continue on. " +
+		"Then, you'll need to move the word from the wrong blank to the right one to continue on. " +
 		"You should use this feedback to help you figure out where certain words " +
 		"go best in sentences with <i>blork</i>.<p />" +
 		"We ask that you please don't write anything down, and just try to figure things out on your own.<p />" +
