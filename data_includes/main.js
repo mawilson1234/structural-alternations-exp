@@ -55,9 +55,9 @@ Sequence(
 	"setcounter",
 	"consent",
 	"instruction1",
-	//randomize("trial_prac"),
+	randomize("trial_prac"),
 	"instruction2",
-	//randomize("trial_train"),
+	randomize("trial_train"),
 	"instruction3",
 	sepWithN('break', randomize("trial"), 54),
 	"feedback",
@@ -339,7 +339,7 @@ var trial = group_label => item => {
 		newText(postsentence).print(getText("container")),
 		
 		newText("placeholder", "&mdash;").center().print(),
-		//newTimer("wait", item.sentence.split(" ").length * 325).start().wait(),
+		newTimer("wait", item.sentence.split(" ").length * 325).start().wait(),
 		getText("placeholder").remove(),
 		
 		newText("word", word).css({border: '1px solid #000', padding: '3px'}).center().print(),
@@ -356,7 +356,7 @@ var trial = group_label => item => {
 			.addDrag(getText("word"))
 			.callback()
 			.offset('0.5em', '0.1em', getText(first_arg), getText(second_arg))
-			//.wait()
+			.wait()
 			.removeDrag(getText("word"))
 			.removeDrop(getText(first_arg), getText(second_arg))
 		,
@@ -365,7 +365,7 @@ var trial = group_label => item => {
 		
 		getText("word").css(dropped_word_style),
 		
-		//newButton("next", "Next").center().print().wait().remove()
+		newButton("next", "Next").center().print().wait().remove()
 	)
 	.log('item'		 	  , item.item)
 	.log('word'			  , word)
