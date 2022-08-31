@@ -196,7 +196,7 @@ newTrial("instruction2",
 	
 	newText(
 		"Just like in the sentences you saw during the practice session, " +
-		"in sentences with <i>blork</i>, some words go better in certain slots than in others." +
+		"in sentences with <i>blork</i>, some words go better in certain slots than in others. " +
 		"However, <i>blork</i> isn't exactly like any other English words.<p />" +
 		"During training, you should start by guessing which blank the word should go in. " +
 		//"If you guess right, " + //"you should make more guesses like that one. " +
