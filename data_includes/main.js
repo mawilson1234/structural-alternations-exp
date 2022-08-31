@@ -328,7 +328,6 @@ var trial = group_label => item => {
 	var postsentence 	 = '&nbsp;' + item.sentence.match(/.*(?:\[(su|o)bj\])(.*?)$/)[2]
 	var first_arg    	 = item.sentence.match(/\[(su|o)bj\]/g)[0]
 	var second_arg   	 = item.sentence.match(/\[(su|o)bj\]/g)[1]
-	var adverb 		 	 = group_label == 'filler_group' ? 'NA' : item.adverb
 	var seen_in_training = group_label == 'filler_group' ? 'NA' : item.seen_in_training
 	
 	return newTrial("trial",		
@@ -374,8 +373,9 @@ var trial = group_label => item => {
 	.log('args_group'	   , item[group_label])
 	.log('sentence_type'   , item.sentence_type)
 	.log('sentence'	 	   , item.sentence)
-	.log('adverb'		   , adverb)
+	.log('adverb'		   , item.adverb)
 	.log('seen_in_training', seen_in_training)
+	.log('template' 	   , item.template)
 }
 
 Template("stimuli.csv", trial("group"))
