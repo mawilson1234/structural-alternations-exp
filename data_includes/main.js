@@ -320,15 +320,16 @@ Template("pretrial.csv", variable =>
 */
 
 var trial = group_label => item => {
-	var word_num 	 = Math.floor(Math.random() * 12)
-	var target_res   = word_num <= 5 ? '[subj]' : '[obj]'
-	var correct 	 = false
-	var word 		 = item['word_' + word_num]
-	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
-	var midsentence  = '&nbsp;' + item.sentence.match(/(?:\[(su|o)bj\])(.*?)(?=\[(su|o)bj\])/)[2] + '&nbsp;'
-	var postsentence = '&nbsp;' + item.sentence.match(/.*(?:\[(su|o)bj\])(.*?)$/)[2]
-	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0]
-	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1]
+	var word_num 	 	 = Math.floor(Math.random() * 12)
+	var target_res   	 = group_label == 'filler_group' ? (word_num <= 5 ? '[subj]' : '[obj]') : item.target_response
+	var word 	 		 = group_label == 'filler_group' ? item['word_' + word_num] : item.word
+	var presentence  	 = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
+	var midsentence  	 = '&nbsp;' + item.sentence.match(/(?:\[(su|o)bj\])(.*?)(?=\[(su|o)bj\])/)[2] + '&nbsp;'
+	var postsentence 	 = '&nbsp;' + item.sentence.match(/.*(?:\[(su|o)bj\])(.*?)$/)[2]
+	var first_arg    	 = item.sentence.match(/\[(su|o)bj\]/g)[0]
+	var second_arg   	 = item.sentence.match(/\[(su|o)bj\]/g)[1]
+	var adverb 		 	 = group_label == 'filler_group' ? 'NA' : item.adverb
+	var seen_in_training = group_label == 'filler_group' ? 'NA' : item.seen_in_training
 	
 	return newTrial("trial",		
 		newText("container", "").center().css({display: "flex", 'margin-bottom': '3em'}).print(),
@@ -367,12 +368,14 @@ var trial = group_label => item => {
 		
 		newButton("next", "Next").center().print().wait().remove()
 	)
-	.log('item'		 	  , item.item)
-	.log('word'			  , word)
-	.log('target_response', target_res)
-	.log('args_group'	  , item[group_label])
-	.log('sentence_type'  , item.sentence_type)
-	.log('sentence'	 	  , item.sentence)
+	.log('item'		 	   , item.item)
+	.log('word'			   , word)
+	.log('target_response' , target_res)
+	.log('args_group'	   , item[group_label])
+	.log('sentence_type'   , item.sentence_type)
+	.log('sentence'	 	   , item.sentence)
+	.log('adverb'		   , adverb)
+	.log('seen_in_training', seen_in_training)
 }
 
 Template("stimuli.csv", trial("group"))
