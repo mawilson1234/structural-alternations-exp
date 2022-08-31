@@ -323,6 +323,7 @@ var trial = group_label => item => {
 	var word_num 	 	 = Math.floor(Math.random() * 12)
 	var target_res   	 = group_label == 'filler_group' ? (word_num <= 5 ? '[subj]' : '[obj]') : item.target_response
 	var word 	 		 = group_label == 'filler_group' ? item['word_' + word_num] : item.word
+	var adverb 			 = group_label == 'filler_group' ? 'NA' : item.adverb
 	var presentence  	 = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
 	var midsentence  	 = '&nbsp;' + item.sentence.match(/(?:\[(su|o)bj\])(.*?)(?=\[(su|o)bj\])/)[2] + '&nbsp;'
 	var postsentence 	 = '&nbsp;' + item.sentence.match(/.*(?:\[(su|o)bj\])(.*?)$/)[2]
@@ -373,7 +374,7 @@ var trial = group_label => item => {
 	.log('args_group'	   , item[group_label])
 	.log('sentence_type'   , item.sentence_type)
 	.log('sentence'	 	   , item.sentence)
-	.log('adverb'		   , item.adverb)
+	.log('adverb'		   , adverb)
 	.log('seen_in_training', seen_in_training)
 	.log('template' 	   , item.template)
 }
