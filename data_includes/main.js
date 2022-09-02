@@ -112,10 +112,9 @@ newTrial("instruction1",
 ).setOption("countsForProgressBar", false)
 
 var feedback_trial = label => item => {
-	var word_num 	 = Math.floor(Math.random() * (label == 'trial_train' ? 4 : 8))
-	var target_res   = label === 'trial_train' ? item['correct_pos'] : (word_num <= 3 ? '[subj]' : '[obj]')
-	var correct 	 = false
-	var word 		 = item['word_' + word_num]
+	var word_num 	 = Math.floor(Math.random() * 8)
+	var target_res   = label === 'trial_train' ? item['target_response'] : (word_num <= 3 ? '[subj]' : '[obj]')
+	var word 		 = label == 'trial_prac' ? item['word_' + word_num] : item.word
 	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
 	var midsentence  = '&nbsp;' + item.sentence.match(/(?:\[(su|o)bj\])(.*?)(?=\[(su|o)bj\])/)[2] + '&nbsp;'
 	var postsentence = '&nbsp;' + item.sentence.match(/.*(?:\[(su|o)bj\])(.*?)$/)[2]
@@ -167,12 +166,14 @@ var feedback_trial = label => item => {
 		
 		newButton("next", "Next").center().print().wait().remove()
 	)
-	.log('item'		 	  , item.item)
-	.log('word'			  , word)
-	.log('target_response', target_res)
-	.log('args_group'	  , item.group)
-	.log('sentence_type'  , item.sentence_type)
-	.log('sentence'	 	  , item.sentence)
+	.log('item'		 	   , item.item)
+	.log('word'			   , word)
+	.log('target_response' , target_res)
+	.log('args_group'	   , item.group)
+	.log('sentence_type'   , item.sentence_type)
+	.log('sentence'	 	   , item.sentence)
+	.log('adverb'		   , item.adverb)
+	.log('seen_in_training', 'True')
 }
 
 Template("practice.csv", feedback_trial('trial_prac'))
@@ -323,7 +324,6 @@ var trial = group_label => item => {
 	var word_num 	 	 = Math.floor(Math.random() * 12)
 	var target_res   	 = group_label == 'filler_group' ? (word_num <= 5 ? '[subj]' : '[obj]') : item.target_response
 	var word 	 		 = group_label == 'filler_group' ? item['word_' + word_num] : item.word
-	var adverb 			 = group_label == 'filler_group' ? 'NA' : item.adverb
 	var presentence  	 = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
 	var midsentence  	 = '&nbsp;' + item.sentence.match(/(?:\[(su|o)bj\])(.*?)(?=\[(su|o)bj\])/)[2] + '&nbsp;'
 	var postsentence 	 = '&nbsp;' + item.sentence.match(/.*(?:\[(su|o)bj\])(.*?)$/)[2]
@@ -374,9 +374,8 @@ var trial = group_label => item => {
 	.log('args_group'	   , item[group_label])
 	.log('sentence_type'   , item.sentence_type)
 	.log('sentence'	 	   , item.sentence)
-	.log('adverb'		   , adverb)
+	.log('adverb'		   , item.adverb)
 	.log('seen_in_training', seen_in_training)
-	.log('template' 	   , item.template)
 }
 
 Template("stimuli.csv", trial("group"))
