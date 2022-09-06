@@ -5,9 +5,9 @@ prac,The [subj] has always regretted the [obj].,perfect transitive,prac,prince,p
 prac,The [subj] has often regretted the [obj].,perfect transitive,prac,prince,president,client,author,choice,error,decision,statement
 prac,The [subj] has always read the [obj].,perfect transitive,prac,reviewer,editor,student,scientist,book,article,document,script
 prac,The [subj] has often read the [obj].,perfect transitive,prac,reviewer,editor,student,scientist,book,article,document,script
-prac,Which [subj] has typically eaten the [obj]?,mat-wh-Q subject perfect transitive,prac,person,guest,child,customer,pizza,orange,steak,bread
+prac,It is the [subj] that has typically eaten the [obj].,cleft subject perfect transitive,prac,person,guest,child,customer,pizza,orange,steak,bread
 prac,The [subj] seems to have often eaten the [obj].,raising perfect transitive,prac,person,guest,child,customer,pizza,orange,steak,bread
 prac,The [obj] seems to have always been eaten by the [subj].,raising perfect passive,prac,person,guest,child,customer,pizza,orange,steak,bread
 prac,The [obj] hasn't typically been regretted by the [subj].,neg perfect passive,prac,prince,president,client,author,choice,error,decision,statement
-prac,Which [subj] seems to have often regretted the [obj]?,mat-wh-Q subject raising perfect transitive,prac,prince,president,client,author,choice,error,decision,statement
+prac,It is the [subj] that seems to have often regretted the [obj].,cleft subject raising perfect transitive,prac,prince,president,client,author,choice,error,decision,statement
 prac,The [obj] seems to have usually been regretted by the [subj].,raising perfect passive,prac,prince,president,client,author,choice,error,decision,statement
