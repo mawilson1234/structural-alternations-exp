@@ -200,7 +200,7 @@ newTrial('post-training',
 		.failure(
 			newText()
 				.text("Your first-guess accuracy was ")
-				.after(getVar('grandaverage'))
+				.after(getVar('grandaverage')),
 			newButton('Next').print().wait(),
 			getVar('grandaverage')
 				.set(getVar('responses'))
