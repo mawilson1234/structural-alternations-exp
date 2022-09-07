@@ -58,6 +58,7 @@ Sequence(
 	"consent",
 	"instruction1",
 	randomize("trial_prac"), 'post-training',
+	randomize("trial_prac"), 'post-training',
 	"instruction2",
 	randomize("trial_train"), 'post-training',
 	randomize("trial_train"), 'post-training',
@@ -201,10 +202,7 @@ newTrial('post-training',
 			newButton('Next').print().wait(),
 			getVar('grandaverage')
 				.set(getVar('responses'))
-				.set(v => v.filter(r => r == true).length/v.length),
-			newText()
-				.text("Your first-guess accuracy was ")
-				.after(getVar('grandaverage')),
+				.set(v => v.filter(r => r == true).length/v.length)
 		),
 	newVar('responses').global().set([])
 )
