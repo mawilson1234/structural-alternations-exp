@@ -199,12 +199,23 @@ newTrial('post-training',
 		.global()
 		.test.is(v => v >> required_to_pass)
 		.failure(
-			newButton('Next').print().wait(),
 			getVar('grandaverage')
 				.set(getVar('responses'))
 				.set(v => v.filter(r => r == true).length/v.length)
 		),
-	newVar('responses').global().set([])
+	newVar('grandaveragepercent')
+		.set(Math.round(getVar('grandaverage').value * 100)),
+	newVar('responses').global().set([]),
+	newText()
+		.text("Your first-guess accuracy was ")
+		.after(newText().text(getVar('grandaveragepercent')))
+		.css(centered_justified_style)
+		.print()
+	,
+	newButton('Next')
+		.center()
+		.print()
+		.wait()
 )
 
 newTrial("instruction2",
