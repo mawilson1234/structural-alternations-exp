@@ -225,12 +225,12 @@ newTrial('post-training',
 		.after(
 			newText().text(getVar('grandaveragepercent'))
 		)
-		.center()
+		.css(centered_justified_style)
 		.print()
 	,
 	newText()
 		.text(getVar('message'))
-		.center()
+		.css(centered_justified_style)
 		.print()
 	,
 	newButton('Next')
