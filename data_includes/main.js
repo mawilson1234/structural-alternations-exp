@@ -232,7 +232,7 @@ newTrial('post-training',
 		)
 		.failure(
 			getVar('attempts')
-				.test.is(v => v < max_attempts)
+				.test.is(v => v < max_attempts - 1)
 					.success(
 						getVar('message').set('Please try again.')
 					)
