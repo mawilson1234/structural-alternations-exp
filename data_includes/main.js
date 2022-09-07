@@ -119,7 +119,7 @@ newTrial("instruction1",
 var feedback_trial = label => item => {
 	var word_num 	 = Math.floor(Math.random() * 8)
 	var target_res   = label === 'trial_train' ? item['target_response'] : (word_num <= 3 ? '[subj]' : '[obj]')
-	var word 		 = label == 'trial_prac' ? item['word_' + word_num] : item.word
+	var word 		 = label === 'trial_prac' ? item['word_' + word_num] : item.word
 	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
 	var midsentence  = '&nbsp;' + item.sentence.match(/(?:\[(su|o)bj\])(.*?)(?=\[(su|o)bj\])/)[2] + '&nbsp;'
 	var postsentence = '&nbsp;' + item.sentence.match(/.*(?:\[(su|o)bj\])(.*?)$/)[2]
@@ -218,7 +218,7 @@ newTrial('post-training',
 			newText()
 				.text(getVar('grandaveragepercent'))
 		)
-		.after(newText('%.'))
+		.after(newText('n.'))
 		.center()
 		.print()
 	,
