@@ -196,6 +196,7 @@ Template("practice.csv", feedback_trial('trial_prac'))
 
 newTrial('post-training',
 	newVar('message')
+		.global()
 	,
 	newVar('grandaverage')
 		.global()
