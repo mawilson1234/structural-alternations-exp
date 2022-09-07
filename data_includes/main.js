@@ -5,6 +5,8 @@ SetCounter("setcounter")
 
 var counterOverride = 2
 
+var required_to_pass = 0.5
+
 var blank_style = {
 	border: '1px solid #000', 
 	width: '5.75em', 
@@ -55,9 +57,11 @@ Sequence(
 	"setcounter",
 	"consent",
 	"instruction1",
-	randomize("trial_prac"),
+	randomize("trial_prac"), 'post-training',
 	"instruction2",
-	randomize("trial_train"),
+	randomize("trial_train"), 'post-training',
+	randomize("trial_train"), 'post-training',
+	randomize("trial_train"), 'post-training',
 	"instruction3",
 	sepWithN('break', randomize("trial"), 57),
 	"feedback",
@@ -121,7 +125,12 @@ var feedback_trial = label => item => {
 	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0]
 	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1]
 	
-	return newTrial(label,		
+	return newTrial(label,
+		newVar('responses', []).global(),
+		newVar('grandaverage', 0).global()
+			.test.is(v => v >= required_to_pass).success(end()),
+		newVar('firstdropped', 'no drop yet'),
+		
 		newText("container", "").center().css({display: "flex", 'margin-bottom': '3em'}).print(),
 		newText(presentence).print(getText("container")),
 		newText(first_arg, " ").css(blank_style).print(getText("container")),
@@ -153,9 +162,15 @@ var feedback_trial = label => item => {
 				self.test.dropped(getText(target_res))
 					.success(
 						getText("correct").print(),
-						getMouseTracker("mouse").stop()
+						getMouseTracker("mouse").stop(),
+						getVar('firstdropped').test.is(v => v === 'no drop yet')
+							.success(getVar('responses').set(v => [true, ...v]))
 					)
-					.failure(getText("incorrect").print()),
+					.failure(
+						getText("incorrect").print(),
+						getVar('firstdropped').set('dropped already')
+						getVar('responses').set(v => [false, ...v])
+					),
 					getText("word").css(dropped_word_style)
 			)
 			.offset('0.5em', '0.1em', getText(first_arg), getText(second_arg))
@@ -177,6 +192,22 @@ var feedback_trial = label => item => {
 }
 
 Template("practice.csv", feedback_trial('trial_prac'))
+
+newTrial('post-training',
+	newVar('grandaverage')
+		.global()
+		.test.is(v => v >> required_to_pass)
+		.failure(
+			newText()
+				.text("Your first-guess accuracy was ")
+				.after(getVar('grandaverage'))
+			newButton('Next').print().wait(),
+			getVar('grandaverage')
+				.set(getVar('responses'))
+				.set(v => v.filter(r => r == true).length/v.length)
+		),
+	newVar('responses').global().set([])
+)
 
 newTrial("instruction2",
 	newText(
