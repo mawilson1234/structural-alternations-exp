@@ -271,14 +271,15 @@ newTrial("instruction2",
 	
 	newText(
 		"Just like in the sentences you saw during the practice session, " +
-		"in sentences with <i>blork</i>, some words go better in certain slots than in others. " +
-		"However, <i>blork</i> isn't exactly like any other English words.<p />" +
+		"in sentences with <i>blork</i>, some words go better in certain slots than in others. "+ 
+		"Your task during this training phase is to figure out where different words go best " +
+		"in sentences with <i>blork</i>.<p />" +
+		//"However, <i>blork</i> isn't exactly like any other English words.<p />" +
 		"During training, you should start by guessing which blank the word should go in. " +
 		//"If you guess right, " + //"you should make more guesses like that one. " +
 		"If you guess wrong, you will see a message that you should have chosen the other blank. " +
 		"Then, you'll need to move the word from the wrong blank to the right one to continue on. " +
-		"You should use this feedback to help you figure out where certain words " +
-		"go best in sentences with <i>blork</i>.<p />" +
+		"You should use this feedback to help you learn.<p />" +
 		"We ask that you please don't write anything down, and just try to figure things out on your own.<p />" +
 		"When you are finished with the training session, you will see one more message before " +
 		"going on to the last part of the experiment, which is a test session.<p />" +
