@@ -201,15 +201,9 @@ newTrial('post-training',
 	,
 	newVar('attempts')
 		.global()
-		.test.is(v => v >= 0)
-			.success(
-				getVar('attempts')
-					.set(v => v + 1)
-			)
-			.failure(
-				getVar('attempts')
-					.set(0)
-			)
+		.test.is(v => v >= 1)
+			.success(getVar('attempts').set(v => v + 1))
+			.failure(getVar('attempts').set(1))
 	,
 	newVar('grandaverage')
 		.global()
@@ -226,19 +220,13 @@ newTrial('post-training',
 			getVar('message')
 				.test.is('Great job!')
 					.success(end())
-					.failure(
-						getVar('message').set('Great job!')
-					)
+					.failure(getVar('message').set('Great job!'))
 		)
 		.failure(
 			getVar('attempts')
-				.test.is(v => v < max_attempts - 1)
-					.success(
-						getVar('message').set('Please try again.')
-					)
-					.failure(
-						getVar('message').set('')
-					)
+				.test.is(v => v < max_attempts)
+					.success(getVar('message').set('Please try again.'))
+					.failure(getVar('message').set(''))
 		)
 	,
 	newVar('grandaveragepercent')
