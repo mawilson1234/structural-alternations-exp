@@ -204,11 +204,12 @@ newTrial('post-training',
 				.set(v => v.filter(r => r == true).length/v.length)
 		),
 	newVar('grandaveragepercent')
-		.set(Math.round(getVar('grandaverage').value * 100)),
+		.set(getVar('grandaverage'))
+		.set(v => v * 100)
 	newVar('responses').global().set([]),
 	newText()
 		.text("Your first-guess accuracy was ")
-		.after(newText().text(getVar('grandaveragepercent')))
+		.after(newText().text(getVar('grandaveragepercent')).css(centered_justified_style))
 		.css(centered_justified_style)
 		.print()
 	,
