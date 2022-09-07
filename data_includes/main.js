@@ -195,6 +195,8 @@ var feedback_trial = label => item => {
 Template("practice.csv", feedback_trial('trial_prac'))
 
 newTrial('post-training',
+	newVar('message')
+	,
 	newVar('grandaverage')
 		.global()
 		.test.is(v => v >= required_to_pass)
@@ -206,7 +208,13 @@ newTrial('post-training',
 	,
 	getVar('grandaverage')
 		.test.is(v => v >= required_to_pass)
-		.success(end())
+		.success(
+			// end()
+			getVar('message').set('Great job!')
+		)
+		.failure(
+			getVar('message').set('Please try again.')
+		)
 	,
 	newVar('grandaveragepercent')
 		.set(getVar('grandaverage'))
@@ -217,6 +225,11 @@ newTrial('post-training',
 		.after(
 			newText().text(getVar('grandaveragepercent'))
 		)
+		.center()
+		.print()
+	,
+	newText()
+		.text(getVar('message'))
 		.center()
 		.print()
 	,
