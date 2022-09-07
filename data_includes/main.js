@@ -205,7 +205,7 @@ newTrial('post-training',
         )
     ,
     getVar('grandaverage')
-        .test.is(v => v >> required_to_pass)
+        .test.is(v => v >= required_to_pass)
         .success(end())
     ,
     newVar('grandaveragepercent')
