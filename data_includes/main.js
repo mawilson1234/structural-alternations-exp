@@ -215,9 +215,10 @@ newTrial('post-training',
 	newVar('responses').global().set([]),
 	newText("Your first-guess accuracy was&nbsp;")
 		.after(
-			newText().text(getVar('grandaveragepercent'))
-				.after(newText('%.'))
+			newText()
+				.text(getVar('grandaveragepercent'))
 		)
+		.after(newText('%.'))
 		.center()
 		.print()
 	,
