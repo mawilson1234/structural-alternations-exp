@@ -218,7 +218,7 @@ newTrial('post-training',
 			newText()
 				.text(getVar('grandaveragepercent'))
 		)
-		.after(newText('n.'))
+		.after(newText('%.'))
 		.center()
 		.print()
 	,
