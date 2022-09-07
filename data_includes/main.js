@@ -235,7 +235,7 @@ newTrial('post-training',
 	,
 	newText()
 		.text(getVar('message'))
-		.css('margin-top', '1em')
+		.css('margin-top', '1.5em')
 		.center()
 		.print()
 	,
