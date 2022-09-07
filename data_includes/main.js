@@ -210,15 +210,13 @@ newTrial('post-training',
 	,
 	newVar('grandaveragepercent')
 		.set(getVar('grandaverage'))
-		.set(v => Math.round(v * 100))
+		.set(v => Math.round(v * 100) + '%.')
 	,
 	newVar('responses').global().set([]),
 	newText("Your first-guess accuracy was&nbsp;")
 		.after(
-			newText()
-				.text(getVar('grandaveragepercent'))
+			newText().text(getVar('grandaveragepercent'))
 		)
-		.after(newText('%.'))
 		.center()
 		.print()
 	,
