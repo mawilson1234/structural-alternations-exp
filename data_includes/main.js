@@ -209,8 +209,12 @@ newTrial('post-training',
 	getVar('grandaverage')
 		.test.is(v => v >= required_to_pass)
 		.success(
-			// end()
-			getVar('message').set('Great job!')
+			getVar('message')
+				.test.is('Great job!')
+					.success(end())
+					.failure(
+						getVar('message').set('Great job!')
+					)
 		)
 		.failure(
 			getVar('message').set('Please try again.')
