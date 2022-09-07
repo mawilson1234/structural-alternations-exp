@@ -6,6 +6,7 @@ SetCounter("setcounter")
 var counterOverride = 2
 
 var required_to_pass = 0.5
+var max_attempts = 2
 
 var blank_style = {
 	border: '1px solid #000', 
@@ -198,6 +199,18 @@ newTrial('post-training',
 	newVar('message')
 		.global()
 	,
+	newVar('attempts')
+		.global()
+		.test.is(v => v >= 0)
+			.success(
+				getVar('attempts')
+					.set(v => v + 1)
+			)
+			.failure(
+				getVar('attempts')
+					.set(0)
+			)
+	,
 	newVar('grandaverage')
 		.global()
 		.test.is(v => v >= required_to_pass)
@@ -218,7 +231,14 @@ newTrial('post-training',
 					)
 		)
 		.failure(
-			getVar('message').set('Please try again.')
+			getVar('attempts')
+				.test.is(v => v < max_attempts)
+					.success(
+						getVar('message').set('Please try again.')
+					)
+					.failure(
+						getVar('message').set('')
+					)
 		)
 	,
 	newVar('grandaveragepercent')
