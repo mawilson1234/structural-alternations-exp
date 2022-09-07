@@ -202,18 +202,21 @@ newTrial('post-training',
 			getVar('grandaverage')
 				.set(getVar('responses'))
 				.set(v => v.filter(r => r == true).length/v.length)
-		),
+		)
+	,
 	getVar('grandaverage')
 		.test.is(v => v >> required_to_pass)
-		.success(end()),
+		.success(end())
+	,
 	newVar('grandaveragepercent')
 		.set(getVar('grandaverage'))
-		.set(v => v * 100),
+		.set(v => v * 100)
+	,
 	newVar('responses').global().set([]),
 	newText("Your first-guess accuracy was&nbsp;")
 		.after(newText().text(getVar('grandaveragepercent')))
 		.after(newText('%.'))
-		.css(centered_justified_style)
+		.center()
 		.print()
 	,
 	newButton('Next')
