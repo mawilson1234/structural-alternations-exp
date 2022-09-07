@@ -1,49 +1,49 @@
 item,sentence,sentence_type,group,word,target_response,adverb
-train,The [subj] has always blorked the [obj].,perfect transitive,red_yellow,cherry,[subj],always
-train,The [subj] has often blorked the [obj].,perfect transitive,red_yellow,strawberry,[subj],often
-train,The [subj] has typically blorked the [obj].,perfect transitive,red_yellow,tomato,[subj],usually
-train,The [subj] has usually blorked the [obj].,perfect transitive,red_yellow,lobster,[subj],typically
-train,The [subj] has always blorked the [obj] frequently.,perfect transitive,red_yellow,banana,[obj],always
-train,The [subj] has often blorked the [obj] at times.,perfect transitive,red_yellow,lemon,[obj],often
-train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,red_yellow,corn,[obj],usually
-train,The [subj] has typically blorked the [obj] afterward.,perfect transitive,red_yellow,lion,[obj],typically
-train,The [subj] has always blorked the [obj].,perfect transitive,red_yellow,lion,[obj],always
-train,The [subj] has often blorked the [obj].,perfect transitive,red_yellow,corn,[obj],often
-train,The [subj] has typically blorked the [obj].,perfect transitive,red_yellow,lemon,[obj],usually
-train,The [subj] has usually blorked the [obj].,perfect transitive,red_yellow,banana,[obj],typically
-train,The [subj] has always blorked the [obj] frequently.,perfect transitive,red_yellow,lobster,[subj],always
-train,The [subj] has often blorked the [obj] at times.,perfect transitive,red_yellow,tomato,[subj],often
-train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,red_yellow,strawberry,[subj],usually
-train,The [subj] has typically blorked the [obj] afterward.,perfect transitive,red_yellow,cherry,[subj],typically
-train,The [subj] has always blorked the [obj].,perfect transitive,red_yellow,tomato,[subj],always
-train,The [subj] has often blorked the [obj].,perfect transitive,red_yellow,lobster,[subj],often
-train,The [subj] has typically blorked the [obj].,perfect transitive,red_yellow,banana,[obj],usually
-train,The [subj] has usually blorked the [obj].,perfect transitive,red_yellow,lemon,[obj],typically
-train,The [subj] has always blorked the [obj] frequently.,perfect transitive,red_yellow,corn,[obj],always
-train,The [subj] has often blorked the [obj] at times.,perfect transitive,red_yellow,lion,[obj],often
-train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,red_yellow,cherry,[subj],usually
-train,The [subj] has typically blorked the [obj] afterward.,perfect transitive,red_yellow,strawberry,[subj],typically
-train,The [subj] has always blorked the [obj].,perfect transitive,vehicles_buildings,bike,[subj],always
-train,The [subj] has often blorked the [obj].,perfect transitive,vehicles_buildings,car,[subj],often
-train,The [subj] has typically blorked the [obj].,perfect transitive,vehicles_buildings,train,[subj],usually
-train,The [subj] has usually blorked the [obj].,perfect transitive,vehicles_buildings,motorcycle,[subj],typically
-train,The [subj] has always blorked the [obj] frequently.,perfect transitive,vehicles_buildings,house,[obj],always
-train,The [subj] has often blorked the [obj] at times.,perfect transitive,vehicles_buildings,apartment,[obj],often
-train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,vehicles_buildings,tent,[obj],usually
-train,The [subj] has typically blorked the [obj] afterward.,perfect transitive,vehicles_buildings,building,[obj],typically
-train,The [subj] has always blorked the [obj].,perfect transitive,vehicles_buildings,building,[obj],always
-train,The [subj] has often blorked the [obj].,perfect transitive,vehicles_buildings,tent,[obj],often
-train,The [subj] has typically blorked the [obj].,perfect transitive,vehicles_buildings,apartment,[obj],usually
-train,The [subj] has usually blorked the [obj].,perfect transitive,vehicles_buildings,house,[obj],typically
-train,The [subj] has always blorked the [obj] frequently.,perfect transitive,vehicles_buildings,motorcycle,[subj],always
-train,The [subj] has often blorked the [obj] at times.,perfect transitive,vehicles_buildings,train,[subj],often
-train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,vehicles_buildings,car,[subj],usually
-train,The [subj] has typically blorked the [obj] afterward.,perfect transitive,vehicles_buildings,bike,[subj],typically
-train,The [subj] has always blorked the [obj].,perfect transitive,vehicles_buildings,train,[subj],always
-train,The [subj] has often blorked the [obj].,perfect transitive,vehicles_buildings,motorcycle,[subj],often
-train,The [subj] has typically blorked the [obj].,perfect transitive,vehicles_buildings,house,[obj],usually
-train,The [subj] has usually blorked the [obj].,perfect transitive,vehicles_buildings,apartment,[obj],typically
-train,The [subj] has always blorked the [obj] frequently.,perfect transitive,vehicles_buildings,tent,[obj],always
-train,The [subj] has often blorked the [obj] at times.,perfect transitive,vehicles_buildings,building,[obj],often
-train,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,vehicles_buildings,bike,[subj],usually
-train,The [subj] has typically blorked the [obj] afterward.,perfect transitive,vehicles_buildings,car,[subj],typically
+car,The [subj] has always blorked the [obj].,perfect transitive,red_yellow,cherry,[subj],always
+car,The [subj] has often blorked the [obj].,perfect transitive,red_yellow,strawberry,[subj],often
+car,The [subj] has typically blorked the [obj].,perfect transitive,red_yellow,tomato,[subj],usually
+car,The [subj] has usually blorked the [obj].,perfect transitive,red_yellow,lobster,[subj],typically
+car,The [subj] has always blorked the [obj] frequently.,perfect transitive,red_yellow,banana,[obj],always
+car,The [subj] has often blorked the [obj] at times.,perfect transitive,red_yellow,lemon,[obj],often
+car,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,red_yellow,corn,[obj],usually
+car,The [subj] has typically blorked the [obj] afterward.,perfect transitive,red_yellow,lion,[obj],typically
+car,The [subj] has always blorked the [obj].,perfect transitive,red_yellow,lion,[obj],always
+car,The [subj] has often blorked the [obj].,perfect transitive,red_yellow,corn,[obj],often
+car,The [subj] has typically blorked the [obj].,perfect transitive,red_yellow,lemon,[obj],usually
+car,The [subj] has usually blorked the [obj].,perfect transitive,red_yellow,banana,[obj],typically
+car,The [subj] has always blorked the [obj] frequently.,perfect transitive,red_yellow,lobster,[subj],always
+car,The [subj] has often blorked the [obj] at times.,perfect transitive,red_yellow,tomato,[subj],often
+car,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,red_yellow,strawberry,[subj],usually
+car,The [subj] has typically blorked the [obj] afterward.,perfect transitive,red_yellow,cherry,[subj],typically
+car,The [subj] has always blorked the [obj].,perfect transitive,red_yellow,tomato,[subj],always
+car,The [subj] has often blorked the [obj].,perfect transitive,red_yellow,lobster,[subj],often
+car,The [subj] has typically blorked the [obj].,perfect transitive,red_yellow,banana,[obj],usually
+car,The [subj] has usually blorked the [obj].,perfect transitive,red_yellow,lemon,[obj],typically
+car,The [subj] has always blorked the [obj] frequently.,perfect transitive,red_yellow,corn,[obj],always
+car,The [subj] has often blorked the [obj] at times.,perfect transitive,red_yellow,lion,[obj],often
+car,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,red_yellow,cherry,[subj],usually
+car,The [subj] has typically blorked the [obj] afterward.,perfect transitive,red_yellow,strawberry,[subj],typically
+car,The [subj] has always blorked the [obj].,perfect transitive,buildings_vehicles,bicycle,[subj],always
+car,The [subj] has often blorked the [obj].,perfect transitive,buildings_vehicles,bus,[subj],often
+car,The [subj] has typically blorked the [obj].,perfect transitive,buildings_vehicles,car,[subj],usually
+car,The [subj] has usually blorked the [obj].,perfect transitive,buildings_vehicles,tractor,[subj],typically
+car,The [subj] has always blorked the [obj] frequently.,perfect transitive,buildings_vehicles,barn,[obj],always
+car,The [subj] has often blorked the [obj] at times.,perfect transitive,buildings_vehicles,building,[obj],often
+car,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,buildings_vehicles,house,[obj],usually
+car,The [subj] has typically blorked the [obj] afterward.,perfect transitive,buildings_vehicles,mansion,[obj],typically
+car,The [subj] has always blorked the [obj].,perfect transitive,buildings_vehicles,mansion,[obj],always
+car,The [subj] has often blorked the [obj].,perfect transitive,buildings_vehicles,house,[obj],often
+car,The [subj] has typically blorked the [obj].,perfect transitive,buildings_vehicles,building,[obj],usually
+car,The [subj] has usually blorked the [obj].,perfect transitive,buildings_vehicles,barn,[obj],typically
+car,The [subj] has always blorked the [obj] frequently.,perfect transitive,buildings_vehicles,tractor,[subj],always
+car,The [subj] has often blorked the [obj] at times.,perfect transitive,buildings_vehicles,car,[subj],often
+car,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,buildings_vehicles,bus,[subj],usually
+car,The [subj] has typically blorked the [obj] afterward.,perfect transitive,buildings_vehicles,bicycle,[subj],typically
+car,The [subj] has always blorked the [obj].,perfect transitive,buildings_vehicles,car,[subj],always
+car,The [subj] has often blorked the [obj].,perfect transitive,buildings_vehicles,tractor,[subj],often
+car,The [subj] has typically blorked the [obj].,perfect transitive,buildings_vehicles,barn,[obj],usually
+car,The [subj] has usually blorked the [obj].,perfect transitive,buildings_vehicles,building,[obj],typically
+car,The [subj] has always blorked the [obj] frequently.,perfect transitive,buildings_vehicles,house,[obj],always
+car,The [subj] has often blorked the [obj] at times.,perfect transitive,buildings_vehicles,mansion,[obj],often
+car,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,buildings_vehicles,bicycle,[subj],usually
+car,The [subj] has typically blorked the [obj] afterward.,perfect transitive,buildings_vehicles,bus,[subj],typically
