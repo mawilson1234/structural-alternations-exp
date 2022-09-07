@@ -198,13 +198,13 @@ newTrial('post-training',
 		.global()
 		.test.is(v => v >> required_to_pass)
 		.failure(
-			newText()
-				.text("Your first-guess accuracy was ")
-				.after(getVar('grandaverage')),
 			newButton('Next').print().wait(),
 			getVar('grandaverage')
 				.set(getVar('responses'))
-				.set(v => v.filter(r => r == true).length/v.length)
+				.set(v => v.filter(r => r == true).length/v.length),
+			newText()
+				.text("Your first-guess accuracy was ")
+				.after(getVar('grandaverage')),
 		),
 	newVar('responses').global().set([])
 )
