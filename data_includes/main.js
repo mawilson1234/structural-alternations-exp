@@ -168,7 +168,7 @@ var feedback_trial = label => item => {
 					)
 					.failure(
 						getText("incorrect").print(),
-						getVar('firstdropped').set('dropped already')
+						getVar('firstdropped').set('dropped already'),
 						getVar('responses').set(v => [false, ...v])
 					),
 					getText("word").css(dropped_word_style)
