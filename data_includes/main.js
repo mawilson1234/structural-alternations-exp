@@ -63,7 +63,6 @@ Sequence(
 	"instruction2",
 	randomize("trial_train"), 'post-training',
 	randomize("trial_train"), 'post-training',
-	randomize("trial_train"), 'post-training',
 	"instruction3",
 	sepWithN('break', randomize("trial"), 57),
 	"feedback",
