@@ -143,7 +143,7 @@ var feedback_trial = label => item => {
 		newTimer("wait", item.sentence.split(" ").length * 325).start().wait(),
 		getText("placeholder").remove(),
 		
-		newText("word", word).css({border: '1px solid #000', padding: '3px'}).center().print(),
+		newText("word", word).css({width: '', border: '1px solid #000', padding: '3px'}).center().print(),
 		
 		newMouseTracker("mouse").log(),
 		newFunction(async () => {
