@@ -3,7 +3,7 @@ DebugOff()
 
 SetCounter("setcounter")
 
-var counterOverride = 1
+var counterOverride = 0
 
 var required_to_pass = 0.5
 var max_attempts = 2
