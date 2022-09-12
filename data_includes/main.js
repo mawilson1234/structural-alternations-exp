@@ -52,7 +52,7 @@ function SepWithN(sep, main, n) {
 function sepWithN(sep, main, n) { return new SepWithN(sep, main, n); }
 
 Sequence(
-	"setcounter"
+	"setcounter",
 	"consent",
 	"instruction1",
 	randomize("trial_prac"),
