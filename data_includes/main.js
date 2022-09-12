@@ -3,7 +3,7 @@ DebugOff()
 
 SetCounter("setcounter")
 
-var counterOverride = 2
+var counterOverride = 1
 
 var required_to_pass = 0.5
 var max_attempts = 2
@@ -55,7 +55,7 @@ function SepWithN(sep, main, n) {
 function sepWithN(sep, main, n) { return new SepWithN(sep, main, n); }
 
 Sequence(
-	"setcounter",
+	"setcounter"
 	"consent",
 	"instruction1",
 	randomize("trial_prac"), 'post-training',
