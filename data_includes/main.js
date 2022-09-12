@@ -73,7 +73,7 @@ Sequence(
 newTrial("consent",
 	newText(
 		"Before starting the experiment, you will need to give consent. " + 
-		"Please click <a href='https://campuspress.yale.edu/michaelwilson/files/2022/08/consent.pdf' target='_blank'>here</a> to download the consent form for this study. " +
+		"Please click <a href='https://campuspress.yale.edu/michaelwilson/files/2022/09/consent.pdf' target='_blank'>here</a> to download the consent form for this study. " +
 		"If you read it and agree to participate in this study, click 'I Agree' below. " + 
 		"If you do not agree to participate in this study, you can leave this page by closing the tab or window."
 	)
