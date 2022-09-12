@@ -1,4 +1,4 @@
-item,sentence,sentence_type,group,adverb,word,seen_in_caring,target_response
+item,sentence,sentence_type,group,adverb,word,seen_in_training,target_response
 1,The [subj] has always blorked the [obj].,perfect transitive,red_yellow,always,cherry,True,[subj]
 2,The [subj] seems to have often blorked the [obj].,raising perfect transitive,red_yellow,often,cherry,True,[subj]
 3,It is the [subj] that has typically blorked the [obj].,cleft subject perfect transitive,red_yellow,typically,cherry,True,[subj]
