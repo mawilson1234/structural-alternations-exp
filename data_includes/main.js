@@ -3,7 +3,7 @@ DebugOff()
 
 SetCounter("setcounter")
 
-var counterOverride = 2
+var counterOverride = 1
 
 var blank_style = {
 	border: '1px solid #000', 
@@ -52,7 +52,7 @@ function SepWithN(sep, main, n) {
 function sepWithN(sep, main, n) { return new SepWithN(sep, main, n); }
 
 Sequence(
-	"setcounter",
+	"setcounter"
 	"consent",
 	"instruction1",
 	randomize("trial_prac"),
