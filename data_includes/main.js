@@ -5,8 +5,8 @@ SetCounter("setcounter")
 
 var counterOverride = 0
 
-var required_to_pass = 0.5
-var max_attempts = 2
+var required_to_pass = 0.75
+var max_attempts = 4
 
 var blank_style = {
 	border: '1px solid #000', 
@@ -59,10 +59,12 @@ Sequence(
 	"consent",
 	"instruction1",
 	randomize("trial_prac"), 'post-training',
-	randomize("trial_prac"), 'post-training',
 	"instruction2",
 	randomize("trial_train"), 'post-training',
-	randomize("trial_train"), 'post-training',
+	randomize("trial_train_rep1"), 'post-training',
+	randomize("trial_train_rep2"), 'post-training',
+	randomize("trial_train_rep1"), 'post-training',
+	randomize("trial_train_rep2"), 'post-training',
 	"instruction3",
 	sepWithN('break', randomize("trial"), 57),
 	"feedback",
@@ -125,8 +127,15 @@ var feedback_trial = label => item => {
 	var postsentence = '&nbsp;' + item.sentence.match(/.*(?:\[(su|o)bj\])(.*?)$/)[2]
 	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0]
 	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1]
+	var trial_on
 	
 	return newTrial(label,
+		newVar('trial_no')
+			.global()
+			.test.is(v => v >= 1)
+				.success(getVar('trial_no').set(v => v + 1))
+				.failure(getVar('trial_no').set(1))
+		,
 		newVar('responses', []).global(),
 		newVar('grandaverage', 0).global()
 			.test.is(v => v >= required_to_pass).success(end()),
@@ -170,7 +179,14 @@ var feedback_trial = label => item => {
 					.failure(
 						getText("incorrect").print(),
 						getVar('firstdropped').set('dropped already'),
-						getVar('responses').set(v => [false, ...v])
+						// if it is the first training set, we only want to count accuracy for the second half of the items
+						// since there are 24 items, indexed from 0, this is true if the trial_no is greater than 11
+						// if the label is not trial_train, it is trial_train_rep, and we always want to record the accuracy since
+						// these have only 12 items. thus, we run a check that will always return true
+						// to deal with the fact that we don't care about accuracy of the earlier trials, we just don't set anything
+						// if the check fails
+						getVar('trial_no').test.is(v => label === 'trial_train' ? v > 11 : true)
+							.success(getVar('responses').set(v => [false, ...v]))
 					),
 					getText("word").css(dropped_word_style)
 			)
@@ -224,7 +240,7 @@ newTrial('post-training',
 		.failure(
 			getVar('attempts')
 				.test.is(v => v < max_attempts)
-					.success(getVar('message').set('Please try again.'))
+					.success(getVar('message').set('Please try again. Remember, you should try to learn something about where different words go best in sentences with <i>blork</i>.<p />"'))
 					.failure(getVar('message').set(''))
 		)
 	,
@@ -242,7 +258,7 @@ newTrial('post-training',
 	,
 	newText()
 		.text(getVar('message'))
-		.css('margin-top', '1.5em')
+		.css(centered_justified_style)
 		.center()
 		.print()
 	,
@@ -280,6 +296,10 @@ newTrial("instruction2",
 		"If you guess wrong, you will see a message that you should have chosen the other blank. " +
 		"Then, you'll need to move the word from the wrong blank to the right one to continue on. " +
 		"You should use this feedback to help you learn.<p />" +
+		"In order to ensure that you learn enough, we will ask you to continue the training session until your first choice " +
+		"for where the words should go is correct 75% of the time, up to four additional training sessions total. " +
+		"Any additional training sessions will be half as long as the first one. " +
+		"You will get feedback at the end of each training session on your accuracy for that session.<p />" +
 		"We ask that you please don't write anything down, and just try to figure things out on your own.<p />" +
 		"When you are finished with the training session, you will see one more message before " +
 		"going on to the last part of the experiment, which is a test session.<p />" +
@@ -296,6 +316,8 @@ newTrial("instruction2",
 )
 
 Template("train.csv", feedback_trial('trial_train'))
+Template("train_rep1.csv", feedback_trial('trial_train_rep1'))
+Template("train_rep2.csv", feedback_trial('trial_train_rep2'))
 
 newTrial("instruction3",
 	newText(
