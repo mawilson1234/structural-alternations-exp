@@ -120,14 +120,13 @@ newTrial("instruction1",
 
 var feedback_trial = label => item => {
 	var word_num     = Math.floor(Math.random() * 8)
-	var target_res   = label === 'trial_train' ? item['target_response'] : (word_num <= 3 ? '[subj]' : '[obj]')
+	var target_res   = label.startsWith('trial_train') ? item['target_response'] : (word_num <= 3 ? '[subj]' : '[obj]')
 	var word         = label === 'trial_prac' ? item['word_' + word_num] : item.word
 	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
 	var midsentence  = '&nbsp;' + item.sentence.match(/(?:\[(su|o)bj\])(.*?)(?=\[(su|o)bj\])/)[2] + '&nbsp;'
 	var postsentence = '&nbsp;' + item.sentence.match(/.*(?:\[(su|o)bj\])(.*?)$/)[2]
 	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0]
 	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1]
-	var trial_on
 	
 	return newTrial(label,
 		newVar('trial_no')
@@ -137,8 +136,6 @@ var feedback_trial = label => item => {
 				.failure(getVar('trial_no').set(1))
 		,
 		newVar('responses', []).global(),
-		newVar('grandaverage', 0).global()
-			.test.is(v => v >= required_to_pass).success(end()),
 		newVar('firstdropped', 'no drop yet'),
 		
 		newText("container", "").center().css({display: "flex", 'margin-bottom': '3em'}).print(),
@@ -154,11 +151,17 @@ var feedback_trial = label => item => {
 		
 		newText("word", word).css({width: '', border: '1px solid #000', padding: '3px'}).center().print(),
 		
-		newMouseTracker("mouse").log(),
-		newFunction(async () => {
-			await new Promise(r => getText("word")._element.jQueryContainer.mousedown(r))
-			getMouseTracker("mouse").start()._runPromises()
-		}).call(),
+		newVar('grandaverage', 0).global()
+			.test.is(v => v >= required_to_pass)
+				.success(end())
+				.failure(
+					newMouseTracker("mouse").log(),
+					newFunction(async () => {
+						await new Promise(r => getText("word")._element.jQueryContainer.mousedown(r))
+						getMouseTracker("mouse").start()._runPromises()
+					}).call(),
+				)
+		,
 		
 		newText("correct", "Good job&mdash;that's the right choice!").css('color', 'rgb(34, 139, 34)').center(),
 		newText("incorrect", "That's not the right one&mdash;try moving the word to the other blank!").css('color', 'rgb(188, 74, 60)').center(),
@@ -240,7 +243,7 @@ newTrial('post-training',
 		.failure(
 			getVar('attempts')
 				.test.is(v => v < max_attempts)
-					.success(getVar('message').set('Please try again. Remember, you should try to learn something about where different words go best in sentences with <i>blork</i>.<p />"'))
+					.success(getVar('message').set('Please try again. Remember, you should try to pay attention to where different words go best in sentences with <i>blork</i>.<p />"'))
 					.failure(getVar('message').set(''))
 		)
 	,
@@ -249,7 +252,7 @@ newTrial('post-training',
 		.set(v => Math.round(v * 100) + '%.')
 	,
 	newVar('responses').global().set([]),
-	newText("Your first-guess accuracy was&nbsp;")
+	newText("Your first-choice accuracy was&nbsp;")
 		.after(
 			newText().text(getVar('grandaveragepercent'))
 		)
@@ -287,20 +290,24 @@ newTrial("instruction2",
 	
 	newText(
 		"Just like in the sentences you saw during the practice session, " +
-		"in sentences with <i>blork</i>, some words go better in certain slots than in others. "+ 
-		"Your task during this training phase is to figure out where different words go best " +
-		"in sentences with <i>blork</i>.<p />" +
-		//"However, <i>blork</i> isn't exactly like any other English words.<p />" +
-		"During training, you should start by guessing which blank the word should go in. " +
-		//"If you guess right, " + //"you should make more guesses like that one. " +
+		"you will find that some words go better in certain slots than others in sentences with <i>blork</i>."+ 
+		"Your task during this training phase is to figure out this pattern: where do different words go best " +
+		"in sentences with <i>blork</i>?<p />" +
+		
+		"As you begin training, you should start by guessing which blank the word should go in. " +
 		"If you guess wrong, you will see a message that you should have chosen the other blank. " +
 		"Then, you'll need to move the word from the wrong blank to the right one to continue on. " +
 		"You should use this feedback to help you learn.<p />" +
-		"In order to ensure that you learn enough, we will ask you to continue the training session until your first choice " +
-		"for where the words should go is correct 75% of the time, up to four additional training sessions total. " +
-		"Any additional training sessions will be half as long as the first one. " +
-		"You will get feedback at the end of each training session on your accuracy for that session.<p />" +
+		
+		"Because we want you to learn as much as you can about the pattern of words in sentences with <i>blork</i>, " +
+		"we would like you to continue the training process until you are able to guess the right position 75% of the time. "
+		"We'll let you repeat the training session a number of times until you reach 75% accuracy, " +
+		"and give you feedback on how you did at the end of each session. " +
+		"In any case, don't worry if you have difficulty: there is a limit on how many sessions we will ask you to do, even if " +
+		"you aren't able to reach 75%.<p />" +
+		
 		"We ask that you please don't write anything down, and just try to figure things out on your own.<p />" +
+		
 		"When you are finished with the training session, you will see one more message before " +
 		"going on to the last part of the experiment, which is a test session.<p />" +
 		"Click below when you are ready to begin the training session."
