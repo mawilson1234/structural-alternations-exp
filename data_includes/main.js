@@ -324,8 +324,8 @@ newTrial("instruction2",
 		"we would like you to continue the training process until you are able to guess the right position 75% of the time. " +
 		"We'll let you repeat the training session a number of times until you reach 75% accuracy, " +
 		"and give you feedback on how you did at the end of each session. " +
-		"In any case, don't worry if you have difficulty: there is a limit on how many sessions we will ask you to do, even if " +
-		"you aren't able to reach 75%.<p />" +
+		"In any case, don't worry if you have difficulty: there is a limit on how many sessions " +
+		"we will ask you to do, even if you aren't able to reach 75%.<p />" +
 		
 		"We ask that you please don't write anything down, and just try to figure things out on your own.<p />" +
 		
