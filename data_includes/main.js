@@ -317,7 +317,7 @@ newTrial("instruction2",
 		"You should use this feedback to help you learn.<p />" +
 		
 		"Because we want you to learn as much as you can about the pattern of words in sentences with <i>blork</i>, " +
-		"we would like you to continue the training process until you are able to guess the right position 75% of the time. "
+		"we would like you to continue the training process until you are able to guess the right position 75% of the time. " +
 		"We'll let you repeat the training session a number of times until you reach 75% accuracy, " +
 		"and give you feedback on how you did at the end of each session. " +
 		"In any case, don't worry if you have difficulty: there is a limit on how many sessions we will ask you to do, even if " +
