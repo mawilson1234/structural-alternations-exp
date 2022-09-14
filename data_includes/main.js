@@ -562,7 +562,7 @@ newTrial("bye",
 		"https://app.prolific.co/submissions/complete?cc=CEU2H725" +
 		"</a>."
 	)
-		.css({'text-align': 'center', 'width': '30em'})
+		.css({'margin': 'auto', 'text-align': 'center', 'width': '30em'})
 		.print()
 	,
 	
