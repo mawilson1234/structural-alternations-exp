@@ -129,6 +129,14 @@ var feedback_trial = label => item => {
 	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1]
 	
 	return newTrial(label,
+		newText("word", word).css({width: '', border: '1px solid #000', padding: '3px'}).center(),
+		
+		newMouseTracker("mouse").log(),
+    	newFunction("startmouse", async () => {
+    		await new Promise(r => getText("word")._element.jQueryContainer.mousedown(r))
+    		getMouseTracker("mouse").start()._runPromises()
+    	}),
+		
 		newVar('trial_no')
 			.global()
 			.test.is(v => v >= 1)
@@ -136,6 +144,8 @@ var feedback_trial = label => item => {
 				.failure(getVar('trial_no').set(1))
 		,
 		newVar('responses', []).global(),
+		newVar('grandaverage', 0).global()
+			.test.is(v => v >= required_to_pass).success(end()),
 		newVar('firstdropped', 'no drop yet'),
 		
 		newText("container", "").center().css({display: "flex", 'margin-bottom': '3em'}).print(),
@@ -149,19 +159,9 @@ var feedback_trial = label => item => {
 		newTimer("wait", item.sentence.split(" ").length * 325).start().wait(),
 		getText("placeholder").remove(),
 		
-		newText("word", word).css({width: '', border: '1px solid #000', padding: '3px'}).center().print(),
-		
-		newVar('grandaverage', 0).global()
-			.test.is(v => v >= required_to_pass)
-				.success(end())
-				.failure(
-					newMouseTracker("mouse").log(),
-					newFunction(async () => {
-						await new Promise(r => getText("word")._element.jQueryContainer.mousedown(r))
-						getMouseTracker("mouse").start()._runPromises()
-					}).call(),
-				)
-		,
+		getText("word").print(),
+       	
+        getFunction("startmouse").call(),
 		
 		newText("correct", "Good job&mdash;that's the right choice!").css('color', 'rgb(34, 139, 34)').center(),
 		newText("incorrect", "That's not the right one&mdash;try moving the word to the other blank!").css('color', 'rgb(188, 74, 60)').center(),
