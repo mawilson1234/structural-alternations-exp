@@ -558,6 +558,7 @@ newTrial("bye",
 		"Thank you for participating! " +
 		"Please go to the following web page to verify your participation: " +
 		"<a href='https://app.prolific.co/submissions/complete?cc=CEU2H725' target='_blank' />."
+	)
 		.print()
 	,
 	
