@@ -6,7 +6,7 @@ SetCounter("setcounter")
 var counterOverride = 0
 
 var required_to_pass = 0.75
-var max_attempts = 2
+var max_attempts = 5
 
 var blank_style = {
 	border: '1px solid #000', 
@@ -59,17 +59,17 @@ Sequence(
 	"consent",
 	"instruction1",
 	randomize("trial_prac")
-	"instruction2",*/
+	"instruction2",
 	randomize("trial_train"), 'post-training',
-	randomize("trial_train_rep1"), 'post-training'/*,
+	randomize("trial_train_rep1"), 'post-training',
 	randomize("trial_train_rep2"), 'post-training',
 	randomize("trial_train_rep1"), 'post-training',
 	randomize("trial_train_rep2"), 'post-training',
 	"instruction3",
 	sepWithN('break', randomize("trial"), 57),
 	"feedback",
-	SendResults(),
-	"bye"*/
+	SendResults(),*/
+	"bye"
 )
 
 newTrial("consent",
@@ -99,13 +99,15 @@ newTrial("instruction1",
 		"in the sentence where you think it goes best. " +
 		"After you have filled a blank with the word, you will see a \"Next\" button, which you can click " +
 		"to go to the next item.<p />" +
+		
 		"Since you will only fill in one of the two blanks, " +
 		"<b>the sentence will still be missing one word at the end of each trial</b>.<p />" + 
+		
 		"First, you will do some practice to get you used to how this works. " +
-		//"Afterward, there will be additional instructions. " + 
 		"During the practice, you will get feedback on whether you chose the correct blank for the word, " +
 		"and if you chose incorrectly, you should move the word to the correct blank to continue. " +
 		"However, you will not get feedback during the main part of the experiment.<p />" +
+		
 		"Click below when you are ready to begin practice."
 	)
 		.css(centered_justified_style)
@@ -290,7 +292,9 @@ newTrial('post-training',
 
 newTrial("instruction2",
 	newText(
-		"You have now finished the practice session! Next, you will move on to the first part of the experiment, which is a training session.<p />" +
+		"You have now finished the practice session! Next, you will move on " +
+		"to the first part of the experiment, which is a training session.<p />" +
+		
 		"During training, you will learn about a new word, <i>blork</i>. " +
 		"You will see sentences like the following: "
 	)
@@ -349,12 +353,15 @@ newTrial("instruction3",
 		"In this part, which is a test session, you will see many sentences. " +
 		"Most will have the new word, <i>blork</i>, which you just learned about, " +
 		"and others will have words you already know.<p />" +
+		
 		"Remember, your job is to decide which blank the word below the sentence goes best in. " +
 		"During the test session, you will not get any feedback about your choice, " +
 		"and you will not be able to change your first choice. Make sure to try your best, and good luck!<p />" +
+		
 		"During this part of the experiment, you will have the opportunity to take two short breaks partway through. " +
 		"We ask that you take only as much time as you need, so that you don't forget what you just " +
 		"learned about words that go with <i>blork</i>!<p />" +
+		
 		"Click below when you are ready to begin the test session."
 	)
 		.css(centered_justified_style)
@@ -519,8 +526,10 @@ newTrial("feedback",
 		"If you have any feedback on the experiment, please type it here. " +
 		"We would be especially interested to hear if you have any thoughts " +
 		"about whether you thought of words that might be similar in meaning to <i>blork</i>.<p />" +
+		
 		"We would also like to know what guesses you may have about what determines where different " +
 		"words can go with <i>blork</i>.<p />" +
+		
 		"If you don't have any feedback, " +
 		"you can leave this blank and continue by pressing \"Send\" below."
 	)
@@ -548,7 +557,7 @@ newTrial("bye",
 	newText(
 		"Thank you for participating! " +
 		"Please go to the following web page to verify your participation: " +
-		"<a href='https://app.prolific.co/submissions/complete?cc=CEU2H725' target='_blank'>https://app.prolific.co/submissions/complete?cc=CEU2H725</a>.")
+		"<a href='https://app.prolific.co/submissions/complete?cc=CEU2H725' target='_blank' />."
 		.print()
 	,
 	
