@@ -119,23 +119,23 @@ newTrial("instruction1",
 ).setOption("countsForProgressBar", false)
 
 var feedback_trial = label => item => {
-	var word_num     = Math.floor(Math.random() * 8)
+	var word_num	 = Math.floor(Math.random() * 8)
 	var target_res   = label.startsWith('trial_train') ? item['target_response'] : (word_num <= 3 ? '[subj]' : '[obj]')
-	var word         = label === 'trial_prac' ? item['word_' + word_num] : item.word
+	var word		 = label === 'trial_prac' ? item['word_' + word_num] : item.word
 	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
 	var midsentence  = '&nbsp;' + item.sentence.match(/(?:\[(su|o)bj\])(.*?)(?=\[(su|o)bj\])/)[2] + '&nbsp;'
 	var postsentence = '&nbsp;' + item.sentence.match(/.*(?:\[(su|o)bj\])(.*?)$/)[2]
-	var first_arg    = item.sentence.match(/\[(su|o)bj\]/g)[0]
+	var first_arg	 = item.sentence.match(/\[(su|o)bj\]/g)[0]
 	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1]
 	
 	return newTrial(label,
 		newText("word", word).css({width: '', border: '1px solid #000', padding: '3px'}).center(),
 		
 		newMouseTracker("mouse").log(),
-    	newFunction("startmouse", async () => {
-    		await new Promise(r => getText("word")._element.jQueryContainer.mousedown(r))
-    		getMouseTracker("mouse").start()._runPromises()
-    	}),
+		newFunction("startmouse", async () => {
+			await new Promise(r => getText("word")._element.jQueryContainer.mousedown(r))
+			getMouseTracker("mouse").start()._runPromises()
+		}),
 		
 		newVar('trial_no')
 			.global()
@@ -160,8 +160,8 @@ var feedback_trial = label => item => {
 		getText("placeholder").remove(),
 		
 		getText("word").print(),
-       	
-        getFunction("startmouse").call(),
+	   	
+		getFunction("startmouse").call(),
 		
 		newText("correct", "Good job&mdash;that's the right choice!").css('color', 'rgb(34, 139, 34)').center(),
 		newText("incorrect", "That's not the right one&mdash;try moving the word to the other blank!").css('color', 'rgb(188, 74, 60)').center(),
@@ -177,7 +177,10 @@ var feedback_trial = label => item => {
 						getText("correct").print(),
 						getMouseTracker("mouse").stop(),
 						getVar('firstdropped').test.is(v => v === 'no drop yet')
-							.success(getVar('responses').set(v => [true, ...v]))
+							.success(
+								getVar('trial_no').test.is(v => label === 'trial_train' ? v > 11 : true)
+									.success(getVar('responses').set(v => [true, ...v]))
+							)
 					)
 					.failure(
 						getText("incorrect").print(),
@@ -201,14 +204,14 @@ var feedback_trial = label => item => {
 		
 		newButton("next", "Next").center().print().wait().remove()
 	)
-	.log('item'            , item.item)
-	.log('word'            , word)
-	.log('target_response' , target_res)
-	.log('args_group'      , item.group)
-	.log('sentence_type'   , item.sentence_type)
-	.log('sentence'        , item.sentence)
-	.log('adverb'          , item.adverb)
-	.log('seen_in_training', 'True')
+	.log('item'				, item.item)
+	.log('word'				, word)
+	.log('target_response' 	, target_res)
+	.log('args_group'	  	, item.group)
+	.log('sentence_type'   	, item.sentence_type)
+	.log('sentence'			, item.sentence)
+	.log('adverb'		  	, item.adverb)
+	.log('seen_in_training'	, 'True')
 }
 
 Template("practice.csv", feedback_trial('trial_prac'))
@@ -243,7 +246,12 @@ newTrial('post-training',
 		.failure(
 			getVar('attempts')
 				.test.is(v => v < max_attempts)
-					.success(getVar('message').set('Please try again. Remember, you should try to pay attention to where different words go best in sentences with <i>blork</i>.<p />"'))
+					.success(
+						getVar('message').set(
+							'Please try again. Remember, you should try to pay attention ' +
+							'to where different words go best in sentences with <i>blork</i>.<p />'
+						)
+					)
 					.failure(getVar('message').set(''))
 		)
 	,
@@ -256,14 +264,25 @@ newTrial('post-training',
 		.after(
 			newText().text(getVar('grandaveragepercent'))
 		)
+		.css('margin-bottom', '3em')
 		.center()
 		.print()
 	,
-	newText()
-		.text(getVar('message'))
-		.css(centered_justified_style)
-		.center()
-		.print()
+	getVar('message')
+		.test.is(v => v === 'Great job!')
+			.success(
+				newText()
+					.text(getVar('message'))
+					.css('margin-bottom', '3em')
+					.center()
+					.print()
+			)
+			.failure(
+				newText()
+					.text(getVar('message'))
+					.css(centered_justified_style)
+					.print()
+			)
 	,
 	newButton('Next')
 		.center()
@@ -394,7 +413,7 @@ Template("pretrial.csv", variable =>
 		,
 		
 		newCanvas("buttons", 200, 50)
-			.add(              0, 0, newButton("XXXX").selector("position"))
+			.add(			  0, 0, newButton("XXXX").selector("position"))
 			.add("right at 100%", 0, newButton("YYYY").selector("position"))
 			.center()
 			.print()
@@ -416,26 +435,26 @@ Template("pretrial.csv", variable =>
 			.print()
 			.wait()
 	)
-	.log("group"        , variable.group)
-	.log("item"         , variable.item)
-	.log("word"         , variable.word)
+	.log("group"		, variable.group)
+	.log("item"		 , variable.item)
+	.log("word"		 , variable.word)
 	.log("args_group"   , variable.args_group)
 	.log("sentence_type", variable.sentence_type)
 )
 */
 
 var trial = group_label => item => {
-	var word_num         = Math.floor(Math.random() * 12)
-	var target_res       = group_label == 'filler_group' ? (word_num <= 5 ? '[subj]' : '[obj]') : item.target_response
-	var word             = group_label == 'filler_group' ? item['word_' + word_num] : item.word
-	var presentence      = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
-	var midsentence      = '&nbsp;' + item.sentence.match(/(?:\[(su|o)bj\])(.*?)(?=\[(su|o)bj\])/)[2] + '&nbsp;'
-	var postsentence     = '&nbsp;' + item.sentence.match(/.*(?:\[(su|o)bj\])(.*?)$/)[2]
-	var first_arg        = item.sentence.match(/\[(su|o)bj\]/g)[0]
-	var second_arg       = item.sentence.match(/\[(su|o)bj\]/g)[1]
+	var word_num		 = Math.floor(Math.random() * 12)
+	var target_res		 = group_label == 'filler_group' ? (word_num <= 5 ? '[subj]' : '[obj]') : item.target_response
+	var word			 = group_label == 'filler_group' ? item['word_' + word_num] : item.word
+	var presentence		 = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
+	var midsentence		 = '&nbsp;' + item.sentence.match(/(?:\[(su|o)bj\])(.*?)(?=\[(su|o)bj\])/)[2] + '&nbsp;'
+	var postsentence	 = '&nbsp;' + item.sentence.match(/.*(?:\[(su|o)bj\])(.*?)$/)[2]
+	var first_arg		 = item.sentence.match(/\[(su|o)bj\]/g)[0]
+	var second_arg		 = item.sentence.match(/\[(su|o)bj\]/g)[1]
 	var seen_in_training = group_label == 'filler_group' ? 'NA' : item.seen_in_training
 	
-	return newTrial("trial",        
+	return newTrial("trial",		
 		newText("container", "").center().css({display: "flex", 'margin-bottom': '3em'}).print(),
 		newText(presentence).print(getText("container")),
 		newText(first_arg, " ").css(blank_style).print(getText("container")),
@@ -472,14 +491,14 @@ var trial = group_label => item => {
 		
 		newButton("next", "Next").center().print().wait().remove()
 	)
-	.log('item'            , item.item)
-	.log('word'            , word)
-	.log('target_response' , target_res)
-	.log('args_group'      , item[group_label])
-	.log('sentence_type'   , item.sentence_type)
-	.log('sentence'        , item.sentence)
-	.log('adverb'          , item.adverb)
-	.log('seen_in_training', seen_in_training)
+	.log('item'				, item.item)
+	.log('word'				, word)
+	.log('target_response' 	, target_res)
+	.log('args_group'	  	, item[group_label])
+	.log('sentence_type'   	, item.sentence_type)
+	.log('sentence'			, item.sentence)
+	.log('adverb'		  	, item.adverb)
+	.log('seen_in_training'	, seen_in_training)
 }
 
 Template("stimuli.csv", trial("group"))
