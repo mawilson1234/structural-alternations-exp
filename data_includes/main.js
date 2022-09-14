@@ -6,7 +6,7 @@ SetCounter("setcounter")
 var counterOverride = 0
 
 var required_to_pass = 0.75
-var max_attempts = 4
+var max_attempts = 2
 
 var blank_style = {
 	border: '1px solid #000', 
@@ -55,13 +55,13 @@ function SepWithN(sep, main, n) {
 function sepWithN(sep, main, n) { return new SepWithN(sep, main, n); }
 
 Sequence(
-	"setcounter",
+	/*"setcounter",
 	"consent",
 	"instruction1",
-	randomize("trial_prac"), 'post-training',
-	"instruction2",
+	randomize("trial_prac")
+	"instruction2",*/
 	randomize("trial_train"), 'post-training',
-	randomize("trial_train_rep1"), 'post-training',
+	randomize("trial_train_rep1"), 'post-training'/*,
 	randomize("trial_train_rep2"), 'post-training',
 	randomize("trial_train_rep1"), 'post-training',
 	randomize("trial_train_rep2"), 'post-training',
@@ -69,7 +69,7 @@ Sequence(
 	sepWithN('break', randomize("trial"), 57),
 	"feedback",
 	SendResults(),
-	"bye"
+	"bye"*/
 )
 
 newTrial("consent",
