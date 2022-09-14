@@ -220,11 +220,9 @@ newTrial('post-training',
 	newVar('message')
 		.global()
 	,
-	newVar('attempts')
+	newVar('attempts', 0)
 		.global()
-		.test.is(v => v >= 1)
-			.success(getVar('attempts').set(v => v + 1))
-			.failure(getVar('attempts').set(1))
+		.set(v => v + 1)
 	,
 	newVar('grandaverage')
 		.global()
@@ -249,7 +247,7 @@ newTrial('post-training',
 					.success(
 						getVar('message').set(
 							'Please try again. Remember, you should try to pay attention ' +
-							'to where different words go best in sentences with <i>blork</i>.<p />'
+							'to where different words go best in sentences with <i>blork</i>.'
 						)
 					)
 					.failure(getVar('message').set(''))
