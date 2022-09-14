@@ -555,13 +555,14 @@ newTrial("feedback",
 
 newTrial("bye",
 	newText(
-		"Thank you for participating! " +
+		"Thank you for participating!<p />" +
+		
 		"Please go to the following web page to verify your participation: " +
 		"<a href='https://app.prolific.co/submissions/complete?cc=CEU2H725' target='_blank'>" +
 		"https://app.prolific.co/submissions/complete?cc=CEU2H725" +
 		"</a>."
 	)
-		.css(centered_justified_style)
+		.center()
 		.print()
 	,
 	
