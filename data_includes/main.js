@@ -58,7 +58,7 @@ Sequence(
 	"setcounter",
 	"consent",
 	"instruction1",
-	randomize("trial_prac")
+	randomize("trial_prac"),
 	"instruction2",
 	randomize("trial_train"), 'post-training',
 	randomize("trial_train_rep1"), 'post-training',
