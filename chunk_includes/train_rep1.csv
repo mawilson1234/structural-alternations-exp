@@ -1,25 +1,25 @@
-item,sentence,sentence_type,group,word,target_response,adverb
-prac,The [subj] has always blorked the [obj].,perfect transitive,red_yellow,cherry,[subj],always
-prac,The [subj] has often blorked the [obj].,perfect transitive,red_yellow,strawberry,[subj],often
-prac,The [subj] has typically blorked the [obj].,perfect transitive,red_yellow,tomato,[subj],usually
-prac,The [subj] has usually blorked the [obj].,perfect transitive,red_yellow,lobster,[subj],typically
-prac,The [subj] has always blorked the [obj] frequently.,perfect transitive,red_yellow,banana,[obj],always
-prac,The [subj] has often blorked the [obj] at times.,perfect transitive,red_yellow,lemon,[obj],often
-prac,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,red_yellow,corn,[obj],usually
-prac,The [subj] has typically blorked the [obj] afterward.,perfect transitive,red_yellow,lion,[obj],typically
-prac,The [subj] has always blorked the [obj].,perfect transitive,red_yellow,lion,[obj],always
-prac,The [subj] has often blorked the [obj].,perfect transitive,red_yellow,corn,[obj],often
-prac,The [subj] has typically blorked the [obj].,perfect transitive,red_yellow,lemon,[obj],usually
-prac,The [subj] has usually blorked the [obj].,perfect transitive,red_yellow,banana,[obj],typically
-prac,The [subj] has always blorked the [obj].,perfect transitive,buildings_vehicles,building,[subj],always
-prac,The [subj] has often blorked the [obj].,perfect transitive,buildings_vehicles,mansion,[subj],often
-prac,The [subj] has typically blorked the [obj].,perfect transitive,buildings_vehicles,house,[subj],usually
-prac,The [subj] has usually blorked the [obj].,perfect transitive,buildings_vehicles,barn,[subj],typically
-prac,The [subj] has always blorked the [obj] frequently.,perfect transitive,buildings_vehicles,tractor,[obj],always
-prac,The [subj] has often blorked the [obj] at times.,perfect transitive,buildings_vehicles,bicycle,[obj],often
-prac,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,buildings_vehicles,car,[obj],usually
-prac,The [subj] has typically blorked the [obj] afterward.,perfect transitive,buildings_vehicles,bus,[obj],typically
-prac,The [subj] has always blorked the [obj].,perfect transitive,buildings_vehicles,bus,[obj],always
-prac,The [subj] has often blorked the [obj].,perfect transitive,buildings_vehicles,car,[obj],often
-prac,The [subj] has typically blorked the [obj].,perfect transitive,buildings_vehicles,bicycle,[obj],usually
-prac,The [subj] has usually blorked the [obj].,perfect transitive,buildings_vehicles,tractor,[obj],typically
+item,sentence                                                   ,sentence_type     ,group             ,word      ,target_response,adverb   
+prac,The [subj] has always blorked the [obj].                   ,perfect transitive,red_yellow        ,cherry    ,[subj]         ,always   
+prac,The [subj] has often blorked the [obj].                    ,perfect transitive,red_yellow        ,strawberry,[subj]         ,often    
+prac,The [subj] has typically blorked the [obj].                ,perfect transitive,red_yellow        ,tomato    ,[subj]         ,usually  
+prac,The [subj] has usually blorked the [obj].                  ,perfect transitive,red_yellow        ,lobster   ,[subj]         ,typically
+prac,The [subj] has always blorked the [obj] frequently.        ,perfect transitive,red_yellow        ,banana    ,[obj]          ,always   
+prac,The [subj] has often blorked the [obj] at times.           ,perfect transitive,red_yellow        ,lemon     ,[obj]          ,often    
+prac,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,red_yellow        ,corn      ,[obj]          ,usually  
+prac,The [subj] has typically blorked the [obj] afterward.      ,perfect transitive,red_yellow        ,lion      ,[obj]          ,typically
+prac,The [subj] has always blorked the [obj].                   ,perfect transitive,red_yellow        ,lion      ,[obj]          ,always   
+prac,The [subj] has often blorked the [obj].                    ,perfect transitive,red_yellow        ,corn      ,[obj]          ,often    
+prac,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,red_yellow        ,cherry    ,[subj]         ,usually  
+prac,The [subj] has typically blorked the [obj] afterward.      ,perfect transitive,red_yellow        ,strawberry,[subj]         ,typically
+prac,The [subj] has always blorked the [obj].                   ,perfect transitive,buildings_vehicles,building  ,[subj]         ,always   
+prac,The [subj] has often blorked the [obj].                    ,perfect transitive,buildings_vehicles,mansion   ,[subj]         ,often    
+prac,The [subj] has typically blorked the [obj].                ,perfect transitive,buildings_vehicles,house     ,[subj]         ,usually  
+prac,The [subj] has usually blorked the [obj].                  ,perfect transitive,buildings_vehicles,barn      ,[subj]         ,typically
+prac,The [subj] has always blorked the [obj] frequently.        ,perfect transitive,buildings_vehicles,tractor   ,[obj]          ,always   
+prac,The [subj] has often blorked the [obj] at times.           ,perfect transitive,buildings_vehicles,bicycle   ,[obj]          ,often    
+prac,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,buildings_vehicles,car       ,[obj]          ,usually  
+prac,The [subj] has typically blorked the [obj] afterward.      ,perfect transitive,buildings_vehicles,bus       ,[obj]          ,typically
+prac,The [subj] has always blorked the [obj].                   ,perfect transitive,buildings_vehicles,bus       ,[obj]          ,always   
+prac,The [subj] has often blorked the [obj].                    ,perfect transitive,buildings_vehicles,car       ,[obj]          ,often    
+prac,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,buildings_vehicles,building  ,[subj]         ,usually  
+prac,The [subj] has typically blorked the [obj] afterward.      ,perfect transitive,buildings_vehicles,mansion   ,[subj]         ,typically
