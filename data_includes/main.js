@@ -327,6 +327,10 @@ newTrial("instruction2",
 		"In any case, don't worry if you have difficulty: there is a limit on how many sessions " +
 		"we will ask you to do, even if you aren't able to reach 75%.<p />" +
 		
+		"The first several trials of the first training session will be a warm-up." +
+		"This warm-up won't count towards your accuracy, so feel free to guess for a few trials " +
+		"while you are figuring out where different words go best with <i>blork</i>." +
+		
 		"We ask that you please don't write anything down, and just try to figure things out on your own.<p />" +
 		
 		"When you are finished with the training session, you will see one more message before " +
