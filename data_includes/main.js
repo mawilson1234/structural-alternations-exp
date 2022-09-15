@@ -321,16 +321,15 @@ newTrial("instruction2",
 		"You should use this feedback to help you learn.<p />" +
 		
 		"Because we want you to learn as much as you can about the pattern of words in sentences with <i>blork</i>, " +
-		"we would like you to continue the training process until you are able to guess the right position 75% of the time. " +
+		"we would like you to continue the training process until you are able to choose correctly 75% of the time. " +
 		"We'll let you repeat the training session a number of times until you reach 75% accuracy, " +
 		"and give you feedback on how you did at the end of each session. " +
 		"In any case, don't worry if you have difficulty: there is a limit on how many sessions " +
 		"we will ask you to do, even if you aren't able to reach 75%.<p />" +
 		
-		"The first several trials of the first training session will be a warm-up." +
+		"The first several trials of the first training session will be a warm-up. " +
 		"This warm-up won't count towards your accuracy, so feel free to guess for a few trials " +
-		"while you are figuring out where different words go best in sentences with <i>blork</i>." +
-		
+		"while you are figuring out where different words go best in sentences with <i>blork</i>. " +
 		"We ask that you please don't write anything down, and just try to figure things out on your own.<p />" +
 		
 		"When you are finished with the training session, you will see one more message before " +
