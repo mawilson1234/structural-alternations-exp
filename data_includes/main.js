@@ -329,7 +329,7 @@ newTrial("instruction2",
 		
 		"The first several trials of the first training session will be a warm-up." +
 		"This warm-up won't count towards your accuracy, so feel free to guess for a few trials " +
-		"while you are figuring out where different words go best with <i>blork</i>." +
+		"while you are figuring out where different words go best in sentences with <i>blork</i>." +
 		
 		"We ask that you please don't write anything down, and just try to figure things out on your own.<p />" +
 		
