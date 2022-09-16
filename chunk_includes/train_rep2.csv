@@ -1,25 +1,25 @@
 item,sentence,sentence_type,group,word,target_response,adverb
-prac,The [subj] has always blorked the [obj] frequently.,perfect transitive,red_yellow,lobster,[subj],always
-prac,The [subj] has often blorked the [obj] at times.,perfect transitive,red_yellow,tomato,[subj],often
-prac,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,red_yellow,strawberry,[subj],usually
-prac,The [subj] has typically blorked the [obj] afterward.,perfect transitive,red_yellow,cherry,[subj],typically
+prac,I'm surprised that the [subj] has never blorked the [obj].,perfect transitive,red_yellow,lobster,[subj],always
+prac,She insisted that the [subj] has rarely blorked the [obj].,perfect transitive,red_yellow,tomato,[subj],often
+prac,"Because the [subj] has usually blorked the [obj], I'm satisfied.",perfect transitive,red_yellow,strawberry,[subj],usually
+prac,The [subj] has always blorked the [obj] when Chris is in town.,perfect transitive,red_yellow,cherry,[subj],typically
 prac,The [subj] has always blorked the [obj].,perfect transitive,red_yellow,tomato,[subj],always
-prac,The [subj] has often blorked the [obj].,perfect transitive,red_yellow,lobster,[subj],often
+prac,"Even though the [subj] has typically blorked the [obj], no one is happy about it.",perfect transitive,red_yellow,lobster,[subj],often
 prac,The [subj] has typically blorked the [obj].,perfect transitive,red_yellow,banana,[obj],usually
-prac,The [subj] has usually blorked the [obj].,perfect transitive,red_yellow,lemon,[obj],typically
-prac,The [subj] has always blorked the [obj] frequently.,perfect transitive,red_yellow,corn,[obj],always
-prac,The [subj] has often blorked the [obj] at times.,perfect transitive,red_yellow,lion,[obj],often
+prac,"Despite George's best efforts, the [subj] has usually blorked the [obj].",perfect transitive,red_yellow,lemon,[obj],typically
+prac,I'm surprised that the [subj] has never blorked the [obj].,perfect transitive,red_yellow,corn,[obj],always
+prac,She insisted that the [subj] has rarely blorked the [obj].,perfect transitive,red_yellow,lion,[obj],often
 prac,The [subj] has typically blorked the [obj].,perfect transitive,red_yellow,lemon,[obj],usually
-prac,The [subj] has usually blorked the [obj].,perfect transitive,red_yellow,banana,[obj],typically
-prac,The [subj] has always blorked the [obj] frequently.,perfect transitive,buildings_vehicles,barn,[subj],always
-prac,The [subj] has often blorked the [obj] at times.,perfect transitive,buildings_vehicles,house,[subj],often
-prac,The [subj] has usually blorked the [obj] from time to time.,perfect transitive,buildings_vehicles,mansion,[subj],usually
-prac,The [subj] has typically blorked the [obj] afterward.,perfect transitive,buildings_vehicles,building,[subj],typically
+prac,"Despite George's best efforts, the [subj] has usually blorked the [obj].",perfect transitive,red_yellow,banana,[obj],typically
+prac,I'm surprised that the [subj] has never blorked the [obj].,perfect transitive,buildings_vehicles,barn,[subj],always
+prac,She insisted that the [subj] has rarely blorked the [obj].,perfect transitive,buildings_vehicles,house,[subj],often
+prac,"Because the [subj] has usually blorked the [obj], I'm satisfied.",perfect transitive,buildings_vehicles,mansion,[subj],usually
+prac,The [subj] has always blorked the [obj] when Chris is in town.,perfect transitive,buildings_vehicles,building,[subj],typically
 prac,The [subj] has always blorked the [obj].,perfect transitive,buildings_vehicles,house,[subj],always
-prac,The [subj] has often blorked the [obj].,perfect transitive,buildings_vehicles,barn,[subj],often
+prac,"Even though the [subj] has typically blorked the [obj], no one is happy about it.",perfect transitive,buildings_vehicles,barn,[subj],often
 prac,The [subj] has typically blorked the [obj].,perfect transitive,buildings_vehicles,tractor,[obj],usually
-prac,The [subj] has usually blorked the [obj].,perfect transitive,buildings_vehicles,bicycle,[obj],typically
-prac,The [subj] has always blorked the [obj] frequently.,perfect transitive,buildings_vehicles,car,[obj],always
-prac,The [subj] has often blorked the [obj] at times.,perfect transitive,buildings_vehicles,bus,[obj],often
+prac,"Despite George's best efforts, the [subj] has usually blorked the [obj].",perfect transitive,buildings_vehicles,bicycle,[obj],typically
+prac,I'm surprised that the [subj] has never blorked the [obj].,perfect transitive,buildings_vehicles,car,[obj],always
+prac,She insisted that the [subj] has rarely blorked the [obj].,perfect transitive,buildings_vehicles,bus,[obj],often
 prac,The [subj] has typically blorked the [obj].,perfect transitive,buildings_vehicles,bicycle,[obj],usually
-prac,The [subj] has usually blorked the [obj].,perfect transitive,buildings_vehicles,tractor,[obj],typically
+prac,"Despite George's best efforts, the [subj] has usually blorked the [obj].",perfect transitive,buildings_vehicles,tractor,[obj],typically
