@@ -125,8 +125,10 @@ var feedback_trial = label => item => {
 	var target_res   = label.startsWith('trial_train') ? item['target_response'] : (word_num <= 3 ? '[subj]' : '[obj]')
 	var word		 = label === 'trial_prac' ? item['word_' + word_num] : item.word
 	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
-	var midsentence  = '&nbsp;' + item.sentence.match(/(?:\[(su|o)bj\])(.*?)(?=\[(su|o)bj\])/)[2] + '&nbsp;'
-	var postsentence = '&nbsp;' + item.sentence.match(/.*(?:\[(su|o)bj\])(.*?)$/)[2]
+	var midsentence  = item.sentence.match(/(?:\[(su|o)bj\])(.*?)(?=\[(su|o)bj\])/)[2] + '&nbsp;'
+	var midsentence  = midsentence.startsWith(',') ? midsentence : '&nbsp;' + midsentence
+	var postsentence = item.sentence.match(/.*(?:\[(su|o)bj\])(.*?)$/)[2]
+	var postsentence = postsentence.startsWith(',') | postsentence.startsWith('.') ? postsentence : '&nbsp;' + postsentence
 	var first_arg	 = item.sentence.match(/\[(su|o)bj\]/g)[0]
 	var second_arg   = item.sentence.match(/\[(su|o)bj\]/g)[1]
 	
@@ -456,8 +458,10 @@ var trial = group_label => item => {
 	var target_res		 = group_label == 'filler_group' ? (word_num <= 5 ? '[subj]' : '[obj]') : item.target_response
 	var word			 = group_label == 'filler_group' ? item['word_' + word_num] : item.word
 	var presentence		 = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
-	var midsentence		 = '&nbsp;' + item.sentence.match(/(?:\[(su|o)bj\])(.*?)(?=\[(su|o)bj\])/)[2] + '&nbsp;'
-	var postsentence	 = '&nbsp;' + item.sentence.match(/.*(?:\[(su|o)bj\])(.*?)$/)[2]
+	var midsentence 	 = item.sentence.match(/(?:\[(su|o)bj\])(.*?)(?=\[(su|o)bj\])/)[2] + '&nbsp;'
+	var midsentence 	 = midsentence.startsWith(',') ? midsentence : '&nbsp;' + midsentence
+	var postsentence	 = item.sentence.match(/.*(?:\[(su|o)bj\])(.*?)$/)[2]
+	var postsentence 	 = postsentence.startsWith(',') | postsentence.startsWith('.') ? postsentence : '&nbsp;' + postsentence
 	var first_arg		 = item.sentence.match(/\[(su|o)bj\]/g)[0]
 	var second_arg		 = item.sentence.match(/\[(su|o)bj\]/g)[1]
 	var seen_in_training = group_label == 'filler_group' ? 'NA' : item.seen_in_training
