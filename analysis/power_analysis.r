@@ -228,7 +228,7 @@ crossed.model <- list('Crossed model'=brm(
 	family = bernoulli(),
 	prior = priors_crossed,
 	iter = 6500, chains = 4, cores = 4,
-	backend = 'cmdstanr', threads = threading(2),
+	backend = 'cmdstanr', threads = threading(4),
 	control = list(adapt_delta=0.99),
 	seed = 425, refresh = 500,
 	file = file.path(models.dir, 'salts_power_analysis.rds')
