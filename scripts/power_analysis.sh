@@ -9,7 +9,7 @@
 #SBATCH --time=48:00:00
 #SBATCH --mail-type=FAIL,END,INVALID_DEPEND
 
-module load R/4.1.0-foss-2020b # whatever this actually is, make sure the right packages are available
+module load R/4.1.0-foss-2020b
 
 echo Running script: scripts/salts_exp_power_analysis.sh
 
