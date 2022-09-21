@@ -10,3 +10,5 @@ analysis/Power analysis/
 analysis/analysis.r
 analysis/dists.py
 analysis/results*
+
+scripts/backup.sh
