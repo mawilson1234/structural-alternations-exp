@@ -2,5 +2,11 @@ all_fillers.csv
 consent/
 recruitment/
 irb/
-analysis/
 chunk_includes/backup/
+
+analysis/Models/
+analysis/Plots/
+analysis/Power analysis/
+analysis/analysis.r
+analysis/dists.py
+analysis/results*
