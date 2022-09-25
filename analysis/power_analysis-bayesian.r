@@ -208,9 +208,14 @@ priors_crossed <- c(
 	set_prior('lkj(2)', class='cor'),
 	set_prior('normal(0, 1)', class = 'b', coef=unlist(
 		sapply(
-			c(1,2,3,4),
+			c(1,2),#,3,4),
 			\(i) combn(
-				c('voice.n', 'data_source.n', 'target_response.n', 'seen_in_training.n'),
+				c(
+					# 'voice.n', 
+					'data_source.n', 
+					'target_response.n'#, 
+					# 'seen_in_training.n'
+				),
 				m=i,
 				FUN=\(x) paste(x, collapse=':')
 			)
@@ -224,7 +229,7 @@ crossed.model <- list('Crossed model'=brm(
 		(1 + voice.n * data_source.n * target_response.n * seen_in_training.n | subject) +
 		(1 + voice.n * data_source.n * target_response.n * seen_in_training.n | item) +
 		(1 + voice.n * data_source.n * target_response.n * seen_in_training.n | adverb),
-	data = results,
+	data = results |> filter(,
 	family = bernoulli(),
 	prior = priors_crossed,
 	iter = 6500, chains = 4, cores = 4,
@@ -232,6 +237,21 @@ crossed.model <- list('Crossed model'=brm(
 	control = list(adapt_delta=0.99),
 	seed = 425, refresh = 500,
 	file = file.path(models.dir, 'salts_power_analysis.rds')
+))
+
+target_response.data_source.model <- list('Target response * Data source model'=brm(
+	formula = correct ~ data_source.n * target_response.n +
+		(1 + data_source.n * target_response.n | subject) +
+		(1 + data_source.n * target_response.n | item) +
+		(1 + data_source.n * target_response.n | adverb),
+	data = results |> filter(voice.n == -0.5, seen_in_training.n == 0.5),
+	family = bernoulli(),
+	prior = priors_crossed,
+	iter = 6500, chains = 4, cores = 4,
+	backend = 'cmdstanr', threads = threading(2),
+	control = list(adapt_delta=0.99),
+	seed = 425, refresh = 1,
+	file = file.path(models.dir, 'salts_power_analysis_target_response_data_source.rds')
 ))
 
 save_model_summaries(
