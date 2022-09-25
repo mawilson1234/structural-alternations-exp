@@ -1,5 +1,6 @@
 # Load libraries
 library(lme4)
+library(R.utils)
 library(lmerTest)
 
 # Create directories to store results
@@ -20,7 +21,11 @@ save_model_summaries <- function(
 		return ()
 	}
 	
-	if (class(models) != 'list') models <- list(deparse(substitute(models))=models)
+	if (class(models) != 'list') {
+		name <- deparse(substitute(models))
+		models <- list(models)
+		names(models) <- name
+	}
 	
 	text <- ''
 	
