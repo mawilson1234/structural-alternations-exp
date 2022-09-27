@@ -70,8 +70,6 @@ simplify.lmem.formula <- function(model) {
 	# params: model: 	a lmem fit using the formula
 	# returns: formula: a formula that removes a single random effect
 	#					associated with the least variance
-	
-	# whatever this actually is...
 	formula <- formula(model)
 	
 	fixed.effects <- deparse(nobars(formula))
@@ -88,8 +86,7 @@ simplify.lmem.formula <- function(model) {
 	random.effects <- random.effects[!grepl(paste0('(^| )', to.remove, '$'), random.effects)]
 	post.removal.length <- length(random.effects)
 	if (post.removal.length != pre.removal.length - 1) {
-		cat('Error: >1 random effect removed!\n')
-		return ()
+		stop('Error: >1 random effect removed!')
 	}
 	
 	new.formula.str <- paste0(
@@ -100,7 +97,7 @@ simplify.lmem.formula <- function(model) {
 					)
 	
 	# TODO: can we return this using the most compact notation instead?
-	new.formula <- as.formula(new.formula.str)
+	new.formula <- as.formula(new.formula.str, env=environment(formula))
 	
 	return (new.formula)
 }
