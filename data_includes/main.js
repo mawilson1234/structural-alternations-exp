@@ -147,20 +147,7 @@ var feedback_trial = label => item => {
 				.success(getVar('trial_no').set(v => v + 1))
 				.failure(getVar('trial_no').set(1))
 		,
-		newVar('responses', [])
-			.global()
-			// .test.is(v => v.length === 13)
-			// 	.failure(
-			// 		getVar('responses').set([])
-			// 	)
-		,
-		newVar('responsesDupe', [])
-			.global()
-			.test.is(v => v.length === 13)
-				.failure(
-					getVar('responses').set([])
-				)
-		,
+		newVar('responses', []).global(),
 		newVar('grandaverage', 0).global()
 			.test.is(v => v >= required_to_pass).success(end()),
 		newVar('firstdropped', 'no drop yet'),
@@ -196,10 +183,7 @@ var feedback_trial = label => item => {
 						getVar('firstdropped').test.is(v => v === 'no drop yet')
 							.success(
 								getVar('trial_no').test.is(v => label === 'trial_train' ? v > 12 : true)
-									.success(
-										getVar('responses').set(v => [true, ...v]),
-										getVar('responsesDupe').set(v => [true, ...v])
-									)
+									.success(getVar('responses').set(v => [true, ...v]))
 							)
 					)
 					.failure(
@@ -212,10 +196,7 @@ var feedback_trial = label => item => {
 						// to deal with the fact that we don't care about accuracy of the earlier trials, we just don't set anything
 						// if the check fails
 						getVar('trial_no').test.is(v => label === 'trial_train' ? v > 12 : true)
-							.success(
-								getVar('responses').set(v => [false, ...v]),
-								getVar('responsesDupe').set(v => [false, ...v])
-							)
+							.success(getVar('responses').set(v => [false, ...v]))
 					),
 					getText("word").css(dropped_word_style)
 			)
@@ -247,11 +228,12 @@ newTrial('post-training',
 		.global()
 		.set(v => v + 1)
 	,
-	newVar('text')
-		.global()
-		.set(getVar('responsesDupe'))
-		.set(v => v.toString())
-	,
+	// newVar('text')
+	// 	.global()
+	// 	.getVar('text')
+	// 		.set(getVar('responses'))
+	// 		.set(v => v.toString())
+	// ,
 	newVar('grandaverage')
 		.global()
 		.test.is(v => v >= required_to_pass)
@@ -288,17 +270,17 @@ newTrial('post-training',
 	newVar('responses').global().set([]),
 	newText("Your first-choice accuracy was&nbsp;")
 		.after(
-			newText().text(getVar('grandaveragepercent'))
+			newText().text(getVar('grandaverage'))
 		)
 		.css('margin-bottom', '3em')
 		.center()
 		.print()
 	,
-	newText()
-	    .text(getVar('text'))
-	    .center()
-	    .print()
-	,
+// 	newText()
+// 	    .text(getVar('text'))
+// 	    .center()
+// 	    .print()
+// 	,
 	getVar('message')
 		.test.is(v => v === 'Great job!')
 			.success(
