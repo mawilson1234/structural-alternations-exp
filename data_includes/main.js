@@ -228,12 +228,12 @@ newTrial('post-training',
 		.global()
 		.set(v => v + 1)
 	,
-	newVar('text')
-		.global()
-		.getVar('text')
-			.set(getVar('responses'))
-			.set(v => v.toString())
-	,
+	// newVar('text')
+	// 	.global()
+	// 	.getVar('text')
+	// 		.set(getVar('responses'))
+	// 		.set(v => v.toString())
+	// ,
 	newVar('grandaverage')
 		.global()
 		.test.is(v => v >= required_to_pass)
