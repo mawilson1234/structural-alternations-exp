@@ -147,8 +147,20 @@ var feedback_trial = label => item => {
 				.success(getVar('trial_no').set(v => v + 1))
 				.failure(getVar('trial_no').set(1))
 		,
-		newVar('responses', []).global(),
-		newVar('responsesDupe', []).global(),
+		newVar('responses', [])
+			.global()
+			.test.is(v => v === [])
+				.failure(
+					getVar('responses').set([])
+				)
+		,
+		newVar('responsesDupe', [])
+			.global()
+			.test.is(v => v === [])
+				.failure(
+					getVar('responses').set([])
+				)
+		,
 		newVar('grandaverage', 0).global()
 			.test.is(v => v >= required_to_pass).success(end()),
 		newVar('firstdropped', 'no drop yet'),
