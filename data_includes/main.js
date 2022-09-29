@@ -235,12 +235,12 @@ newTrial('post-training',
 		.global()
 		.set(v => v + 1)
 	,
-	// newVar('text')
-	// 	.global()
-	// 	.getVar('text')
-	// 		.set(getVar('responses'))
-	// 		.set(v => v.toString())
-	// ,
+	newVar('text')
+		.global()
+		.getVar('text')
+			.set(getVar('responsesDupe'))
+			.set(v => v.toString())
+	,
 	newVar('grandaverage')
 		.global()
 		.test.is(v => v >= required_to_pass)
@@ -283,11 +283,11 @@ newTrial('post-training',
 		.center()
 		.print()
 	,
-// 	newText()
-// 	    .text(getVar('text'))
-// 	    .center()
-// 	    .print()
-// 	,
+	newText()
+	    .text(getVar('text'))
+	    .center()
+	    .print()
+	,
 	getVar('message')
 		.test.is(v => v === 'Great job!')
 			.success(
