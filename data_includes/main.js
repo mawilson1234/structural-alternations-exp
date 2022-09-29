@@ -235,7 +235,7 @@ newTrial('post-training',
 		.global()
 		.set(v => v + 1)
 	,
-	newVar('text')
+	newVar('text', '')
 		.global()
 		.set(getVar('responsesDupe'))
 		.set(v => v.toString())
