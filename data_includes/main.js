@@ -144,8 +144,8 @@ var feedback_trial = label => item => {
 		newVar('trial_no')
 			.global()
 			.test.is(v => v >= 1)
-				.success(getVar('trial_no').set(v => v + 1))
-				.failure(getVar('trial_no').set(1))
+				.success(getVar('trial_no').set(v => label === 'trial_prac' ? 0 : v + 1))
+				.failure(getVar('trial_no').set(v => label === 'trial_prac' ? 0 : 1))
 		,
 		newVar('responses', []).global(),
 		newVar('grandaverage', 0).global()
