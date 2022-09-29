@@ -55,21 +55,21 @@ function SepWithN(sep, main, n) {
 function sepWithN(sep, main, n) { return new SepWithN(sep, main, n); }
 
 Sequence(
-	"setcounter",
+	/*"setcounter",
 	"consent",
 	"instruction1",
 	randomize("trial_prac"),
-	"instruction2",
+	"instruction2",*/
 	randomize("trial_train"), 'post-training',
 	randomize("trial_train_rep1"), 'post-training',
 	randomize("trial_train_rep2"), 'post-training',
 	randomize("trial_train_rep1"), 'post-training',
 	randomize("trial_train_rep2"), 'post-training',
-	"instruction3",
+	/*"instruction3",
 	sepWithN('break', randomize("trial"), 57),
-	"feedback",
-	SendResults(),
-	"bye"
+	"feedback",*/
+	SendResults()//,
+	//"bye"
 )
 
 newTrial("consent",
@@ -123,7 +123,7 @@ newTrial("instruction1",
 var feedback_trial = label => item => {
 	var word_num	 = Math.floor(Math.random() * 8)
 	var target_res   = label.startsWith('trial_train') ? item['target_response'] : (word_num <= 3 ? '[subj]' : '[obj]')
-	var word		 = label === 'trial_prac' ? item['word_' + word_num] : item.word
+	var word		 = label === 'trial_prac' ? item['word_' + word_num] : item.target_response
 	var presentence  = item.sentence.match(/^(.*?)(?=\[(su|o)bj\])/g)[0] + '&nbsp;'
 	var midsentence  = item.sentence.match(/(?:\[(su|o)bj\])(.*?)(?=\[(su|o)bj\])/)[2] + '&nbsp;'
 	var midsentence  = midsentence.startsWith(',') ? midsentence : '&nbsp;' + midsentence
@@ -160,7 +160,7 @@ var feedback_trial = label => item => {
 		newText(postsentence).print(getText("container")),
 		
 		newText("placeholder", "&mdash;").center().print(),
-		newTimer("wait", item.sentence.split(" ").length * 325).start().wait(),
+		newTimer("wait", item.sentence.split(" ").length /** 325*/).start().wait(),
 		getText("placeholder").remove(),
 		
 		getText("word").print(),
@@ -182,7 +182,7 @@ var feedback_trial = label => item => {
 						getMouseTracker("mouse").stop(),
 						getVar('firstdropped').test.is(v => v === 'no drop yet')
 							.success(
-								getVar('trial_no').test.is(v => label === 'trial_train' ? v > 11 : true)
+								getVar('trial_no').test.is(v => label === 'trial_train' ? v > 12 : true)
 									.success(getVar('responses').set(v => [true, ...v]))
 							)
 					)
@@ -195,7 +195,7 @@ var feedback_trial = label => item => {
 						// these have only 12 items. thus, we run a check that will always return true
 						// to deal with the fact that we don't care about accuracy of the earlier trials, we just don't set anything
 						// if the check fails
-						getVar('trial_no').test.is(v => label === 'trial_train' ? v > 11 : true)
+						getVar('trial_no').test.is(v => label === 'trial_train' ? v > 12 : true)
 							.success(getVar('responses').set(v => [false, ...v]))
 					),
 					getText("word").css(dropped_word_style)
@@ -204,9 +204,9 @@ var feedback_trial = label => item => {
 			.wait(self.test.dropped(getText(target_res)))
 			.removeDrag(getText("word"))
 			.removeDrop(getText(first_arg), getText(second_arg))
-		,
+		//,
 		
-		newButton("next", "Next").center().print().wait().remove()
+		//newButton("next", "Next").center().print().wait().remove()
 	)
 	.log('item'				, item.item)
 	.log('word'				, word)
@@ -227,6 +227,12 @@ newTrial('post-training',
 	newVar('attempts', 0)
 		.global()
 		.set(v => v + 1)
+	,
+	newVar('text')
+		.global()
+		.getVar('text')
+			.set(getVar('responses'))
+			.set(v => v.toString())
 	,
 	newVar('grandaverage')
 		.global()
@@ -264,12 +270,17 @@ newTrial('post-training',
 	newVar('responses').global().set([]),
 	newText("Your first-choice accuracy was&nbsp;")
 		.after(
-			newText().text(getVar('grandaveragepercent'))
+			newText().text(getVar('grandaverage'))
 		)
 		.css('margin-bottom', '3em')
 		.center()
 		.print()
 	,
+// 	newText()
+// 	    .text(getVar('text'))
+// 	    .center()
+// 	    .print()
+// 	,
 	getVar('message')
 		.test.is(v => v === 'Great job!')
 			.success(
