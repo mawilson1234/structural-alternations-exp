@@ -237,9 +237,8 @@ newTrial('post-training',
 	,
 	newVar('text')
 		.global()
-		.getVar('text')
-			.set(getVar('responsesDupe'))
-			.set(v => v.toString())
+		.set(getVar('responsesDupe'))
+		.set(v => v.toString())
 	,
 	newVar('grandaverage')
 		.global()
