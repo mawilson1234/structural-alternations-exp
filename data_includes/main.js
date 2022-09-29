@@ -183,7 +183,7 @@ var feedback_trial = label => item => {
 						getMouseTracker("mouse").stop(),
 						getVar('firstdropped').test.is(v => v === 'no drop yet')
 							.success(
-								getVar('trial_no').test.is(v => label === 'trial_train' ? v > 11 : true)
+								getVar('trial_no').test.is(v => label === 'trial_train' ? v > 12 : true)
 									.success(
 										getVar('responses').set(v => [true, ...v]),
 										getVar('responsesDupe').set(v => [true, ...v])
@@ -192,17 +192,20 @@ var feedback_trial = label => item => {
 					)
 					.failure(
 						getText("incorrect").print(),
-						getVar('firstdropped').set('dropped already'),
-						// if it is the first training set, we only want to count accuracy for the second half of the items
-						// since there are 24 items, indexed from 0, this is true if the trial_no is greater than 11
-						// if the label is not trial_train, it is trial_train_rep, and we always want to record the accuracy since
-						// these have only 12 items. thus, we run a check that will always return true
-						// to deal with the fact that we don't care about accuracy of the earlier trials, we just don't set anything
-						// if the check fails
-						getVar('trial_no').test.is(v => label === 'trial_train' ? v > 11 : true)
+						getVar('firstdropped').test.is(v => v === 'no drop yet')
 							.success(
-								getVar('responses').set(v => [false, ...v]),
-								getVar('responsesDupe').set(v => [false, ...v])
+								getVar('firstdropped').set('dropped already'),
+								// if it is the first training set, we only want to count accuracy for the second half of the items
+								// since there are 24 items, indexed from 0, this is true if the trial_no is greater than 11
+								// if the label is not trial_train, it is trial_train_rep, and we always want to record the accuracy since
+								// these have only 12 items. thus, we run a check that will always return true
+								// to deal with the fact that we don't care about accuracy of the earlier trials, we just don't set anything
+								// if the check fails
+								getVar('trial_no').test.is(v => label === 'trial_train' ? v > 12 : true)
+									.success(
+										getVar('responses').set(v => [false, ...v]),
+										getVar('responsesDupe').set(v => [false, ...v])
+									)
 							)
 					),
 					getText("word").css(dropped_word_style)
