@@ -149,14 +149,14 @@ var feedback_trial = label => item => {
 		,
 		newVar('responses', [])
 			.global()
-			.test.is(v => v === [])
+			.test.is(v => v.length === 12)
 				.failure(
 					getVar('responses').set([])
 				)
 		,
 		newVar('responsesDupe', [])
 			.global()
-			.test.is(v => v === [])
+			.test.is(v => v.length === 12)
 				.failure(
 					getVar('responses').set([])
 				)
