@@ -274,6 +274,7 @@ newTrial('post-training',
 		.set(v => Math.round(v * 100) + '%.')
 	,
 	newVar('responses').global().set([]),
+	newVar('responsesDupe').global().set([]),
 	newText("Your first-choice accuracy was&nbsp;")
 		.after(
 			newText().text(getVar('grandaveragepercent'))
