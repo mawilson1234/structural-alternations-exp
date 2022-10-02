@@ -63,8 +63,8 @@ Sequence(
 	randomize("trial_train"), 'post-training',
 	randomize("trial_train_rep1"), 'post-training',
 	randomize("trial_train_rep2"), 'post-training',
-	randomize("trial_train_rep1"), 'post-training',
-	randomize("trial_train_rep2"), 'post-training',
+	randomize("trial_train_rep3"), 'post-training',
+	randomize("trial_train_rep4"), 'post-training',
 	"instruction3",
 	sepWithN('break', randomize("trial"), 57),
 	"feedback",
@@ -160,7 +160,7 @@ var feedback_trial = label => item => {
 		newText(postsentence).print(getText("container")),
 		
 		newText("placeholder", "&mdash;").center().print(),
-		newTimer("wait", item.sentence.split(" ").length * 325).start().wait(),
+		newTimer("wait", item.sentence.split(" ").length /* 325*/).start().wait(),
 		getText("placeholder").remove(),
 		
 		getText("word").print(),
@@ -354,6 +354,8 @@ newTrial("instruction2",
 Template("train.csv", feedback_trial('trial_train'))
 Template("train_rep1.csv", feedback_trial('trial_train_rep1'))
 Template("train_rep2.csv", feedback_trial('trial_train_rep2'))
+Template("train_rep1.csv", feedback_trial('trial_train_rep3'))
+Template("train_rep1.csv", feedback_trial('trial_train_rep4'))
 
 newTrial("instruction3",
 	newText(
@@ -469,7 +471,8 @@ var trial = group_label => item => {
 	var second_arg		 = item.sentence.match(/\[(su|o)bj\]/g)[1]
 	var seen_in_training = group_label == 'filler_group' ? 'NA' : item.seen_in_training
 	
-	return newTrial("trial",		
+	return newTrial("trial",
+		end(),		
 		newText("container", "").center().css({display: "flex", 'margin-bottom': '3em'}).print(),
 		newText(presentence).print(getText("container")),
 		newText(first_arg, " ").css(blank_style).print(getText("container")),
