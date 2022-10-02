@@ -486,11 +486,11 @@ var trial = group_label => item => {
 		
 		newText("word", word).css({border: '1px solid #000', padding: '3px'}).center().print(),
 		
-		newMouseTracker("mouse").log(),
-		newFunction(async () => {
-			await new Promise(r => getText("word")._element.jQueryContainer.mousedown(r))
-			getMouseTracker("mouse").start()._runPromises()
-		}).call(),
+		// newMouseTracker("mouse").log(),
+		// newFunction(async () => {
+		// 	await new Promise(r => getText("word")._element.jQueryContainer.mousedown(r))
+		// 	getMouseTracker("mouse").start()._runPromises()
+		// }).call(),
 		
 		newDragDrop("dd", "bungee")
 			.log("all")
