@@ -8,8 +8,10 @@ joblogs/
 analysis/Models/
 analysis/Plots/
 analysis/Power analysis/
+analysis/Power analysis bayesian/
 analysis/analysis.r
 analysis/dists.py
 analysis/results*
 
+scripts/backup-power-analysis.sh
 scripts/backup.sh
