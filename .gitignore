@@ -7,6 +7,7 @@ joblogs/
 
 analysis/Models/
 analysis/Plots/
+analysis/Pilot/
 analysis/Power analysis/
 analysis/Power analysis bayesian/
 analysis/analysis.r
