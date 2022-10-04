@@ -263,6 +263,17 @@ models['Crossed model'] <- do.call(brm, append(brm.args, list(
 	file = file.path(models.dir, 'crossed_model_accuracy.rds')
 )))
 
+models['Crossed model (excl. clefts)'] <- do.call(brm, append(brm.args, list(
+	formula = correct ~ voice.n * data_source.n * target_response.n * seen_in_training.n +
+		(1 + voice.n * data_source.n * target_response.n * seen_in_training.n | subject) +
+		(1 + voice.n * data_source.n * target_response.n * seen_in_training.n | item) +
+		(1 + voice.n * data_source.n * target_response.n * seen_in_training.n | adverb),
+	data = results |> filter(!grepl('cleft', sentence_type)),
+	family = bernoulli(),
+	prior = priors_crossed,
+	file = file.path(models.dir, 'crossed_model_accuracy_excl_clefts.rds')
+)))
+
 models['Crossed model (non-linear)'] <- do.call(brm, append(brm.args, list(
 	formula = correct ~ voice.n * data_source.n * target_response.n * seen_in_training.n +
 		(1 + voice.n * data_source.n * target_response.n * seen_in_training.n | subject) +
@@ -272,6 +283,17 @@ models['Crossed model (non-linear)'] <- do.call(brm, append(brm.args, list(
 	family = bernoulli(),
 	prior = priors_crossed,
 	file = file.path(models.dir, 'crossed_model_accuracy_non-linear.rds')
+)))
+
+models['Crossed model (non-linear, excl. clefts)'] <- do.call(brm, append(brm.args, list(
+	formula = correct ~ voice.n * data_source.n * target_response.n * seen_in_training.n +
+		(1 + voice.n * data_source.n * target_response.n * seen_in_training.n | subject) +
+		(1 + voice.n * data_source.n * target_response.n * seen_in_training.n | item) +
+		(1 + voice.n * data_source.n * target_response.n * seen_in_training.n | adverb),
+	data = results |> filter(grepl('^Non-linear', linear), !grepl('cleft', sentence_type)),
+	family = bernoulli(),
+	prior = priors_crossed,
+	file = file.path(models.dir, 'crossed_model_accuracy_non-linear_excl_clefts.rds')
 )))
 
 models['Crossed model (RTs)'] <- do.call(brm, append(brm.args, list(
