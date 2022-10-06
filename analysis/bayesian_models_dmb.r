@@ -8,8 +8,8 @@ library(R.utils)
 library(bayesplot)
 
 # Create directories to store results
-plots.dir <- 'Plots/Bayesian'
-models.dir <- 'Models/Bayesian'
+plots.dir <- 'Plots/Bayesian-dmb'
+models.dir <- 'Models/Bayesian-dmb'
 dir.create(plots.dir, showWarnings=FALSE, recursive=TRUE)
 dir.create(models.dir, showWarnings=FALSE, recursive=TRUE)
 
@@ -200,7 +200,7 @@ save_model_plots <- function(models = list()) {
 }
 
 # Load data
-results <- read.csv('accuracy-data.csv')
+results <- read.csv('accuracy-data-dmb.csv')
 
 # set priors, following Wilson & Dillon (in prep)
 priors_crossed <- c(
