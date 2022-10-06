@@ -296,16 +296,6 @@ models['Crossed model (non-linear, excl. clefts)'] <- do.call(brm, append(brm.ar
 	file = file.path(models.dir, 'crossed_model_accuracy_non-linear_excl_clefts.rds')
 ))) |> list()
 
-models['Crossed model (RTs)'] <- do.call(brm, append(brm.args, list(
-	formula = RT ~ voice.n * target_response.n * seen_in_training.n +
-		(1 + voice.n * target_response.n * seen_in_training.n | subject) +
-		(1 + voice.n * target_response.n * seen_in_training.n | item),
-	data = results |> filter(data_source == 'human') |> mutate(RT = exp(log.RT)),
-	family = lognormal(),
-	prior = priors_crossed_RT,
-	file = file.path(models.dir, 'crossed_model_RTs.rds')
-))) |> list()
-
 save_model_summaries(
 	models,
 	filename=file.path(models.dir, 'model_summaries.txt'), 
