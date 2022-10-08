@@ -6,7 +6,9 @@ chunk_includes/backup/
 joblogs/
 
 analysis/Models/
+analysis/Models
 analysis/Plots/
+analysis/Plots
 analysis/Pilot/
 analysis/Power analysis/
 analysis/Power analysis bayesian/

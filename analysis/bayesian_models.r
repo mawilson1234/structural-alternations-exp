@@ -34,7 +34,7 @@ posteriors_plot <- function(x, pars = '', labels = '', title = '', color_scheme 
 	
 	if (labels == '') {
 		labels <- gsub('^b\\_', '', pars)
-		labels <- gsub('\\.n(:|$)', '', labels)
+		labels <- gsub('\\.n(:|$)', '\\1', labels)
 		labels <- gsub('(\\.|\\_)', ' ', labels)
 		labels <- gsub(':', ' $\\\\times$ ', labels)
 		labels <- toTitleCase(labels)
@@ -135,7 +135,7 @@ save_pmcmc <- function(
 				cat(topsep, model_name, ' posteriors', midsep, sep = '')
 				for (i in seq_len(nrow(summary))) {
 					effect <- gsub('^b\\_', '', summary[i,'name'][[1]])
-					effect <- gsub('\\.n(:|$)', '', effect)
+					effect <- gsub('\\.n(:|$)', '\\1', effect)
 					effect <- gsub(':', ' x ', effect)
 					effect <- gsub('(\\.|\\_)', ' ', effect)
 					effect <- toTitleCase(effect)
@@ -171,7 +171,7 @@ save_model_plots <- function(models = list()) {
 						type=plot_types[[plot_type]], 
 						variable=variables[[variable]], 
 						regex=TRUE
-					) + ggtitle(paste('Test model', plot_type, variable)))
+					) + ggtitle(paste(model_name, plot_type, variable)))
 				)
 			}
 		}
