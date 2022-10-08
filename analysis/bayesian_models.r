@@ -200,7 +200,12 @@ save_model_plots <- function(models = list()) {
 }
 
 # Load data
-results <- read.csv('accuracy-data.csv')
+results <- read.csv('accuracy-data.csv') |>
+	mutate(
+		subject = as.factor(subject),
+		item = as.factor(item),
+		adverb = as.factor(adverb)
+	)
 
 # set priors, following Wilson & Dillon (in prep)
 priors_crossed <- c(
