@@ -4,7 +4,7 @@ library(dplyr)
 models.dir <- 'Models/Bayesian'
 dir.create(models.dir, showWarnings=FALSE, recursive=TRUE)
 
-results <- read.csv('../accuracy-data.csv') |>
+results <- read.csv('accuracy-data.csv') |>
 	mutate(
 		subject = as.factor(subject),
 		item 	= as.factor(item)
