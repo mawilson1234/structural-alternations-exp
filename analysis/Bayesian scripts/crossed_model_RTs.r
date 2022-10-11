@@ -23,7 +23,8 @@ priors_crossed_RT <- c(
 				c(
 					'voice.n', 
 					'target_response.n', 
-					'seen_in_training.n'
+					'seen_in_training.n',
+					'linear.n'
 				),
 				m=i,
 				FUN=\(x) paste(x, collapse=':')
@@ -40,9 +41,9 @@ brm.args <- list(
 )
 
 do.call(brm, append(brm.args, list(
-	formula = RT ~ voice.n * target_response.n * seen_in_training.n +
-		(1 + voice.n * target_response.n * seen_in_training.n | subject) +
-		(1 | voice.n:target_response.n:seen_in_training.n:item),
+	formula = RT ~ voice.n * target_response.n * seen_in_training.n * linear.n +
+		(1 + voice.n * target_response.n * seen_in_training.n | linear.n:subject) +
+		(1 + linear.n | voice.n:target_response.n:seen_in_training.n:item),
 	data = results,
 	family = lognormal(),
 	prior = priors_crossed_RT,
