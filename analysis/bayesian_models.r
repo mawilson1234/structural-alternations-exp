@@ -107,22 +107,23 @@ save_pmcmc <- function(
 	models = list(),
 	variable = '^b\\_',
 	regex = TRUE,
-	overwrite = FALSE
+	max_digits = 4
 ) {
 	topsep <- paste0(paste0(rep('#', 81), collapse = ''), '\n')
 	midsep <- paste0('\n', paste0(rep('-', 81), collapse = ''))
 	botsep <- paste0('\n', paste0(rep('#', 81), collapse = ''), '\n')
-		
-	for (model_name in names(models)){
-		model <- models[[model_name]]
-		
-		filename <- file.path(plots.dir, sprintf('%s_pmcmc.txt', gsub(' ', '_', tolower(model_name))))
-		
-		posteriors <- as_draws_df(model, variable=variable, regex=regex)
-		
-		withOptions(
-			{
-				sink(filename)
+	
+	text <- ''
+	
+	printformat <- paste0('%.0', max_digits, 'f')
+	
+	filename <- file.path(models.dir, 'model_pmcmcs.txt')	
+	withOptions(
+		{
+			for (model_name in names(models)){
+				model <- models[[model_name]]
+				
+				posteriors <- as_draws_df(model, variable=variable, regex=regex)
 				
 				summary <- posteriors |>
 					select(-`.chain`, -`.iteration`, -`.draw`) |>
@@ -132,7 +133,8 @@ save_pmcmc <- function(
 					mutate(p_mcmc = sum/length) |>
 					select(name, p_mcmc)
 				
-				cat(topsep, model_name, ' posteriors', midsep, sep = '')
+				text <- paste0(text, topsep, model_name, ' posteriors', midsep)
+				
 				for (i in seq_len(nrow(summary))) {
 					effect <- gsub('^b\\_', '', summary[i,'name'][[1]])
 					effect <- gsub('\\.n(:|$)', '\\1', effect)
@@ -140,18 +142,22 @@ save_pmcmc <- function(
 					effect <- gsub('(\\.|\\_)', ' ', effect)
 					effect <- toTitleCase(effect)
 					pmcmc <- summary[i, 'p_mcmc'][[1]]
-					dir <- ifelse(pmcmc > 0.5, ' < 0: ', ' > 0: ')
+					dir <- ifelse(pmcmc > 0.5, ' < 0', ' > 0')
 					pmcmc <- ifelse(pmcmc > 0.5, 1 - pmcmc, pmcmc)
-					cat(paste0('\n', effect), dir, pmcmc, sep='')
+					text <- paste0(text, '\n', sprintf(printformat, pmcmc), ': ', effect, dir)
 				}
-				cat(botsep)
-				
-				sink()
-			},
-			max.print = 100000,
-			width = 10000
-		)
-	}
+				text <- paste0(text, botsep)
+			}
+			
+			text <- gsub('\\n$', '', text)
+			
+			sink(filename)
+			cat(text)
+			sink()
+		},
+		max.print = 100000,
+		width = 10000
+	)
 }
 
 save_model_plots <- function(models = list()) {	
@@ -318,4 +324,4 @@ save_model_summaries(
 	overwrite=TRUE
 )
 save_model_plots(models)
-save_pmcmc(models, overwrite=TRUE)
+save_pmcmc(models)
