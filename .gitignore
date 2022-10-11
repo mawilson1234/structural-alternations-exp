@@ -18,3 +18,4 @@ analysis/results*
 
 scripts/backup-power-analysis.sh
 scripts/backup.sh
+scripts/*/*.txt
