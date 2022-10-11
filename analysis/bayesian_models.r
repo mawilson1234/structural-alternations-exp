@@ -169,8 +169,9 @@ save_model_plots <- function(models = list()) {
 					list(mcmc_plot(
 						model, 
 						type=plot_types[[plot_type]], 
-						variable=variables[[variable]], 
-						regex=TRUE
+						pars=variables[[variable]]
+						# variable=variables[[variable]], 
+						# regex=TRUE
 					) + ggtitle(paste(model_name, plot_type, variable)))
 				)
 			}
