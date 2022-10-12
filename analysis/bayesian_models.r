@@ -210,8 +210,7 @@ save_model_plots <- function(models = list()) {
 results <- read.csv('accuracy-data.csv') |>
 	mutate(
 		subject = as.factor(subject),
-		item = as.factor(item),
-		adverb = as.factor(adverb)
+		item = as.factor(item)
 	)
 
 # set priors, following Wilson & Dillon (in prep)
@@ -267,8 +266,7 @@ models <- list()
 models['Crossed model'] <- do.call(brm, append(brm.args, list(
 	formula = correct ~ voice.ncommand * data_source.n * target_response.n * seen_in_training.n +
 		(1 + voice.n * target_response.n * seen_in_training.n | data_source.n:subject) +
-		(1 + data_source.n | voice.n:target_response.n:seen_in_training.n:item) +
-		(1 + voice.n * data_source.n * target_response.n * seen_in_training.n | adverb),
+		(1 + data_source.n | voice.n:target_response.n:seen_in_training.n:item),
 	data = results,
 	family = bernoulli(),
 	prior = priors_crossed,
@@ -289,8 +287,7 @@ models['Crossed model'] <- do.call(brm, append(brm.args, list(
 models['Crossed model (non-linear)'] <- do.call(brm, append(brm.args, list(
 	formula = correct ~ voice.n * data_source.n * target_response.n * seen_in_training.n +
 		(1 + voice.n * target_response.n * seen_in_training.n | data_source.n:subject) +
-		(1 + data_source.n | voice.n:target_response.n:seen_in_training.n:item) +
-		(1 + voice.n * data_source.n * target_response.n * seen_in_training.n | adverb),
+		(1 + data_source.n | voice.n:target_response.n:seen_in_training.n:item),
 	data = results |> filter(grepl('^Non-linear', linear)),
 	family = bernoulli(),
 	prior = priors_crossed,
