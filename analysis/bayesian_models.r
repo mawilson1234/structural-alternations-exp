@@ -29,20 +29,22 @@ posteriors_plot <- function(x, pars = '', labels = '', title = '', color_scheme 
 	}
 	
 	if (pars == ''){
-		pars <- rev(colnames(x)[grepl('^b\\_(?!Intercept)', colnames(x), perl = TRUE)] |> sort())
+		pars <- rev(colnames(x)[grepl('^b\\_(?!Intercept)', colnames(x), perl = TRUE)])
 	}
 	
 	if (labels == '') {
 		labels <- gsub('^b\\_', '', pars)
 		labels <- gsub('\\.n(:|$)', '\\1', labels)
 		labels <- gsub('(\\.|\\_)', ' ', labels)
-		labels <- gsub(':', ' $\\\\times$ ', labels)
+		labels <- gsub(':', ' × ', labels)
 		labels <- toTitleCase(labels)
 	} else if (length(labels) != length(pars)) {
 		cat("Warning: the number of labels doesn't match the number of parameters to plot!")
 		cat('Some parameters may not be labeled, or may be labeled incorrectly.')
 	}
 	
+	# for some reason the pars are plotted in reverse, so we need to reverse
+	# the labels to make it line up (???)
 	plot <- mcmc_areas(x, pars=pars, prob=0.95, prob_outer=0.99, point_est='mean') +
 		expand_limits(x=0) +
 		scale_x_continuous('', n.breaks=8) +
@@ -199,8 +201,8 @@ save_model_plots <- function(models = list()) {
 		ggexport(
 			plotlist = plots,
 			filename = file.path(plots.dir, sprintf('%s_plots.pdf', gsub(' ', '_', tolower(model_name)))),
-			width = 13,
-			height = 8.5,
+			width = 15,
+			height = 12,
 			scale = 0.9
 		)
 	}
