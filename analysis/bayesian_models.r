@@ -320,5 +320,5 @@ save_model_summaries(
 	filename=file.path(models.dir, 'model_summaries.txt'), 
 	overwrite=TRUE
 )
-save_model_plots(models)
 save_pmcmc(models)
+save_model_plots(models)
