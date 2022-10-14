@@ -137,10 +137,11 @@ save_pmcmc <- function(
 			for (model_name in names(models)){
 				model <- models[[model_name]]
 				
-				posteriors <- as_draws_df(model, variable=variable, regex=regex)
+				# posteriors <- as_draws_df(model, variable=variable, regex=regex)
+				posteriors <- posterior_samples(model, pars=variable, fixed=(!regex))
 				
 				summary <- posteriors |>
-					select(-`.chain`, -`.iteration`, -`.draw`) |>
+					# select(-`.chain`, -`.iteration`, -`.draw`) |>
 					pivot_longer(everything()) |>
 					group_by(name) |>
 					summarize_all(list(sum=\(x) sum(x > 0),length=length)) |>
