@@ -1,4 +1,4 @@
-source('summary_functions.r')
+source('Bayesian scripts/summary_functions.r')
 
 models.dir <- 'Models/Bayesian'
 dir.create(models.dir, showWarnings=FALSE, recursive=TRUE)
