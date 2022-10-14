@@ -206,15 +206,16 @@ save_model_plots <- function(models = list()) {
 					)
 				)
 		
-		posteriors <- as_draws_df(model, variable='^b', regex=TRUE)
+		# posteriors <- as_draws_df(model, variable='^b', regex=TRUE)
+		posteriors <- posterior_samples(model, pars='^b')
 		plots <- append(list(posteriors_plot(posteriors, title=sprintf('%s posteriors', model_name))), plots)
 		
 		# save the plots
 		ggexport(
 			plotlist = plots,
 			filename = file.path(plots.dir, sprintf('%s_plots.pdf', gsub(' ', '_', tolower(model_name)))),
-			width = 15,
-			height = 12,
+			width = 15
+,			height = 12,
 			scale = 0.9
 		)
 	}
