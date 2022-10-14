@@ -1,8 +1,4 @@
-initial.options <- commandArgs(trailingOnly=FALSE)
-file.arg.name <- '--file='
-script.name <- sub(file.arg.name, '', initial.options[grep(file.arg.name, initial.options)])
-script.basename <- dirname(script.name)
-source(file.path(script.basename, 'summary_functions.r'))
+source('summary_functions.r')
 
 models.dir <- 'Models/Bayesian'
 dir.create(models.dir, showWarnings=FALSE, recursive=TRUE)
