@@ -79,7 +79,7 @@ for (i in seq_along(model.lists)) {
 		family = bernoulli(),
 		prior = priors_crossed,
 		file = file.path(models.dir, sprintf('crossed_model_accuracy_%02d.rds', i))
-	)))
+	))) |> list()
 }
 
 save_model_summaries(

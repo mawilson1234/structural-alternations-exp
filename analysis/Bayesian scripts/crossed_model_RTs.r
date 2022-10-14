@@ -62,7 +62,7 @@ models['Crossed model (RTs)'] <- do.call(brm, append(brm.args, list(
 	family = lognormal(),
 	prior = priors_crossed_RT,
 	file = file.path(models.dir, 'crossed_model_RTs.rds')
-)))
+))) |> list()
 
 save_model_summaries(
 	models,
