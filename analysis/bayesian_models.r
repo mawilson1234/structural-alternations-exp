@@ -8,8 +8,9 @@ library(R.utils)
 library(bayesplot)
 
 # Create directories to store results
-plots.dir <- 'Plots/Bayesian'
-models.dir <- 'Models/Bayesian'
+base.dirname <- 'C:/Users/mawilson/OneDrive - Yale University/CLAY Lab/structural-alternations-exp/analysis'
+plots.dir <- file.path(base.dirname, 'Plots/Bayesian')
+models.dir <- file.path(base.dirname, 'Models/Bayesian')
 dir.create(plots.dir, showWarnings=FALSE, recursive=TRUE)
 dir.create(models.dir, showWarnings=FALSE, recursive=TRUE)
 
