@@ -1,6 +1,6 @@
 source('Bayesian scripts/sim_functions.r')
 
-name <- 'crossed_model_accuracy'
+name <- 'crossed_model_with_linear_accuracy'
 
 results <- read.csv('accuracy-data.csv') |>
 	mutate(
@@ -19,7 +19,8 @@ priors_crossed <- c(
 					'voice.n', 
 					'data_source.n', 
 					'target_response.n', 
-					'seen_in_training.n'
+					'seen_in_training.n',
+					'linear.n'
 				),
 				m=i,
 				FUN=\(x) paste(x, collapse=':')
@@ -33,9 +34,9 @@ priors_crossed <- c(
 cis <- run.simulations(
 	data = results, 
 	name = name,
-	formula = correct ~ voice.n * data_source.n * target_response.n * seen_in_training.n +
-		(1 + voice.n * target_response.n * seen_in_training.n | data_source.n:subject) +
-		(1 + data_source.n | voice.n:target_response.n:seen_in_training.n:item),
+	formula = correct ~ voice.n * data_source.n * target_response.n * seen_in_training.n * linear.n +
+		(1 + voice.n * target_response.n * seen_in_training.n | linear.n:data_source.n:subject) +
+		(1 + data_source.n * linear.n | voice.n:target_response.n:seen_in_training.n:item),
 	family = bernoulli(),
 	prior = priors_crossed
 )

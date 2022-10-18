@@ -1,12 +1,14 @@
 source('Bayesian scripts/sim_functions.r')
 
-name <- 'crossed_model_accuracy'
+name <- 'crossed_model_non-linear_accuracy'
 
 results <- read.csv('accuracy-data.csv') |>
 	mutate(
 		subject = as.factor(subject),
 		item 	= as.factor(item)
-	)
+	) |>
+	filter(linear == 'Non-linear') |>
+	droplevels()
 
 priors_crossed <- c(
 	set_prior('normal(0, 10)', class='Intercept'),
