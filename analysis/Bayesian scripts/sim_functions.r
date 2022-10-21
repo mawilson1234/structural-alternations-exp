@@ -141,7 +141,7 @@ run.simulations <- function(data, name, ...) {
 	
 	human.subject.ids <- data |>
 		filter(data_source == 'human') |>
-		droplevels()
+		droplevels() |>
 		pull(subject) |> 
 		unique()
 	
