@@ -6,7 +6,7 @@ library(gridExtra)
 CI_RANGE <- 0.95
 TARGET_CI_WIDTH <- 2
 
-N_HUMAN_PARTICIPANTS_PER_RUN <- seq(from=40, to=80, by=10)
+N_HUMAN_PARTICIPANTS_PER_RUN <- seq(from=50, to=80, by=10)
 N_RUNS_PER_SIZE <- 10
 
 plots.dir <- 'Plots/Bayesian simulations'
@@ -40,7 +40,7 @@ get.lists <- function(n.participants, n.runs, sample.from) {
 			}
 		} else if (n.participants > n.models) {
 			for (i in seq_along(model.lists)) {
-				while ((n.participants - length(model.lists[[i]])) >= n.participants) {
+				while ((n.participants - length(model.lists[[i]])) >= n.models) {
 					if (is.null(model.lists[[i]])) {
 						model.lists[[i]] <- sample.from
 					} else {
