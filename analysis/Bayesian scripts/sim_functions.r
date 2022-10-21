@@ -84,26 +84,6 @@ brm.args <- list(
 	seed=425, refresh=1
 )
 
-human.data <- results |>
-	filter(data_source == 'human') |>
-	droplevels()
-
-human.subject.ids <- human.data |>
-	pull(subject) |> 
-	unique()
-
-n.real.humans <- human.subject.ids |>
-	length()
-
-model.subject.ids <- results |>
-	filter(data_source == 'BERT') |>
-	pull(subject) |> 
-	unique() |>
-	droplevels()
-
-n.models <- model.subject.ids |>
-	length()
-
 get.duplicated.data <- function(
 	data, 
 	model.list, 
@@ -158,7 +138,19 @@ run.simulations <- function(data, name, ...) {
 		ci.lower = numeric(0),
 		median = numeric(0)
 	)
-
+	
+	human.subject.ids <- data |>
+		filter(data_source == 'human') |>
+		droplevels()
+		pull(subject) |> 
+		unique()
+	
+	model.subject.ids <- data |>
+		filter(data_source == 'BERT') |>
+		pull(subject) |> 
+		unique() |>
+		droplevels()
+	
 	for (n.participants in N_HUMAN_PARTICIPANTS_PER_RUN) {
 		model.lists <- get.lists(
 			n.participants=n.participants, 
