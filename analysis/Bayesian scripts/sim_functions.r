@@ -217,10 +217,6 @@ run.simulations <- function(data, name, ...) {
 		)
 	}
 	
-	return (cis)
-}
-
-save.ci.plots <- function(cis, name) {
 	cis <- cis |>
 		mutate(
 			`Overlaps 0?` = case_when(
@@ -234,7 +230,11 @@ save.ci.plots <- function(cis, name) {
 				),
 			width = fct_relevel(width, paste0('>', TARGET_CI_WIDTH), paste0('<=', TARGET_CI_WIDTH))
 		)
+	
+	return (cis)
+}
 
+save.ci.plots <- function(cis, name) {
 	cis.plots <- list()
 
 	for (effect in unique(cis$effect)) {
