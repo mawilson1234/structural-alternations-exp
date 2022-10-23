@@ -42,5 +42,5 @@ cis <- run.simulations(
 	prior = priors_crossed
 )
 
-save_ci_plots(cis, name=name)
-save_ci_summary(cis, name=name)
+save.ci.plots(cis, name=name)
+save.ci.summary(cis, name=name)
