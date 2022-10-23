@@ -6,7 +6,7 @@ library(gridExtra)
 CI_RANGE <- 0.95
 TARGET_CI_WIDTH <- 2
 
-N_HUMAN_PARTICIPANTS_PER_RUN <- seq(from=50, to=80, by=10)
+N_HUMAN_PARTICIPANTS_PER_RUN <- seq(from=40, to=80, by=10)
 N_RUNS_PER_SIZE <- 10
 
 plots.dir <- 'Plots/Bayesian simulations'
@@ -19,8 +19,10 @@ get.lists <- function(n.participants, n.runs, sample.from) {
 	model.lists <- list()
 	
 	while (
-		!(length(unique(model.lists)) == n.runs) | 
 		(
+			!(length(unique(model.lists)) == n.runs) &
+			n.participants %% n.models != 0
+		) | (
 			!(length(model.lists) == n.runs) & 
 			n.participants %% n.models == 0
 		)
@@ -99,6 +101,7 @@ get.duplicated.data <- function(
 	results.with.duplicates <- data.frame(matrix(ncol=length(colnames(data)), nrow=0))
 	colnames(results.with.duplicates) <- colnames(data)
 	
+	dupe_string <- ''
 	while (length(results.with.duplicates$subject |> unique()) < (n.participants * 2)) {
 		models.to.duplicate <- names(n.each.model)[n.each.model > 0]
 		humans.to.duplicate <- names(n.each.human)[n.each.human > 0]
@@ -110,7 +113,7 @@ get.duplicated.data <- function(
 					filter(subject %in% to.duplicate) |>
 					mutate(
 						subject = case_when(
-							subject %in% unique(results.with.duplicates$subject) ~ paste0(as.character(subject), '_d'),
+							subject %in% unique(results.with.duplicates$subject) ~ paste0(as.character(subject), dupe_string),
 							TRUE ~ as.character(subject)
 						)
 					)
@@ -121,6 +124,7 @@ get.duplicated.data <- function(
 		
 		n.each.human <- n.each.human - 1
 		n.each.human <- n.each.human[n.each.human > 0]
+		dupe_string <- paste0(dupe_string, '_d')
 	}
 	
 	results.with.duplicates <- results.with.duplicates |>
@@ -163,7 +167,7 @@ run.simulations <- function(data, name, ...) {
 			n.runs=N_RUNS_PER_SIZE,
 			sample.from=human.subject.ids
 		)
-		
+				
 		if (length(unique(model.lists)) == 1 & length(unique(human.lists)) == 1) {
 			model.lists <- unique(model.lists)
 			human.lists <- unique(human.lists)
@@ -171,7 +175,8 @@ run.simulations <- function(data, name, ...) {
 		
 		models <- list()
 		for (i in seq_along(model.lists)) {
-			model_name <- sprintf('Crossed model %02d human participants #%02d', n.participants, i)
+			cat(sprintf('Fitting %s with %02d human participants #%02d\n', gsub('_|\\.', ' ', name), n.participants, i))
+			model_name <- sprintf('%s with %02d human participants #%02d', gsub('_', ' ', toTitleCase(name)), n.participants, i)
 			results.with.duplicates <- get.duplicated.data(
 					data=data, 
 					model.list=model.lists[[i]], 
