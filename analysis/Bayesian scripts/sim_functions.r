@@ -6,7 +6,7 @@ library(gridExtra)
 CI_RANGE <- 0.95
 TARGET_CI_WIDTH <- 2
 
-N_HUMAN_PARTICIPANTS_PER_RUN <- seq(from=40, to=80, by=10)
+N_HUMAN_PARTICIPANTS_PER_RUN <- seq(from=70, to=80, by=10)
 N_RUNS_PER_SIZE <- 10
 
 plots.dir <- 'Plots/Bayesian simulations'
@@ -50,9 +50,8 @@ get.lists <- function(n.participants, n.runs, sample.from) {
 					}
 				}
 			}
-		} 
+		}
 		
-		set.seed(425)
 		for (i in seq_along(model.lists)) {
 			while (length(model.lists[[i]]) != n.participants) {
 				if (is.null(model.lists[[i]])) {
@@ -63,14 +62,22 @@ get.lists <- function(n.participants, n.runs, sample.from) {
 						)
 					)
 				} else {
-					model.lists[[i]] <- c(model.lists[[i]], 
-						sort(
-							sample(
-								sample.from, 
-								size=n.participants - length(model.lists[[i]])
+					original.n <- length(model.lists[[i]])
+					while (
+						(model.lists[i] %in% model.lists[-i]) |
+						(i == length(model.lists) & length(model.lists[[i]]) != n.participants)
+					) {
+						cat(i, '\n')
+						model.lists[[i]] <- model.lists[[i]][1:original.n]
+						model.lists[[i]] <- c(model.lists[[i]], 
+							sort(
+								sample(
+									sample.from, 
+									size=n.participants - length(model.lists[[i]])
+								)
 							)
 						)
-					)
+					}
 				}
 			}
 		}
@@ -167,7 +174,7 @@ run.simulations <- function(data, name, ...) {
 			n.runs=N_RUNS_PER_SIZE,
 			sample.from=human.subject.ids
 		)
-				
+		
 		if (length(unique(model.lists)) == 1 & length(unique(human.lists)) == 1) {
 			model.lists <- unique(model.lists)
 			human.lists <- unique(human.lists)
