@@ -67,7 +67,6 @@ get.lists <- function(n.participants, n.runs, sample.from) {
 						(model.lists[i] %in% model.lists[-i]) |
 						(i == length(model.lists) & length(model.lists[[i]]) != n.participants)
 					) {
-						cat(i, '\n')
 						model.lists[[i]] <- model.lists[[i]][1:original.n]
 						model.lists[[i]] <- c(model.lists[[i]], 
 							sort(
