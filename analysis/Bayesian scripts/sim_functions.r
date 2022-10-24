@@ -283,6 +283,7 @@ save.ci.plots <- function(cis, name) {
 }
 
 save.ci.summary <- function(cis, name) {
+	write.csv(cis, file.path(models.dir, paste0(name, '_simulations_cis.csv')), row.names=FALSE)
 	cis.summary <- cis |> 
 		group_by(effect, n.humans, `Overlaps 0?`, width) |>
 		summarize(pr.of.runs.in.group = n()/N_RUNS_PER_SIZE)
