@@ -1,12 +1,13 @@
 source('Bayesian scripts/summary_functions.r')
 library(ggdist)
+library(stringr)
 library(forcats)
 library(gridExtra)
 
 CI_RANGE <- 0.95
 TARGET_CI_WIDTH <- 2
 
-N_HUMAN_PARTICIPANTS_PER_RUN <- seq(from=40, to=80, by=10)
+N_HUMAN_PARTICIPANTS_PER_RUN <- seq(from=30, to=80, by=10)
 N_RUNS_PER_SIZE <- 10
 
 plots.dir <- 'Plots/Bayesian simulations'
@@ -242,8 +243,15 @@ run.simulations <- function(data, name, ...) {
 
 save.ci.plots <- function(cis, name) {
 	cis.plots <- list()
-
-	for (effect in unique(cis$effect)) {
+	
+	effects <- cis |>
+		pull(effect) |>
+		unique() |>
+		sapply(\(e) ifelse(grepl('Intercept', e), '0000', paste0(sprintf('%04d', str_count(e, ':')), '_', e))) |>
+		sort() |> 
+		names()
+	
+	for (effect in effects) {
 		# do a plot for each effect
 		ylab <- gsub('^b\\_', '', effect) %>%
 			gsub('\\.n(:|$)', '\\1', .) %>%
@@ -266,16 +274,20 @@ save.ci.plots <- function(cis, name) {
 				xlab('Simulation no.') +
 				scale_y_continuous(paste0(CI_RANGE*100, '% CI of ', ylab)) +
 				scale_linetype_discrete(paste0('Width >', TARGET_CI_WIDTH, '?')) +
+				scale_color_manual(
+					breaks = c('Overlap', 'No overlap'),
+					values = c('#F8766D', '#00BFC4')
+				) + 
 				facet_grid(paste(n.humans, 'human participants') ~ .)
 			)
 	}
-
+	
 	ggsave(
 		plot=marrangeGrob(cis.plots, nrow=1, ncol=1),
 		filename=file.path(plots.dir, paste0(name, '_simulations_cis_plots.pdf')),
 		device='pdf',
-		width=8,
-		height=6,
+		width=11,
+		height=8.5,
 		scale=1,
 		units='in'
 	)
