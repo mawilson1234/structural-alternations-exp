@@ -287,7 +287,7 @@ save.ci.plots <- function(cis, name) {
 		filename=file.path(plots.dir, paste0(name, '_simulations_cis_plots.pdf')),
 		device='pdf',
 		width=11,
-		height=8.5,
+		height=10.625,
 		scale=1,
 		units='in'
 	)
