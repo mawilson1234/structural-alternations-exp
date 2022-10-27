@@ -355,7 +355,7 @@ Template("train.csv", feedback_trial('trial_train'))
 Template("train_rep1.csv", feedback_trial('trial_train_rep1'))
 Template("train_rep2.csv", feedback_trial('trial_train_rep2'))
 Template("train_rep1.csv", feedback_trial('trial_train_rep3'))
-Template("train_rep1.csv", feedback_trial('trial_train_rep4'))
+Template("train_rep2.csv", feedback_trial('trial_train_rep4'))
 
 newTrial("instruction3",
 	newText(
