@@ -10,10 +10,10 @@ library(reticulate)
 current.exp <- 'bv'
 plots.dir 	<- paste0('Plots/')
 models.dir 	<- paste0('Models/')
-dir.create(plots.dir, 	showWarnings=FALSE, recursive=TRUE)
-dir.create(models.dir, 	showWarnings=FALSE, recursive=TRUE)
+dir.create(plots.dir,  showWarnings=FALSE, recursive=TRUE)
+dir.create(models.dir, showWarnings=FALSE, recursive=TRUE)
 
-MOST_RECENT_SUBJECTS <- 40:45
+MOST_RECENT_SUBJECTS <- 52:57
 
 MAX_RT_IN_SECONDS <- 10
 OUTLIER_RT_SDS <- 2
@@ -1361,4 +1361,5 @@ filler |>
 	ylab('Log RT') +
 	scale_fill_discrete('Target response') +
 	ggtitle(paste0('Log RT by Voice (>3 s.d. by subject removed, fillers) (', MOST_RECENT_SUBJECTS[[1]], '–', MOST_RECENT_SUBJECTS[[length(MOST_RECENT_SUBJECTS)]], ')')) +
+
 	facet_grid(. ~ subject + linear)
