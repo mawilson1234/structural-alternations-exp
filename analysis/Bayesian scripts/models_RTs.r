@@ -57,7 +57,6 @@ brm.args <- list(
 	seed=425
 )
 
-
 dir.create(file.path(models.dir, 'crossed_RTs'), showWarnings=FALSE, recursive=TRUE)
 models <- list()
 cat('Fitting crossed model (RTs)', '\n')
@@ -97,11 +96,15 @@ results.with.nestings <- get_nested_data(
 	gcols = gcols
 )
 
-all.nested.model.effects <- colnames(results.with.nestings)[grepl(paste(nesting.cols, collapse='|'), colnames(results.with.nestings))]
+all.nested.effects <- colnames(results.with.nestings)[grepl(paste(nesting.cols, collapse='|'), colnames(results.with.nestings))]
 
 depvar <- 'correct'
 ranefs <- c('subject', 'item')
-nested.model.formulae <- get.nested.model.formulae(all.nested.model.effects, depvar, ranefs)
+ranef.nestings <- list(
+	subject='linear.n', 
+	item=c('voice.n', 'target_response.n', 'seen_in_training.n')
+)
+nested.model.formulae <- get.nested.model.formulae(all.nested.effects, depvar, ranefs)
 
 for (name in names(nested.model.formulae)) {
 	formula <- nested.model.formulae[[name]]
