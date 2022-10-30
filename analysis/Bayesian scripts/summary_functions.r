@@ -135,8 +135,6 @@ save_pmcmc <- function(
 	
 	if (filename == '') {
 		filename <- file.path(models.dir, 'model_pmcmcs.txt')
-	} else {
-		filename <- file.path(models.dir, filename)
 	}
 	
 	withOptions(
