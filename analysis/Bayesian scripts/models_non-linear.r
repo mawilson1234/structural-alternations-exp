@@ -116,7 +116,7 @@ results.with.nestings <- get_nested_data(
 	gcols = c('seen_in_training', 'target_response', 'data_source', 'voice')
 )
 
-all.nested.model.effects <- colnames(results.with.nestings)[grepl(paste(nesting.cols, collapse='|'), colnames(results.with.nestings))]
+all.nested.effects <- colnames(results.with.nestings)[grepl(paste(nesting.cols, collapse='|'), colnames(results.with.nestings))]
 
 depvar <- 'correct'
 ranefs <- c('subject', 'item')
@@ -124,7 +124,7 @@ ranef.nestings <- list(
 	subject='data_source.n', 
 	item=c('voice.n', 'target_response.n', 'seen_in_training.n')
 )
-nested.model.formulae <- get.nested.model.formulae(all.nested.model.effects, depvar, ranefs, ranef.nestings)
+nested.model.formulae <- get.nested.model.formulae(all.nested.effects, depvar, ranefs, ranef.nestings)
 
 for (name in names(nested.model.formulae)) {
 	formula <- nested.model.formulae[[name]]
