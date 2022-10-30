@@ -73,6 +73,7 @@ while (!(length(unique(model.lists)) == N_RUNS)) {
 	)
 }
 
+dir.create(file.path(models.dir, 'crossed'), showWarnings=FALSE, recursive=TRUE)
 models <- list()
 for (i in seq_along(model.lists)) {
 	cat(sprintf('Fitting crossed model %02d', i), '\n')

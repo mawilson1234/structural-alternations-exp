@@ -57,6 +57,8 @@ brm.args <- list(
 	seed=425
 )
 
+
+dir.create(file.path(models.dir, 'crossed_RTs'), showWarnings=FALSE, recursive=TRUE)
 models <- list()
 cat('Fitting crossed model (RTs)', '\n')
 models['Crossed model (RTs)'] <- do.call(brm, append(brm.args, list(
