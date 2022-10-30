@@ -330,7 +330,7 @@ model.results <- model.results |>
 	select(
 		subject, condition, training, item, word, target_response, args_group, sentence_type, 
 		sentence, adverb, seen_in_training, data_source, mouse, response, log.RT,
-		correct, correct.pre.training, voice, mask_added_tokens, stop_at
+		correct, correct.pre.training, voice, mask_added_tokens, stop_at, model_id
 	) |> 
 	arrange(subject, item, word, adverb)
 
@@ -1363,3 +1363,176 @@ filler |>
 	ggtitle(paste0('Log RT by Voice (>3 s.d. by subject removed, fillers) (', MOST_RECENT_SUBJECTS[[1]], '–', MOST_RECENT_SUBJECTS[[length(MOST_RECENT_SUBJECTS)]], ')')) +
 
 	facet_grid(. ~ subject + linear)
+
+########################################################################
+###################### EXPERIMENTAL ITEMS seen-unseen ##################
+########################################################################
+# accuracy by voice, target_response, and data_source
+exp |> 
+	filter(mask_added_tokens == "Don't mask blork", stop_at=="convergence") |>
+	droplevels() |> 
+	ggplot(aes(x=voice, y=as.numeric(correct), fill=target_response)) +
+	stat_summary(fun=mean, geom='bar', position='dodge', width=0.9) +
+	stat_summary(fun.data=beta_ci, geom='errorbar', width=0.33, position=position_dodge(0.9)) +
+	stat_summary(
+		fun.data=\(y) data.frame(y=mean(y), label=sprintf('%.2f', mean(y)), fill='white'), 
+		geom='label', position=position_dodge(0.9), show.legend=FALSE
+	) +
+	ylim(0, 1) +
+	scale_x_discrete(
+		'Template',
+		breaks = c('SVO active', 'OVS passive', 'OSV active'),
+		labels = c('SVO', 'OVS', '(OSV)')
+	) +
+	ylab('Pr. Correct') +
+	scale_fill_discrete('Target response') +
+	ggtitle(paste0('Pr. Correct by Voice')) +
+	facet_grid(data_source ~ seen_in_training)
+	
+# accuracy by voice, target_response, and data_source (subject means)
+exp |> 
+	filter(mask_added_tokens == "Don't mask blork", stop_at=="convergence") |>
+	droplevels() |> 
+	group_by(subject, data_source, voice, seen_in_training) |>
+	summarize(correct = mean(correct)) |>
+	ggplot(aes(x=voice, y=as.numeric(correct))) +
+	# geom_point(
+	# 	shape=21,
+	# 	cex=2,
+	# 	position=position_jitterdodge(dodge.width=0.9, jitter.width=0.45, jitter.height=0.0)
+	# ) +
+	# geom_violin(alpha=0.3) +
+	geom_boxplot() +
+	ylim(0, 1) +
+	scale_x_discrete(
+		'Template',
+		breaks = c('SVO active', 'OVS passive', 'OSV active'),
+		labels = c('SVO', 'OVS', '(OSV)')
+	) +
+	ylab('Pr. Correct') +
+	# scale_fill_discrete('Target response') +
+	ggtitle(paste0('Pr. Correct by Voice (subject means)')) +
+	facet_grid(data_source ~ seen_in_training)
+
+# accuracy by voice, target_response, data_source, and linear
+exp |>
+	filter(mask_added_tokens == "Don't mask blork", stop_at=="convergence") |>
+	droplevel() |>
+	ggplot(aes(x=voice, y=as.numeric(correct), fill=target_response)) +
+	stat_summary(fun=mean, geom='bar', position='dodge', width=0.9) +
+	stat_summary(fun.data=beta_ci, geom='errorbar', width=0.33, position=position_dodge(0.9)) +
+	stat_summary(
+		fun.data=\(y) data.frame(y=mean(y), label=sprintf('%.2f', mean(y)), fill='white'), 
+		geom='label', position=position_dodge(0.9), show.legend=FALSE
+	) +
+	linear_labels + 
+	ylim(0, 1) +
+	scale_x_discrete(
+		'Template',
+		breaks = c('SVO active', 'OVS passive', 'OSV active'),
+		labels = c('SVO', 'OVS', '(OSV)')
+	) +
+	ylab('Pr. Correct') +
+	scale_fill_discrete(
+		'Target response',
+		breaks = c('Subject target', 'Object target'),
+		labels = c('Subject target', 'Object target')
+	) +
+	ggtitle(paste0('Pr. Correct by Voice')) +
+	facet_grid(data_source ~ seen_in_training)
+
+# mean accuracy/subject by voice, target_response, data_source, and linear
+exp |> 
+	filter(mask_added_tokens == "Don't mask blork", stop_at=="convergence") |>
+	droplevels() |> 
+	group_by(subject, data_source, mask_added_tokens, stop_at, linear, voice, target_response) |>
+	summarize(correct = mean(correct)) |>
+	ggplot(aes(x=voice, y=as.numeric(correct), fill=target_response)) +
+	geom_boxplot(position='dodge', width=0.9) +
+	linear_labels + 
+	ylim(0, 1) +
+	scale_x_discrete(
+		'Template',
+		breaks = c('SVO active', 'OVS passive', 'OSV active'),
+		labels = c('SVO', 'OVS', '(OSV)')
+	) +
+	ylab('Pr. Correct (means)') +
+	scale_fill_discrete('Target response') +
+	ggtitle(paste0('Pr. Correct by Voice (subject means)')) +
+	facet_grid(data_source ~ seen_in_training + linear)
+
+# log RT by subject, data_source, linear, voice, and target_response
+exp |> 
+	filter(
+		data_source == 'human',
+		log.RT < log(MAX_RT_IN_SECONDS*1000)
+	) |>
+	group_by(subject) |>
+	mutate(sd.log.RT = sd(log.RT)) |>
+	filter(
+		log.RT < mean(log.RT) + (OUTLIER_RT_SDS * sd.log.RT), 
+		log.RT > mean(log.RT) - (OUTLIER_RT_SDS * sd.log.RT)
+	) |>
+	ungroup() |> 
+	ggplot(aes(x=voice, y=log.RT, fill=target_response)) +
+	geom_boxplot() +
+	linear_labels_humans +
+	scale_x_discrete(
+		'Template',
+		breaks = c('SVO active', 'OVS passive', 'OSV active'),
+		labels = c('SVO', 'OVS', '(OSV)')
+	) +
+	ylab('Log RT') +
+	scale_fill_discrete('Target response') +
+	ggtitle(sprintf('Log RT by Voice (>%s sec and >%s s.d. from mean by subject removed)', MAX_RT_IN_SECONDS, OUTLIER_RT_SDS)) +
+	facet_grid(. ~ linear + seen_in_training)
+
+# mean log RT by subject, data_source, linear, voice, and target_response
+exp |> 
+	filter(
+		data_source == 'human',
+		log.RT < log(MAX_RT_IN_SECONDS*1000)
+	) |>
+	group_by(subject) |>
+	mutate(sd.log.RT = sd(log.RT)) |>
+	filter(
+		log.RT < mean(log.RT) + (OUTLIER_RT_SDS * sd.log.RT), 
+		log.RT > mean(log.RT) - (OUTLIER_RT_SDS * sd.log.RT)
+	) |>
+	group_by(subject, data_source, linear, voice, target_response, seen_in_training) |>
+	summarize(log.RT = mean(log.RT)) |>
+	ggplot(aes(x=voice, y=log.RT, fill=target_response)) +
+	geom_boxplot() +
+	linear_labels_humans +
+	scale_x_discrete(
+		'Template',
+		breaks = c('SVO active', 'OVS passive', 'OSV active'),
+		labels = c('SVO', 'OVS', '(OSV)')
+	) +
+	ylab('Log RT (means)') +
+	scale_fill_discrete('Target response') +
+	ggtitle(sprintf('Log RT by Voice (subject means, >%s sec and >%s s.d. by subject removed)', MAX_RT_IN_SECONDS, OUTLIER_RT_SDS)) +
+	facet_grid(. ~ linear + seen_in_training)
+
+# F scores/subject by data_source, linear, voice, and target_response
+exp |> 
+	select(
+		subject, data_source, mask_added_tokens, 
+		stop_at, voice, target_response, linear, f.score
+	) |>
+	distinct() |>
+	mutate(f.score = case_when(is.na(f.score) ~ 0, TRUE ~ f.score)) |>
+	ggplot(aes(x=voice, y=f.score, fill=target_response)) +
+	geom_boxplot(position='dodge', width=0.9) +
+	linear_labels + 
+	# geom_violin(position='dodge', width=0.9, alpha=0.3) +
+	ylim(0, 1) +
+	scale_x_discrete(
+		'Template',
+		breaks = c('SVO active', 'OVS passive', 'OSV active'),
+		labels = c('SVO', 'OVS', '(OSV)')
+	) +
+	ylab('F score') +
+	scale_fill_discrete('Target response') +
+	ggtitle(paste0('Subject F scores by Voice')) +
+	facet_grid(data_source ~ mask_added_tokens + stop_at + linear)

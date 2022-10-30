@@ -3,9 +3,18 @@ library(brms)
 library(tools)
 library(tidyr)
 library(dplyr)
+library(purrr)
 library(ggpubr)
+library(stringr)
 library(R.utils)
 library(bayesplot)
+
+# brms will not accept essentially any
+# symbol in a variable name, so we're
+# stuck with this. it also won't 
+# take double underscores.
+NESTING_SEPARATOR <- '_i_n_'
+LEVEL_SEPARATOR <- '_a_t_'
 
 # Create directories to store results
 plots.dir <- 'Plots/Bayesian'
@@ -72,8 +81,6 @@ save_model_summaries <- function(
 	
 	if (filename == '') {
 		filename <- file.path(models.dir, 'model_summaries.txt')
-	} else {
-		filename <- file.path(models.dir, filename)
 	}
 	
 	if (file.exists(filename) & !overwrite){
@@ -175,7 +182,7 @@ save_pmcmc <- function(
 	)
 }
 
-save_model_plots <- function(models = list()) {	
+save_model_plots <- function(models = list(), plots.dir = '.') {	
 	for (model_name in names(models)) {	
 		# we have to put every plot in a list or else R flattens them out
 		# and they're unusable. amazing behavior. great language
@@ -215,9 +222,305 @@ save_model_plots <- function(models = list()) {
 		ggexport(
 			plotlist = plots,
 			filename = file.path(plots.dir, sprintf('%s_plots.pdf', gsub(' ', '_', tolower(model_name)))),
-			width = 15
-,			height = 12,
+			width = 15,
+			height = 12,
 			scale = 0.9
 		)
 	}
+}
+
+get_nested_data <- function(data, cols, gcols, out_of_group_value = 0) {	
+	for (c in cols) {
+		other_cols <- gcols[which(cols != c)]
+		# cat(sprintf('Getting nestings for %s within levels of %s', c, paste0(other_cols, collapse=', ')), '\n')
+		
+		comb <- lapply(
+				seq_along(other_cols),
+				\(i) combn(
+					other_cols,
+					m=i
+				)
+			)
+		
+		comb <- lapply(
+					comb,
+					\(x) {
+						x <- as.matrix(x)
+						lapply(
+							seq_len(ncol(x)),
+							\(i) x[,i]
+						)
+					}
+				)
+		
+		comb <- flatten(comb)
+		
+		for (co in comb) {
+			# cat(sprintf('Working on %s', paste0(co, collapse=' X ')), '\n')
+			groups <- data |>
+				select_at(co) |>
+				distinct()
+			
+			for (i in seq_len(nrow(groups))) {
+				group <- groups[i,]
+				group_s <- tolower(gsub(' ', '_', paste(paste0(gsub('(\\w)(.*?)(_|$)', '\\1', names(groups))), group, sep=LEVEL_SEPARATOR, collapse=NESTING_SEPARATOR)))
+				# cat(sprintf('Working on group nesting %s:%s', c, group_s), '\n')
+				nested_name <- paste0(c, NESTING_SEPARATOR, group_s)
+				
+				data <- data |> 
+					mutate(
+						`__tmp__` = tolower(gsub(' ', '_', paste(paste0(gsub('(\\w)(.*?)(_|$)', '\\1', names(groups))), group, sep=LEVEL_SEPARATOR, collapse=NESTING_SEPARATOR))),
+						'{nested_name}' := case_when(
+							`__tmp__` == group_s ~ !!!rlang::syms(c),
+							TRUE ~ out_of_group_value
+						)
+					) |>
+					select(-`__tmp__`)
+			}
+		}
+		# cat('\n')
+	}
+	
+	return (data)
+}
+
+re.findall <- function(regex, str) {
+	# lol R is awful
+	return (regmatches(str, gregexpr(regex, str, perl=TRUE)))
+}
+
+get.nested.model.formulae <- function(all.nested.effects, depvar, ranefs, ranef.nestings = list()) {
+	# gets formulae for all nestings of predictors in all.nested effects
+	# this may not work for other designs, but it works for ours! 
+	#
+	# good luck if you want to change this, string manipulation in R is not fun
+	# 
+	# 	params:
+	#  		all.nested.effects (string vector): a vector of strings contained all of the nested effects
+	#											these are the column names added by get_nested_data
+	#		depvar (string)					  : the name of the dependent variable
+	#		ranefs (string vector)			  : the names of the random effects groups
+	# 		ranef.nestings (list[str,str])	  : a list mapping random effects to
+	#											the variables within which they are nested
+	#
+	#   returns:
+	#		list[str,str]					  : a list mapping abbreviated group names
+	#										    to the formula for that nested model
+	#
+	nested.model.formulae <- data.frame(effect = all.nested.effects) |>
+		as_tibble() |> 
+		filter(grepl(NESTING_SEPARATOR, effect, fixed=TRUE)) |>
+		mutate(
+			n.effects = str_count(effect, NESTING_SEPARATOR)
+		) |>
+		arrange(n.effects, effect) |>
+		rowwise() |>
+		mutate(
+			nested = re.findall(paste0('^(.*?)(?=', NESTING_SEPARATOR, ')'), effect)[[1]],
+			group = paste0(re.findall(paste0('(?<=', NESTING_SEPARATOR, ')(.*?)(?=', LEVEL_SEPARATOR, '|$)'), effect)[[1]], collapse=NESTING_SEPARATOR),
+			added.effects = nesting.cols[
+								grepl(gsub(NESTING_SEPARATOR, '|', group), gsub('(\\w)(.*?)(_|$)', '\\1', nesting.cols))
+							] |>
+							paste0(collapse=' * '),
+			other.effects = nesting.cols[
+								!grepl(nested, nesting.cols) & 
+								!grepl(gsub(NESTING_SEPARATOR, '|', group), gsub('(\\w)(.*?)(_|$)', '\\1', nesting.cols))
+							] |>
+							paste0(collapse=' * ')
+		) |> 
+		ungroup() |> 
+		group_by(nested, n.effects, group) |>
+		mutate(
+			fixef = paste0(
+						paste0(
+							'(',
+								paste0(
+									paste0('`', paste0(effect, collapse='` + `'), '`'),
+									ifelse(unique(other.effects) != '', paste0(' + `', gsub('( \\* | \\+ |:)', '`\\1`', unique(added.effects)), '`'), '')
+								),
+							')'
+						),
+						ifelse(unique(other.effects) != '', paste0(' * `', gsub('( \\* | \\+ |:)', '`\\1`', unique(other.effects)), '`'), '')
+					)
+		)
+	
+	for (ranef in names(ranef.nestings)) {
+		ranef.nesting <- ranef.nestings[[ranef]]
+		
+		nested.model.formulae <- nested.model.formulae |>
+			group_by(nested, n.effects, group) |>						
+			mutate(
+				'ranef_{ranef}' := paste0(
+									'(1',
+									# get the things that aren't nested in random effects
+									# that are nested fixed effects
+									ifelse(
+											length(
+												effect[
+													!grepl(paste0('^(', paste0(ranef.nesting, collapse='|'), ')'), effect)
+												]
+											) != 0,
+											paste0(
+												' + (`',
+													paste0(effect[!grepl(paste0('^(', paste0(ranef.nesting, collapse='|'), ')'), effect)], collapse='` + `'),
+												'`)'
+											),
+											''
+									),
+									# get the things that aren't nested in random effects
+									# that aren't nested fixed effects
+									ifelse(
+										length(
+											strsplit(paste0(unique(added.effects), ' * ', unique(other.effects)), ' \\* ', perl=TRUE)[[1]][
+												!grepl(paste0('^(', paste0(ranef.nesting, collapse='|'), ')'), strsplit(paste0(unique(added.effects), ' * ', unique(other.effects)), ' \\* ', perl=TRUE)[[1]])
+											]
+										) != 0,
+										paste0(
+											' + `',
+											paste0(
+												strsplit(paste0(unique(added.effects), ' * ', unique(other.effects)), ' \\* ', perl=TRUE)[[1]][
+													!grepl(paste0('^(', paste0(ranef.nesting, collapse='|'), ')'), strsplit(paste0(unique(added.effects), ' * ', unique(other.effects)), ' \\* ', perl=TRUE)[[1]])
+												],
+												collapse = '` * `'
+											),
+											'`'
+										),
+										''
+									),
+									' | ',
+										ifelse(
+											(
+												length(
+												strsplit(paste0(unique(added.effects), ' * ', unique(other.effects)), ' \\* ', perl=TRUE)[[1]][
+													grepl(paste0('^(', paste0(ranef.nesting, collapse='|'), ')'), strsplit(paste0(unique(added.effects), ' * ', unique(other.effects)), ' \\* ', perl=TRUE)[[1]])
+												]
+												) != 0
+											) & (
+												length(
+													effect[
+														grepl(paste0('^(', paste0(ranef.nesting, collapse='|'), ')'), effect)
+													]
+												) != 0
+											),
+											'(',
+											''
+										),
+										# get the things that are nested in random effects
+										# that are nested fixed effects
+										ifelse(
+											length(
+												effect[
+													grepl(paste0('^(', paste0(ranef.nesting, collapse='|'), ')'), effect)
+												]
+											) != 0,
+											paste0(
+												'(`',
+													paste0(effect[grepl(paste0('^(', paste0(ranef.nesting, collapse='|'), ')'), effect)], collapse='` + `'),
+												'`)',
+												ifelse(
+													length(
+														strsplit(paste0(unique(added.effects), ' * ', unique(other.effects)), ' \\* ', perl=TRUE)[[1]][
+															grepl(paste0('^(', paste0(ranef.nesting, collapse='|'), ')'), strsplit(paste0(unique(added.effects), ' * ', unique(other.effects)), ' \\* ', perl=TRUE)[[1]])
+														]
+													) != 0,
+													':',
+													''
+												)
+											),
+											''
+											# paste0(paste0(ranef.nesting, collapse=':'), ':')
+										),
+										# get the things that are nested in random effects
+										# that aren't nested fixed effects
+										ifelse(
+											length(
+												strsplit(paste0(unique(added.effects), ' * ', unique(other.effects)), ' \\* ', perl=TRUE)[[1]][
+													grepl(paste0('^(', paste0(ranef.nesting, collapse='|'), ')'), strsplit(paste0(unique(added.effects), ' * ', unique(other.effects)), ' \\* ', perl=TRUE)[[1]])
+												]
+											) != 0,
+											paste0(
+												'`',
+												paste0(
+													strsplit(paste0(unique(added.effects), ' * ', unique(other.effects)), ' \\* ', perl=TRUE)[[1]][
+														grepl(paste0('^(', paste0(ranef.nesting, collapse='|'), ')'), strsplit(paste0(unique(added.effects), ' * ', unique(other.effects)), ' \\* ', perl=TRUE)[[1]])
+													],
+													collapse = '`:`'
+												),
+												'`',
+												ifelse(
+													(
+														length(
+														strsplit(paste0(unique(added.effects), ' * ', unique(other.effects)), ' \\* ', perl=TRUE)[[1]][
+															grepl(paste0('^(', paste0(ranef.nesting, collapse='|'), ')'), strsplit(paste0(unique(added.effects), ' * ', unique(other.effects)), ' \\* ', perl=TRUE)[[1]])
+														]
+														) != 0
+													) & (
+														length(
+															effect[
+																grepl(paste0('^(', paste0(ranef.nesting, collapse='|'), ')'), effect)
+															]
+														) != 0
+													),
+													'):`',
+													':`'
+												),
+												''
+											),
+											':`'
+										),
+									ranef,
+									'`)'
+								)
+			)
+	}
+	
+	ranef.cols <- colnames(nested.model.formulae)[grepl('^ranef_', colnames(nested.model.formulae))]
+	
+	nested.model.formulae <- nested.model.formulae |>
+		unite('ranef', all_of(ranef.cols), sep=' + ') |>
+		group_by(nested, n.effects, group) |>
+		mutate(
+			depvar = depvar,
+			formula = paste0(
+						'`', unique(depvar), '`',
+						' ~ ',
+						unique(fixef),
+						' + ',
+						unique(ranef)
+					)
+		) |>
+		ungroup() |>
+		select(nested, group, formula) |>
+		distinct()
+		
+		# 	# TODO: figure out how to do the nested random effects
+		# 	#		with the nested fixed effects. is this right?
+		# 	ranef = paste0(
+		# 				paste0(
+		# 					'(1 + ',
+		# 					unique(fixef),
+		# 					' | ',
+		# 					ranefs,
+		# 					collapse = ') + '
+		# 				),
+		# 				')'
+		# 			)
+		# }
+		# 	depvar = depvar,
+		# 	formula = paste0(
+		# 				unique(depvar),
+		# 				' ~ ',
+		# 				unique(fixef),
+		# 				' + ',
+		# 				unique(ranef)
+		# 			)
+		# ) |>
+		# ungroup() |>
+		# select(nested, group, formula) |> 
+		# distinct()
+	
+	nested.model.formulae.list <- lapply(nested.model.formulae$formula, formula)
+	names(nested.model.formulae.list) <- paste0(nested.model.formulae$nested, NESTING_SEPARATOR, nested.model.formulae$group)
+	
+	return (nested.model.formulae.list)
 }
