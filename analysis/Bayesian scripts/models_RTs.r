@@ -92,9 +92,9 @@ nesting.cols <- nesting.cols[!grepl('data_source\\.n', nesting.cols)]
 gcols <- gsub('\\.n$', '', nesting.cols)
 
 results.with.nestings <- get_nested_data(
-	results, 
-	cols = nesting.cols,
-	gcols = gcols
+	data=results, 
+	cols=nesting.cols,
+	gcols=gcols
 )
 
 all.nested.effects <- colnames(results.with.nestings)[grepl(paste(nesting.cols, collapse='|'), colnames(results.with.nestings))]

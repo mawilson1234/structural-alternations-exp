@@ -261,13 +261,19 @@ get_nested_data <- function(data, cols, gcols, out_of_group_value = 0) {
 			
 			for (i in seq_len(nrow(groups))) {
 				group <- groups[i,]
-				group_s <- tolower(gsub(' ', '_', paste(paste0(gsub('(\\w)(.*?)(_|$)', '\\1', names(groups))), group, sep=LEVEL_SEPARATOR, collapse=NESTING_SEPARATOR)))
+				# R/brms won't accept any non-word character in a variable name except for a dot or a single underscore
+				group_s <- tolower(gsub('(?:(?![.])([[:punct:]]| ))+', '_', paste(paste0(gsub('(\\w)(.*?)(_|$)', '\\1', names(groups))), group, sep=LEVEL_SEPARATOR, collapse=NESTING_SEPARATOR), perl=TRUE))
+				group_s <- remove.double.underscores(group_s)
+				# brms won't take trailing underscores in variable names
+				group_s <- gsub('_$', '', group_s)
 				# cat(sprintf('Working on group nesting %s:%s', c, group_s), '\n')
 				nested_name <- paste0(c, NESTING_SEPARATOR, group_s)
 				
 				data <- data |> 
 					mutate(
-						`__tmp__` = tolower(gsub(' ', '_', paste(paste0(gsub('(\\w)(.*?)(_|$)', '\\1', names(groups))), group, sep=LEVEL_SEPARATOR, collapse=NESTING_SEPARATOR))),
+						`__tmp__` = tolower(gsub('(?:(?![.])([[:punct:]])| )+', '_', paste(paste0(gsub('(\\w)(.*?)(_|$)', '\\1', names(groups))), group, sep=LEVEL_SEPARATOR, collapse=NESTING_SEPARATOR), perl=TRUE)) |>
+							remove.double.underscores() %>%
+							gsub('_$', '', .),
 						'{nested_name}' := case_when(
 							`__tmp__` == group_s ~ !!!rlang::syms(c),
 							TRUE ~ out_of_group_value
@@ -280,6 +286,13 @@ get_nested_data <- function(data, cols, gcols, out_of_group_value = 0) {
 	}
 	
 	return (data)
+}
+
+remove.double.underscores <- function(s) {
+	while ('__' %in% s) {
+		s <- gsub('__', '_', s)
+	}
+	return (s)
 }
 
 re.findall <- function(regex, str) {

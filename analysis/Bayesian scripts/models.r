@@ -90,7 +90,7 @@ for (i in seq_along(model.lists)) {
 
 save_model_summaries(
 	models,
-	filename=file.path(models.dir, 'crossed', 'crossed_model_accuracy_summaries.txt')),
+	filename=file.path(models.dir, 'crossed', 'crossed_model_accuracy_summaries.txt'),
 	overwrite=TRUE
 )
 
