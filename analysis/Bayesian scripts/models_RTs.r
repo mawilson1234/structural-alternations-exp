@@ -126,7 +126,7 @@ for (name in names(nested.model.formulae)) {
 	cat(sprintf('Fitting nested model (RTs) %s', name), '\n')
 	models[sprintf('Nested model (RTs) %s', name)] <- do.call(brm, append(brm.args, list(
 		formula = formula,
-		data = results.with.nestings |> filter(data_source == 'human' | subject %in% model.lists[[i]]),
+		data = results.with.nestings,
 		family = bernoulli(),
 		prior = priors,
 		file = file.path(nested.model.dir, sprintf('nested_model_RTs_%s.rds', name))
