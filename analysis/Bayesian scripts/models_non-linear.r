@@ -1,7 +1,7 @@
 source('Bayesian scripts/summary_functions.r')
 
-models.dir <- 'Models/Bayesian'
-plots.dir <- 'Plots/Bayesian'
+models.dir <- file.path('Models', 'Bayesian', 'accuracy_non-linear_only')
+plots.dir <- file.path('Plots', 'Bayesian', 'accuracy_non-linear_only')
 dir.create(models.dir, showWarnings=FALSE, recursive=TRUE)
 dir.create(plots.dir, showWarnings=FALSE, recursive=TRUE)
 
@@ -75,7 +75,7 @@ while (!(length(unique(model.lists)) == N_RUNS)) {
 	)
 }
 
-dir.create(file.path(models.dir, 'crossed_non-linear'), showWarnings=FALSE, recursive=TRUE)
+dir.create(file.path(models.dir, 'crossed'), showWarnings=FALSE, recursive=TRUE)
 models <- list()
 for (i in seq_along(model.lists)) {
 	cat(sprintf('Fitting crossed model (non-linear) %02d', i), '\n')
@@ -86,24 +86,24 @@ for (i in seq_along(model.lists)) {
 		data = results |> filter(data_source == 'human' | subject %in% model.lists[[i]]),
 		family = bernoulli(),
 		prior = priors_crossed,
-		file = file.path(models.dir, 'crossed_non-linear', sprintf('crossed_model_accuracy_non-linear_%02d.rds', i))
+		file = file.path(models.dir, 'crossed', sprintf('crossed_model_accuracy_non-linear_%02d.rds', i))
 	))) |> list()
 }
 
 save_model_summaries(
 	models,
-	filename=file.path(models.dir, 'crossed_non-linear', 'crossed_model_accuracy_non-linear_summaries.txt'), 
+	filename=file.path(models.dir, 'crossed', 'crossed_model_accuracy_non-linear_summaries.txt'), 
 	overwrite=TRUE
 )
 
 save_pmcmc(
 	models,
-	filename=file.path(models.dir, 'crossed_non-linear', 'crossed_model_accuracy_non-linear_pmcmcs.txt')
+	filename=file.path(models.dir, 'crossed', 'crossed_model_accuracy_non-linear_pmcmcs.txt')
 )
 
 save_model_plots(
 	models,
-	plots.dir=file.path(plots.dir, 'crossed_non-linear')
+	plots.dir=file.path(plots.dir, 'crossed')
 )
 
 nesting.cols <- colnames(results)[grepl('\\.n$', colnames(results))]
@@ -131,8 +131,8 @@ for (name in names(nested.model.formulae)) {
 	effects <- attr(terms(formula), 'term.labels')
 	fixef <- effects[!grepl('^1|0 + ', effects)]
 	
-	nested.model.dir <- file.path(models.dir, paste0('nested_non-linear_', name))
-	nested.plots.dir <- file.path(plots.dir, paste0('nested_non-linear_', name))
+	nested.model.dir <- file.path(models.dir, paste0('nested_', name))
+	nested.plots.dir <- file.path(plots.dir, paste0('nested_', name))
 	dir.create(nested.model.dir, showWarnings=FALSE, recursive=TRUE)
 	dir.create(nested.plots.dir, showWarnings=FALSE, recursive=TRUE)
 	

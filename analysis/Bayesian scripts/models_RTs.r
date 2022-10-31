@@ -1,7 +1,7 @@
 source('Bayesian scripts/summary_functions.r')
 
-models.dir <- 'Models/Bayesian'
-plots.dir <- 'Models/Bayesian'
+models.dir <- file.path('Models', 'Bayesian', 'RTs')
+plots.dir <- file.path('Plots', 'Bayesian', 'RTs')
 dir.create(models.dir, showWarnings=FALSE, recursive=TRUE)
 dir.create(plots.dir, showWarnings=FALSE, recursive=TRUE)
 
@@ -57,7 +57,7 @@ brm.args <- list(
 	seed=425
 )
 
-dir.create(file.path(models.dir, 'crossed_RTs'), showWarnings=FALSE, recursive=TRUE)
+dir.create(file.path(models.dir, 'crossed'), showWarnings=FALSE, recursive=TRUE)
 models <- list()
 cat('Fitting crossed model (RTs)', '\n')
 models['Crossed model (RTs)'] <- do.call(brm, append(brm.args, list(
@@ -67,23 +67,23 @@ models['Crossed model (RTs)'] <- do.call(brm, append(brm.args, list(
 	data = results,
 	family = lognormal(),
 	prior = priors_crossed_RT,
-	file = file.path(models.dir, 'crossed_RTs', 'crossed_model_RTs.rds')
+	file = file.path(models.dir, 'crossed', 'crossed_model_RTs.rds')
 ))) |> list()
 
 save_model_summaries(
 	models,
-	filename=file.path(models.dir, 'crossed_RTs', 'crossed_model_RTs_summary.txt'),
+	filename=file.path(models.dir, 'crossed', 'crossed_model_RTs_summary.txt'),
 	overwrite=TRUE
 )
 
 save_pmcmc(
 	models,
-	filename=file.path(models.dir, 'crossed_RTs', 'crossed_model_RTs_pmcmcs.txt')
+	filename=file.path(models.dir, 'crossed', 'crossed_model_RTs_pmcmcs.txt')
 )
 
 save_model_plots(
 	models,
-	plots.dir=file.path(plots.dir, 'crossed_RTs')
+	plots.dir=file.path(plots.dir, 'crossed')
 )
 
 nesting.cols <- colnames(results)[grepl('\\.n$', colnames(results))]
@@ -111,8 +111,8 @@ for (name in names(nested.model.formulae)) {
 	effects <- attr(terms(formula), 'term.labels')
 	fixef <- effects[!grepl('^1|0 + ', effects)]
 	
-	nested.model.dir <- file.path(models.dir, paste0('nested_RTs_', name))
-	nested.plots.dir <- file.path(plots.dir, paste0('nested_RTs_', name))
+	nested.model.dir <- file.path(models.dir, paste0('nested_', name))
+	nested.plots.dir <- file.path(plots.dir, paste0('nested_', name))
 	dir.create(nested.model.dir, showWarnings=FALSE, recursive=TRUE)
 	dir.create(nested.plots.dir, showWarnings=FALSE, recursive=TRUE)
 	

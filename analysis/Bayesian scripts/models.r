@@ -1,7 +1,7 @@
 source('Bayesian scripts/summary_functions.r')
 
-models.dir <- 'Models/Bayesian'
-plots.dir <- 'Plots/Bayesian'
+models.dir <- file.path('Models', 'Bayesian', 'accuracy_all')
+plots.dir <- file.path('Plots', 'Bayesian', 'accuracy_all')
 dir.create(models.dir, showWarnings=FALSE, recursive=TRUE)
 dir.create(plots.dir, showWarnings=FALSE, recursive=TRUE)
 
