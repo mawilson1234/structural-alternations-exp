@@ -151,7 +151,7 @@ for (name in names(nested.model.formulae)) {
 			data = results.with.nestings |> filter(data_source == 'human' | subject %in% model.lists[[i]]),
 			family = bernoulli(),
 			prior = priors,
-			file = file.path(nested.model.dir, sprintf('nested_model_accuracy_non-linear_%s_%02d.rds', name))
+			file = file.path(nested.model.dir, sprintf('nested_model_accuracy_non-linear_%s_%02d.rds', name, i))
 		))) |> list()
 	}
 	
