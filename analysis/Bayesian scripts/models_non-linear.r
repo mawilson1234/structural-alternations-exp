@@ -101,6 +101,7 @@ save_pmcmc(
 	filename=file.path(models.dir, 'crossed', 'crossed_model_accuracy_non-linear_pmcmcs.txt')
 )
 
+dir.create(file.path(plots.dir, 'crossed'), showWarnings=FALSE, recursive=TRUE
 save_model_plots(
 	models,
 	plots.dir=file.path(plots.dir, 'crossed')
