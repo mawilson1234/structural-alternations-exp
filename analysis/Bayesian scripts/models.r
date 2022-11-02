@@ -76,7 +76,14 @@ while (!(length(unique(model.lists)) == N_RUNS)) {
 dir.create(file.path(models.dir, 'crossed'), showWarnings=FALSE, recursive=TRUE)
 models <- list()
 for (i in seq_along(model.lists)) {
-	cat(sprintf('Fitting crossed model %02d', i), '\n')
+	reload.subject.ids <- FALSE
+	if (file.exists(file.path(models.dir, 'crossed', sprintf('crossed_model_accuracy_%02d.rds', i)))) {
+		cat(sprintf('Loading crossed model %02d', i), '\n')
+		reload.subject.ids <- TRUE	
+	} else {
+		cat(sprintf('Fitting crossed model %02d', i), '\n')
+	}
+			
 	models[sprintf('Crossed model %02d', i)] <- do.call(brm, append(brm.args, list(
 		formula = correct ~ voice.n * data_source.n * target_response.n * seen_in_training.n +
 			(1 + voice.n * target_response.n * seen_in_training.n | data_source.n:subject) +
@@ -86,6 +93,10 @@ for (i in seq_along(model.lists)) {
 		prior = priors_crossed,
 		file = file.path(models.dir, 'crossed', sprintf('crossed_model_accuracy_%02d.rds', i))
 	))) |> list()
+	
+	if (reload.subject.ids) {
+		model.lists[[i]] <- models[[sprintf('Crossed model %02d', i)]]$data$subject |> unique()
+	}
 }
 
 save_model_summaries(
@@ -143,7 +154,12 @@ for (name in names(nested.model.formulae)) {
 	
 	models <- list()
 	for (i in seq_along(model.lists)) {
-		cat(sprintf('Fitting nested model %s %02d', name, i), '\n')
+		if (file.exists(file.path(nested.model.dir, sprintf('nested_model_accuracy_%s_%02d.rds', name, i)))) {
+			cat(sprintf('Loading nested model %s %02d', name, i), '\n')
+		} else {
+			cat(sprintf('Fitting nested model %s %02d', name, i), '\n')
+		}
+		
 		models[sprintf('Nested model %s %02d', name, i)] <- do.call(brm, append(brm.args, list(
 			formula = formula,
 			data = results.with.nestings |> filter(data_source == 'human' | subject %in% model.lists[[i]]),

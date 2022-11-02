@@ -59,7 +59,6 @@ brm.args <- list(
 
 dir.create(file.path(models.dir, 'crossed'), showWarnings=FALSE, recursive=TRUE)
 models <- list()
-cat('Fitting crossed model (RTs)', '\n')
 models['Crossed model (RTs)'] <- do.call(brm, append(brm.args, list(
 	formula = RT ~ voice.n * target_response.n * seen_in_training.n * linear.n +
 		(1 + voice.n * target_response.n * seen_in_training.n | linear.n:subject) +
