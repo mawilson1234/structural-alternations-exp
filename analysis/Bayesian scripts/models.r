@@ -76,14 +76,7 @@ while (!(length(unique(model.lists)) == N_RUNS)) {
 dir.create(file.path(models.dir, 'crossed'), showWarnings=FALSE, recursive=TRUE)
 models <- list()
 for (i in seq_along(model.lists)) {
-	reload.subject.ids <- FALSE
-	if (file.exists(file.path(models.dir, 'crossed', sprintf('crossed_model_accuracy_%02d.rds', i)))) {
-		cat(sprintf('Loading crossed model %02d', i), '\n')
-		reload.subject.ids <- TRUE	
-	} else {
-		cat(sprintf('Fitting crossed model %02d', i), '\n')
-	}
-			
+	
 	models[sprintf('Crossed model %02d', i)] <- do.call(brm, append(brm.args, list(
 		formula = correct ~ voice.n * data_source.n * target_response.n * seen_in_training.n +
 			(1 + voice.n * target_response.n * seen_in_training.n | data_source.n:subject) +
@@ -94,9 +87,9 @@ for (i in seq_along(model.lists)) {
 		file = file.path(models.dir, 'crossed', sprintf('crossed_model_accuracy_%02d.rds', i))
 	))) |> list()
 	
-	if (reload.subject.ids) {
-		model.lists[[i]] <- models[[sprintf('Crossed model %02d', i)]]$data$subject |> unique()
-	}
+	# this ensures that if we've already fit the models and are just loading them from disk
+	# that the model lists will be identical for the nested models
+	model.lists[[i]] <- models[[sprintf('Crossed model %02d', i)]]$data$subject |> unique()
 }
 
 save_model_summaries(
