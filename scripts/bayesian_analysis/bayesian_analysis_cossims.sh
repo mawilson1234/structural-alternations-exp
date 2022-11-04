@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=salts_exp_bayes-RTs
+#SBATCH --job-name=salts_exp_bayes-cossims
 #SBATCH --output=joblogs/%x_%j.txt
 #SBATCH --nodes=1
 #SBATCH --ntasks=4
@@ -12,8 +12,8 @@
 
 module load R/4.1.0-foss-2020b
 
-echo Running script: scripts/bayesian_analysis_RTs.sh
+echo Running script: scripts/bayesian_analysis_cossims.sh
 
 cd analysis/
 
-Rscript Bayesian\ scripts/models_RTs.r
+Rscript Bayesian\ scripts/models_cossims.r
