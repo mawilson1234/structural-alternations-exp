@@ -1,5 +1,6 @@
 # Load libraries
 library(plyr)
+library(ggh4x)
 library(ggpubr)
 library(stringr)
 library(tidyverse)
@@ -309,10 +310,13 @@ model.results <- model.results |>
 			sentence %like% 'usually' ~ 'usually',
 			sentence %like% 'typically' ~ 'typically'
 		),
-		subject = match(random_seed, c(
-			1:max(as.numeric(as.character(results$subject))), 
-			random_seed |> unique()
-		)),
+		subject = match(
+			random_seed, 
+			c(
+				1:max(as.numeric(as.character(results$subject))), 
+				random_seed |> unique()
+			)
+		),
 		args_group = case_when(
 						condition == 'experimental' ~ args_group,
 						condition == 'filler' ~ gsub('syn_(.*?)_ext_for_human_exp', '\\1', eval_data)
@@ -338,7 +342,8 @@ model.results <- model.results |>
 results <- results |> 
 	mutate(
 		training = 'SVO only',
-		subject = as.numeric(as.character(subject))
+		subject = as.numeric(as.character(subject)),
+		model_id = NA_character_
 	) |> 
 	rbind(
 		model.results |>
@@ -357,11 +362,7 @@ results <- results |>
 						fct_relevel('Subject target', 'Object target'),
 		args_group = paste(gsub('\\_', '+', args_group), 'args') |> 
 						fct_relevel(
-							'female+male args', 
-							'red+yellow args', 
-							'vehicles+buildings args', 
 							'buildings+vehicles args',
-							'vanimals+canimals args',
 							'eat args',
 							'regret args',
 							'break args', 
@@ -379,9 +380,7 @@ results <- results |>
 				'raising perfect passive',
 				'cleft subject perfect passive',
 				'neg perfect passive',
-				'cleft subject raising perfect passive',
-				'cleft object perfect transitive',
-				'presentational ORC perfect transitive'
+				'cleft subject raising perfect passive'
 			),
 		voice = case_when(
 					voice %like% 'active' ~ 'SVO active',
@@ -493,6 +492,45 @@ results <- results |>
 				)
 	)
 
+# read in cosine similarity files for models
+# to determine whether success distinguishing
+# pre-fine-tuning BLORKED from non-BLORKED targets
+# predicts accuracy post-fine-tuning
+py_run_string(
+	paste0(
+		'cossim_csvs = glob("C:/Users/mawilson/OneDrive - Yale University/',
+		'CLAY Lab/structural-alternations/outputs/fhe/*bert*/bv-margs*/',
+		'**/*cossims.csv.gz", recursive=True)'
+	)
+)
+py_run_string('cossim_results = pd.concat([pd.read_csv(f) for f in tqdm(cossim_csvs)], ignore_index=True)')
+
+cossim.results <- py$cossim_results |> 
+	as_tibble() |>
+	mutate(
+		data_source = gsub('(B|b)ert', 'BERT', str_to_title(model_name)),
+		token = gsub('^\u0120', '', token) # formatting bug with roberta models
+	)
+
+# get mean cosine similarity (with and without correction for each model)
+cossim.means <- cossim.results |> 
+	filter(
+		!grepl('most similar$', target_group),
+		correction == 'all_but_the_top'
+	) |>
+	mutate(eval_epoch = case_when(eval_epoch == 0 ~ as.character(eval_epoch), TRUE ~ epoch_criteria)) |>
+	group_by(model_id, target_group, eval_epoch) |>
+	summarize(mean_cossim_to_targets = mean(cossim)) |>
+	filter(
+		eval_epoch != 0,
+		target_group == 'BLORKED'
+	) |> 
+	ungroup() |>
+	select(-target_group, -eval_epoch)
+
+results <- results |>
+	left_join(cossim.means)
+
 # get all excluded subjects
 all.excluded.subjects <- c(
 		less.than.75.on.training$subject,
@@ -534,6 +572,7 @@ all.excluded.subjects <- c(
 excluded.for.reasons.other.than.nonlinear <- all.excluded.subjects |>
 	filter(why.excluded != 'n.d. from linear')
 
+full.results <- results
 results <- results |>
 	filter(!(subject %in% excluded.for.reasons.other.than.nonlinear$subject)) |>
 	droplevels()
@@ -944,6 +983,38 @@ exp |>
 	scale_fill_discrete('Target response') +
 	ggtitle(paste0('Subject F scores by Voice')) +
 	facet_grid(data_source ~ mask_added_tokens + stop_at + linear)
+
+# mean accuracy by mean cosine similarity to targets (models only)
+exp |>
+	filter(!is.na(mean_cossim_to_targets)) |>
+	droplevels() |>
+	group_by(subject, data_source, voice, target_response, mean_cossim_to_targets, mask_added_tokens, stop_at) |>
+	summarize(correct = mean(correct)) |>
+	ggplot(aes(x=mean_cossim_to_targets, y=as.numeric(correct), fill=target_response)) +
+	geom_point(shape=21, cex=2) +
+	geom_smooth(method='lm') +
+	ylim(0, 1) +
+	xlab('Mean cosine similarity to best targets for blorked (determined pre-fine-tuning)') +
+	ylab('Pr. Correct') +
+	scale_fill_discrete('Target response') +
+	ggtitle(paste0('Pr. Correct by mean cosine similarity to blorked targets')) +
+	facet_grid2(data_source ~ mask_added_tokens + stop_at + voice + target_response, scales='free_x', independent='x')
+
+# mean accuracy by mean cosine similarity to targets (models only) and linear
+exp |>
+	filter(!is.na(mean_cossim_to_targets)) |>
+	droplevels() |>
+	group_by(subject, data_source, voice, target_response, mean_cossim_to_targets, linear, mask_added_tokens, stop_at) |>
+	summarize(correct = mean(correct)) |>
+	ggplot(aes(x=mean_cossim_to_targets, y=as.numeric(correct), fill=target_response)) +
+	geom_point(shape=21, cex=2) +
+	geom_smooth(method='lm') +
+	ylim(0, 1) +
+	xlab('Mean cosine similarity to best targets for blorked (determined pre-fine-tuning)') +
+	ylab('Pr. Correct') +
+	scale_fill_discrete('Target response') +
+	ggtitle(paste0('Pr. Correct by mean cosine similarity to blorked targets')) +
+	facet_grid2(data_source ~ mask_added_tokens + stop_at + linear + voice + target_response, scales='free_x', independent='x')
 
 ########################################################################
 ###################### PRE-FINE-TUNING (MODELS ONLY) ###################
