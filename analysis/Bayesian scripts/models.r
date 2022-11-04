@@ -127,7 +127,7 @@ ranef.nestings <- list(
 	subject='data_source.n', 
 	item=c('voice.n', 'target_response.n', 'seen_in_training.n')
 )
-nested.model.formulae <- get.nested.model.formulae(all.nested.effects, depvar, ranefs, ranef.nestings)
+nested.model.formulae <- get.nested.model.formulae(all.nested.effects, nesting.cols, depvar, ranefs, ranef.nestings)
 
 for (name in names(nested.model.formulae)) {
 	# windows can't use : in filenames

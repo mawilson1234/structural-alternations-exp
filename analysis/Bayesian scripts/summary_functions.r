@@ -300,7 +300,7 @@ re.findall <- function(regex, str) {
 	return (regmatches(str, gregexpr(regex, str, perl=TRUE)))
 }
 
-get.nested.model.formulae <- function(all.nested.effects, depvar, ranefs, ranef.nestings = list()) {
+get.nested.model.formulae <- function(all.nested.effects, all.effect.cols, depvar, ranefs, ranef.nestings = list()) {
 	# gets formulae for all nestings of predictors in all.nested effects
 	# this may not work for other designs, but it works for ours! 
 	#
@@ -329,13 +329,13 @@ get.nested.model.formulae <- function(all.nested.effects, depvar, ranefs, ranef.
 		mutate(
 			nested = re.findall(paste0('^(.*?)(?=', NESTING_SEPARATOR, ')'), effect)[[1]],
 			group = paste0(re.findall(paste0('(?<=', NESTING_SEPARATOR, ')(.*?)(?=', LEVEL_SEPARATOR, '|$)'), effect)[[1]], collapse=NESTING_SEPARATOR),
-			added.effects = nesting.cols[
-								grepl(gsub(NESTING_SEPARATOR, '|', group), gsub('(\\w)(.*?)(_|$)', '\\1', nesting.cols))
+			added.effects = all.effect.cols[
+								grepl(gsub(NESTING_SEPARATOR, '|', group), gsub('(\\w)(.*?)(_|$)', '\\1', all.effect.cols))
 							] |>
 							paste0(collapse=' * '),
-			other.effects = nesting.cols[
-								!grepl(nested, nesting.cols) & 
-								!grepl(gsub(NESTING_SEPARATOR, '|', group), gsub('(\\w)(.*?)(_|$)', '\\1', nesting.cols))
+			other.effects = all.effect.cols[
+								!grepl(nested, all.effect.cols) & 
+								!grepl(gsub(NESTING_SEPARATOR, '|', group), gsub('(\\w)(.*?)(_|$)', '\\1', all.effect.cols))
 							] |>
 							paste0(collapse=' * ')
 		) |> 

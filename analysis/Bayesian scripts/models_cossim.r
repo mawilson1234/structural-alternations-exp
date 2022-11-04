@@ -68,7 +68,7 @@ save_model_plots(
 )
 
 nesting.cols <- colnames(results)[grepl('\\.n$', colnames(results))]
-nesting.cols <- nesting.cols[!grepl('mean_cossim_to_targets', nesting.cols)]
+nesting.cols <- nesting.cols[!grepl('((data_source|linear)\\.n|mean_cossim_to_targets)', nesting.cols)]
 gcols <- gsub('\\.n$', '', nesting.cols)
 
 results.with.nestings <- get_nested_data(
@@ -85,7 +85,9 @@ ranef.nestings <- list(
 	subject='mean_cossim_to_targets', 
 	item=c('voice.n', 'target_response.n', 'seen_in_training.n')
 )
-nested.model.formulae <- get.nested.model.formulae(all.nested.effects, depvar, ranefs, ranef.nestings)
+
+all.effect.cols <- c(nesting.cols, 'mean_cossim_to_targets')
+nested.model.formulae <- get.nested.model.formulae(all.nested.effects, all.effect.cols, depvar, ranefs, ranef.nestings)
 
 for (name in names(nested.model.formulae)) {
 	formula <- nested.model.formulae[[name]]
