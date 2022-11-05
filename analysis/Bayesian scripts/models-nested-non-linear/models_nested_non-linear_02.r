@@ -40,7 +40,7 @@ results.with.nestings <- get_nested_data(
 
 nested.model.formulae <- readRDS(file.path('Bayesian scripts', 'nested_model_formulae_accuracy.rds'))
 
-name <- nested.model.formulae[[2]]
+name <- names(nested.model.formulae)[[2]]
 
 nested.model.dir <- file.path(models.dir, paste0('nested_', name))
 nested.plots.dir <- file.path(plots.dir, paste0('nested_', name))
