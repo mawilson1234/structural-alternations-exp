@@ -19,6 +19,11 @@ MOST_RECENT_SUBJECTS <- 52:57
 MAX_RT_IN_SECONDS <- 10
 OUTLIER_RT_SDS <- 2
 
+# we didn't have exclusion based on tags prior to training the models
+# so we want to exclude bad tokens now
+# these are tokens that spaCy does not tag as VBN or VBZ, which is what we want
+EXCLUDE_FROM_COSSIMS <- c('website', 'trail', 'factory', 'rack', 'shop', 'wheel', 'track')
+
 # confidence interval for beta distribution
 beta_ci <- function(y, ci=0.95) {
 	alpha <- sum(y) + 1
@@ -512,11 +517,12 @@ cossim.results <- py$cossim_results |>
 		token = gsub('^\u0120', '', token) # formatting bug with roberta models
 	)
 
-# get mean cosine similarity (with and without correction for each model)
+# get mean cosine similarity (with correction) for each model
 cossim.means <- cossim.results |> 
 	filter(
 		!grepl('most similar$', target_group),
-		correction == 'all_but_the_top'
+		correction == 'all_but_the_top',
+		!(token %in% EXCLUDE_FROM_COSSIMS)
 	) |>
 	mutate(eval_epoch = case_when(eval_epoch == 0 ~ as.character(eval_epoch), TRUE ~ epoch_criteria)) |>
 	group_by(model_id, target_group, eval_epoch) |>
@@ -1584,26 +1590,19 @@ exp |>
 	scale_fill_discrete('Target response') +
 	ggtitle(sprintf('Log RT by Voice (subject means, >%s sec and >%s s.d. by subject removed)', MAX_RT_IN_SECONDS, OUTLIER_RT_SDS)) +
 	facet_grid(. ~ linear + seen_in_training)
-
-# F scores/subject by data_source, linear, voice, and target_response
-exp |> 
-	select(
-		subject, data_source, mask_added_tokens, 
-		stop_at, voice, target_response, linear, f.score
-	) |>
-	distinct() |>
-	mutate(f.score = case_when(is.na(f.score) ~ 0, TRUE ~ f.score)) |>
-	ggplot(aes(x=voice, y=f.score, fill=target_response)) +
-	geom_boxplot(position='dodge', width=0.9) +
-	linear_labels + 
-	# geom_violin(position='dodge', width=0.9, alpha=0.3) +
+	
+# mean accuracy by mean cosine similarity to targets (models only)
+exp |>
+	filter(!is.na(mean_cossim_to_targets)) |>
+	droplevels() |>
+	group_by(subject, data_source, voice, target_response, mean_cossim_to_targets, mask_added_tokens, stop_at, seen_in_training) |>
+	summarize(correct = mean(correct)) |>
+	ggplot(aes(x=mean_cossim_to_targets, y=as.numeric(correct), fill=target_response)) +
+	geom_point(shape=21, cex=2) +
+	geom_smooth(method='lm') +
 	ylim(0, 1) +
-	scale_x_discrete(
-		'Template',
-		breaks = c('SVO active', 'OVS passive', 'OSV active'),
-		labels = c('SVO', 'OVS', '(OSV)')
-	) +
-	ylab('F score') +
+	xlab('Mean cosine similarity to best targets for blorked (determined pre-fine-tuning)') +
+	ylab('Pr. Correct') +
 	scale_fill_discrete('Target response') +
-	ggtitle(paste0('Subject F scores by Voice')) +
-	facet_grid(data_source ~ mask_added_tokens + stop_at + linear)
+	ggtitle(paste0('Pr. Correct by mean cosine similarity to blorked targets')) +
+	facet_grid2(data_source + seen_in_training ~ mask_added_tokens + stop_at + voice + target_response, scales='free_x', independent='x')
