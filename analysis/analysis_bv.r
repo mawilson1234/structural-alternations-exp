@@ -22,6 +22,8 @@ OUTLIER_RT_SDS <- 2
 # we didn't have exclusion based on tags prior to training the models
 # so we want to exclude bad tokens now
 # these are tokens that spaCy does not tag as VBN or VBZ, which is what we want
+
+# RECHECK THESE AFTER RERUNNING
 EXCLUDE_FROM_COSSIMS <- c('website', 'trail', 'factory', 'rack', 'shop', 'wheel', 'track')
 
 # confidence interval for beta distribution
