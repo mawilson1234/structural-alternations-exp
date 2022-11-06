@@ -6,6 +6,7 @@
 #SBATCH --ntasks=4
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
+#SBATCH --partition=week
 #SBATCH --time=02-00:00:00
 #SBATCH --mail-type=FAIL,END,INVALID_DEPEND
 
