@@ -39,7 +39,7 @@ results.with.nestings <- get_nested_data(
 
 nested.model.formulae <- readRDS(file.path('Bayesian scripts', 'nested_model_formulae_RTs.rds'))
 
-name <- names(nested.model.formulae[[20]]
+name <- names(nested.model.formulae)[[20]]
 
 formula <- nested.model.formulae[[name]]
 effects <- attr(terms(formula), 'term.labels')
