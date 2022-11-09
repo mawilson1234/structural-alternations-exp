@@ -1015,7 +1015,10 @@ exp |>
 exp |>
 	filter(data_source != 'human', stop_at == 'convergence', mask_added_tokens == "Don't mask blork") |>
 	droplevels() |>
-	group_by(subject, data_source, voice, target_response, mean_cossim_to_targets, linear, mask_added_tokens, stop_at) |>
+	group_by(
+		subject, data_source, voice, target_response, 
+		mean_cossim_to_targets, linear, mask_added_tokens, stop_at
+	) |>
 	summarize(correct = mean(correct)) |>
 	ggplot(aes(x=mean_cossim_to_targets, y=as.numeric(correct), fill=target_response)) +
 	geom_point(shape=21, cex=2) +
