@@ -8,6 +8,16 @@ dir.create(plots.dir, showWarnings=FALSE, recursive=TRUE)
 MAX_RT_IN_SECONDS <- 10
 OUTLIER_RT_SDS <- 2
 
+brm.args <- list(
+	iter=6500,
+	chains=4,
+	cores=4,
+	backend='cmdstanr',
+	threads=threading(4),
+	control=list(adapt_delta=0.99),
+	seed=425
+)
+
 results <- read.csv('accuracy-data.csv') |>
 	mutate(
 		subject = as.factor(subject),
