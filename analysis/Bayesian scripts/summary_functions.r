@@ -55,6 +55,7 @@ posteriors_plot <- function(x, pars = '', labels = '', title = '', color_scheme 
 		labels <- gsub(' Ds ', ' D.S. ', labels)
 		labels <- gsub(' Sit ', ' S.i.T. ', labels)
 		labels <- gsub(' v ', ' V. ', labels)
+		labels <- gsub(' l ', ' L. ', labels)
 		labels <- gsub('Bert', 'BERT', labels)
 	} else if (length(labels) != length(pars)) {
 		cat("Warning: the number of labels doesn't match the number of parameters to plot!")
