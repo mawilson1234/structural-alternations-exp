@@ -270,15 +270,16 @@ get_nested_data <- function(data, cols, gcols, out_of_group_value = 0) {
 				nested_name <- paste0(c, NESTING_SEPARATOR, group_s)
 				
 				data <- data |> 
+					rowwise() |>
 					mutate(
-						`__tmp__` = tolower(gsub('(?:(?![.])([[:punct:]])| )+', '_', paste(paste0(gsub('(\\w)(.*?)(_|$)', '\\1', names(groups))), group, sep=LEVEL_SEPARATOR, collapse=NESTING_SEPARATOR), perl=TRUE)) |>
+						`__tmp__` = tolower(gsub('(?:(?![.])([[:punct:]])| )+', '_', paste(gsub('(\\w)(.*?)(_|$)', '\\1', names(groups)), c(!!!rlang::syms(names(groups))), sep=LEVEL_SEPARATOR, collapse=NESTING_SEPARATOR), perl=TRUE)) |>
 							remove.double.underscores() %>%
 							gsub('_$', '', .),
 						'{nested_name}' := case_when(
 							`__tmp__` == group_s ~ !!!rlang::syms(c),
 							TRUE ~ out_of_group_value
 						)
-					) |>
+					) |> 
 					select(-`__tmp__`)
 			}
 		}
