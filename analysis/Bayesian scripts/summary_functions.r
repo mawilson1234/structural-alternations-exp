@@ -43,10 +43,19 @@ posteriors_plot <- function(x, pars = '', labels = '', title = '', color_scheme 
 	
 	if (labels == '') {
 		labels <- gsub('^b\\_', '', pars)
-		labels <- gsub('\\.n(:|$)', '\\1', labels)
-		labels <- gsub('(\\.|\\_)', ' ', labels)
+		labels <- gsub('\\.n(_|:|$)', '\\1', labels)
+		labels <- gsub(NESTING_SEPARATOR, ' \U03F5 ', labels)
+		labels <- gsub(LEVEL_SEPARATOR, ' @ ', labels)
+		labels <- gsub('(\\.|_)', ' ', labels)
 		labels <- gsub(':', ' × ', labels)
 		labels <- toTitleCase(labels)
+		labels <- gsub('Svo', 'SVO', labels)
+		labels <- gsub('Ovs', 'OVS', labels)
+		labels <- gsub(' Tr ', ' T.R. ', labels)
+		labels <- gsub(' Ds ', ' D.S. ', labels)
+		labels <- gsub(' Sit ', ' S.i.T. ', labels)
+		labels <- gsub(' v ', ' V. ', labels)
+		labels <- gsub('Bert', 'BERT', labels)
 	} else if (length(labels) != length(pars)) {
 		cat("Warning: the number of labels doesn't match the number of parameters to plot!")
 		cat('Some parameters may not be labeled, or may be labeled incorrectly.')
