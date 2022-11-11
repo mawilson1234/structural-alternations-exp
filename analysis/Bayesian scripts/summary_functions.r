@@ -16,6 +16,10 @@ library(bayesplot)
 NESTING_SEPARATOR <- '_i_n_'
 LEVEL_SEPARATOR <- '_a_t_'
 
+# for filtering RTs
+MAX_RT_IN_SECONDS <- 10
+OUTLIER_RT_SDS <- 2
+
 # Create directories to store results
 plots.dir <- 'Plots/Bayesian'
 models.dir <- 'Models/Bayesian'
@@ -23,6 +27,16 @@ dir.create(plots.dir, showWarnings=FALSE, recursive=TRUE)
 dir.create(models.dir, showWarnings=FALSE, recursive=TRUE)
 
 bayesplot_theme_set(theme_default(base_family = getOption('bayesplot.base_family', 'sans')))
+
+brm.args <- list(
+	iter=6500, 
+	chains=4, 
+	cores=4,
+	# backend='cmdstanr', 
+	# threads=threading(4),
+	control=list(adapt_delta=0.99),
+	seed=425
+)
 
 posteriors_plot <- function(x, pars = '', labels = '', title = '', color_scheme = ''){
 	if (color_scheme == ''){
@@ -240,7 +254,7 @@ save_model_plots <- function(models = list(), plots.dir = '.') {
 get_nested_data <- function(data, cols, gcols, out_of_group_value = 0) {	
 	for (c in cols) {
 		other_cols <- gcols[which(cols != c)]
-		# cat(sprintf('Getting nestings for %s within levels of %s', c, paste0(other_cols, collapse=', ')), '\n')
+		cat(sprintf('Getting nestings for %s within levels of %s', c, paste0(other_cols, collapse=', ')), '\n')
 		
 		comb <- lapply(
 				seq_along(other_cols),
@@ -264,7 +278,7 @@ get_nested_data <- function(data, cols, gcols, out_of_group_value = 0) {
 		comb <- flatten(comb)
 		
 		for (co in comb) {
-			# cat(sprintf('Working on %s', paste0(co, collapse=' X ')), '\n')
+			cat(sprintf('Working on %s', paste0(co, collapse=' X ')), '\n')
 			groups <- data |>
 				select_at(co) |>
 				distinct()
@@ -276,7 +290,7 @@ get_nested_data <- function(data, cols, gcols, out_of_group_value = 0) {
 				group_s <- remove.double.underscores(group_s)
 				# brms won't take trailing underscores in variable names
 				group_s <- gsub('_$', '', group_s)
-				# cat(sprintf('Working on group nesting %s:%s', c, group_s), '\n')
+				cat(sprintf(paste0('Working on group nesting %s', NESTING_SEPARATOR, '%s'), c, group_s), '\n')
 				nested_name <- paste0(c, NESTING_SEPARATOR, group_s)
 				
 				data <- data |> 
@@ -293,7 +307,7 @@ get_nested_data <- function(data, cols, gcols, out_of_group_value = 0) {
 					select(-`__tmp__`)
 			}
 		}
-		# cat('\n')
+		cat('\n')
 	}
 	
 	return (data)
@@ -545,4 +559,105 @@ get.nested.model.formulae <- function(all.nested.effects, all.effect.cols, depva
 	names(nested.model.formulae.list) <- paste0(nested.model.formulae$nested, NESTING_SEPARATOR, nested.model.formulae$group)
 	
 	return (nested.model.formulae.list)
+}
+
+ident <- function(df) return (df)
+
+fit.model <- function(
+	data.type,
+	model.type, 
+	data.file,
+	data.function,
+	formulae.file,
+	formula.no,
+	model.lists.file,
+	model.no,
+	family=bernoulli()
+) {
+	models.dir <- file.path('Models', 'Bayesian', data.type)
+	plots.dir <- file.path('Plots', 'Bayesian', data.type)
+	dir.create(models.dir, showWarnings=FALSE, recursive=TRUE)
+	dir.create(plots.dir, showWarnings=FALSE, recursive=TRUE)
+	
+	results <- read.csv(data.file) |> 
+		mutate(
+			subject = as.factor(subject),
+			item 	= as.factor(item)
+		) |>
+		data.function()
+	
+	model.formulae <- readRDS(file.path('Bayesian scripts', formulae.file))
+	name <- names(model.formulae)[[formula.no]]
+	
+	formula <- model.formulae[[name]]
+	effects <- attr(terms(formula), 'term.labels')
+	fixef <- effects[!grepl('^1|0 + ', effects)]
+	priors <- c(
+		set_prior('normal(0, 10)', class='Intercept'),
+		set_prior('lkj(2)', class='cor'),
+		set_prior('normal(0, 1)', class = 'b', coef=fixef)
+	)
+	
+	models <- list()
+	i <- model.no
+	model.lists <- readRDS(file.path('Bayesian scripts', model.lists.file))
+	
+	if (model.type == name) {
+		model.dir <- file.path(models.dir, paste0(model.type))
+		plot.dir <- file.path(plots.dir, paste0(model.type))
+		if (length(model.lists) == 1) {
+			out.file <- sprintf('%s_model_%s', model.type, data.type)
+			info.str <- sprintf('%s model (%s)', model.type, data.type)
+			model.name <- sprintf('%s model (%s)', toTitleCase(model.type), data.type)
+		} else {
+			out.file <- sprintf('%s_model_%s_%02d', model.type, data.type, i)
+			info.str <- sprintf('%s model (%s) %02d', model.type, data.type, i)
+			model.name <- sprintf('%s model (%s) %02d', toTitleCase(model.type), data.type, i)
+		}
+	} else {
+		model.dir <- file.path(models.dir, paste0(model.type, '_', name))
+		plot.dir <- file.path(plots.dir, paste0(model.type, '_', name))
+		if (length(model.lists) == 1) {
+			out.file <- sprintf('%s_model_%s_%s', model.type, data.type, name)
+			info.str <- sprintf('%s model (%s) %s', model.type, data.type, name)
+			model.name <- sprintf('%s model (%s) %s', toTitleCase(model.type), data.type, name)
+		} else {
+			out.file <- sprintf('%s_model_%s_%s_%02d', model.type, data.type, name, i)
+			info.str <- sprintf('%s model (%s) %s %02d', model.type, data.type, name, i)
+			model.name <- sprintf('%s model (%s) %s %02d', toTitleCase(model.type), data.type, name, i)
+		}
+	}
+	
+	dir.create(model.dir, showWarnings=FALSE, recursive=TRUE)
+	dir.create(plot.dir, showWarnings=FALSE, recursive=TRUE)
+	
+	if (file.exists(file.path(model.dir, paste0(out.file, '.rds')))) {
+		cat('Loading ', info.str, '\n', sep='')
+	} else {
+		cat('Fitting ', info.str, '\n', sep='')
+	}
+	
+	models[model.name] <- do.call(brm, append(brm.args, list(
+		formula = formula,
+		data = results |> filter(data_source == 'human' | subject %in% model.lists[[i]]),
+		family = family,
+		prior = priors,
+		file = file.path(model.dir, paste0(out.file, '.rds'))
+	))) |> list()
+	
+	save_model_summaries(
+		models,
+		filename=file.path(model.dir, paste0(out.file, '_summary.txt')),
+		overwrite=TRUE
+	)
+
+	save_pmcmc(
+		models,
+		filename=file.path(model.dir, paste0(out.file, '_pmcmcs.txt'))
+	)
+
+	save_model_plots(
+		models,
+		plots.dir=plot.dir
+	)
 }
