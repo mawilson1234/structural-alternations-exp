@@ -1,13 +1,13 @@
 # Load libraries
-library(brms)
-library(tools)
-library(tidyr)
-library(dplyr)
-library(purrr)
-library(ggpubr)
-library(stringr)
-library(R.utils)
-library(bayesplot)
+suppressMessages(library(brms))
+suppressMessages(library(tools))
+suppressMessages(library(tidyr))
+suppressMessages(library(dplyr))
+suppressMessages(library(purrr))
+suppressMessages(library(ggpubr))
+suppressMessages(library(stringr))
+suppressMessages(library(R.utils))
+suppressMessages(library(bayesplot))
 
 # brms will not accept essentially any
 # symbol in a variable name, so we're
@@ -32,8 +32,9 @@ brm.args <- list(
 	iter=6500, 
 	chains=4, 
 	cores=4,
-	# backend='cmdstanr', 
-	# threads=threading(4),
+	refresh=650,
+	backend='cmdstanr', 
+	threads=threading(4, static=TRUE),
 	control=list(adapt_delta=0.99),
 	seed=425
 )
@@ -636,6 +637,12 @@ fit.model <- function(
 	} else {
 		cat('Fitting ', info.str, '\n', sep='')
 	}
+	
+	# debug
+	# cat(paste0('out.file: ', out.file), '\n')
+	# cat(paste0('model.dir: ', model.dir), '\n')
+	# cat(paste0('plot.dir: ', plot.dir), '\n')
+	# quit()
 	
 	models[model.name] <- do.call(brm, append(brm.args, list(
 		formula = formula,

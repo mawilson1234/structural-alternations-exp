@@ -16,4 +16,4 @@ echo Running script: scripts/bayesian_analysis_nested_non-linear_15_06.sh
 
 cd analysis/
 
-Rscript Bayesian\ scripts/models-nested-non-linear/models_nested_non-linear_15_06.r
+Rscript Bayesian\ scripts/models-non-linear/models_nested_non-linear_15_06.r

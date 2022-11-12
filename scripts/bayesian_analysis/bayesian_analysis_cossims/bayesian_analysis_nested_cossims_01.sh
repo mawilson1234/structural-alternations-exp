@@ -16,4 +16,4 @@ echo Running script: scripts/bayesian_analysis_nested_cossims_01.sh
 
 cd analysis/
 
-Rscript Bayesian\ scripts/models-nested-cossims/models_nested_cossims_01.r
+Rscript Bayesian\ scripts/models-cossims/models_nested_cossims_01.r

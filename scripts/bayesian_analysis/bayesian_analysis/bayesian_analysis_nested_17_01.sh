@@ -16,4 +16,4 @@ echo Running script: scripts/bayesian_analysis_nested_17_01.sh
 
 cd analysis/
 
-Rscript Bayesian\ scripts/models-nested/models_nested_17_01.r
+Rscript Bayesian\ scripts/models/models_nested_17_01.r
