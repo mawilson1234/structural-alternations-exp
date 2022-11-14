@@ -146,7 +146,7 @@ save_model_summaries <- function(
 save_pmcmc <- function(
 	models = list(),
 	filename = '',
-	variable = '^b\\_',
+	variable = '^b_',
 	regex = TRUE,
 	max_digits = 4
 ) {
@@ -173,8 +173,17 @@ save_pmcmc <- function(
 				summary <- posteriors |>
 					# select(-`.chain`, -`.iteration`, -`.draw`) |>
 					pivot_longer(everything()) |>
+					mutate(
+						name = as.factor(name) |>
+							fct_relevel(colnames(posteriors))
+					) |> 
 					group_by(name) |>
-					summarize_all(list(sum=\(x) sum(x > 0),length=length)) |>
+					summarize(
+						across(
+							everything(), 
+							list(sum=\(x) sum(x > 0), length=length)
+						)
+					) |>
 					mutate(p_mcmc = sum/length) |>
 					select(name, p_mcmc)
 				
@@ -199,7 +208,10 @@ save_pmcmc <- function(
 					pmcmc <- summary[i, 'p_mcmc'][[1]]
 					dir <- ifelse(pmcmc > 0.5, ' < 0', ' > 0')
 					pmcmc <- ifelse(pmcmc > 0.5, 1 - pmcmc, pmcmc)
-					text <- paste0(text, '\n', sprintf(printformat, pmcmc), ': ', effect, dir)
+					sig <- ifelse(pmcmc < 0.05, '*', '')
+					sig <- ifelse(pmcmc < 0.001, '**', sig)
+					sig <- ifelse(pmcmc < 0.0001, '***', sig)
+					text <- paste0(text, '\n', sprintf(printformat, pmcmc), ': ', effect, dir, ' ', sig)
 				}
 				text <- paste0(text, botsep)
 			}
