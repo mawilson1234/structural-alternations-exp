@@ -238,12 +238,21 @@ save_model_plots <- function(models = list(), plots.dir = '.') {
 			}
 		}
 
-		plots <- append(plots, list(pp_check(model, ndraws=100) + ggtitle(sprintf('%s PP check', model_name))))
+		plots <- append(plots, list(pp_check(model, nsamples=100) + ggtitle(sprintf('%s PP check', model_name))))
+		
+		if (model$family$family == 'bernoulli') {
+			type <- 'error_binned'
+			title <- '%s binned residuals PP check'
+		} else {
+			type <- 'scatter_avg'
+			title <- '%s scatterplot PP check'
+		}
+		
 		plots <- append(
 					plots, 
 					list(
-						pp_check(model, ndraws=9, type='error_binned') + 
-						ggtitle(sprintf('%s binned residuals PP check', model_name))
+						pp_check(model, type=type) + 
+						ggtitle(sprintf(title, model_name))
 					)
 				)
 		
