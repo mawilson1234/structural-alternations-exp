@@ -184,7 +184,7 @@ save_pmcmc <- function(
 							list(sum=\(x) sum(x > 0), length=length)
 						)
 					) |>
-					mutate(p_mcmc = sum/length) |>
+					mutate(p_mcmc = value_sum/value_length) |>
 					select(name, p_mcmc)
 				
 				text <- paste0(text, topsep, model_name, ' posteriors', midsep)
