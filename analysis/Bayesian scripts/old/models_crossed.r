@@ -110,25 +110,27 @@ save_model_plots(
 	plots.dir=file.path(plots.dir, 'crossed')
 )
 
-# nesting.cols <- colnames(results)[grepl('\\.n$', colnames(results))]
-# nesting.cols <- nesting.cols[!grepl('linear\\.n', nesting.cols)]
-# gcols <- gsub('\\.n$', '', nesting.cols)
-
+nesting.cols <- colnames(results)[grepl('\\.n$', colnames(results))]
+nesting.cols <- nesting.cols[!grepl('linear\\.n', nesting.cols)]
+gcols <- gsub('\\.n$', '', nesting.cols)
+results.with.nestings <- read.csv('accuracy-data-nested.csv') |> as_tibble()
 # results.with.nestings <- get_nested_data(
 # 	results, 
 # 	cols = nesting.cols,
 # 	gcols = gcols
 # )
 
-# all.nested.effects <- colnames(results.with.nestings)[grepl(paste(nesting.cols, collapse='|'), colnames(results.with.nestings))]
+all.nested.effects <- colnames(results.with.nestings)[
+	grepl(paste(nesting.cols, collapse='|'), colnames(results.with.nestings))
+]
 
-# depvar <- 'correct'
-# ranefs <- c('subject', 'item')
-# ranef.nestings <- list(
-# 	subject='data_source.n', 
-# 	item=c('voice.n', 'target_response.n', 'seen_in_training.n')
-# )
-# nested.model.formulae <- get.nested.model.formulae(all.nested.effects, nesting.cols, depvar, ranefs, ranef.nestings)
+depvar <- 'correct'
+ranefs <- c('subject', 'item')
+ranef.nestings <- list(
+	subject='data_source.n', 
+	item=c('voice.n', 'target_response.n', 'seen_in_training.n')
+)
+nested.model.formulae <- get.nested.model.formulae(all.nested.effects, nesting.cols, depvar, ranefs, ranef.nestings)
 
 # for (name in names(nested.model.formulae)) {
 # 	# windows can't use : in filenames
