@@ -5,6 +5,7 @@ irb/
 chunk_includes/backup/
 joblogs/
 
+analysis/Bayesian scripts/old/
 analysis/Models/
 analysis/Models
 analysis/Plots/
