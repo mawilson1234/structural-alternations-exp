@@ -57,9 +57,9 @@ posteriors_plot <- function(x, pars = '', labels = '', title = '', color_scheme 
 	}
 	
 	if (labels == '') {
-		labels <- gsub('^b\\_', '', pars)
+		labels <- gsub('^b_', '', pars)
 		labels <- gsub('\\.n(_|:|$)', '\\1', labels)
-		labels <- gsub(NESTING_SEPARATOR, ' \U03F5 ', labels)
+		labels <- gsub(NESTING_SEPARATOR, ' (in) ', labels)
 		labels <- gsub(LEVEL_SEPARATOR, ' @ ', labels)
 		labels <- gsub('(\\.|_)', ' ', labels)
 		labels <- gsub(':', ' × ', labels)
@@ -181,9 +181,9 @@ save_pmcmc <- function(
 				text <- paste0(text, topsep, model_name, ' posteriors', midsep)
 				
 				for (i in seq_len(nrow(summary))) {
-					effect <- gsub('^b\\_', '', summary[i,'name'][[1]])
-					effect <- gsub('\\.n(:|$)', '\\1', effect)
-					effect <- gsub(NESTING_SEPARATOR, ' \U03FS ', effect)
+					effect <- gsub('^b_', '', summary[i,'name'][[1]])
+					effect <- gsub('\\.n(_|:|$)', '\\1', effect)
+					effect <- gsub(NESTING_SEPARATOR, ' (in) ', effect)
 					effect <- gsub(LEVEL_SEPARATOR, ' @ ', effect)
 					effect <- gsub('(\\.|_)', ' ', effect)
 					effect <- gsub(':', ' × ', effect)
