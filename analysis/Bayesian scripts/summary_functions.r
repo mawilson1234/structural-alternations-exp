@@ -276,7 +276,7 @@ save_model_plots <- function(models = list(), plots.dir = '.') {
 		# save the plots
 		ggexport(
 			plotlist = plots,
-			filename = file.path(plots.dir, sprintf('%s_plots.pdf', gsub(' ', '_', tolower(model_name)))),
+			filename = file.path(plots.dir, sprintf('%s_plots.pdf', gsub(' |\\.', '_', tolower(model_name)))),
 			width = 15,
 			height = 12,
 			scale = 0.9
@@ -643,15 +643,7 @@ fit.model <- function(
 	
 	model.formulae <- readRDS(file.path('Bayesian scripts', formulae.file))
 	name <- names(model.formulae)[[formula.no]]
-	
 	formula <- model.formulae[[name]]
-	effects <- attr(terms(formula), 'term.labels')
-	fixef <- effects[!grepl('^1|0 + ', effects)]
-	priors <- c(
-		set_prior('normal(0, 10)', class='Intercept'),
-		set_prior('lkj(2)', class='cor'),
-		set_prior('normal(0, 1)', class = 'b', coef=fixef)
-	)
 	
 	models <- list()
 	i <- model.no
@@ -702,7 +694,6 @@ fit.model <- function(
 		formula = formula,
 		data = results |> filter(data_source == 'human' | subject %in% model.lists[[i]]),
 		family = family,
-		prior = priors,
 		file = file.path(model.dir, paste0(out.file, '.rds'))
 	))) |> list()
 	
