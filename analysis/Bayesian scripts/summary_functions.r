@@ -585,11 +585,13 @@ get.nested.model.formulae <- function(
 		ranef.string <- paste0(ranef.string, ' | ')
 		rhs <- get.rhs(ranef.nesting, added.effects, crossed.effects, nested.effects)
 		if (rhs != '') {
-			ranef.string <- paste0(ranef.string, rhs, ':')
+			rhs <- paste0('`', names(ranef.nesting), '`:', rhs)
+		} else {
+			rhs <- paste0('`', names(ranef.nesting), '`')
 		}
 		
 		# add the group and close the parens
-		ranef.string <- paste0(ranef.string, '`', names(ranef.nesting), '`)')
+		ranef.string <- paste0(ranef.string, rhs, ')')
 	}
 	
 	for (ranef.group in names(ranef.nestings)) {

@@ -14,6 +14,8 @@ analysis/Pilot/
 analysis/Power analysis/
 analysis/Power analysis bayesian/
 analysis/analysis.r
+analysis/analysis_bv.r
+analysis/testing_nested_models.r
 analysis/dists.py
 analysis/results*
 
