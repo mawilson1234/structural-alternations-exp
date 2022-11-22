@@ -528,7 +528,10 @@ cossim.means <- cossim.results |>
 	) |>
 	mutate(eval_epoch = case_when(eval_epoch == 0 ~ as.character(eval_epoch), TRUE ~ epoch_criteria)) |>
 	group_by(model_id, target_group, eval_epoch) |>
-	summarize(mean_cossim_to_targets = mean(cossim)) |>
+	summarize(
+		max_cossim_to_targets = max(cossim),
+		mean_cossim_to_targets = mean(cossim)
+	) |>
 	filter(
 		eval_epoch != 0,
 		target_group == 'BLORKED'
@@ -1032,6 +1035,48 @@ exp |>
 		data_source ~ mask_added_tokens + stop_at + linear + voice, 
 		scales='free_x', independent='x'
 	)
+
+# mean accuracy by max cosine similarity to targets (models only)
+exp |>
+	filter(data_source != 'human', stop_at == 'convergence', mask_added_tokens == "Don't mask blork") |>
+	droplevels() |>
+	group_by(subject, data_source, voice, target_response, max_cossim_to_targets, mask_added_tokens, stop_at) |>
+	summarize(correct = mean(correct)) |>
+	ggplot(aes(x=max_cossim_to_targets, y=as.numeric(correct), fill=target_response)) +
+	geom_point(shape=21, cex=2) +
+	geom_smooth(method='lm') +
+	expand_limits(y=c(0,1)) +
+	xlab('Max cosine similarity to best targets for blorked (determined pre-fine-tuning)') +
+	ylab('Pr. Correct') +
+	scale_fill_discrete('Target response') +
+	ggtitle(paste0('Pr. Correct by max cosine similarity to blorked targets')) +
+	facet_grid2(
+		data_source ~ mask_added_tokens + stop_at + voice,
+		scales='free_x', independent='x'
+	)
+
+# mean accuracy by max cosine similarity to targets (models only) and linear
+exp |>
+	filter(data_source != 'human', stop_at == 'convergence', mask_added_tokens == "Don't mask blork") |>
+	droplevels() |>
+	group_by(
+		subject, data_source, voice, target_response, 
+		max_cossim_to_targets, linear, mask_added_tokens, stop_at
+	) |>
+	summarize(correct = mean(correct)) |>
+	ggplot(aes(x=max_cossim_to_targets, y=as.numeric(correct), fill=target_response)) +
+	geom_point(shape=21, cex=2) +
+	geom_smooth(method='lm') +
+	expand_limits(y=c(0,1)) +
+	xlab('Max cosine similarity to best targets for blorked (determined pre-fine-tuning)') +
+	ylab('Pr. Correct') +
+	scale_fill_discrete('Target response') +
+	ggtitle(paste0('Pr. Correct by max cosine similarity to blorked targets')) +
+	facet_grid2(
+		data_source ~ mask_added_tokens + stop_at + linear + voice, 
+		scales='free_x', independent='x'
+	)
+
 
 ########################################################################
 ###################### PRE-FINE-TUNING (MODELS ONLY) ###################
@@ -1625,3 +1670,52 @@ exp |>
 			mask_added_tokens + stop_at + voice + seen_in_training,
 		scales='free_x', independent='x'
 	)
+
+
+# AD HOC
+	# plots <- lapply(
+	# 	other.cols,
+	# 	\(col) {
+	# 		limits <- max(abs(results[[baseline.col]]), abs(results[[col]])) + 0.1
+	# 		limits <- c(-limits, limits)
+			
+	# 		return(
+	# 			results |>
+	# 				ggplot(aes(x=.data[[baseline.col]], y=.data[[col]], color=target_response)) +
+	# 				geom_abline(
+	# 					intercept=0,
+	# 					slope=1,
+	# 					linetype='dashed',
+	# 					color='darkgrey',
+	# 					linewidth=1
+	# 				) +
+	# 				geom_point(cex=2.5) +
+	# 				geom_text(
+	# 					aes(x=.data[[baseline.col]], y=.data[[col]]-0.08, label=word), 
+	# 					color='black', size=2.5, vjust='top'
+	# 				) +
+	# 				xlab(paste0('Confidence in ', baseline.col, ' sentences')) +
+	# 				ylab(paste0('Confidence in ', col, ' sentences')) +
+	# 				scale_x_continuous(limits = limits) +
+	# 				scale_y_continuous(limits = limits) +
+	# 				coord_fixed(ratio=1) +
+	# 				scale_color_discrete('Target response') +
+	# 				ggtitle(
+	# 					paste0(
+	# 						'X: ', model.results$sentence[model.results$sentence_type == baseline.col][[1]], '\n',
+	# 						'Y: ', model.results$sentence[model.results$sentence_type == col][[1]]
+	# 				)) +
+	# 				theme_minimal()
+	# 		)
+	# 	}
+	# )
+
+	# ggsave(
+	#     plot=marrangeGrob(plots, nrow=1, ncol=1),
+	#     filename=paste0('syn_blorked_SVO-OSV_for_human_exp-000-odds_ratios-plots.pdf'),
+	#     device='pdf',
+	#     width=8,
+	#     height=6,
+	#     scale=1,
+	#     units='in'
+	# )
