@@ -58,7 +58,7 @@ brm.args <- list(
 
 # N_RUNS <- 10
 
-# set.seed(1225)
+# set.seed(425)
 # model.lists <- list()
 # while (!(length(unique(model.lists)) == N_RUNS)) {
 # 	model.lists <- replicate(
